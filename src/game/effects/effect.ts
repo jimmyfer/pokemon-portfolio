@@ -8,7 +8,7 @@ type EffectSecuence = {
   quantity: number;
 };
 
-export abstract class Effect<TSequence extends string> {
+export abstract class Effect<T extends string> {
   public position: Vector2D;
   protected assetManager: AssetManager;
   protected animationSecuences: Map<string, EffectSecuence> = new Map();
@@ -22,5 +22,5 @@ export abstract class Effect<TSequence extends string> {
 
   public abstract render(): void;
 
-  public abstract playSequence(secuence: TSequence, deltaTime: number): void;
+  public abstract playSequence(secuence: T, deltaTime: number): void;
 }
