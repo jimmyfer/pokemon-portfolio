@@ -45,13 +45,16 @@ export class EventChain implements Trigger {
     this.cooldown = cooldown;
   }
 
-  update(deltaTime: number, playerPos: Vector2D): void {
-    this.elapsedTime += deltaTime;
+  update(deltaTime: number): void {
     const trigger = this.triggers[this.currentIndex];
 
-    if (this.conditions.every((c) => c.isMet(playerPos))) {
+    if (this.conditions.every((c) => c.isMet())) {
+      this.elapsedTime += deltaTime;
       trigger.update(deltaTime);
-      if (this.elapsedTime >= this.cooldown && this.currentIndex < this.triggers.length - 1) {
+      if (
+        this.elapsedTime >= this.cooldown &&
+        this.currentIndex < this.triggers.length - 1
+      ) {
         this.elapsedTime = 0;
         this.currentIndex++;
       }
@@ -60,7 +63,9 @@ export class EventChain implements Trigger {
 
   render() {
     const currentTrigger = this.triggers[this.currentIndex];
-    currentTrigger.render();
+    if (this.conditions.every((c) => c.isMet())) {
+      currentTrigger.render();
+    }
   }
 
   isComplete(): boolean {
