@@ -12,7 +12,8 @@ export async function createLittleRootTown() {
   const sprites = assetManager.getSpriteSheet("sprites");
   const appScale = GameContext.getInstance().getTilesScale();
 
-  const doorEffect = new DoorOpenEffect(304, 324, appScale);
+  const doorEffect = new DoorOpenEffect(304, 324, appScale, "closed");
+  const doorEffectTwo = new DoorOpenEffect(304, 324, appScale, "opened");
   const areaCondition = new AreaTrigger(
     { x: 9, y: 11, width: 1, height: 1 },
     32
@@ -257,7 +258,7 @@ export async function createLittleRootTown() {
         -10
       )
       .createLayer("effects", 29, 27, false, LayerPriority.FOREGROUND)
-      .addEffectTrigger(doorEffect, DoorSecuence.OPEN_EFFECT, [compositeCondition])
+      .addChainEffectTrigger([doorEffect, doorEffectTwo], [DoorSecuence.OPEN_EFFECT, DoorSecuence.CLOSE_EFFECT ], [compositeCondition], 5000)
       .build()
   );
 }

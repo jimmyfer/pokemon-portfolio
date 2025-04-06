@@ -5,6 +5,7 @@ import { AssetManager } from "@/assets/assetsManager";
 import { SceneManager } from "@/core/engine/scene-manager";
 import { LayerManager } from "@/rendering/layer-manager";
 import { OverworldScene } from "@/scenes/overworld-scene";
+import { GameStateManager } from "../systems/game-state-manager";
 
 export class GameEngine {
     public canvas: HTMLCanvasElement;
@@ -15,6 +16,8 @@ export class GameEngine {
     assetManager: AssetManager;
 
     sceneManager: SceneManager;
+
+    gameStateManager: GameStateManager;
 
     private ctx!: CanvasRenderingContext2D;
 
@@ -29,7 +32,7 @@ export class GameEngine {
 
         this.assetManager = this.gameContext.getBean(AssetManager);
         this.sceneManager = this.gameContext.getBean(SceneManager);
-
+        this.gameStateManager = this.gameContext.getBean(GameStateManager);
         this.initializeCanvas();
 
         window.addEventListener('resize', () => this.handleResize());
@@ -43,6 +46,8 @@ export class GameEngine {
     }
 
     async initialize() {
+        this.gameStateManager.loadFromPersistentStorage();
+        
         await this.loadAssets();
         this.sceneManager.addScene('overworld', new OverworldScene());
         await this.sceneManager.switchTo('overworld');

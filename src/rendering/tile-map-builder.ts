@@ -3,9 +3,12 @@ import { SpriteSheet } from "./sprite-sheet";
 import { TileMap } from "./tile-map";
 import { LayerPriority } from "@/types/render-types";
 import { Effect } from "@/game/effects/effect";
-import { DoorSecuence } from "@/game/effects/door-open";
-import { EffectSystem, EffectTrigger } from "@/core/systems/effect-system";
 import { TriggerCondition } from "@/types/trigger";
+import {
+  BasicTrigger,
+  EffectSystem,
+  EventChain,
+} from "@/core/systems/effect-system";
 
 export class TileMapBuilder {
   private layers: MapLayer[] = [];
@@ -23,19 +26,46 @@ export class TileMapBuilder {
   addEffectTrigger<T extends string>(
     effect: Effect<T>,
     secuence: T,
-    conditions: TriggerCondition[],
-    cooldown = 0
+    conditions: TriggerCondition[]
   ): this {
     this.effectSystem.addTrigger(
-      new EffectTrigger(
-        conditions,
+      new BasicTrigger(
         {
           execute: (deltaTime: number) =>
             effect.playSequence(secuence, deltaTime),
           render: () => {
             effect.render();
-          }
+          },
         },
+        false,
+        conditions
+      )
+    );
+    return this;
+  }
+
+  addChainEffectTrigger<T extends string>(
+    effects: Effect<T>[],
+    secuence: T[],
+    conditions: TriggerCondition[],
+    cooldown: number
+  ): this {
+    this.effectSystem.addTrigger(
+      new EventChain(
+        conditions,
+        effects.map(
+          (effect, index) =>
+            new BasicTrigger(
+              {
+                execute: (deltaTime: number) =>
+                  effect.playSequence(secuence[index], deltaTime),
+                render: () => {
+                  effect.render();
+                },
+              },
+              true
+            )
+        ),
         cooldown
       )
     );

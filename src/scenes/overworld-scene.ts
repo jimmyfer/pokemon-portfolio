@@ -97,7 +97,7 @@ export class OverworldScene extends GameScene {
       priority: LayerPriority.FOREGROUND,
       enabled: true,
       update: (delta) => {
-        this.tileMap.update(delta, this.player.position);
+        this.tileMap.update(delta);
       },
       render: (ctx) => {
         this.tileMap.render(ctx, this.camera, LayerPriority.FOREGROUND);

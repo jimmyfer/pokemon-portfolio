@@ -40,8 +40,8 @@ export class TileMap {
     return maxHeight * this.scaledTileSize;
   }
 
-  update(deltaTime: number, playerPos: Vector2D) {
-    this.effectSystem.update(playerPos, deltaTime);
+  update(deltaTime: number) {
+    this.effectSystem.update(deltaTime);
   }
 
   render(
@@ -112,9 +112,7 @@ export class TileMap {
       }
     });
 
-    this.effectSystem.triggers.forEach((trigger) => {
-      trigger.action.render();
-    });
+    this.effectSystem.render();
   }
 
   public getCollisionGrid(): boolean[][] {
