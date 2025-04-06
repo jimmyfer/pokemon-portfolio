@@ -13,14 +13,14 @@ export class DoorOpenEffect extends Effect<DoorSecuence> {
   private flipX: boolean = false;
   private scale: number;
 
-  constructor(x: number, y: number, scale: number) {
+  constructor(x: number, y: number, scale: number, initialAnimation: string) {
     super(x, y);
     this.scale = scale;
 
     const spriteSheet = this.assetManager.getSpriteSheet("sprites");
     this.configureAnimations(spriteSheet);
     this.sprite = new AnimatedSprite(spriteSheet);
-    this.sprite.play("closed");
+    this.sprite.play(initialAnimation);
   }
 
   private configureAnimations(spriteSheet: SpriteSheet): void {
@@ -94,6 +94,14 @@ export class DoorOpenEffect extends Effect<DoorSecuence> {
         deltaTime,
         0.5,
         ["closed", "little_opened", "almost_opened", "opened"],
+        1
+      );
+    }
+    if (secuence == DoorSecuence.CLOSE_EFFECT) {
+      this.sprite.playSequence(
+        deltaTime,
+        0.5,
+        ["opened", "almost_opened", "little_opened", "closed"],
         1
       );
     }

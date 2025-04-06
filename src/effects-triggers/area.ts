@@ -1,3 +1,5 @@
+import { GameContext } from "@/core/engine/game-context";
+import { GameStateManager } from "@/core/systems/game-state-manager";
 import { Vector2D } from "@/types/sprite-sheet";
 import { TriggerCondition } from "@/types/trigger";
 
@@ -8,11 +10,13 @@ export class AreaTrigger implements TriggerCondition {
   ) {}
 
   isMet(playerPos: Vector2D): boolean {
+    const gameStateManager =  GameContext.getInstance().getBean(GameStateManager);
+    const playerState = gameStateManager.getState().player
     return (
-      playerPos.x >= this.area.x * this.tileSize &&
-      playerPos.x <= (this.area.x + this.area.width) * this.tileSize &&
-      playerPos.y >= this.area.y * this.tileSize &&
-      playerPos.y <= (this.area.y + this.area.height) * this.tileSize
+      playerState.position.x >= this.area.x * this.tileSize &&
+      playerState.position.x <= (this.area.x + this.area.width) * this.tileSize &&
+      playerState.position.y >= this.area.y * this.tileSize &&
+      playerState.position.y <= (this.area.y + this.area.height) * this.tileSize
     );
   }
 }
