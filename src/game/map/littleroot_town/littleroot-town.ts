@@ -2,7 +2,7 @@ import { GameContext } from "@/core/engine/game-context";
 import { AssetManager } from "@/assets/assetsManager";
 import { TileMapBuilder } from "@/rendering/tile-map-builder";
 import { LayerPriority } from "@/types/render-types";
-import { DoorOpenEffect } from "@/game/effects/door-open";
+import { DoorOpenEffect, DoorSecuence } from "@/game/effects/door-open";
 import { AreaTrigger } from "@/effects-triggers/area";
 import { KeyPressTrigger } from "@/effects-triggers/keypress";
 import { CompositeTrigger } from "@/effects-triggers/composite";
@@ -257,7 +257,7 @@ export async function createLittleRootTown() {
         -10
       )
       .createLayer("effects", 29, 27, false, LayerPriority.FOREGROUND)
-      .addEffectTrigger(doorEffect, [compositeCondition])
+      .addEffectTrigger(doorEffect, DoorSecuence.OPEN_EFFECT, [compositeCondition])
       .build()
   );
 }

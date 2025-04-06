@@ -20,8 +20,9 @@ export class TileMapBuilder {
     this.scale = scale;
   }
 
-  addEffectTrigger(
-    effect: Effect<DoorSecuence>,
+  addEffectTrigger<T extends string>(
+    effect: Effect<T>,
+    secuence: T,
     conditions: TriggerCondition[],
     cooldown = 0
   ): this {
@@ -30,7 +31,7 @@ export class TileMapBuilder {
         conditions,
         {
           execute: (deltaTime: number) =>
-            effect.playSequence(DoorSecuence.OPEN_EFFECT, deltaTime),
+            effect.playSequence(secuence, deltaTime),
           render: () => {
             effect.render();
           }
