@@ -1,11 +1,11 @@
-import { AnimationSequence } from "@/types/sprite-sheet";
+import { AnimationSequence } from '@/types/sprite-sheet';
 
 export class AnimatedSprite {
     private currentAnimation: string = 'idle';
     private frameIndex: number = 0;
     private timer: number = 0;
 
-    constructor(private animations: Record<string, AnimationSequence>) { }
+    constructor(private animations: Record<string, AnimationSequence>) {}
 
     update(deltaTime: number) {
         const animation = this.animations[this.currentAnimation];

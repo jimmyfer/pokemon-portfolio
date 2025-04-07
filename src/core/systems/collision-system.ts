@@ -1,11 +1,11 @@
-import { TileMap } from "@/rendering/tile-map";
-import { Injectable } from "../decorators/injectable";
-import { Vector2D } from "@/types/sprite-sheet";
+import { TileMap } from '@/rendering/tile-map';
+import { Injectable } from '../decorators/injectable';
+import { Vector2D } from '@/types/sprite-sheet';
 
 @Injectable()
 export class CollisionSystem {
     private tileMap: TileMap;
-    
+
     constructor() {}
 
     setTileMap(tileMap: TileMap): void {
@@ -21,19 +21,19 @@ export class CollisionSystem {
         const tileSize = this.tileMap.getTileSize();
         return {
             x: Math.floor(x / tileSize),
-            y: Math.floor(y / tileSize)
+            y: Math.floor(y / tileSize),
         };
     }
 
     private checkTileCollision(tileX: number, tileY: number): boolean {
         const collisionGrid = this.tileMap.getCollisionGrid();
-        if(!collisionGrid.length) {
+        if (!collisionGrid.length) {
             return false;
         }
-        
+
         if (tileY >= collisionGrid.length || tileY < 0) return true;
         if (tileX >= collisionGrid[0].length || tileX < 0) return true;
-        
+
         return collisionGrid[tileY][tileX];
     }
 }

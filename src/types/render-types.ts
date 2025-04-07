@@ -7,7 +7,7 @@ export enum LayerPriority {
     ENTITIES = 200,
     FOREGROUND = 300,
     UI = 400,
-    DEBUG = 500
+    DEBUG = 500,
 }
 
 export interface Layer {
