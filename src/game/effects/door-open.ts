@@ -3,17 +3,32 @@ import { AnimatedSprite, SpriteSheet } from "@/rendering/sprite-sheet";
 import { Effect } from "./effect";
 import { GameContext } from "@/core/engine/game-context";
 
-export enum DoorSecuence {
+export enum DoorSequence {
   OPEN_EFFECT = "OPEN_EFFECT",
   CLOSE_EFFECT = "CLOSE_EFFECT",
 }
 
-export class DoorOpenEffect extends Effect<DoorSecuence> {
+export enum DOEffectInitialState {
+  EFFECT_OPENED = "opened",
+  EFFECT_CLOSED = "closed",
+}
+
+export class DoorOpenEffect extends Effect<DoorSequence> {
   private sprite: AnimatedSprite;
   private flipX: boolean = false;
   private scale: number;
 
-  constructor(x: number, y: number, scale: number, initialAnimation: string) {
+  public static initialState = {
+    open: DOEffectInitialState.EFFECT_OPENED,
+    close: DOEffectInitialState.EFFECT_CLOSED,
+  };
+
+  constructor(
+    x: number,
+    y: number,
+    scale: number,
+    initialAnimation: DOEffectInitialState
+  ) {
     super(x, y);
     this.scale = scale;
 
@@ -52,9 +67,15 @@ export class DoorOpenEffect extends Effect<DoorSecuence> {
       loop: false,
     });
 
-    this.animationSecuences.set(DoorSecuence.OPEN_EFFECT, {
-      duraction: 1,
+    this.animationSecuences.set(DoorSequence.OPEN_EFFECT, {
+      duraction: 0.5,
       animations: ["closed", "little_opened", "almost_opened", "opened"],
+      quantity: 1,
+    });
+
+    this.animationSecuences.set(DoorSequence.CLOSE_EFFECT, {
+      duraction: 0.5,
+      animations: ["opened", "almost_opened", "little_opened", "closed"],
       quantity: 1,
     });
   }
@@ -88,23 +109,12 @@ export class DoorOpenEffect extends Effect<DoorSecuence> {
     );
   }
 
-  playSequence(secuence: DoorSecuence, deltaTime: number): void {
-    if (secuence == DoorSecuence.OPEN_EFFECT) {
-      this.sprite.playSequence(
-        deltaTime,
-        0.5,
-        ["closed", "little_opened", "almost_opened", "opened"],
-        1
-      );
-    }
-    if (secuence == DoorSecuence.CLOSE_EFFECT) {
-      this.sprite.playSequence(
-        deltaTime,
-        0.5,
-        ["opened", "almost_opened", "little_opened", "closed"],
-        1
-      );
-    }
+  playSequence(sequence: DoorSequence, deltaTime: number): void {
+    const { duraction, animations, quantity } =
+      this.animationSecuences.get(sequence) || {};
+    if (!duraction || !animations || !quantity) return;
+
+    this.sprite.playSequence(deltaTime, duraction, animations, quantity);
     this.sprite.update(deltaTime);
   }
 }
