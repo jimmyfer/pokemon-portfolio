@@ -2,10 +2,13 @@ import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
-import { DoorOpenEffect, DoorSequence } from '@/game/effects/door-open';
-import { AreaTrigger } from '@/effects-triggers/area';
-import { KeyPressTrigger } from '@/effects-triggers/keypress';
-import { CompositeTrigger } from '@/effects-triggers/composite';
+import {
+    DoorOpenEffect,
+    DoorSequence,
+} from '@/effects/sprites-effects/door-open';
+import { AreaTrigger } from '@/effects/trigger-conditions/area';
+import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
+import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);

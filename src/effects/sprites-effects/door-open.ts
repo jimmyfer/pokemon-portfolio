@@ -1,6 +1,6 @@
 import { Camera } from '@/rendering/camera';
 import { AnimatedSprite, SpriteSheet } from '@/rendering/sprite-sheet';
-import { Effect } from './effect';
+import { Effect } from '../effect';
 import { GameContext } from '@/core/engine/game-context';
 
 export enum DoorSequence {

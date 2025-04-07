@@ -2,13 +2,11 @@ import { MapLayer } from '@/types/tiles';
 import { SpriteSheet } from './sprite-sheet';
 import { TileMap } from './tile-map';
 import { LayerPriority } from '@/types/render-types';
-import { Effect } from '@/game/effects/effect';
+import { Effect } from '@/effects/effect';
 import { TriggerCondition } from '@/types/trigger';
-import {
-    BasicTrigger,
-    EffectSystem,
-    EventChain,
-} from '@/core/systems/effect-system';
+import { EffectSystem } from '@/core/systems/effect-system';
+import { BasicTrigger } from '@/effects/triggers/basic-trigger';
+import { EventChain } from '@/effects/triggers/event-chain';
 
 export class TileMapBuilder {
     private layers: MapLayer[] = [];
