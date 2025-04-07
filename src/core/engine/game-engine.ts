@@ -1,11 +1,11 @@
-import { GameConfig } from "@/types/game-config";
-import { Layer } from "@/types/render-types";
-import { GameContext } from "@/core/engine/game-context";
-import { AssetManager } from "@/assets/assetsManager";
-import { SceneManager } from "@/core/engine/scene-manager";
-import { LayerManager } from "@/rendering/layer-manager";
-import { OverworldScene } from "@/scenes/overworld-scene";
-import { GameStateManager } from "../systems/game-state-manager";
+import { GameConfig } from '@/types/game-config';
+import { Layer } from '@/types/render-types';
+import { GameContext } from '@/core/engine/game-context';
+import { AssetManager } from '@/assets/assetsManager';
+import { SceneManager } from '@/core/engine/scene-manager';
+import { LayerManager } from '@/rendering/layer-manager';
+import { OverworldScene } from '@/scenes/overworld-scene';
+import { GameStateManager } from '../systems/game-state-manager';
 
 export class GameEngine {
     public canvas: HTMLCanvasElement;
@@ -22,13 +22,17 @@ export class GameEngine {
     private ctx!: CanvasRenderingContext2D;
 
     constructor(config: GameConfig) {
+        this.canvas = document.getElementById(
+            config.canvasId
+        ) as HTMLCanvasElement;
 
-        this.canvas = document.getElementById(config.canvasId) as HTMLCanvasElement;
-        
         this.ctx = this.canvas.getContext('2d', { alpha: false })!;
 
         this.gameContext = GameContext.getInstance();
-        this.gameContext.registerBean(CanvasRenderingContext2D, this.canvas.getContext('2d', { alpha: false })!);
+        this.gameContext.registerBean(
+            CanvasRenderingContext2D,
+            this.canvas.getContext('2d', { alpha: false })!
+        );
 
         this.assetManager = this.gameContext.getBean(AssetManager);
         this.sceneManager = this.gameContext.getBean(SceneManager);
@@ -47,15 +51,25 @@ export class GameEngine {
 
     async initialize() {
         this.gameStateManager.loadFromPersistentStorage();
-        
+
         await this.loadAssets();
         this.sceneManager.addScene('overworld', new OverworldScene());
         await this.sceneManager.switchTo('overworld');
     }
 
     private async loadAssets() {
-        await this.assetManager.loadSpriteSheet('player', 'assets/sprites/character_01.png', 32, 32);
-        await this.assetManager.loadSpriteSheet('sprites', 'assets/sprites/sprites.png', 16, 16);
+        await this.assetManager.loadSpriteSheet(
+            'player',
+            'assets/sprites/character_01.png',
+            32,
+            32
+        );
+        await this.assetManager.loadSpriteSheet(
+            'sprites',
+            'assets/sprites/sprites.png',
+            16,
+            16
+        );
     }
 
     private gameLoop(timestamp: number) {
@@ -63,7 +77,7 @@ export class GameEngine {
         this.lastFrameTime = timestamp;
 
         this.sceneManager.currentScene?.update(deltaTime);
-        
+
         this.ctx.save();
         this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         this.sceneManager.currentScene?.render(this.ctx);

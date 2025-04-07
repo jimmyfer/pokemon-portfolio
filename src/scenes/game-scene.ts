@@ -1,8 +1,7 @@
-import { SceneManager } from "@/core/engine/scene-manager";
-import { SceneTransitionOptions } from "@/types/scene";
+import { SceneManager } from '@/core/engine/scene-manager';
+import { SceneTransitionOptions } from '@/types/scene';
 
 export abstract class GameScene {
-    
     protected sceneManager?: SceneManager;
 
     setSceneManager(manager: SceneManager): void {
@@ -16,7 +15,10 @@ export abstract class GameScene {
 
     async onExit(): Promise<void> {}
 
-    protected transitionTo(sceneName: string, options?: SceneTransitionOptions): void {
+    protected transitionTo(
+        sceneName: string,
+        options?: SceneTransitionOptions
+    ): void {
         this.sceneManager?.switchTo(sceneName, options);
     }
 }

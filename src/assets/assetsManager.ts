@@ -1,5 +1,5 @@
-import { Injectable } from "@/core/decorators/injectable";
-import { SpriteSheet } from "@/rendering/sprite-sheet";
+import { Injectable } from '@/core/decorators/injectable';
+import { SpriteSheet } from '@/rendering/sprite-sheet';
 
 @Injectable()
 export class AssetManager {
@@ -59,7 +59,12 @@ export class AssetManager {
         }
 
         const img = await this.loadImage(name, url);
-        const spriteSheet = new SpriteSheet(img, frameWidth, frameHeight, padding);
+        const spriteSheet = new SpriteSheet(
+            img,
+            frameWidth,
+            frameHeight,
+            padding
+        );
         this.spriteSheets.set(name, spriteSheet);
         return spriteSheet;
     }

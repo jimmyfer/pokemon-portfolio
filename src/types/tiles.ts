@@ -1,4 +1,4 @@
-import { LayerPriority } from "./render-types";
+import { LayerPriority } from './render-types';
 
 export interface TileLayer {
     name: string;
@@ -40,11 +40,11 @@ export interface TiledMapData {
 }
 
 export interface Tile {
-    tile: number,
-    offsetX: number,
-    offsetY: number,
-    flipX: boolean,
-    flipY: boolean,
+    tile: number;
+    offsetX: number;
+    offsetY: number;
+    flipX: boolean;
+    flipY: boolean;
     collidable: boolean;
 }
 

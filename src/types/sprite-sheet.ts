@@ -13,9 +13,9 @@ export type SpriteFrame = {
 };
 
 export type AnimationSequence = {
-    speed: number
-    frames: number[]
-}
+    speed: number;
+    frames: number[];
+};
 
 export interface Vector2D {
     x: number;

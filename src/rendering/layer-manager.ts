@@ -1,5 +1,5 @@
-import { Injectable } from "@/core/decorators/injectable";
-import { Layer } from "../types/render-types";
+import { Injectable } from '@/core/decorators/injectable';
+import { Layer } from '../types/render-types';
 
 @Injectable()
 export class LayerManager {
@@ -22,15 +22,15 @@ export class LayerManager {
 
     private sortLayers(): void {
         this.sortedLayers = Array.from(this.layers.values())
-            .filter(layer => layer.enabled)
+            .filter((layer) => layer.enabled)
             .sort((a, b) => a.priority - b.priority);
     }
 
     update(deltaTime: number): void {
-        this.sortedLayers.forEach(layer => layer.update(deltaTime));
+        this.sortedLayers.forEach((layer) => layer.update(deltaTime));
     }
 
     render(ctx: CanvasRenderingContext2D): void {
-        this.sortedLayers.forEach(layer => layer.render(ctx));
+        this.sortedLayers.forEach((layer) => layer.render(ctx));
     }
 }

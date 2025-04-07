@@ -1,5 +1,5 @@
-import { GameConfig } from "./types/game-config";
-import { GameEngine } from "./core/engine/game-engine";
+import { GameConfig } from './types/game-config';
+import { GameEngine } from './core/engine/game-engine';
 
 class GameBootstrapper {
     private gameEngine: GameEngine;
@@ -10,7 +10,7 @@ class GameBootstrapper {
             loadingScreen: document.getElementById('loading-screen')!,
             progressBar: document.querySelector('.progress')!,
             dialogueBox: document.getElementById('dialogue-box')!,
-            hud: document.getElementById('hud')!
+            hud: document.getElementById('hud')!,
         };
 
         this.initializeEngine();
@@ -20,7 +20,7 @@ class GameBootstrapper {
     private initializeEngine(): void {
         const config: GameConfig = {
             canvasId: 'game-canvas',
-            uiElements: this.uiElements
+            uiElements: this.uiElements,
         };
 
         this.gameEngine = new GameEngine(config);
