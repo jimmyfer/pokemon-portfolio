@@ -2,7 +2,7 @@ import { GameContext } from "@/core/engine/game-context";
 import { AssetManager } from "@/assets/assetsManager";
 import { TileMapBuilder } from "@/rendering/tile-map-builder";
 import { LayerPriority } from "@/types/render-types";
-import { DoorOpenEffect, DoorSecuence } from "@/game/effects/door-open";
+import { DoorOpenEffect, DoorSequence } from "@/game/effects/door-open";
 import { AreaTrigger } from "@/effects-triggers/area";
 import { KeyPressTrigger } from "@/effects-triggers/keypress";
 import { CompositeTrigger } from "@/effects-triggers/composite";
@@ -12,8 +12,8 @@ export async function createLittleRootTown() {
   const sprites = assetManager.getSpriteSheet("sprites");
   const appScale = GameContext.getInstance().getTilesScale();
 
-  const doorEffect = new DoorOpenEffect(304, 324, appScale, "closed");
-  const doorEffectTwo = new DoorOpenEffect(304, 324, appScale, "opened");
+  const doorEffect = new DoorOpenEffect(304, 324, appScale, DoorOpenEffect.initialState.close);
+  const doorEffectTwo = new DoorOpenEffect(304, 324, appScale, DoorOpenEffect.initialState.open);
   const areaCondition = new AreaTrigger(
     { x: 9, y: 11, width: 1, height: 1 },
     32
@@ -258,7 +258,7 @@ export async function createLittleRootTown() {
         -10
       )
       .createLayer("effects", 29, 27, false, LayerPriority.FOREGROUND)
-      .addChainEffectTrigger([doorEffect, doorEffectTwo], [DoorSecuence.OPEN_EFFECT, DoorSecuence.CLOSE_EFFECT ], [compositeCondition], 5000)
+      .addChainEffectTrigger([doorEffect, doorEffectTwo], [DoorSequence.OPEN_EFFECT, DoorSequence.CLOSE_EFFECT ], [compositeCondition], 5000)
       .build()
   );
 }
