@@ -18,6 +18,8 @@ export class Player {
     private tileSize: number;
     private scale: number;
     private readonly movementSpeed: number = 180;
+    private hidden = false;
+    private canMove = true;
 
     private isAligning: boolean = false;
     private alignProgress: number = 0;
@@ -35,9 +37,12 @@ export class Player {
         const gameContext = GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
-        this.assetManager = gameContext.getBean(AssetManager);
+        this.assetManager = GameContext.getInstance().getBean(AssetManager);
         this.collisionSystem = gameContext.getBean(CollisionSystem);
         this.gameStateManager = gameContext.getBean(GameStateManager);
+        this.gameStateManager.subscribe(() => {
+            this.updatePlayerState();
+        });
 
         const xPlayerPosition =
             this.gameStateManager.getState().player.position.x;
@@ -55,7 +60,14 @@ export class Player {
         this.sprite = new AnimatedSprite(
             this.assetManager.getSpriteSheet('player')
         );
+
         this.sprite.play('idle');
+    }
+
+    updatePlayerState() {
+        const { hidden, canMove } = this.gameStateManager.getState().player;
+        this.hidden = hidden;
+        this.canMove = canMove;
     }
 
     private configureAnimations(spriteSheet: SpriteSheet): void {
@@ -64,6 +76,27 @@ export class Player {
             frames: [0, 0],
             frameRate: 8,
             loop: true,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'up',
+            frames: [1],
+            frameRate: 0,
+            loop: false,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'walk-up-first',
+            frames: [4],
+            frameRate: 0,
+            loop: false,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'walk-up-second',
+            frames: [7],
+            frameRate: 0,
+            loop: false,
         });
 
         spriteSheet.defineAnimation({
@@ -128,6 +161,7 @@ export class Player {
     }
 
     update(deltaTime: number): void {
+        if (!this.canMove) return;
         const deltaSeconds = deltaTime / 1000;
 
         if (this.isAligning) {
@@ -184,15 +218,18 @@ export class Player {
             this.sprite.play(this.currentAnimation);
         }
 
-        this.gameStateManager.updateState((state) => ({
-            ...state,
-            player: {
-                position: {
-                    x: this.position.x,
-                    y: this.position.y,
+        this.gameStateManager.updateState((state) => {
+            return {
+                ...state,
+                player: {
+                    ...state.player,
+                    position: {
+                        x: this.position.x,
+                        y: this.position.y,
+                    },
                 },
-            },
-        }));
+            };
+        });
     }
 
     private updateMovementAnimation(direction: Vector2D): void {
@@ -254,8 +291,11 @@ export class Player {
         this.updateMovementAnimation(direction);
     }
 
-    render(ctx: CanvasRenderingContext2D, camera: Camera): void {
+    render(): void {
         const frame = this.sprite.getCurrentFrame();
+
+        const ctx = GameContext.getInstance().getBean(CanvasRenderingContext2D);
+        const camera = GameContext.getInstance().getBean(Camera);
 
         const screenPos = {
             x:
@@ -268,13 +308,14 @@ export class Player {
                 (frame.height * this.scale) / 2,
         };
 
-        this.sprite.spriteSheet.draw(
-            ctx,
-            frame,
-            screenPos.x,
-            screenPos.y,
-            this.flipX,
-            this.scale
-        );
+        if (!this.hidden)
+            this.sprite.spriteSheet.draw(
+                ctx,
+                frame,
+                screenPos.x,
+                screenPos.y,
+                this.flipX,
+                this.scale
+            );
     }
 }

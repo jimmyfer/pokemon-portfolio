@@ -13,6 +13,8 @@ export class GameStateManager {
         return {
             player: {
                 position: { x: 500, y: 500 },
+                hidden: false,
+                canMove: true,
             },
         };
     }
@@ -28,12 +30,28 @@ export class GameStateManager {
     }
 
     private saveToPersistentStorage(): void {
-        localStorage.setItem('gameState', JSON.stringify(this.state));
+        const { player } = this.state;
+        const filteredState = {
+            player: {
+                position: player.position,
+            },
+        };
+        localStorage.setItem('gameState', JSON.stringify(filteredState));
     }
 
     public loadFromPersistentStorage(): void {
         const saved = localStorage.getItem('gameState');
-        if (saved) this.state = JSON.parse(saved);
+        if (saved) {
+            const loadedState = JSON.parse(saved);
+            this.state = {
+                ...this.state,
+                ...loadedState,
+                player: {
+                    ...this.state.player,
+                    ...loadedState.player,
+                },
+            };
+        }
     }
 
     private observers: Function[] = [];
