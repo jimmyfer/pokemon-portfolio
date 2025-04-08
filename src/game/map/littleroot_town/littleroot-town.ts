@@ -2,13 +2,12 @@ import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
-import {
-    DoorOpenEffect,
-    DoorSequence,
-} from '@/effects/sprites-effects/door-open';
+import { DoorOpenEffect } from '@/effects/sprites-effects/door-open';
 import { AreaTrigger } from '@/effects/trigger-conditions/area';
 import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
 import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
+import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
+import { DoorSequence, PlayerMovementSequence } from '@/types/effects';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -16,17 +15,14 @@ export async function createLittleRootTown() {
     const appScale = GameContext.getInstance().getTilesScale();
 
     const doorEffect = new DoorOpenEffect(
-        304,
+        302,
         324,
         appScale,
         DoorOpenEffect.initialState.close
     );
-    const doorEffectTwo = new DoorOpenEffect(
-        304,
-        324,
-        appScale,
-        DoorOpenEffect.initialState.open
-    );
+
+    const playerEffect = new PlayerMovementEffect({ x: 9, y: 10 });
+
     const areaCondition = new AreaTrigger(
         { x: 9, y: 11, width: 1, height: 1 },
         32
@@ -151,6 +147,27 @@ export async function createLittleRootTown() {
             .buildSpriteObjectRow([144, 145, 146, 147], 22, 31, -308, -10, 3)
             .buildSpriteObjectRow([160, 161, 162, 163], 23, 31, -308, -10, 3)
             .buildSpriteObjectRow([176, 177, 178, 179], 24, 31, -308, -10, 3)
+            .createLayer('flowers', 29, 27, false, LayerPriority.BACKGROUND_LOW)
+            .buildSingleSprite(2440, 10, 3)
+            .buildSingleSprite(2440, 14, 3)
+            .buildSingleSprite(2440, 12, 4)
+            .buildSingleSprite(2440, 13, 6)
+            .buildSingleSprite(2440, 18, 4)
+            .buildSingleSprite(2440, 9, 26)
+            .buildSingleSprite(2440, 10, 25)
+            .buildSingleSprite(2440, 11, 26)
+            .buildSingleSprite(2440, 13, 23)
+            .buildSingleSprite(2440, 13, 25)
+            .buildSingleSprite(2440, 20, 17)
+            .buildSingleSprite(2440, 17, 20)
+            .buildSpriteObject(
+                [
+                    [2440, 2440, 2440],
+                    [2440, 2440, 2440],
+                ],
+                21,
+                6
+            )
             .createLayer('signs', 29, 27, false, LayerPriority.FOREGROUND)
             .buildSpriteObject(
                 [
@@ -195,26 +212,6 @@ export async function createLittleRootTown() {
                 false,
                 -16,
                 8
-            )
-            .buildSingleSprite(2440, 10, 3)
-            .buildSingleSprite(2440, 14, 3)
-            .buildSingleSprite(2440, 12, 4)
-            .buildSingleSprite(2440, 13, 6)
-            .buildSingleSprite(2440, 18, 4)
-            .buildSingleSprite(2440, 9, 26)
-            .buildSingleSprite(2440, 10, 25)
-            .buildSingleSprite(2440, 11, 26)
-            .buildSingleSprite(2440, 13, 23)
-            .buildSingleSprite(2440, 13, 25)
-            .buildSingleSprite(2440, 20, 17)
-            .buildSingleSprite(2440, 17, 20)
-            .buildSpriteObject(
-                [
-                    [2440, 2440, 2440],
-                    [2440, 2440, 2440],
-                ],
-                21,
-                6
             )
             .createLayer('houses', 29, 27, false, LayerPriority.FOREGROUND)
             .buildSpriteObject(
@@ -294,12 +291,12 @@ export async function createLittleRootTown() {
                 -20,
                 -10
             )
-            .createLayer('effects', 29, 27, false, LayerPriority.FOREGROUND)
-            .addChainEffectTrigger(
-                [doorEffect, doorEffectTwo],
-                [DoorSequence.OPEN_EFFECT, DoorSequence.CLOSE_EFFECT],
+            .createLayer('effects', 29, 27, false, LayerPriority.BACKGROUND)
+            .addEnterIntoBuildingEffectTrigger(
+                [doorEffect, playerEffect],
+                [DoorSequence.OPEN_EFFECT, PlayerMovementSequence.WALK_UP],
                 [compositeCondition],
-                5000
+                500
             )
             .build()
     );

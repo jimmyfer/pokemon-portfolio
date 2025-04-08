@@ -65,6 +65,12 @@ export class GameEngine {
             32
         );
         await this.assetManager.loadSpriteSheet(
+            'player-effect',
+            'assets/sprites/character_01.png',
+            32,
+            32
+        );
+        await this.assetManager.loadSpriteSheet(
             'sprites',
             'assets/sprites/sprites.png',
             16,

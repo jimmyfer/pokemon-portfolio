@@ -2,11 +2,7 @@ import { Camera } from '@/rendering/camera';
 import { AnimatedSprite, SpriteSheet } from '@/rendering/sprite-sheet';
 import { Effect } from '../effect';
 import { GameContext } from '@/core/engine/game-context';
-
-export enum DoorSequence {
-    OPEN_EFFECT = 'OPEN_EFFECT',
-    CLOSE_EFFECT = 'CLOSE_EFFECT',
-}
+import { DoorSequence } from '@/types/effects';
 
 export enum DOEffectInitialState {
     EFFECT_OPENED = 'opened',
@@ -67,13 +63,13 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
             loop: false,
         });
 
-        this.animationSecuences.set(DoorSequence.OPEN_EFFECT, {
+        this.animationSequences.set(DoorSequence.OPEN_EFFECT, {
             duraction: 0.5,
             animations: ['closed', 'little_opened', 'almost_opened', 'opened'],
             quantity: 1,
         });
 
-        this.animationSecuences.set(DoorSequence.CLOSE_EFFECT, {
+        this.animationSequences.set(DoorSequence.CLOSE_EFFECT, {
             duraction: 0.5,
             animations: ['opened', 'almost_opened', 'little_opened', 'closed'],
             quantity: 1,
@@ -113,9 +109,9 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
         );
     }
 
-    playSequence(sequence: DoorSequence, deltaTime: number): void {
+    playSequence(deltaTime: number, sequence: DoorSequence): void {
         const { duraction, animations, quantity } =
-            this.animationSecuences.get(sequence) || {};
+            this.animationSequences.get(sequence) || {};
         if (!duraction || !animations || !quantity) return;
 
         this.sprite.playSequence(deltaTime, duraction, animations, quantity);

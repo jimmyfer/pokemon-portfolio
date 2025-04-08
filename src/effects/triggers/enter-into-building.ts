@@ -1,10 +1,10 @@
 import { Trigger, TriggerCondition } from '@/types/trigger';
 
-// TODO: Refactor to not depend on cooldown timer
-export class EventChain implements Trigger {
+export class EnterIntoBuilding implements Trigger {
     public currentIndex = 0;
     private elapsedTime = 0;
     private readonly cooldown: number;
+    private activeTriggers: Trigger[] = [];
 
     constructor(
         public conditions: TriggerCondition[],
@@ -21,6 +21,13 @@ export class EventChain implements Trigger {
             this.elapsedTime += deltaTime;
             trigger.update(deltaTime);
             if (
+                !this.activeTriggers.some(
+                    (trigger) => trigger === this.triggers[this.currentIndex]
+                )
+            ) {
+                this.activeTriggers.push(this.triggers[this.currentIndex]);
+            }
+            if (
                 this.elapsedTime >= this.cooldown &&
                 this.currentIndex < this.triggers.length - 1
             ) {
@@ -31,13 +38,8 @@ export class EventChain implements Trigger {
     }
 
     render() {
-        const currentTrigger = this.triggers[this.currentIndex];
         if (this.conditions.every((c) => c.isMet())) {
-            currentTrigger.render();
+            this.activeTriggers.forEach((trigger) => trigger.render());
         }
-    }
-
-    isComplete(): boolean {
-        return this.currentIndex >= this.triggers.length;
     }
 }

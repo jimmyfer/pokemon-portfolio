@@ -95,7 +95,7 @@ export class OverworldScene extends GameScene {
                 this.camera.update(delta);
             },
             render: (ctx) => {
-                this.player.render(ctx, this.camera);
+                this.player.render();
                 this.npcs.forEach((npc) => npc.render(ctx, this.camera));
             },
         });

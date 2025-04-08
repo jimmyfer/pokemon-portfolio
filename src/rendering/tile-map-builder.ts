@@ -6,7 +6,7 @@ import { Effect } from '@/effects/effect';
 import { TriggerCondition } from '@/types/trigger';
 import { EffectSystem } from '@/core/systems/effect-system';
 import { BasicTrigger } from '@/effects/triggers/basic-trigger';
-import { EventChain } from '@/effects/triggers/event-chain';
+import { EnterIntoBuilding } from '@/effects/triggers/enter-into-building';
 
 export class TileMapBuilder {
     private layers: MapLayer[] = [];
@@ -21,16 +21,16 @@ export class TileMapBuilder {
         this.scale = scale;
     }
 
-    addEffectTrigger<T extends string>(
-        effect: Effect<T>,
-        secuence: T,
+    addEffectTrigger<SequenceTypes>(
+        effect: Effect<SequenceTypes>,
+        sequence: SequenceTypes,
         conditions: TriggerCondition[]
     ): this {
         this.effectSystem.addTrigger(
             new BasicTrigger(
                 {
                     execute: (deltaTime: number) =>
-                        effect.playSequence(secuence, deltaTime),
+                        effect.playSequence(deltaTime, sequence),
                     render: () => {
                         effect.render();
                     },
@@ -42,14 +42,14 @@ export class TileMapBuilder {
         return this;
     }
 
-    addChainEffectTrigger<T extends string>(
-        effects: Effect<T>[],
-        secuence: T[],
+    addEnterIntoBuildingEffectTrigger<SequenceTypes>(
+        effects: Effect<SequenceTypes>[],
+        sequence: SequenceTypes[],
         conditions: TriggerCondition[],
         cooldown: number
     ): this {
         this.effectSystem.addTrigger(
-            new EventChain(
+            new EnterIntoBuilding(
                 conditions,
                 effects.map(
                     (effect, index) =>
@@ -57,8 +57,8 @@ export class TileMapBuilder {
                             {
                                 execute: (deltaTime: number) =>
                                     effect.playSequence(
-                                        secuence[index],
-                                        deltaTime
+                                        deltaTime,
+                                        sequence[index]
                                     ),
                                 render: () => {
                                     effect.render();
