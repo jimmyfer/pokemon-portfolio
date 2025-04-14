@@ -1,6 +1,8 @@
 import { AssetManager } from '@/assets/assetsManager';
 import { GameContext } from '@/core/engine/game-context';
+import { GameEvent } from '@/types/game-event';
 import { Vector2D } from '@/types/sprite-sheet';
+import { EventSystem } from '../core/systems/event-system';
 
 type EffectSequence = {
     duraction: number;
@@ -10,12 +12,17 @@ type EffectSequence = {
 
 export abstract class Effect<SequenceTypes> {
     public position: Vector2D;
+    protected eventAtEnd: GameEvent | undefined;
     protected assetManager: AssetManager;
     protected animationSequences: Map<string, EffectSequence> = new Map();
+    protected eventSystem: EventSystem;
 
-    constructor(x: number, y: number) {
+    constructor(x: number, y: number, eventAtEnd?: GameEvent) {
         this.position = { x, y };
-        this.assetManager = GameContext.getInstance().getBean(AssetManager);
+        this.eventAtEnd = eventAtEnd;
+        const gameContext = GameContext.getInstance();
+        this.assetManager = gameContext.getBean(AssetManager);
+        this.eventSystem = gameContext.getBean(EventSystem);
     }
 
     public abstract update(deltaTime: number): void;

@@ -5,6 +5,8 @@ import { AnimatedSprite, SpriteSheet } from '@/rendering/sprite-sheet';
 import { Vector2D } from '@/types/sprite-sheet';
 import { Effect } from '../effect';
 import { PlayerMovementSequence } from '@/types/effects';
+import { GameEvent } from '@/types/game-event';
+import { GAME_CANVAS } from '@/core/engine/canvas-token';
 
 export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
     public position: Vector2D = { x: 0, y: 0 };
@@ -17,9 +19,10 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
     private isMoving = false;
     private hasReachedTarget = false;
     private gameStateManager: GameStateManager;
+    private eventEmitted = false;
 
-    constructor(target: Vector2D) {
-        super(0, 0);
+    constructor(target: Vector2D, eventAtEnd?: GameEvent) {
+        super(0, 0, eventAtEnd);
         const gameContext = GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
@@ -82,8 +85,9 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
     render(): void {
         const frame = this.sprite.getCurrentFrame();
 
-        const ctx = GameContext.getInstance().getBean(CanvasRenderingContext2D);
-        const camera = GameContext.getInstance().getBean(Camera);
+        const gameContext = GameContext.getInstance();
+        const ctx = gameContext.getBean(GAME_CANVAS);
+        const camera = gameContext.getBean(Camera);
 
         const screenPos = {
             x: Math.ceil(
@@ -153,7 +157,10 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
         quantity: number,
         deltaSeconds: number
     ): void {
-        this.moveTowardsTarget(deltaSeconds);
+        const playerOnTarget = this.moveTowardsTarget(deltaSeconds);
+        if (playerOnTarget && this.eventAtEnd) {
+            this.emitEffectEnd();
+        }
         if (this.isMoving) {
             this.sprite.playSequence(deltaTime, duration, animations, quantity);
         }
@@ -183,5 +190,12 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
             animData.quantity,
             deltaSeconds
         );
+    }
+
+    private emitEffectEnd(): void {
+        if (!this.eventEmitted && this.eventAtEnd) {
+            this.eventSystem.emit(this.eventAtEnd.type, this.eventAtEnd);
+            this.eventEmitted = true;
+        }
     }
 }

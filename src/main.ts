@@ -20,6 +20,7 @@ class GameBootstrapper {
     private initializeEngine(): void {
         const config: GameConfig = {
             canvasId: 'game-canvas',
+            canvasTransicionId: 'transicion-canvas',
             uiElements: this.uiElements,
         };
 
@@ -47,7 +48,7 @@ class GameBootstrapper {
     }
 
     private updateUIPosition(): void {
-        const canvasRect = this.gameEngine.canvas.getBoundingClientRect();
+        const canvasRect = this.gameEngine.canvasGame.getBoundingClientRect();
         this.uiElements.hud.style.transform = `translate(${canvasRect.left}px, ${canvasRect.top}px)`;
     }
 

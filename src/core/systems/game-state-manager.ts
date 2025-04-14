@@ -16,6 +16,9 @@ export class GameStateManager {
                 hidden: false,
                 canMove: true,
             },
+            world: {
+                currentMap: 'little_root_town',
+            },
         };
     }
 
@@ -30,11 +33,12 @@ export class GameStateManager {
     }
 
     private saveToPersistentStorage(): void {
-        const { player } = this.state;
+        const { player, world } = this.state;
         const filteredState = {
             player: {
                 position: player.position,
             },
+            world,
         };
         localStorage.setItem('gameState', JSON.stringify(filteredState));
     }
