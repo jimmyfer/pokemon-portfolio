@@ -1,4 +1,5 @@
 import { Injectable } from '@/core/decorators/injectable';
+import { GAME_CANVAS } from '@/core/engine/canvas-token';
 import { GameContext } from '@/core/engine/game-context';
 import { Player } from '@/game/player/player';
 import { Vector2D } from '@/types/sprite-sheet';
@@ -13,9 +14,20 @@ export class Camera {
 
     constructor() {
         this.viewport = {
-            width: window.innerWidth * 0.7,
+            width: window.innerWidth * 0.6,
             height: window.innerHeight * 0.8,
         };
+    }
+
+    public targetCenter(): { x: number; y: number } {
+        if (this.target) {
+            const frame = this.target.sprite.getCurrentFrame();
+            return {
+                x: this.target.position.x - this.position.x,
+                y: this.target.position.y - this.position.y,
+            };
+        }
+        throw new Error('No target detected');
     }
 
     setBounds(mapWidth: number, mapHeight: number): void {
@@ -34,7 +46,7 @@ export class Camera {
     update(deltaTime: number): void {
         if (!this.target) return;
 
-        const ctx = GameContext.getInstance().getBean(CanvasRenderingContext2D);
+        const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
         const targetX = this.target.position.x - ctx.canvas.width / 2;
         const targetY = this.target.position.y - ctx.canvas.height / 2;
 

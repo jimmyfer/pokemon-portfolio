@@ -1,14 +1,14 @@
 import { GameConfig } from '@/types/game-config';
-import { Layer } from '@/types/render-types';
 import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { SceneManager } from '@/core/engine/scene-manager';
-import { LayerManager } from '@/rendering/layer-manager';
 import { OverworldScene } from '@/scenes/overworld-scene';
 import { GameStateManager } from '../systems/game-state-manager';
+import { GAME_CANVAS, TRANSICION_CANVAS } from './canvas-token';
 
 export class GameEngine {
-    public canvas: HTMLCanvasElement;
+    public canvasGame: HTMLCanvasElement;
+    public canvasTransicion: HTMLCanvasElement;
     private lastFrameTime: number = 0;
 
     private gameContext: GameContext;
@@ -19,19 +19,30 @@ export class GameEngine {
 
     gameStateManager: GameStateManager;
 
-    private ctx!: CanvasRenderingContext2D;
+    private canvasGameCtx: CanvasRenderingContext2D;
 
     constructor(config: GameConfig) {
-        this.canvas = document.getElementById(
+        this.canvasGame = document.getElementById(
             config.canvasId
         ) as HTMLCanvasElement;
 
-        this.ctx = this.canvas.getContext('2d', { alpha: false })!;
+        this.canvasTransicion = document.getElementById(
+            config.canvasTransicionId
+        ) as HTMLCanvasElement;
+
+        this.canvasGameCtx = this.canvasGame.getContext('2d', {
+            alpha: false,
+        })!;
 
         this.gameContext = GameContext.getInstance();
+
         this.gameContext.registerBean(
-            CanvasRenderingContext2D,
-            this.canvas.getContext('2d', { alpha: false })!
+            GAME_CANVAS,
+            this.canvasGame.getContext('2d', { alpha: false })!
+        );
+        this.gameContext.registerBean(
+            TRANSICION_CANVAS,
+            this.canvasTransicion.getContext('2d', { alpha: true })!
         );
 
         this.assetManager = this.gameContext.getBean(AssetManager);
@@ -44,8 +55,10 @@ export class GameEngine {
     }
 
     private initializeCanvas(): void {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvasGame.width = window.innerWidth;
+        this.canvasGame.height = window.innerHeight;
+        this.canvasTransicion.width = window.innerWidth;
+        this.canvasTransicion.height = window.innerHeight;
         this.handleResize();
     }
 
@@ -84,10 +97,15 @@ export class GameEngine {
 
         this.sceneManager.currentScene?.update(deltaTime);
 
-        this.ctx.save();
-        this.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-        this.sceneManager.currentScene?.render(this.ctx);
-        this.ctx.restore();
+        this.canvasGameCtx.save();
+        this.canvasGameCtx.clearRect(
+            0,
+            0,
+            window.innerWidth,
+            window.innerHeight
+        );
+        this.sceneManager.currentScene?.render(this.canvasGameCtx);
+        this.canvasGameCtx.restore();
 
         requestAnimationFrame(this.gameLoop);
     }
@@ -99,8 +117,11 @@ export class GameEngine {
     public handleResize(): void {
         const container = document.getElementById('game-container')!;
 
-        this.canvas.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
-        this.canvas.style.transformOrigin = 'top left';
+        this.canvasGame.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
+        this.canvasGame.style.transformOrigin = 'top left';
+
+        this.canvasTransicion.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
+        this.canvasTransicion.style.transformOrigin = 'top left';
 
         container.style.width = `${window.innerWidth}px`;
         container.style.height = `${window.innerHeight}px`;

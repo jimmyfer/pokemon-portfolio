@@ -8,6 +8,7 @@ import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
 import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { DoorSequence, PlayerMovementSequence } from '@/types/effects';
+import { MapTransitionEvent } from '@/types/game-event';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -21,7 +22,16 @@ export async function createLittleRootTown() {
         DoorOpenEffect.initialState.close
     );
 
-    const playerEffect = new PlayerMovementEffect({ x: 9, y: 10 });
+    const mapTransitionEvent: MapTransitionEvent = {
+        type: 'MAP_TRANSITION',
+        from: 'little_root_town',
+        to: 'little_root_town_house_1',
+    };
+
+    const playerEffect = new PlayerMovementEffect(
+        { x: 9, y: 10 },
+        mapTransitionEvent
+    );
 
     const areaCondition = new AreaTrigger(
         { x: 9, y: 11, width: 1, height: 1 },

@@ -12,7 +12,7 @@ export enum LayerPriority {
 
 export interface Layer {
     update(deltaTime: number): void;
-    render(ctx: CanvasRenderingContext2D): void;
+    render(): void;
     priority: LayerPriority;
     enabled: boolean;
 }

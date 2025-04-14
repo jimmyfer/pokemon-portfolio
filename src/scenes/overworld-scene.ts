@@ -1,92 +1,70 @@
 import { GameContext } from '@/core/engine/game-context';
-import { CollisionSystem } from '@/core/systems/collision-system';
 import { LayerPriority } from '@/types/render-types';
-import { createLittleRootTown } from '@/game/map/littleroot_town/littleroot-town';
 import { Player } from '@/game/player/player';
 import { Camera } from '@/rendering/camera';
 import { LayerManager } from '@/rendering/layer-manager';
-import { TileMap } from '@/rendering/tile-map';
 import { GameScene } from '@/scenes/game-scene';
 import { Input } from '@/input/input-manager';
+import { WorldManager } from '@/core/engine/world-manager';
+import { GAME_CANVAS } from '@/core/engine/canvas-token';
 
 export class OverworldScene extends GameScene {
     private camera: Camera;
     private player: Player;
-    private tileMap!: TileMap;
     private npcs: any[] = [];
-    private lastExecutionTime = Date.now();
 
     private layerManager: LayerManager;
-
-    private collisionSystem: CollisionSystem;
+    private worldManager: WorldManager;
 
     constructor() {
         super();
 
         const gameContext = GameContext.getInstance();
         this.layerManager = gameContext.getBean(LayerManager);
-        this.collisionSystem = gameContext.getBean(CollisionSystem);
         this.camera = gameContext.getBean(Camera);
+        this.worldManager = gameContext.getBean(WorldManager);
 
         this.player = new Player();
         this.initializeLayers();
     }
 
     async onEnter(): Promise<void> {
-        await this.loadMap();
+        await this.worldManager.initialize();
         this.initializeLayers();
         this.camera.follow(this.player);
-    }
-
-    private async loadMap(): Promise<void> {
-        this.tileMap = await createLittleRootTown();
-        this.collisionSystem.setTileMap(this.tileMap);
-
-        this.camera.setBounds(
-            this.tileMap.getMapWidth(),
-            this.tileMap.getMapHeight()
-        );
     }
 
     private initializeLayers(): void {
         Input.initialize();
 
-        this.layerManager.addLayer('background', {
+        this.layerManager.addLayer({
             priority: LayerPriority.BACKGROUND,
             enabled: true,
             update: (delta) => {},
-            render: (ctx) => {
-                this.tileMap.render(ctx, this.camera, LayerPriority.BACKGROUND);
+            render: () => {
+                this.worldManager.render(LayerPriority.BACKGROUND);
             },
         });
 
-        this.layerManager.addLayer('background_low', {
+        this.layerManager.addLayer({
             priority: LayerPriority.BACKGROUND_LOW,
             enabled: true,
             update: (delta) => {},
-            render: (ctx) => {
-                this.tileMap.render(
-                    ctx,
-                    this.camera,
-                    LayerPriority.BACKGROUND_LOW
-                );
+            render: () => {
+                this.worldManager.render(LayerPriority.BACKGROUND_LOW);
             },
         });
 
-        this.layerManager.addLayer('background_med', {
+        this.layerManager.addLayer({
             priority: LayerPriority.BACKGROUND_MED,
             enabled: true,
             update: (delta) => {},
-            render: (ctx) => {
-                this.tileMap.render(
-                    ctx,
-                    this.camera,
-                    LayerPriority.BACKGROUND_MED
-                );
+            render: () => {
+                this.worldManager.render(LayerPriority.BACKGROUND_MED);
             },
         });
 
-        this.layerManager.addLayer('entities', {
+        this.layerManager.addLayer({
             priority: LayerPriority.ENTITIES,
             enabled: true,
             update: (delta) => {
@@ -94,41 +72,34 @@ export class OverworldScene extends GameScene {
                 this.npcs.forEach((npc) => npc.update(delta));
                 this.camera.update(delta);
             },
-            render: (ctx) => {
+            render: () => {
                 this.player.render();
-                this.npcs.forEach((npc) => npc.render(ctx, this.camera));
+                this.npcs.forEach((npc) => npc.render());
             },
         });
 
-        this.layerManager.addLayer('foreground', {
+        this.layerManager.addLayer({
             priority: LayerPriority.FOREGROUND,
             enabled: true,
             update: (delta) => {
-                this.tileMap.update(delta);
+                this.worldManager.update(delta);
             },
-            render: (ctx) => {
-                this.tileMap.render(ctx, this.camera, LayerPriority.FOREGROUND);
+            render: () => {
+                this.worldManager.render(LayerPriority.FOREGROUND);
             },
         });
 
-        this.layerManager.addLayer('ui', {
+        this.layerManager.addLayer({
             priority: LayerPriority.UI,
             enabled: true,
             update: (delta) => {},
-            render: (ctx) => {
-                this.drawDebugInfo(ctx);
+            render: () => {
+                //this.drawDebugInfo();
             },
         });
     }
 
     update(deltaTime: number) {
-        const currentTime = Date.now();
-        const elapsedTime = (currentTime - this.lastExecutionTime) / 1000;
-        if (elapsedTime >= 10) {
-            console.log('Scene Update - Delta:', deltaTime);
-            this.lastExecutionTime = currentTime;
-        }
-
         this.layerManager.update(deltaTime);
     }
 
@@ -147,16 +118,17 @@ export class OverworldScene extends GameScene {
         );
         ctx.clip();
         ctx.imageSmoothingEnabled = false;
-        this.layerManager.render(ctx);
+        this.layerManager.render();
         ctx.restore();
     }
 
-    private drawDebugInfo(ctx: CanvasRenderingContext2D): void {
-        //this.drawCameraBorders(ctx);
-        //this.drawBorderTiles(ctx);
+    private drawDebugInfo(): void {
+        this.drawCameraBorders();
+        this.drawBorderTiles();
     }
 
-    drawCameraBorders(ctx: CanvasRenderingContext2D): void {
+    drawCameraBorders(): void {
+        const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
         const offsetX = (ctx.canvas.width - this.camera.viewport.width) / 2;
         const offsetY = (ctx.canvas.height - this.camera.viewport.height) / 2;
 
@@ -189,7 +161,8 @@ export class OverworldScene extends GameScene {
         ctx.restore();
     }
 
-    private drawBorderTiles(ctx: CanvasRenderingContext2D): void {
+    private drawBorderTiles(): void {
+        const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
         const tileSize = 32;
         const startCol = 0;
         const startRow = 0;

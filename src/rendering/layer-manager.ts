@@ -1,23 +1,23 @@
 import { Injectable } from '@/core/decorators/injectable';
-import { Layer } from '../types/render-types';
+import { Layer, LayerPriority } from '../types/render-types';
 
 @Injectable()
 export class LayerManager {
-    private layers: Map<string, Layer> = new Map();
+    private layers: Map<LayerPriority, Layer> = new Map();
     private sortedLayers: Layer[] = [];
 
-    addLayer(name: string, layer: Layer): void {
-        this.layers.set(name, layer);
+    addLayer(layer: Layer): void {
+        this.layers.set(layer.priority, layer);
         this.sortLayers();
     }
 
-    removeLayer(name: string): void {
-        this.layers.delete(name);
+    removeLayer(layerPriority: LayerPriority): void {
+        this.layers.delete(layerPriority);
         this.sortLayers();
     }
 
-    getLayer(name: string): Layer | undefined {
-        return this.layers.get(name);
+    getLayer(layerPriority: LayerPriority): Layer | undefined {
+        return this.layers.get(layerPriority);
     }
 
     private sortLayers(): void {
@@ -30,7 +30,7 @@ export class LayerManager {
         this.sortedLayers.forEach((layer) => layer.update(deltaTime));
     }
 
-    render(ctx: CanvasRenderingContext2D): void {
-        this.sortedLayers.forEach((layer) => layer.render(ctx));
+    render(): void {
+        this.sortedLayers.forEach((layer) => layer.render());
     }
 }

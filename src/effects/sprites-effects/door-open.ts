@@ -3,6 +3,7 @@ import { AnimatedSprite, SpriteSheet } from '@/rendering/sprite-sheet';
 import { Effect } from '../effect';
 import { GameContext } from '@/core/engine/game-context';
 import { DoorSequence } from '@/types/effects';
+import { GAME_CANVAS } from '@/core/engine/canvas-token';
 
 export enum DOEffectInitialState {
     EFFECT_OPENED = 'opened',
@@ -83,8 +84,9 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
     render(): void {
         const frame = this.sprite.getCurrentFrame();
 
-        const ctx = GameContext.getInstance().getBean(CanvasRenderingContext2D);
-        const camera = GameContext.getInstance().getBean(Camera);
+        const gameContext = GameContext.getInstance();
+        const ctx = gameContext.getBean(GAME_CANVAS);
+        const camera = gameContext.getBean(Camera);
 
         const screenPos = {
             x: Math.ceil(

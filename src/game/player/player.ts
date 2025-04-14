@@ -1,5 +1,5 @@
 import { AssetManager } from '@/assets/assetsManager';
-import { Injectable } from '@/core/decorators/injectable';
+import { GAME_CANVAS } from '@/core/engine/canvas-token';
 import { GameContext } from '@/core/engine/game-context';
 import { CollisionSystem } from '@/core/systems/collision-system';
 import { GameStateManager } from '@/core/systems/game-state-manager';
@@ -10,14 +10,16 @@ import { Vector2D } from '@/types/sprite-sheet';
 
 export class Player {
     public position: Vector2D;
-    private sprite: AnimatedSprite;
     private targetPosition: Vector2D;
-    private isMoving: boolean = false;
+
+    public sprite: AnimatedSprite;
     private currentAnimation: string = 'idle';
+    private isMoving: boolean = false;
     private flipX: boolean = false;
     private tileSize: number;
-    private scale: number;
+    public scale: number;
     private readonly movementSpeed: number = 180;
+
     private hidden = false;
     private canMove = true;
 
@@ -28,9 +30,7 @@ export class Player {
     private lastDirection: Vector2D = { x: 0, y: 0 };
 
     private gameStateManager: GameStateManager;
-
     private assetManager: AssetManager;
-
     private collisionSystem: CollisionSystem;
 
     constructor() {
@@ -65,9 +65,14 @@ export class Player {
     }
 
     updatePlayerState() {
-        const { hidden, canMove } = this.gameStateManager.getState().player;
+        const { hidden, canMove, position } =
+            this.gameStateManager.getState().player;
         this.hidden = hidden;
         this.canMove = canMove;
+        if (this.position.x != position.x && this.position.y != position.y) {
+            this.position = this.snapToTileCenter(position);
+            this.targetPosition = this.position;
+        }
     }
 
     private configureAnimations(spriteSheet: SpriteSheet): void {
@@ -294,8 +299,9 @@ export class Player {
     render(): void {
         const frame = this.sprite.getCurrentFrame();
 
-        const ctx = GameContext.getInstance().getBean(CanvasRenderingContext2D);
-        const camera = GameContext.getInstance().getBean(Camera);
+        const gameContext = GameContext.getInstance();
+        const ctx = gameContext.getBean(GAME_CANVAS);
+        const camera = gameContext.getBean(Camera);
 
         const screenPos = {
             x:

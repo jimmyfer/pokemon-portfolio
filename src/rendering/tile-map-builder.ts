@@ -7,6 +7,8 @@ import { TriggerCondition } from '@/types/trigger';
 import { EffectSystem } from '@/core/systems/effect-system';
 import { BasicTrigger } from '@/effects/triggers/basic-trigger';
 import { EnterIntoBuilding } from '@/effects/triggers/enter-into-building';
+import { MapTransitionEvent } from '@/types/game-event';
+import { MapTransition } from '@/effects/triggers/map-transition';
 
 export class TileMapBuilder {
     private layers: MapLayer[] = [];
@@ -19,6 +21,15 @@ export class TileMapBuilder {
     constructor(tileSize: number = 16, scale: number = 2) {
         this.tileSize = tileSize;
         this.scale = scale;
+    }
+
+    addMapTransitionTrigger(
+        conditions: TriggerCondition[],
+        mapEvent: MapTransitionEvent
+    ): this {
+        this.effectSystem.addTrigger(new MapTransition(conditions, mapEvent));
+
+        return this;
     }
 
     addEffectTrigger<SequenceTypes>(
@@ -184,6 +195,15 @@ export class TileMapBuilder {
             }
         }
 
+        return this;
+    }
+
+    cleanSprite(row: number, column: number): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+        this.currentLayer.data[row][column].tile = 0;
+        this.currentLayer.data[row][column].flipX = false;
+        this.currentLayer.data[row][column].offsetX = 0;
+        this.currentLayer.data[row][column].offsetY = 0;
         return this;
     }
 
