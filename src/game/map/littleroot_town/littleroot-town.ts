@@ -25,7 +25,7 @@ export async function createLittleRootTown() {
     const mapTransitionEvent: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town',
-        to: 'little_root_town_house_1',
+        to: 'little_root_town_house01_f1',
     };
 
     const playerEffect = new PlayerMovementEffect(

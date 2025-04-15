@@ -13,6 +13,7 @@ export class GameStateManager {
         return {
             player: {
                 position: { x: 500, y: 500 },
+                spritePosition: 'down',
                 hidden: false,
                 canMove: true,
             },

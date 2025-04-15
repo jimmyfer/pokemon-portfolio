@@ -169,6 +169,24 @@ export class TileMapBuilder {
         return this;
     }
 
+    buildSingleTriggerSprite(
+        frame: number,
+        row: number,
+        column: number,
+        flipX: boolean = false,
+        offsetX: number = 0,
+        offsetY: number = 0,
+        condition: TriggerCondition
+    ): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+        this.currentLayer.data[row][column].tile = frame;
+        this.currentLayer.data[row][column].flipX = flipX;
+        this.currentLayer.data[row][column].offsetX = offsetX;
+        this.currentLayer.data[row][column].offsetY = offsetY;
+        this.currentLayer.data[row][column].condition = condition;
+        return this;
+    }
+
     buildSpriteObject(
         frames: number[][],
         row: number,

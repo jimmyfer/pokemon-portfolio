@@ -65,12 +65,13 @@ export class Player {
     }
 
     updatePlayerState() {
-        const { hidden, canMove, position } =
+        const { hidden, canMove, position, spritePosition } =
             this.gameStateManager.getState().player;
         this.hidden = hidden;
         this.canMove = canMove;
         if (this.position.x != position.x && this.position.y != position.y) {
             this.position = this.snapToTileCenter(position);
+            this.currentAnimation = spritePosition;
             this.targetPosition = this.position;
         }
     }
@@ -88,6 +89,28 @@ export class Player {
             frames: [1],
             frameRate: 0,
             loop: false,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'down',
+            frames: [0],
+            frameRate: 0,
+            loop: false,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'left',
+            frames: [2],
+            frameRate: 0,
+            loop: false,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'right',
+            frames: [2],
+            frameRate: 0,
+            loop: false,
+            flipX: true,
         });
 
         spriteSheet.defineAnimation({

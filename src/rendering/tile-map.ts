@@ -64,6 +64,12 @@ export class TileMap {
                         const tileId = tile.tile;
                         if (tileId === -1) continue;
 
+                        if (tile.condition) {
+                            if (!tile.condition.isMet()) {
+                                continue;
+                            }
+                        }
+
                         const sourceX =
                             (tileId % tilesPerRow) * this.tileset.width;
                         const sourceY =
