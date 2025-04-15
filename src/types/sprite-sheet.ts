@@ -3,6 +3,8 @@ export type AnimationConfig = {
     frames: number[];
     frameRate: number;
     loop?: boolean;
+    flipX?: boolean;
+    flipY?: boolean;
 };
 
 export type SpriteFrame = {

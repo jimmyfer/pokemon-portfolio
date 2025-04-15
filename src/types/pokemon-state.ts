@@ -6,6 +6,7 @@ export interface GameState {
 
 export interface PlayerState {
     position: Vector2D;
+    spritePosition: string;
     hidden: boolean;
     canMove: boolean;
 }

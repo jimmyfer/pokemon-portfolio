@@ -8,10 +8,11 @@ import { GameStateManager } from '../systems/game-state-manager';
 import { CollisionSystem } from '../systems/collision-system';
 import { LayerPriority } from '@/types/render-types';
 import { createRoute101 } from '@/game/map/route_101/route-101';
-import { createHouse01 } from '@/game/map/littleroot_town/houses/house-01';
 import { EventSystem } from '../systems/event-system';
 import { Vector2D } from '@/types/sprite-sheet';
 import { GAME_CANVAS, TRANSICION_CANVAS } from './canvas-token';
+import { createHouseRT01 } from '@/game/map/littleroot_town/houses/house-01';
+import { createHouseRT01F2 } from '@/game/map/littleroot_town/houses/house-01-f2';
 
 @Injectable()
 export class WorldManager {
@@ -29,6 +30,7 @@ export class WorldManager {
     private transitionDuration: number = 1000;
     private transitionTargetMapId: string | null = null;
     private transitionPlayerTargetPosition: Vector2D | null = null;
+    private transitionPlayerSpritePosition: string | null = null;
     private transitionScreenPosition: { x: number; y: number } = { x: 0, y: 0 };
     private maxRadius: number = 0;
 
@@ -40,7 +42,6 @@ export class WorldManager {
         this.camera = gameContext.getBean(Camera);
         this.collisionSystem = gameContext.getBean(CollisionSystem);
         this.eventSystem = gameContext.getBean(EventSystem);
-        console.log(gameContext);
     }
 
     async initialize() {
@@ -57,19 +58,48 @@ export class WorldManager {
             type: 'OPEN_WORLD',
             spawnPoints: new Map([
                 [
-                    'little_root_town_house_1',
-                    { spawnPosition: { x: 272, y: 272 } },
+                    'little_root_town_house01_f1',
+                    { spawnPosition: { x: 272, y: 272 }, playerPosition: 'up' },
                 ],
             ]),
         });
 
-        this.maps.set('little_root_town_house_1', {
-            id: 'little_root_town_house_1',
-            name: 'Home',
-            loader: createHouse01,
+        this.maps.set('little_root_town_house01_f1', {
+            id: 'little_root_town_house01_f1',
+            name: 'Home F1',
+            loader: createHouseRT01,
             type: 'INTERIOR',
             spawnPoints: new Map([
-                ['little_root_town', { spawnPosition: { x: 304, y: 368 } }],
+                [
+                    'little_root_town',
+                    {
+                        spawnPosition: { x: 304, y: 368 },
+                        playerPosition: 'down',
+                    },
+                ],
+                [
+                    'little_root_town_house01_f2',
+                    {
+                        spawnPosition: { x: 304, y: 80 },
+                        playerPosition: 'down',
+                    },
+                ],
+            ]),
+        });
+
+        this.maps.set('little_root_town_house01_f2', {
+            id: 'little_root_town_house01_f2',
+            name: 'Home F2',
+            loader: createHouseRT01F2,
+            type: 'INTERIOR',
+            spawnPoints: new Map([
+                [
+                    'little_root_town_house01_f1',
+                    {
+                        spawnPosition: { x: 272, y: 112 },
+                        playerPosition: 'down',
+                    },
+                ],
             ]),
         });
 
@@ -106,6 +136,7 @@ export class WorldManager {
             this.transitionTargetMapId = targetMapId;
             this.transitionScreenPosition = this.camera.targetCenter();
             this.transitionPlayerTargetPosition = spawnPoint.spawnPosition;
+            this.transitionPlayerSpritePosition = spawnPoint.playerPosition;
             const screenWidth = gameCtx.canvas.width;
             const screenHeight = gameCtx.canvas.height;
             this.maxRadius = Math.hypot(screenWidth, screenHeight) / 2;
@@ -134,6 +165,8 @@ export class WorldManager {
                             hidden: false,
                             canMove: true,
                             position: this.transitionPlayerTargetPosition!,
+                            spritePosition:
+                                this.transitionPlayerSpritePosition!,
                         },
                         world: {
                             currentMap: this.transitionTargetMapId!,

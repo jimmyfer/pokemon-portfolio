@@ -1,4 +1,5 @@
 import { LayerPriority } from './render-types';
+import { TriggerCondition } from './trigger';
 
 export interface TileLayer {
     name: string;
@@ -46,6 +47,7 @@ export interface Tile {
     flipX: boolean;
     flipY: boolean;
     collidable: boolean;
+    condition?: TriggerCondition;
 }
 
 export interface MapLayer {

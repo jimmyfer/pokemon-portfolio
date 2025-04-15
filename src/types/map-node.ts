@@ -3,6 +3,7 @@ import { Vector2D } from './sprite-sheet';
 
 export type SpawnConection = {
     spawnPosition: Vector2D;
+    playerPosition: string;
 };
 
 export interface MapNode {
