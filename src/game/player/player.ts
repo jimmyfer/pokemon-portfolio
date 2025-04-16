@@ -79,35 +79,35 @@ export class Player {
     private configureAnimations(spriteSheet: SpriteSheet): void {
         spriteSheet.defineAnimation({
             name: 'idle',
-            frames: [0, 0],
-            frameRate: 8,
-            loop: true,
+            frames: [[[0]]],
+            frameRate: 0,
+            loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'up',
-            frames: [1],
+            frames: [[[1]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'down',
-            frames: [0],
+            frames: [[[0]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'left',
-            frames: [2],
+            frames: [[[2]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'right',
-            frames: [2],
+            frames: [[[2]]],
             frameRate: 0,
             loop: false,
             flipX: true,
@@ -115,56 +115,56 @@ export class Player {
 
         spriteSheet.defineAnimation({
             name: 'walk-up-first',
-            frames: [4],
+            frames: [[[4]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-up-second',
-            frames: [7],
+            frames: [[[7]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-left',
-            frames: [2, 5, 2, 5],
+            frames: [[[2]], [[5]], [[2]], [[5]]],
             frameRate: 8,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-up',
-            frames: [4, 7, 4, 7],
+            frames: [[[4]], [[7]], [[4]], [[7]]],
             frameRate: 8,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-down',
-            frames: [3, 6, 3],
+            frames: [[[3]], [[6]], [[3]]],
             frameRate: 8,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'left-align',
-            frames: [2, 5],
+            frames: [[[2]], [[5]]],
             frameRate: 16,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'up-align',
-            frames: [1, 7],
+            frames: [[[1]], [[7]]],
             frameRate: 16,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'down-align',
-            frames: [0, 3],
+            frames: [[[0]], [[3]]],
             frameRate: 16,
             loop: true,
         });
@@ -321,30 +321,50 @@ export class Player {
 
     render(): void {
         const frame = this.sprite.getCurrentFrame();
-
         const gameContext = GameContext.getInstance();
         const ctx = gameContext.getBean(GAME_CANVAS);
         const camera = gameContext.getBean(Camera);
 
         const screenPos = {
-            x:
+            x: Math.ceil(
                 this.position.x -
-                camera.position.x -
-                (frame.width * this.scale) / 2,
-            y:
+                    camera.position.x -
+                    (frame.width * this.scale) / 2
+            ),
+            y: Math.ceil(
                 this.position.y -
-                camera.position.y -
-                (frame.height * this.scale) / 2,
+                    camera.position.y -
+                    (frame.height * this.scale) / 2
+            ),
         };
 
-        if (!this.hidden)
-            this.sprite.spriteSheet.draw(
-                ctx,
-                frame,
-                screenPos.x,
-                screenPos.y,
-                this.flipX,
-                this.scale
-            );
+        const tileWidth = this.sprite.spriteSheet.width * this.scale;
+        const tileHeight = this.sprite.spriteSheet.height * this.scale;
+
+        if (this.hidden) {
+            return;
+        }
+
+        frame.tiles.forEach((row, rowIndex) => {
+            row.forEach((tile, colIndex) => {
+                const xOffset = this.flipX
+                    ? (row.length - colIndex - 1) * tileWidth
+                    : colIndex * tileWidth;
+
+                const yOffset = rowIndex * tileHeight;
+
+                const tileX = screenPos.x + xOffset;
+                const tileY = screenPos.y + yOffset;
+
+                this.sprite.spriteSheet.draw(
+                    ctx,
+                    tile,
+                    tileX,
+                    tileY,
+                    this.flipX,
+                    this.scale
+                );
+            });
+        });
     }
 }

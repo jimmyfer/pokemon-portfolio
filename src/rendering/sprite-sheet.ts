@@ -1,37 +1,35 @@
-import { AnimationConfig, SpriteFrame } from '@/types/sprite-sheet';
+import { AnimationConfig, SpriteFrame, SpriteTile } from '@/types/sprite-sheet';
 
 export class SpriteSheet {
     private image: HTMLImageElement;
-    private frameWidth: number;
-    private frameHeight: number;
-    private frames: SpriteFrame[] = [];
+    private tileWidth: number;
+    private tileHeight: number;
+    private tiles: SpriteTile[] = [];
     private animations: Map<string, AnimationConfig> = new Map();
 
     constructor(
         image: HTMLImageElement,
-        frameWidth: number,
-        frameHeight: number,
+        tileWidth: number,
+        tileHeight: number,
         padding: number = 0
     ) {
         this.image = image;
-        this.frameWidth = frameWidth;
-        this.frameHeight = frameHeight;
+        this.tileWidth = tileWidth;
+        this.tileHeight = tileHeight;
         this.generateFrames(padding);
     }
 
     private generateFrames(padding: number): void {
-        const cols = Math.floor(this.image.width / (this.frameWidth + padding));
+        const cols = Math.floor(this.image.width / (this.tileWidth + padding));
         const rows = Math.floor(
-            this.image.height / (this.frameHeight + padding)
+            this.image.height / (this.tileHeight + padding)
         );
 
         for (let y = 0; y < rows; y++) {
             for (let x = 0; x < cols; x++) {
-                this.frames.push({
-                    x: x * (this.frameWidth + padding),
-                    y: y * (this.frameHeight + padding),
-                    width: this.frameWidth,
-                    height: this.frameHeight,
+                this.tiles.push({
+                    x: x * (this.tileWidth + padding),
+                    y: y * (this.tileHeight + padding),
                 });
             }
         }
@@ -48,13 +46,6 @@ export class SpriteSheet {
         return this.image;
     }
 
-    getFrame(frameIndex: number): SpriteFrame {
-        if (frameIndex < 0 || frameIndex >= this.frames.length) {
-            throw new Error(`Invalid frame index: ${frameIndex}`);
-        }
-        return this.frames[frameIndex];
-    }
-
     getAnimation(name: string): AnimationConfig {
         const animation = this.animations.get(name);
         if (!animation) {
@@ -63,9 +54,16 @@ export class SpriteSheet {
         return animation;
     }
 
+    getTile(frameIndex: number): SpriteTile {
+        if (frameIndex < 0 || frameIndex >= this.tiles.length) {
+            throw new Error(`Invalid frame index: ${frameIndex}`);
+        }
+        return this.tiles[frameIndex];
+    }
+
     draw(
         ctx: CanvasRenderingContext2D,
-        frame: SpriteFrame,
+        tile: SpriteTile,
         x: number,
         y: number,
         flipX: boolean = false,
@@ -74,30 +72,30 @@ export class SpriteSheet {
         ctx.save();
         if (flipX) {
             ctx.scale(-1, 1);
-            x = -x - this.frameWidth * scale;
+            x = -x - this.tileWidth * scale;
         }
 
         ctx.drawImage(
             this.image,
-            frame.x,
-            frame.y,
-            frame.width,
-            frame.height,
+            tile.x,
+            tile.y,
+            this.width,
+            this.height,
             x,
             y,
-            this.frameWidth * scale,
-            this.frameHeight * scale
+            this.tileWidth * scale,
+            this.tileHeight * scale
         );
 
         ctx.restore();
     }
 
     get width(): number {
-        return this.frameWidth;
+        return this.tileWidth;
     }
 
     get height(): number {
-        return this.frameHeight;
+        return this.tileHeight;
     }
 }
 
@@ -153,11 +151,23 @@ export class AnimatedSprite {
 
     getCurrentFrame(): SpriteFrame {
         if (!this.currentAnimation) {
-            return this.spriteSheet.getFrame(0);
+            return { tiles: [], width: 0, height: 0 };
         }
-        const actualFrame =
+
+        const currentTileIndices =
             this.currentAnimation.frames[this.currentFrameIndex];
-        return this.spriteSheet.getFrame(actualFrame);
+        const tileWidth = this.spriteSheet.width;
+        const tileHeight = this.spriteSheet.height;
+
+        const tiles = currentTileIndices.map((row) =>
+            row.map((index) => this.spriteSheet.getTile(index))
+        );
+
+        return {
+            tiles,
+            width: tiles[0]?.length * tileWidth || 0,
+            height: tiles.length * tileHeight,
+        };
     }
 
     playSequence(

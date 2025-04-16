@@ -1,15 +1,19 @@
 export type AnimationConfig = {
     name: string;
-    frames: number[];
+    frames: number[][][];
     frameRate: number;
     loop?: boolean;
     flipX?: boolean;
     flipY?: boolean;
 };
 
-export type SpriteFrame = {
+export type SpriteTile = {
     x: number;
     y: number;
+};
+
+export type SpriteFrame = {
+    tiles: SpriteTile[][];
     width: number;
     height: number;
 };

@@ -2,7 +2,7 @@ import { Camera } from '@/rendering/camera';
 import { AnimatedSprite, SpriteSheet } from '@/rendering/sprite-sheet';
 import { Effect } from '../effect';
 import { GameContext } from '@/core/engine/game-context';
-import { DoorSequence } from '@/types/effects';
+import { LabDoorSequence } from '@/types/effects';
 import { GAME_CANVAS } from '@/core/engine/canvas-token';
 
 export enum DOEffectInitialState {
@@ -10,7 +10,7 @@ export enum DOEffectInitialState {
     EFFECT_CLOSED = 'closed',
 }
 
-export class DoorOpenEffect extends Effect<DoorSequence> {
+export class LabDoorOpenEffect extends Effect<LabDoorSequence> {
     private sprite: AnimatedSprite;
     private flipX: boolean = false;
     private scale: number;
@@ -31,7 +31,7 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
         this.flipX = flipX;
         this.scale = scale;
 
-        const spriteSheet = this.assetManager.getSpriteSheet('door');
+        const spriteSheet = this.assetManager.getSpriteSheet('lab_door');
         this.configureAnimations(spriteSheet);
         this.sprite = new AnimatedSprite(spriteSheet);
         this.sprite.play(initialAnimation);
@@ -40,39 +40,59 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
     private configureAnimations(spriteSheet: SpriteSheet): void {
         spriteSheet.defineAnimation({
             name: 'closed',
-            frames: [[[19442, 19443]]],
+            frames: [
+                [
+                    [19655, 19656],
+                    [19671, 19672],
+                ],
+            ],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'little_opened',
-            frames: [[[19446, 19447]]],
+            frames: [
+                [
+                    [19653, 19654],
+                    [19669, 19670],
+                ],
+            ],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'almost_opened',
-            frames: [[[19448, 19449]]],
+            frames: [
+                [
+                    [19651, 19652],
+                    [19667, 19668],
+                ],
+            ],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'opened',
-            frames: [[[19444, 19445]]],
+            frames: [
+                [
+                    [19649, 19650],
+                    [19665, 19666],
+                ],
+            ],
             frameRate: 0,
             loop: false,
         });
 
-        this.animationSequences.set(DoorSequence.OPEN_EFFECT, {
+        this.animationSequences.set(LabDoorSequence.OPEN_EFFECT, {
             duraction: 0.5,
             animations: ['closed', 'little_opened', 'almost_opened', 'opened'],
             quantity: 1,
         });
 
-        this.animationSequences.set(DoorSequence.CLOSE_EFFECT, {
+        this.animationSequences.set(LabDoorSequence.CLOSE_EFFECT, {
             duraction: 0.5,
             animations: ['opened', 'almost_opened', 'little_opened', 'closed'],
             quantity: 1,
@@ -128,7 +148,7 @@ export class DoorOpenEffect extends Effect<DoorSequence> {
         });
     }
 
-    playSequence(deltaTime: number, sequence: DoorSequence): void {
+    playSequence(deltaTime: number, sequence: LabDoorSequence): void {
         const { duraction, animations, quantity } =
             this.animationSequences.get(sequence) || {};
         if (!duraction || !animations || !quantity) return;

@@ -34,11 +34,11 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
         };
 
         this.sprite = new AnimatedSprite(
-            this.assetManager.getSpriteSheet('player-effect')
+            this.assetManager.getSpriteSheet('player_effect')
         );
 
         this.configureAnimations(
-            this.assetManager.getSpriteSheet('player-effect')
+            this.assetManager.getSpriteSheet('player_effect')
         );
 
         this.animationSequences.set(PlayerMovementSequence.WALK_UP, {
@@ -51,28 +51,28 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
     private configureAnimations(spriteSheet: SpriteSheet): void {
         spriteSheet.defineAnimation({
             name: 'idle',
-            frames: [0, 0],
-            frameRate: 8,
-            loop: true,
+            frames: [[[0]]],
+            frameRate: 0,
+            loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'up',
-            frames: [1],
+            frames: [[[1]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-up-first',
-            frames: [4],
+            frames: [[[4]]],
             frameRate: 0,
             loop: false,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-up-second',
-            frames: [7],
+            frames: [[[7]]],
             frameRate: 0,
             loop: false,
         });
@@ -84,7 +84,6 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
 
     render(): void {
         const frame = this.sprite.getCurrentFrame();
-
         const gameContext = GameContext.getInstance();
         const ctx = gameContext.getBean(GAME_CANVAS);
         const camera = gameContext.getBean(Camera);
@@ -101,15 +100,33 @@ export class PlayerMovementEffect extends Effect<PlayerMovementSequence> {
                     (frame.height * this.scale) / 2
             ),
         };
+
+        const tileWidth = this.sprite.spriteSheet.width * this.scale;
+        const tileHeight = this.sprite.spriteSheet.height * this.scale;
+
         ctx.filter = 'brightness(70%)';
-        this.sprite.spriteSheet.draw(
-            ctx,
-            frame,
-            screenPos.x,
-            screenPos.y,
-            this.flipX,
-            this.scale
-        );
+
+        frame.tiles.forEach((row, rowIndex) => {
+            row.forEach((tile, colIndex) => {
+                const xOffset = this.flipX
+                    ? (row.length - colIndex - 1) * tileWidth
+                    : colIndex * tileWidth;
+
+                const yOffset = rowIndex * tileHeight;
+
+                const tileX = screenPos.x + xOffset;
+                const tileY = screenPos.y + yOffset;
+
+                this.sprite.spriteSheet.draw(
+                    ctx,
+                    tile,
+                    tileX,
+                    tileY,
+                    this.flipX,
+                    this.scale
+                );
+            });
+        });
         ctx.filter = 'none';
     }
 

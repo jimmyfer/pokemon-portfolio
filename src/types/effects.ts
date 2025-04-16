@@ -7,4 +7,12 @@ export enum DoorSequence {
     CLOSE_EFFECT = 'CLOSE_EFFECT',
 }
 
-export type SequenceTypes = DoorSequence | PlayerMovementSequence;
+export enum LabDoorSequence {
+    OPEN_EFFECT = 'OPEN_EFFECT',
+    CLOSE_EFFECT = 'CLOSE_EFFECT',
+}
+
+export type SequenceTypes =
+    | DoorSequence
+    | LabDoorSequence
+    | PlayerMovementSequence;

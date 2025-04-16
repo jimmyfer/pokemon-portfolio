@@ -9,20 +9,20 @@ import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
 
-export async function createHouseRT01() {
+export async function createHouseRT02() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
 
     const mapTransitionEventRT: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
-        from: 'little_root_town_house01_f1',
+        from: 'little_root_town_house02_f1',
         to: 'little_root_town',
     };
 
     const mapTransitionEventF2: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
-        from: 'little_root_town_house01_f1',
-        to: 'little_root_town_house01_f2',
+        from: 'little_root_town_house02_f1',
+        to: 'little_root_town_house02_f2',
     };
 
     const areaConditionToRT = new AreaTrigger(
@@ -67,9 +67,21 @@ export async function createHouseRT01() {
         .fillArea(19553, 0, 0, 32, 32)
         .buildSpriteRow([19556], 0, 0, 0, 0)
         .buildSpriteObjectRow([[19556], [19572]], 0, 0, 0, 0, 7)
-        .buildSpriteObjectRow([[19556], [19572]], 1, 8, 0, 0, 7)
-        .buildSpriteObjectRow([[19558], [19574]], 1, 7, 0, 0, 1)
-        .buildSpriteObjectRow([[19560], [19576]], 1, 10, 0, 0, 1)
+        .buildSpriteObjectRow(
+            [
+                [19556, 19556],
+                [19572, 19572],
+            ],
+            1,
+            8,
+            0,
+            0,
+            1
+        )
+        .buildSpriteObjectRow([[19558]], 1, 7, 0, 0, 1)
+        .buildSpriteObjectRow([[19574]], 2, 7, 0, 0, 1)
+        .buildSpriteObjectRow([[19560]], 1, 10, 0, 0, 1)
+        .buildSpriteObjectRow([[19576]], 2, 10, 0, 0, 1)
         .buildSingleSprite(19604, 0, 7)
         .cleanSprite(0, 8)
         .cleanSprite(0, 9)

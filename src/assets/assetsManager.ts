@@ -1,9 +1,9 @@
 import { Injectable } from '@/core/decorators/injectable';
 import { SpriteSheet } from '@/rendering/sprite-sheet';
+import { ImageCache } from './image-cache';
 
 @Injectable()
 export class AssetManager {
-    private textures = new Map<string, HTMLImageElement>();
     private spriteSheets = new Map<string, SpriteSheet>();
     private jsonData = new Map<string, any>();
 
@@ -25,26 +25,19 @@ export class AssetManager {
     }
 
     async loadImage(name: string, url: string): Promise<HTMLImageElement> {
-        if (this.textures.has(name)) {
-            return this.textures.get(name)!;
+        try {
+            const img = await ImageCache.load(url);
+            return img;
+        } catch (error) {
+            throw new Error(`Failed to load image ${name}: ${error}`);
         }
-
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = url;
-            img.onload = () => {
-                this.textures.set(name, img);
-                resolve(img);
-            };
-            img.onerror = reject;
-        });
     }
 
-    getTexture(name: string): HTMLImageElement {
-        if (!this.textures.has(name)) {
-            throw new Error(`Texture '${name}' not loaded`);
+    getSpriteSheet(name: string): SpriteSheet {
+        if (!this.spriteSheets.has(name)) {
+            throw new Error(`SpriteSheet '${name}' not loaded`);
         }
-        return this.textures.get(name)!;
+        return this.spriteSheets.get(name)!;
     }
 
     async loadSpriteSheet(
@@ -67,13 +60,6 @@ export class AssetManager {
         );
         this.spriteSheets.set(name, spriteSheet);
         return spriteSheet;
-    }
-
-    getSpriteSheet(name: string): SpriteSheet {
-        if (!this.spriteSheets.has(name)) {
-            throw new Error(`SpriteSheet '${name}' not loaded`);
-        }
-        return this.spriteSheets.get(name)!;
     }
 
     getJson<T>(name: string): T {
