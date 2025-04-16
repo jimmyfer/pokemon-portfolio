@@ -13,6 +13,9 @@ import { Vector2D } from '@/types/sprite-sheet';
 import { GAME_CANVAS, TRANSICION_CANVAS } from './canvas-token';
 import { createHouseRT01 } from '@/game/map/littleroot_town/houses/house-01';
 import { createHouseRT01F2 } from '@/game/map/littleroot_town/houses/house-01-f2';
+import { createHouseRT02 } from '@/game/map/littleroot_town/houses/house-02';
+import { createHouseRT02F2 } from '@/game/map/littleroot_town/houses/house-02-f2';
+import { createHouseRTLab } from '@/game/map/littleroot_town/houses/lab';
 
 @Injectable()
 export class WorldManager {
@@ -61,6 +64,14 @@ export class WorldManager {
                     'little_root_town_house01_f1',
                     { spawnPosition: { x: 272, y: 272 }, playerPosition: 'up' },
                 ],
+                [
+                    'little_root_town_house02_f1',
+                    { spawnPosition: { x: 272, y: 272 }, playerPosition: 'up' },
+                ],
+                [
+                    'little_root_town_lab',
+                    { spawnPosition: { x: 208, y: 400 }, playerPosition: 'up' },
+                ],
             ]),
         });
 
@@ -103,6 +114,61 @@ export class WorldManager {
             ]),
         });
 
+        this.maps.set('little_root_town_house02_f1', {
+            id: 'little_root_town_house02_f1',
+            name: 'RT House 02 F1',
+            loader: createHouseRT02,
+            type: 'INTERIOR',
+            spawnPoints: new Map([
+                [
+                    'little_root_town',
+                    {
+                        spawnPosition: { x: 624, y: 368 },
+                        playerPosition: 'down',
+                    },
+                ],
+                [
+                    'little_root_town_house02_f2',
+                    {
+                        spawnPosition: { x: 304, y: 80 },
+                        playerPosition: 'down',
+                    },
+                ],
+            ]),
+        });
+
+        this.maps.set('little_root_town_house02_f2', {
+            id: 'little_root_town_house02_f2',
+            name: 'RT House 02 F1',
+            loader: createHouseRT02F2,
+            type: 'INTERIOR',
+            spawnPoints: new Map([
+                [
+                    'little_root_town_house02_f1',
+                    {
+                        spawnPosition: { x: 272, y: 112 },
+                        playerPosition: 'down',
+                    },
+                ],
+            ]),
+        });
+
+        this.maps.set('little_root_town_lab', {
+            id: 'little_root_town_lab',
+            name: 'RT Lab',
+            loader: createHouseRTLab,
+            type: 'INTERIOR',
+            spawnPoints: new Map([
+                [
+                    'little_root_town',
+                    {
+                        spawnPosition: { x: 368, y: 688 },
+                        playerPosition: 'down',
+                    },
+                ],
+            ]),
+        });
+
         this.maps.set('route_101', {
             id: 'route_101',
             name: 'Route 101',
@@ -139,7 +205,7 @@ export class WorldManager {
             this.transitionPlayerSpritePosition = spawnPoint.playerPosition;
             const screenWidth = gameCtx.canvas.width;
             const screenHeight = gameCtx.canvas.height;
-            this.maxRadius = Math.hypot(screenWidth, screenHeight) / 2;
+            this.maxRadius = Math.hypot(screenWidth, screenHeight);
             this.transitionPhase = 'closing';
             this.transitionProgress = 0;
         } else {

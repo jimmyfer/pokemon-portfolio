@@ -72,19 +72,31 @@ export class GameEngine {
 
     private async loadAssets() {
         await this.assetManager.loadSpriteSheet(
+            'sprites',
+            'assets/sprites/sprites.png',
+            16,
+            16
+        );
+        await this.assetManager.loadSpriteSheet(
             'player',
             'assets/sprites/character_01.png',
             32,
             32
         );
         await this.assetManager.loadSpriteSheet(
-            'player-effect',
+            'player_effect',
             'assets/sprites/character_01.png',
             32,
             32
         );
         await this.assetManager.loadSpriteSheet(
-            'sprites',
+            'door',
+            'assets/sprites/sprites.png',
+            16,
+            16
+        );
+        await this.assetManager.loadSpriteSheet(
+            'lab_door',
             'assets/sprites/sprites.png',
             16,
             16
@@ -94,7 +106,6 @@ export class GameEngine {
     private gameLoop(timestamp: number) {
         const deltaTime = timestamp - this.lastFrameTime;
         this.lastFrameTime = timestamp;
-
         this.sceneManager.currentScene?.update(deltaTime);
 
         this.canvasGameCtx.save();

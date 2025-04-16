@@ -9,14 +9,14 @@ import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
 
-export async function createHouseRT01F2() {
+export async function createHouseRT02F2() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
 
     const mapTransitionEvent: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
-        from: 'little_root_town_house01_f2',
-        to: 'little_root_town_house01_f1',
+        from: 'little_root_town_house02_f2',
+        to: 'little_root_town_house02_f1',
     };
 
     const areaCondition = new AreaTrigger(

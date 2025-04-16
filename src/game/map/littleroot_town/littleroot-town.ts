@@ -7,39 +7,104 @@ import { AreaTrigger } from '@/effects/trigger-conditions/area';
 import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
 import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
-import { DoorSequence, PlayerMovementSequence } from '@/types/effects';
+import {
+    DoorSequence,
+    LabDoorSequence,
+    PlayerMovementSequence,
+} from '@/types/effects';
 import { MapTransitionEvent } from '@/types/game-event';
+import { LabDoorOpenEffect } from '@/effects/sprites-effects/lab-door-open';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
     const appScale = GameContext.getInstance().getTilesScale();
 
-    const doorEffect = new DoorOpenEffect(
-        302,
+    const doorEffectToH1 = new DoorOpenEffect(
+        318,
         324,
         appScale,
         DoorOpenEffect.initialState.close
     );
 
-    const mapTransitionEvent: MapTransitionEvent = {
+    const doorEffectToH2 = new DoorOpenEffect(
+        610,
+        324,
+        appScale,
+        DoorOpenEffect.initialState.close,
+        true
+    );
+
+    const doorEffectToLab = new LabDoorOpenEffect(
+        370,
+        638,
+        appScale,
+        DoorOpenEffect.initialState.close,
+        false
+    );
+
+    const mapTransitionEventToH1: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town',
         to: 'little_root_town_house01_f1',
     };
 
-    const playerEffect = new PlayerMovementEffect(
+    const mapTransitionEventToH2: MapTransitionEvent = {
+        type: 'MAP_TRANSITION',
+        from: 'little_root_town',
+        to: 'little_root_town_house02_f1',
+    };
+
+    const mapTransitionEventToLab: MapTransitionEvent = {
+        type: 'MAP_TRANSITION',
+        from: 'little_root_town',
+        to: 'little_root_town_lab',
+    };
+
+    const playerEffectToH1 = new PlayerMovementEffect(
         { x: 9, y: 10 },
-        mapTransitionEvent
+        mapTransitionEventToH1
     );
 
-    const areaCondition = new AreaTrigger(
+    const playerEffectToH2 = new PlayerMovementEffect(
+        { x: 19, y: 10 },
+        mapTransitionEventToH2
+    );
+
+    const playerEffectToLab = new PlayerMovementEffect(
+        { x: 11, y: 20 },
+        mapTransitionEventToLab
+    );
+
+    const areaConditionToH1 = new AreaTrigger(
         { x: 9, y: 11, width: 1, height: 1 },
         32
     );
+
+    const areaConditionToH2 = new AreaTrigger(
+        { x: 19, y: 11, width: 1, height: 1 },
+        32
+    );
+
+    const areaConditionToLab = new AreaTrigger(
+        { x: 11, y: 21, width: 1, height: 1 },
+        32
+    );
+
     const keyCondition = new KeyPressTrigger('ArrowUp');
-    const compositeCondition = new CompositeTrigger([
-        areaCondition,
+
+    const compositeConditionToH1 = new CompositeTrigger([
+        areaConditionToH1,
+        keyCondition,
+    ]);
+
+    const compositeConditionToH2 = new CompositeTrigger([
+        areaConditionToH2,
+        keyCondition,
+    ]);
+
+    const compositeConditionToLab = new CompositeTrigger([
+        areaConditionToLab,
         keyCondition,
     ]);
 
@@ -87,76 +152,76 @@ export async function createLittleRootTown() {
             .fillArea(2246, 0, 0, 32, 32)
             .createLayer('trees', 900, 900, false, LayerPriority.FOREGROUND)
             //line right
-            .buildSpriteObjectRow([176, 177, 178, 179], 0, 0, -35, 0, 6)
-            .buildSpriteObjectRow([176, 177, 178, 179], 0, 24, -244, 0, 5)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 0, 0, -35, 0, 6)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 0, 24, -244, 0, 5)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 1, 0, -35, -5, 6)
-            .buildSpriteObjectRow([160, 161, 162, 163], 2, 0, -35, -5, 6)
-            .buildSpriteObjectRow([176, 177, 178, 179], 3, 0, -35, -5, 6)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 1, 0, -35, -5, 6)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 2, 0, -35, -5, 6)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 3, 0, -35, -5, 6)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 4, 0, -35, -5, 2)
-            .buildSpriteObjectRow([160, 161, 162, 163], 5, 0, -35, -5, 2)
-            .buildSpriteObjectRow([176, 177, 178, 179], 6, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 4, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 5, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 6, 0, -35, -5, 2)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 7, 0, -35, -5, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 8, 0, -35, -5, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 9, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 7, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 8, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 9, 0, -35, -5, 1)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 10, 0, -35, -5, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 11, 0, -35, -5, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 12, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 10, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 11, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 12, 0, -35, -5, 1)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 13, 0, -35, -5, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 14, 0, -35, -5, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 15, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 13, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 14, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 15, 0, -35, -5, 1)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 16, 0, -35, -5, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 17, 0, -35, -5, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 18, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 16, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 17, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 18, 0, -35, -5, 1)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 19, 0, -35, -5, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 20, 0, -35, -5, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 21, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 19, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 20, 0, -35, -5, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 21, 0, -35, -5, 1)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 22, 0, -35, -5, 2)
-            .buildSpriteObjectRow([160, 161, 162, 163], 23, 0, -35, -5, 2)
-            .buildSpriteObjectRow([176, 177, 178, 179], 24, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 22, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 23, 0, -35, -5, 2)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 24, 0, -35, -5, 2)
             // line right
-            .buildSpriteObjectRow([144, 145, 146, 147], 25, 0, -35, -5, 12)
-            .buildSpriteObjectRow([160, 161, 162, 163], 26, 0, -35, -5, 12)
-            .buildSpriteObjectRow([176, 177, 178, 179], 27, 0, -35, -5, 12)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 25, 0, -35, -5, 12)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 26, 0, -35, -5, 12)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 27, 0, -35, -5, 12)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 1, 24, -244, -5, 5)
-            .buildSpriteObjectRow([160, 161, 162, 163], 2, 24, -244, -5, 5)
-            .buildSpriteObjectRow([176, 177, 178, 179], 3, 24, -244, -5, 5)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 1, 24, -244, -5, 5)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 2, 24, -244, -5, 5)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 3, 24, -244, -5, 5)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 4, 31, -228, -10, 2)
-            .buildSpriteObjectRow([160, 161, 162, 163], 5, 31, -228, -10, 2)
-            .buildSpriteObjectRow([176, 177, 178, 179], 6, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 4, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 5, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 6, 31, -228, -10, 2)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 7, 31, -148, -10, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 8, 31, -148, -10, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 9, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 7, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 8, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 9, 31, -148, -10, 1)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 10, 31, -148, -10, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 11, 31, -148, -10, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 12, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 10, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 11, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 12, 31, -148, -10, 1)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 13, 31, -148, -10, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 14, 31, -148, -10, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 15, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 13, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 14, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 15, 31, -148, -10, 1)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 16, 31, -148, -10, 1)
-            .buildSpriteObjectRow([160, 161, 162, 163], 17, 31, -148, -10, 1)
-            .buildSpriteObjectRow([176, 177, 178, 179], 18, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 16, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 17, 31, -148, -10, 1)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 18, 31, -148, -10, 1)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 19, 31, -228, -10, 2)
-            .buildSpriteObjectRow([160, 161, 162, 163], 20, 31, -228, -10, 2)
-            .buildSpriteObjectRow([176, 177, 178, 179], 21, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 19, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 20, 31, -228, -10, 2)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 21, 31, -228, -10, 2)
             // line left
-            .buildSpriteObjectRow([144, 145, 146, 147], 22, 31, -308, -10, 3)
-            .buildSpriteObjectRow([160, 161, 162, 163], 23, 31, -308, -10, 3)
-            .buildSpriteObjectRow([176, 177, 178, 179], 24, 31, -308, -10, 3)
+            .buildSpriteObjectRow([[144, 145, 146, 147]], 22, 31, -308, -10, 3)
+            .buildSpriteObjectRow([[160, 161, 162, 163]], 23, 31, -308, -10, 3)
+            .buildSpriteObjectRow([[176, 177, 178, 179]], 24, 31, -308, -10, 3)
             .createLayer('flowers', 29, 27, false, LayerPriority.BACKGROUND_LOW)
             .buildSingleSprite(2440, 10, 3)
             .buildSingleSprite(2440, 14, 3)
@@ -303,9 +368,21 @@ export async function createLittleRootTown() {
             )
             .createLayer('effects', 29, 27, false, LayerPriority.BACKGROUND)
             .addEnterIntoBuildingEffectTrigger(
-                [doorEffect, playerEffect],
+                [doorEffectToH1, playerEffectToH1],
                 [DoorSequence.OPEN_EFFECT, PlayerMovementSequence.WALK_UP],
-                [compositeCondition],
+                [compositeConditionToH1],
+                500
+            )
+            .addEnterIntoBuildingEffectTrigger(
+                [doorEffectToH2, playerEffectToH2],
+                [DoorSequence.OPEN_EFFECT, PlayerMovementSequence.WALK_UP],
+                [compositeConditionToH2],
+                500
+            )
+            .addEnterIntoBuildingEffectTrigger(
+                [doorEffectToLab, playerEffectToLab],
+                [LabDoorSequence.OPEN_EFFECT, PlayerMovementSequence.WALK_UP],
+                [compositeConditionToLab],
                 500
             )
             .build()

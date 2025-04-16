@@ -159,24 +159,8 @@ export class TileMapBuilder {
         column: number,
         flipX: boolean = false,
         offsetX: number = 0,
-        offsetY: number = 0
-    ): this {
-        if (!this.currentLayer) throw new Error('No layer selected');
-        this.currentLayer.data[row][column].tile = frame;
-        this.currentLayer.data[row][column].flipX = flipX;
-        this.currentLayer.data[row][column].offsetX = offsetX;
-        this.currentLayer.data[row][column].offsetY = offsetY;
-        return this;
-    }
-
-    buildSingleTriggerSprite(
-        frame: number,
-        row: number,
-        column: number,
-        flipX: boolean = false,
-        offsetX: number = 0,
         offsetY: number = 0,
-        condition: TriggerCondition
+        condition?: TriggerCondition
     ): this {
         if (!this.currentLayer) throw new Error('No layer selected');
         this.currentLayer.data[row][column].tile = frame;
@@ -226,28 +210,52 @@ export class TileMapBuilder {
     }
 
     buildSpriteObjectRow(
-        frames: number[],
+        tilesId: number[][],
         row: number,
         startColumn: number,
         offsetX: number = 0,
         offsetY: number = 0,
-        cantidad: number
+        cantidad: number = 1,
+        flipX: boolean = false,
+        condition?: TriggerCondition
     ): this {
         if (!this.currentLayer) throw new Error('No layer selected');
 
-        frames.forEach((frame, index) => {
-            const column = startColumn + index;
-            for (let i = 0; i < cantidad; i++) {
-                this.currentLayer!.data[row][column + i * frames.length].tile =
-                    frame;
-                this.currentLayer!.data[row][
-                    column + i * frames.length
-                ].offsetX = offsetX - i * frames.length * 12;
-                this.currentLayer!.data[row][
-                    column + i * frames.length
-                ].offsetY = offsetY;
+        const objectHeight = tilesId.length;
+        const objectWidth = tilesId[0].length;
+
+        for (let copy = 0; copy < cantidad; copy++) {
+            for (let r = 0; r < objectHeight; r++) {
+                const targetRow = row + r;
+
+                if (targetRow >= this.currentLayer.data.length) continue;
+
+                for (let c = 0; c < objectWidth; c++) {
+                    const targetColumn = startColumn + c + copy * objectWidth;
+
+                    if (
+                        targetColumn >= this.currentLayer.data[targetRow].length
+                    )
+                        continue;
+
+                    this.currentLayer.data[targetRow][targetColumn].tile =
+                        tilesId[r][c];
+
+                    this.currentLayer.data[targetRow][targetColumn].offsetX =
+                        offsetX == 0
+                            ? offsetX
+                            : offsetX - copy * objectWidth * 12;
+                    this.currentLayer.data[targetRow][targetColumn].offsetY =
+                        offsetY;
+
+                    this.currentLayer.data[targetRow][targetColumn].flipX =
+                        flipX;
+
+                    this.currentLayer.data[targetRow][targetColumn].condition =
+                        condition;
+                }
             }
-        });
+        }
 
         return this;
     }
@@ -316,6 +324,25 @@ export class TileMapBuilder {
                 }
             }
         }
+        return this;
+    }
+
+    fillAreaWithTiles(tiles: number[][]): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+
+        const layerRows = this.currentLayer.data.length;
+        const layerCols = this.currentLayer.data[0].length;
+        const patternRows = tiles.length;
+
+        for (let row = 0; row < layerRows; row++) {
+            const tileRow = tiles[row % patternRows];
+            const patternCols = tileRow.length;
+            for (let col = 0; col < layerCols; col++) {
+                this.currentLayer.data[row][col].tile =
+                    tileRow[col % patternCols];
+            }
+        }
+
         return this;
     }
 

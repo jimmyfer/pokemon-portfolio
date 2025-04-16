@@ -65,6 +65,15 @@ export class OverworldScene extends GameScene {
         });
 
         this.layerManager.addLayer({
+            priority: LayerPriority.BACKGROUND_HIGH,
+            enabled: true,
+            update: (delta) => {},
+            render: () => {
+                this.worldManager.render(LayerPriority.BACKGROUND_HIGH);
+            },
+        });
+
+        this.layerManager.addLayer({
             priority: LayerPriority.ENTITIES,
             enabled: true,
             update: (delta) => {
