@@ -113,19 +113,7 @@ export class OverworldScene extends GameScene {
     }
 
     render(ctx: CanvasRenderingContext2D) {
-        const offsetX = (ctx.canvas.width - this.camera.viewport.width) / 2;
-        const offsetY = (ctx.canvas.height - this.camera.viewport.height) / 2;
-
         ctx.save();
-
-        ctx.beginPath();
-        ctx.rect(
-            offsetX,
-            offsetY,
-            this.camera.viewport.width,
-            this.camera.viewport.height
-        );
-        ctx.clip();
         ctx.imageSmoothingEnabled = false;
         this.layerManager.render();
         ctx.restore();
