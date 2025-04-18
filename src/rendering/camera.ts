@@ -9,6 +9,8 @@ export class Camera {
     position: Vector2D = { x: 0, y: 0 };
     viewport: { width: number; height: number };
     private target?: Player;
+    private mapWidth: number = 0;
+    private mapHeight: number = 0;
 
     private bounds = { minX: 0, minY: 0, maxX: Infinity, maxY: Infinity };
 
@@ -31,12 +33,8 @@ export class Camera {
     }
 
     setBounds(mapWidth: number, mapHeight: number): void {
-        this.bounds = {
-            minX: 0,
-            minY: 0,
-            maxX: Math.max(mapWidth - this.viewport.width, 0),
-            maxY: Math.max(mapHeight - this.viewport.height, 0),
-        };
+        this.mapWidth = mapWidth;
+        this.mapHeight = mapHeight;
     }
 
     follow(target: Player): void {
@@ -47,21 +45,30 @@ export class Camera {
         if (!this.target) return;
 
         const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
-        const targetX = this.target.position.x - ctx.canvas.width / 2;
-        const targetY = this.target.position.y - ctx.canvas.height / 2;
+        const scale = GameContext.getInstance().getGameScale();
 
-        const offsetX = (ctx.canvas.width - this.viewport.width) / 2;
-        const offsetY = (ctx.canvas.height - this.viewport.height) / 2;
+        const effectiveViewportWidth = ctx.canvas.width / scale;
+        const effectiveViewportHeight = ctx.canvas.height / scale;
+
+        const targetX = this.target.position.x - effectiveViewportWidth / 2;
+        const targetY = this.target.position.y - effectiveViewportHeight / 2;
+
+        this.bounds = {
+            minX: 0,
+            minY: 0,
+            maxX: Math.max(this.mapWidth - effectiveViewportWidth, 0),
+            maxY: Math.max(this.mapHeight - effectiveViewportHeight, 0),
+        };
 
         const clampedX = this.clamp(
             targetX,
-            this.bounds.minX - offsetX,
-            this.bounds.maxX - offsetX
+            this.bounds.minX,
+            this.bounds.maxX
         );
         const clampedY = this.clamp(
             targetY,
-            this.bounds.minY - offsetY,
-            this.bounds.maxY - offsetY
+            this.bounds.minY,
+            this.bounds.maxY
         );
 
         const damping = 0.1 * (deltaTime / 16.67);

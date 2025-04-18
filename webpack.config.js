@@ -20,6 +20,14 @@ module.exports = {
                 },
             },
             {
+                test: /\.html$/i,
+                use: 'html-loader',
+            },
+            {
+                test: /\.css$/i,
+                use: 'raw-loader',
+            },
+            {
                 test: /\.json$/,
                 type: 'asset/resource',
                 generator: {

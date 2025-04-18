@@ -1,5 +1,6 @@
 import { GameConfig } from './types/game-config';
 import { GameEngine } from './core/engine/game-engine';
+import './html/index';
 
 class GameBootstrapper {
     private gameEngine: GameEngine;
@@ -44,12 +45,6 @@ class GameBootstrapper {
 
     private handleResize(): void {
         this.gameEngine.handleResize();
-        this.updateUIPosition();
-    }
-
-    private updateUIPosition(): void {
-        const canvasRect = this.gameEngine.canvasGame.getBoundingClientRect();
-        this.uiElements.hud.style.transform = `translate(${canvasRect.left}px, ${canvasRect.top}px)`;
     }
 
     private handleGlobalInput(event: KeyboardEvent): void {

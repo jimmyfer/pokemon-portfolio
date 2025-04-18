@@ -10,7 +10,7 @@ export class GameContext {
 
     private services: Map<ServiceIdentifier<unknown>, unknown> = new Map();
 
-    private gameScale = 1;
+    private gameScale = 2;
 
     private tilesScale = 2;
 
