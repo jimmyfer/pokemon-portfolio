@@ -6,9 +6,13 @@ import { Effect } from '@/effects/effect';
 import { TriggerCondition } from '@/types/trigger';
 import { EffectSystem } from '@/core/systems/effect-system';
 import { BasicTrigger } from '@/effects/triggers/basic-trigger';
-import { EnterIntoBuilding } from '@/effects/triggers/enter-into-building';
+import { EnterIntoBuildingTrigger } from '@/effects/triggers/enter-into-building';
 import { MapTransitionEvent } from '@/types/game-event';
-import { MapTransition } from '@/effects/triggers/map-transition';
+import { MapTransitionTrigger } from '@/effects/triggers/map-transition';
+import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
+import { BushAreaTriggerCondition } from '@/effects/trigger-conditions/bush-area';
+import { JumpTrigger } from '@/effects/triggers/jump';
+import { PlayerJumpSequence } from '@/types/effects';
 
 export class TileMapBuilder {
     private layers: MapLayer[] = [];
@@ -27,7 +31,9 @@ export class TileMapBuilder {
         conditions: TriggerCondition[],
         mapEvent: MapTransitionEvent
     ): this {
-        this.effectSystem.addTrigger(new MapTransition(conditions, mapEvent));
+        this.effectSystem.addTrigger(
+            new MapTransitionTrigger(conditions, mapEvent)
+        );
 
         return this;
     }
@@ -53,14 +59,14 @@ export class TileMapBuilder {
         return this;
     }
 
-    addEnterIntoBuildingEffectTrigger<SequenceTypes>(
+    addEnterIntoBuildingTriggerEffect<SequenceTypes>(
         effects: Effect<SequenceTypes>[],
         sequence: SequenceTypes[],
         conditions: TriggerCondition[],
         cooldown: number
     ): this {
         this.effectSystem.addTrigger(
-            new EnterIntoBuilding(
+            new EnterIntoBuildingTrigger(
                 conditions,
                 effects.map(
                     (effect, index) =>
@@ -81,6 +87,14 @@ export class TileMapBuilder {
                 cooldown
             )
         );
+        return this;
+    }
+
+    addJumpEffectTrigger(
+        sequence: PlayerJumpSequence,
+        condition: TriggerCondition
+    ): this {
+        this.effectSystem.addTrigger(new JumpTrigger(sequence, condition));
         return this;
     }
 
@@ -153,11 +167,38 @@ export class TileMapBuilder {
         return this;
     }
 
+    buildBushSpriteRow(
+        frames: number[],
+        row: number,
+        startColumn: number,
+        offsetX: number = 0,
+        offsetY: number = 0
+    ): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+
+        frames.forEach((frame, index) => {
+            const column = startColumn + index;
+
+            const bushCondition = new BushAreaTriggerCondition(
+                { x: column, y: row, width: 1, height: 1 },
+                32
+            );
+
+            this.currentLayer!.data[row][column].tile = frame;
+            this.currentLayer!.data[row][column].offsetX = offsetX;
+            this.currentLayer!.data[row][column].offsetY = offsetY;
+            this.currentLayer!.data[row][column].condition = bushCondition;
+        });
+
+        return this;
+    }
+
     buildSingleSprite(
         frame: number,
         row: number,
         column: number,
         flipX: boolean = false,
+        flipY: boolean = false,
         offsetX: number = 0,
         offsetY: number = 0,
         condition?: TriggerCondition
@@ -165,9 +206,46 @@ export class TileMapBuilder {
         if (!this.currentLayer) throw new Error('No layer selected');
         this.currentLayer.data[row][column].tile = frame;
         this.currentLayer.data[row][column].flipX = flipX;
+        this.currentLayer.data[row][column].flipY = flipY;
         this.currentLayer.data[row][column].offsetX = offsetX;
         this.currentLayer.data[row][column].offsetY = offsetY;
         this.currentLayer.data[row][column].condition = condition;
+        return this;
+    }
+
+    buildSingleTileCondition(
+        row: number,
+        column: number,
+        condition: TriggerCondition
+    ): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+
+        this.currentLayer.data[row][column].condition = condition;
+        return this;
+    }
+
+    buildSingleBushSprite(
+        frame: number,
+        row: number,
+        column: number,
+        flipX: boolean = false,
+        flipY: boolean = false,
+        offsetX: number = 0,
+        offsetY: number = 0
+    ): this {
+        if (!this.currentLayer) throw new Error('No layer selected');
+
+        const bushCondition = new AreaTriggerCondition(
+            { x: column, y: row, width: 1, height: 1 },
+            32
+        );
+
+        this.currentLayer.data[row][column].tile = frame;
+        this.currentLayer.data[row][column].flipX = flipX;
+        this.currentLayer.data[row][column].flipY = flipY;
+        this.currentLayer.data[row][column].offsetX = offsetX;
+        this.currentLayer.data[row][column].offsetY = offsetY;
+        this.currentLayer.data[row][column].condition = bushCondition;
         return this;
     }
 

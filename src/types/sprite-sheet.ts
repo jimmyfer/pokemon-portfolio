@@ -3,8 +3,6 @@ export type AnimationConfig = {
     frames: number[][][];
     frameRate: number;
     loop?: boolean;
-    flipX?: boolean;
-    flipY?: boolean;
 };
 
 export type SpriteTile = {
@@ -16,6 +14,16 @@ export type SpriteFrame = {
     tiles: SpriteTile[][];
     width: number;
     height: number;
+    currentFrame: number;
+    currentAnimation: string;
+};
+
+export type FrameConfig = {
+    frameId: number;
+    offsetX?: number;
+    offsetY?: number;
+    flipX?: boolean;
+    flipY?: boolean;
 };
 
 export type AnimationSequence = {

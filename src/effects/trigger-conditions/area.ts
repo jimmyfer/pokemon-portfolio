@@ -3,13 +3,13 @@ import { GameStateManager } from '@/core/systems/game-state-manager';
 import { Vector2D } from '@/types/sprite-sheet';
 import { TriggerCondition } from '@/types/trigger';
 
-export class AreaTrigger implements TriggerCondition {
+export class AreaTriggerCondition implements TriggerCondition {
     constructor(
         private area: { x: number; y: number; width: number; height: number },
         private tileSize: number
     ) {}
 
-    isMet(playerPos: Vector2D): boolean {
+    isMet(): boolean {
         const gameStateManager =
             GameContext.getInstance().getBean(GameStateManager);
         const playerState = gameStateManager.getState().player;

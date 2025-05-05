@@ -120,42 +120,7 @@ export class OverworldScene extends GameScene {
     }
 
     private drawDebugInfo(): void {
-        this.drawCameraBorders();
         this.drawBorderTiles();
-    }
-
-    drawCameraBorders(): void {
-        const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
-        const offsetX = (ctx.canvas.width - this.camera.viewport.width) / 2;
-        const offsetY = (ctx.canvas.height - this.camera.viewport.height) / 2;
-
-        ctx.fillStyle = 'red';
-        ctx.font = '12px Arial';
-        ctx.fillText(
-            `Position: X:${Math.floor(
-                (this.player.position.x - 5) / 32
-            )}, Y:${Math.floor((this.player.position.y - 5) / 32)}`,
-            offsetX + 10,
-            offsetY + 25
-        );
-        ctx.fillText(
-            `Camera: X:${this.camera.position.x.toFixed(
-                0
-            )}px, Y:${this.camera.position.y.toFixed(0)}px`,
-            offsetX + 10,
-            offsetY + 45
-        );
-
-        ctx.save();
-        ctx.strokeStyle = 'red'; // Color del borde
-        ctx.lineWidth = 2; // Grosor del borde
-        ctx.strokeRect(
-            offsetX,
-            offsetY,
-            this.camera.viewport.width,
-            this.camera.viewport.height
-        );
-        ctx.restore();
     }
 
     private drawBorderTiles(): void {

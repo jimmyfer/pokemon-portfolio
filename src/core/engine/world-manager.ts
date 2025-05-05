@@ -72,6 +72,10 @@ export class WorldManager {
                     'little_root_town_lab',
                     { spawnPosition: { x: 208, y: 400 }, playerPosition: 'up' },
                 ],
+                [
+                    'route_101',
+                    { spawnPosition: { x: 496, y: 816 }, playerPosition: 'up' },
+                ],
             ]),
         });
 
@@ -174,6 +178,15 @@ export class WorldManager {
             name: 'Route 101',
             loader: createRoute101,
             type: 'OPEN_WORLD',
+            spawnPoints: new Map([
+                [
+                    'little_root_town',
+                    {
+                        spawnPosition: { x: 496, y: 16 },
+                        playerPosition: 'down',
+                    },
+                ],
+            ]),
         });
     }
 

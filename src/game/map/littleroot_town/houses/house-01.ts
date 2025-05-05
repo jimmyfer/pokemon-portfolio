@@ -2,9 +2,9 @@ import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
-import { AreaTrigger } from '@/effects/trigger-conditions/area';
-import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
-import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
+import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
+import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
+import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
 import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
@@ -13,43 +13,43 @@ export async function createHouseRT01() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
 
-    const mapTransitionEventRT: MapTransitionEvent = {
+    const MapTransitionEventRT: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town_house01_f1',
         to: 'little_root_town',
     };
 
-    const mapTransitionEventF2: MapTransitionEvent = {
+    const MapTransitionEventF2: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town_house01_f1',
         to: 'little_root_town_house01_f2',
     };
 
-    const areaConditionToRT = new AreaTrigger(
+    const areaConditionToRT = new AreaTriggerCondition(
         { x: 8, y: 8, width: 1, height: 1 },
         32
     );
 
-    const areaConditionToF2 = new AreaTrigger(
+    const areaConditionToF2 = new AreaTriggerCondition(
         { x: 8, y: 3, width: 1, height: 1 },
         32
     );
 
     const playerEffect = new PlayerMovementEffect(
         { x: 8, y: 2 },
-        mapTransitionEventF2
+        MapTransitionEventF2
     );
 
-    const keyConditionDown = new KeyPressTrigger('ArrowDown');
+    const keyConditionDown = new KeyPressTriggerCondition('ArrowDown');
 
-    const keyConditionUp = new KeyPressTrigger('ArrowUp');
+    const keyConditionUp = new KeyPressTriggerCondition('ArrowUp');
 
-    const compositeConditionToRT = new CompositeTrigger([
+    const compositeConditionToRT = new CompositeTriggerCondition([
         areaConditionToRT,
         keyConditionDown,
     ]);
 
-    const compositeConditionToF2 = new CompositeTrigger([
+    const compositeConditionToF2 = new CompositeTriggerCondition([
         areaConditionToF2,
         keyConditionUp,
     ]);
@@ -150,8 +150,8 @@ export async function createHouseRT01() {
         .buildSpriteRow([19459, 19460], 3, 2, 0, 10)
         .buildSpriteRow([19461], 3, 4, 0, 10)
         .createLayer('effects', 11, 9, false, LayerPriority.BACKGROUND)
-        .addMapTransitionTrigger([compositeConditionToRT], mapTransitionEventRT)
-        .addEnterIntoBuildingEffectTrigger(
+        .addMapTransitionTrigger([compositeConditionToRT], MapTransitionEventRT)
+        .addEnterIntoBuildingTriggerEffect(
             [playerEffect],
             [PlayerMovementSequence.WALK_UP],
             [compositeConditionToF2],

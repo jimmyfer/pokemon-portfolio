@@ -1,6 +1,6 @@
 import { Trigger, TriggerCondition } from '@/types/trigger';
 
-export class EnterIntoBuilding implements Trigger {
+export class EnterIntoBuildingTrigger implements Trigger {
     public currentIndex = 0;
     private elapsedTime = 0;
     private readonly cooldown: number;

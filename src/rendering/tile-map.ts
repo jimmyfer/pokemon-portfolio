@@ -86,13 +86,20 @@ export class TileMap {
                         const offsetX = tile.offsetX;
                         const offsetY = tile.offsetY;
 
-                        if (tile.flipX) {
+                        if (tile.flipX || tile.flipY) {
                             this.ctx.save();
                             this.ctx.translate(
-                                screenX + offsetX + this.scaledTileSize,
-                                screenY + offsetY
+                                screenX +
+                                    offsetX +
+                                    (tile.flipX ? this.scaledTileSize : 0),
+                                screenY +
+                                    offsetY +
+                                    (tile.flipY ? this.scaledTileSize : 0)
                             );
-                            this.ctx.scale(-1, 1);
+                            this.ctx.scale(
+                                tile.flipX ? -1 : 1,
+                                tile.flipY ? -1 : 1
+                            );
                             this.ctx.drawImage(
                                 this.tileset.getImage(),
                                 sourceX,

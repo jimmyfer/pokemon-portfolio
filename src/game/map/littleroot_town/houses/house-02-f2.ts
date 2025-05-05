@@ -2,9 +2,9 @@ import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
-import { AreaTrigger } from '@/effects/trigger-conditions/area';
-import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
-import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
+import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
+import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
+import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
 import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
@@ -13,30 +13,30 @@ export async function createHouseRT02F2() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
 
-    const mapTransitionEvent: MapTransitionEvent = {
+    const MapTransitionEvent: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town_house02_f2',
         to: 'little_root_town_house02_f1',
     };
 
-    const areaCondition = new AreaTrigger(
+    const areaCondition = new AreaTriggerCondition(
         { x: 9, y: 2, width: 1, height: 1 },
         32
     );
 
     const playerEffect = new PlayerMovementEffect(
         { x: 9, y: 1 },
-        mapTransitionEvent
+        MapTransitionEvent
     );
 
-    const bedCondition = new AreaTrigger(
+    const bedCondition = new AreaTriggerCondition(
         { x: 0, y: 4, width: 3, height: 1 },
         32
     );
 
-    const keyCondition = new KeyPressTrigger('ArrowUp');
+    const keyCondition = new KeyPressTriggerCondition('ArrowUp');
 
-    const compositeCondition = new CompositeTrigger([
+    const compositeCondition = new CompositeTriggerCondition([
         areaCondition,
         keyCondition,
     ]);
@@ -77,8 +77,8 @@ export async function createHouseRT02F2() {
             0,
             15
         )
-        .buildSingleSprite(19605, 0, 2, false, 0, 5)
-        .buildSingleSprite(19621, 0, 6, false, 0, 20)
+        .buildSingleSprite(19605, 0, 2, false, false, 0, 5)
+        .buildSingleSprite(19621, 0, 6, false, false, 0, 20)
         .buildSpriteObject(
             [
                 [19517, 19518],
@@ -91,7 +91,7 @@ export async function createHouseRT02F2() {
             -2
         )
         .createLayer('furniture_01', 11, 8, false, LayerPriority.BACKGROUND_LOW)
-        .buildSingleSprite(19505, 2, 0, false, 0, 5)
+        .buildSingleSprite(19505, 2, 0, false, false, 0, 5)
         .createLayer('furniture_02', 11, 8, false, LayerPriority.BACKGROUND_LOW)
         .buildSpriteObject(
             [
@@ -107,10 +107,10 @@ export async function createHouseRT02F2() {
         .createLayer('furniture_03', 11, 8, false, LayerPriority.FOREGROUND)
         .buildSpriteObject([[19549, 19550]], 4, 1, false, -16, -2)
         .createLayer('effects', 11, 9, false, LayerPriority.FOREGROUND)
-        .buildSingleSprite(19533, 5, 1, false, -16, -2, bedCondition)
-        .buildSingleSprite(19534, 5, 2, false, -16, -2, bedCondition)
+        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, bedCondition)
+        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, bedCondition)
         .createLayer('effects_01', 11, 9, false, LayerPriority.BACKGROUND)
-        .addEnterIntoBuildingEffectTrigger(
+        .addEnterIntoBuildingTriggerEffect(
             [playerEffect],
             [PlayerMovementSequence.WALK_UP],
             [compositeCondition],

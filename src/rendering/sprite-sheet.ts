@@ -151,7 +151,13 @@ export class AnimatedSprite {
 
     getCurrentFrame(): SpriteFrame {
         if (!this.currentAnimation) {
-            return { tiles: [], width: 0, height: 0 };
+            return {
+                tiles: [],
+                width: 0,
+                height: 0,
+                currentFrame: 0,
+                currentAnimation: '',
+            };
         }
 
         const currentTileIndices =
@@ -167,6 +173,8 @@ export class AnimatedSprite {
             tiles,
             width: tiles[0]?.length * tileWidth || 0,
             height: tiles.length * tileHeight,
+            currentFrame: this.currentFrameIndex,
+            currentAnimation: this.currentAnimation.name,
         };
     }
 
