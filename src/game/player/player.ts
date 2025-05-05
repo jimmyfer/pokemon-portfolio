@@ -18,7 +18,10 @@ export class Player {
     private flipX: boolean = false;
     private tileSize: number;
     public scale: number;
-    private readonly movementSpeed: number = 180;
+    private readonly movementSpeed: number = 120;
+
+    private playerOffsetX = 0;
+    private playerOffsetY = 0;
 
     private hidden = false;
     private canMove = true;
@@ -69,7 +72,7 @@ export class Player {
             this.gameStateManager.getState().player;
         this.hidden = hidden;
         this.canMove = canMove;
-        if (this.position.x != position.x && this.position.y != position.y) {
+        if (this.position.x != position.x || this.position.y != position.y) {
             this.position = this.snapToTileCenter(position);
             this.currentAnimation = spritePosition;
             this.targetPosition = this.position;
@@ -110,7 +113,6 @@ export class Player {
             frames: [[[2]]],
             frameRate: 0,
             loop: false,
-            flipX: true,
         });
 
         spriteSheet.defineAnimation({
@@ -129,21 +131,21 @@ export class Player {
 
         spriteSheet.defineAnimation({
             name: 'walk-left',
-            frames: [[[2]], [[5]], [[2]], [[5]]],
+            frames: [[[5]], [[2]], [[8]], [[2]]],
             frameRate: 8,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-up',
-            frames: [[[4]], [[7]], [[4]], [[7]]],
+            frames: [[[4]], [[1]], [[7]], [[1]]],
             frameRate: 8,
             loop: true,
         });
 
         spriteSheet.defineAnimation({
             name: 'walk-down',
-            frames: [[[3]], [[6]], [[3]]],
+            frames: [[[3]], [[0]], [[6]], [[0]]],
             frameRate: 8,
             loop: true,
         });
@@ -243,7 +245,7 @@ export class Player {
         if (distance <= moveDistance) {
             this.position = { ...this.targetPosition };
             this.isMoving = false;
-            this.sprite.play(this.currentAnimation);
+            this.playAnimation(this.currentAnimation);
         }
 
         this.gameStateManager.updateState((state) => {
@@ -263,13 +265,13 @@ export class Player {
     private updateMovementAnimation(direction: Vector2D): void {
         if (direction.x !== 0) {
             this.flipX = direction.x > 0;
-            this.sprite.play('walk-left');
+            this.playAnimation('walk-left');
             this.currentAnimation = 'walk-left';
         } else if (direction.y > 0) {
-            this.sprite.play('walk-down');
+            this.playAnimation('walk-down');
             this.currentAnimation = 'walk-down';
         } else if (direction.y < 0) {
-            this.sprite.play('walk-up');
+            this.playAnimation('walk-up');
             this.currentAnimation = 'walk-up';
         }
     }
@@ -347,11 +349,19 @@ export class Player {
 
         frame.tiles.forEach((row, rowIndex) => {
             row.forEach((tile, colIndex) => {
-                const xOffset = this.flipX
-                    ? (row.length - colIndex - 1) * tileWidth
-                    : colIndex * tileWidth;
+                const xOffset =
+                    (this.flipX
+                        ? (row.length - colIndex - 1) * tileWidth
+                        : colIndex * tileWidth) + this.playerOffsetX;
 
-                const yOffset = rowIndex * tileHeight;
+                let yOffset = rowIndex * tileHeight + this.playerOffsetY;
+
+                if (
+                    frame.currentAnimation === 'walk-left' &&
+                    (frame.currentFrame == 0 || frame.currentFrame == 2)
+                ) {
+                    yOffset = yOffset + 1;
+                }
 
                 const tileX = screenPos.x + xOffset;
                 const tileY = screenPos.y + yOffset;
@@ -366,5 +376,11 @@ export class Player {
                 );
             });
         });
+    }
+
+    playAnimation(animation: string): void {
+        if (animation != this.currentAnimation) {
+            this.sprite.play(animation);
+        }
     }
 }

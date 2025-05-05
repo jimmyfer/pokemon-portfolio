@@ -4,7 +4,7 @@ import { GameStateManager } from '@/core/systems/game-state-manager';
 import { MapTransitionEvent } from '@/types/game-event';
 import { Trigger, TriggerCondition } from '@/types/trigger';
 
-export class MapTransition implements Trigger {
+export class MapTransitionTrigger implements Trigger {
     private eventEmited: boolean = false;
 
     constructor(

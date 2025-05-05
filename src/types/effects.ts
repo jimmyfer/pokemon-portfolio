@@ -1,3 +1,7 @@
+export enum PlayerJumpSequence {
+    JUMP_DOWN = 'JUMP_DOWN',
+}
+
 export enum PlayerMovementSequence {
     WALK_UP = 'WALK_UP',
 }
@@ -15,4 +19,5 @@ export enum LabDoorSequence {
 export type SequenceTypes =
     | DoorSequence
     | LabDoorSequence
-    | PlayerMovementSequence;
+    | PlayerMovementSequence
+    | PlayerJumpSequence;

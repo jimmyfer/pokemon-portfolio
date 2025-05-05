@@ -1,6 +1,6 @@
 import { TriggerCondition } from '@/types/trigger';
 
-export class CompositeTrigger implements TriggerCondition {
+export class CompositeTriggerCondition implements TriggerCondition {
     constructor(private conditions: TriggerCondition[]) {}
 
     isMet(...args: unknown[]): boolean {

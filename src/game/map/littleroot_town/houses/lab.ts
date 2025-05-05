@@ -2,34 +2,34 @@ import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
-import { AreaTrigger } from '@/effects/trigger-conditions/area';
-import { KeyPressTrigger } from '@/effects/trigger-conditions/keypress';
-import { CompositeTrigger } from '@/effects/trigger-conditions/composite';
+import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
+import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
+import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
 import { MapTransitionEvent } from '@/types/game-event';
 
 export async function createHouseRTLab() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
     const sprites = assetManager.getSpriteSheet('sprites');
 
-    const mapTransitionEvent: MapTransitionEvent = {
+    const MapTransitionEvent: MapTransitionEvent = {
         type: 'MAP_TRANSITION',
         from: 'little_root_town_lab',
         to: 'little_root_town',
     };
 
-    const areaCondition = new AreaTrigger(
+    const areaCondition = new AreaTriggerCondition(
         { x: 6, y: 12, width: 1, height: 1 },
         32
     );
 
-    const keyConditionDown = new KeyPressTrigger('ArrowDown');
+    const keyConditionDown = new KeyPressTriggerCondition('ArrowDown');
 
-    const compositeCondition = new CompositeTrigger([
+    const compositeCondition = new CompositeTriggerCondition([
         areaCondition,
         keyConditionDown,
     ]);
 
-    const bookcaseTrigger = new AreaTrigger(
+    const bookcaseTrigger = new AreaTriggerCondition(
         { x: 0, y: 5, width: 5, height: 1 },
         32
     );
@@ -96,12 +96,12 @@ export async function createHouseRTLab() {
         )
         .buildSingleSprite(19637, 2, 12)
         .buildSingleSprite(19637, 3, 12)
-        .buildSingleSprite(19609, 3, 0, false, 0, -15)
-        .buildSingleSprite(19593, 4, 0, false, 0, -30)
-        .buildSingleSprite(19609, 4, 9, false, 0, -15)
-        .buildSingleSprite(19593, 5, 9, false, 0, -30)
-        .buildSingleSprite(19593, 5, 10, false, 0, -30)
-        .buildSingleSprite(19593, 12, 12, false, 1, -30)
+        .buildSingleSprite(19609, 3, 0, false, false, 0, -15)
+        .buildSingleSprite(19593, 4, 0, false, false, 0, -30)
+        .buildSingleSprite(19609, 4, 9, false, false, 0, -15)
+        .buildSingleSprite(19593, 5, 9, false, false, 0, -30)
+        .buildSingleSprite(19593, 5, 10, false, false, 0, -30)
+        .buildSingleSprite(19593, 12, 12, false, false, 1, -30)
         .buildSpriteObjectRow(
             [
                 [19611, 19612],
@@ -149,10 +149,10 @@ export async function createHouseRTLab() {
             false,
             LayerPriority.BACKGROUND_MED
         )
-        .buildSingleSprite(19593, 4, 10, false, 0, -10)
-        .buildSingleSprite(19593, 11, 12, false, 1, -10)
-        .buildSingleSprite(19637, 10, 0, false, 0, 5)
-        .buildSingleSprite(19637, 11, 0, false, 0, 5)
+        .buildSingleSprite(19593, 4, 10, false, false, 0, -10)
+        .buildSingleSprite(19593, 11, 12, false, false, 1, -10)
+        .buildSingleSprite(19637, 10, 0, false, false, 0, 5)
+        .buildSingleSprite(19637, 11, 0, false, false, 0, 5)
         .buildSpriteObjectRow([[19591], [19607], [19623]], 9, 1)
         .buildSpriteObjectRow([[19532], [19548]], 4, 12)
         .buildSpriteObjectRow([[19639, 19640]], 12, 6)
@@ -178,8 +178,8 @@ export async function createHouseRTLab() {
             false,
             LayerPriority.BACKGROUND_HIGH
         )
-        .buildSingleSprite(19609, 3, 10, false, 0, 5)
-        .buildSingleSprite(19609, 10, 12, false, 1, 5)
+        .buildSingleSprite(19609, 3, 10, false, false, 0, 5)
+        .buildSingleSprite(19609, 10, 12, false, false, 1, 5)
         .createLayer('furniture_03', 13, 13, false, LayerPriority.FOREGROUND)
         .buildSpriteObjectRow(
             [
@@ -251,6 +251,6 @@ export async function createHouseRTLab() {
             bookcaseTrigger
         )
         .createLayer('effects', 13, 13, false, LayerPriority.BACKGROUND)
-        .addMapTransitionTrigger([compositeCondition], mapTransitionEvent)
+        .addMapTransitionTrigger([compositeCondition], MapTransitionEvent)
         .build();
 }
