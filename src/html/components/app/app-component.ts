@@ -3,7 +3,7 @@ import LayoutComponent from './layout/layout';
 import HeaderComponent from './header/header';
 
 /**
- * Declaración de componentes
+ * Components declaration
  */
 export const componentDefinitions: ComponentDefinition[] = [
     {

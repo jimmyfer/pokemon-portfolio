@@ -55,7 +55,7 @@
     right: -2px;
 }
 
-.menu-body {
+.menu-body-container {
     position: absolute;
     top: 0;
     right: -330px;
@@ -66,8 +66,12 @@
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.menu-body.active {
+.menu-body-container.active {
     transform: translateX(-320px);
+}
+
+.menu-body {
+    position: relative;
 }
 
 .menu-background {
@@ -114,4 +118,15 @@
 
 .close-menu .close-icon:active {
     transform: scale(0.8);
+}
+
+.menu-items {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu-items:first-child {
+    margin-top: 2rem;
 }

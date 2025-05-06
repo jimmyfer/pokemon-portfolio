@@ -1,7 +1,8 @@
 import { componentDefinitions as appComponents } from '../components/app/app-component';
+import { componentDefinitions as uiComponents } from '../components/ui/ui-component';
 
 /**
- * Función para definir listas de componentes.
+ * Function to define list of components
  */
 function componentDefinition(
     componentDefinitions: {
@@ -14,5 +15,5 @@ function componentDefinition(
     });
 }
 
-// Definimos los componentes UI
 componentDefinition(appComponents);
+componentDefinition(uiComponents);
