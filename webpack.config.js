@@ -13,13 +13,6 @@ module.exports = {
                 exclude: /node_modules/,
             },
             {
-                test: /\.(png|jpe?g|gif|svg)$/i,
-                type: 'asset/resource',
-                generator: {
-                    filename: 'assets/sprites/[name][ext]',
-                },
-            },
-            {
                 test: /\.html$/i,
                 use: 'html-loader',
             },
@@ -70,6 +63,11 @@ module.exports = {
                 {
                     from: 'src/assets/maps',
                     to: 'assets/maps',
+                    noErrorOnMissing: true,
+                },
+                {
+                    from: 'src/assets/html/fonts',
+                    to: 'assets/html/fonts',
                     noErrorOnMissing: true,
                 },
             ],
