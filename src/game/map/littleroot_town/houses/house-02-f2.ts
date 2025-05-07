@@ -8,6 +8,7 @@ import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composit
 import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
+import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
 
 export async function createHouseRT02F2() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -36,9 +37,15 @@ export async function createHouseRT02F2() {
 
     const keyCondition = new KeyPressTriggerCondition('ArrowUp');
 
+    const playerUpPosition = new PlayerPositionTriggerCondition([
+        'walk-up',
+        'up-align',
+    ]);
+
     const compositeCondition = new CompositeTriggerCondition([
         areaCondition,
         keyCondition,
+        playerUpPosition,
     ]);
 
     return new TileMapBuilder(16, 2)

@@ -3,10 +3,19 @@ import mainCss from '../../../main.css';
 import css from './header.css';
 import html from './header.html';
 import MenuItemComponent from '../../ui/menu-item/menu-item';
+import { EventSystem } from '@/core/systems/event-system';
+import { GameContext } from '@/core/engine/game-context';
 
 export default class HeaderComponent extends HTMLElement {
+    private eventSystem: EventSystem;
+
+    private logoElement: HTMLDivElement;
+
     constructor() {
         super();
+
+        const gameContext = GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(EventSystem);
 
         this.attachShadow({ mode: 'open' });
 
@@ -43,9 +52,32 @@ export default class HeaderComponent extends HTMLElement {
                 'ui-menu-item'
             ) as MenuItemComponent;
             menuItem.itemName = item.itemName;
-            console.log(menuItemsContainer);
 
             menuItemsContainer?.appendChild(menuItem);
+        });
+
+        this.logoElement = this.shadowRoot?.querySelector(
+            '.logo'
+        ) as HTMLDivElement;
+        const logoHeight = this.logoElement.offsetHeight;
+        this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
+
+        this.listenMapTransitionEvent();
+    }
+
+    listenMapTransitionEvent(): void {
+        this.eventSystem.on('MAP_TRANSITION', () => {
+            const logoHeight = this.logoElement.offsetHeight;
+            this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
+        });
+
+        this.eventSystem.on('MAP_TRANSITION_COMPLETED', (data) => {
+            this.logoElement.style.transform = 'translateY(0px)';
+            this.logoElement.childNodes[3].textContent = data.mapName ?? '';
+            setTimeout(() => {
+                const logoHeight = this.logoElement.offsetHeight;
+                this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
+            }, 2000);
         });
     }
 }

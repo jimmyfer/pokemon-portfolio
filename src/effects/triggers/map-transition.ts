@@ -6,28 +6,19 @@ import { Trigger, TriggerCondition } from '@/types/trigger';
 
 export class MapTransitionTrigger implements Trigger {
     private eventEmited: boolean = false;
+    private eventSystem: EventSystem;
 
     constructor(
         public conditions: TriggerCondition[],
         private mapEvent: MapTransitionEvent
-    ) {}
+    ) {
+        this.eventSystem = GameContext.getInstance().getBean(EventSystem);
+    }
 
     update(): void {
         if (this.conditions.every((c) => c.isMet())) {
             if (!this.eventEmited) {
-                const eventSystem =
-                    GameContext.getInstance().getBean(EventSystem);
-                GameContext.getInstance()
-                    .getBean(GameStateManager)
-                    .updateState((state) => ({
-                        ...state,
-                        player: {
-                            ...state.player,
-                            hidden: false,
-                            canMove: false,
-                        },
-                    }));
-                eventSystem.emit(this.mapEvent.type, this.mapEvent);
+                this.eventSystem.emit(this.mapEvent.type, this.mapEvent);
                 this.eventEmited = true;
             }
         }
