@@ -14,6 +14,7 @@ import {
 } from '@/types/effects';
 import { MapTransitionEvent } from '@/types/game-event';
 import { LabDoorOpenEffect } from '@/effects/sprites-effects/lab-door-open';
+import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -104,19 +105,27 @@ export async function createLittleRootTown() {
 
     const keyCondition = new KeyPressTriggerCondition('ArrowUp');
 
+    const playerPosition = new PlayerPositionTriggerCondition([
+        'walk-up',
+        'up-align',
+    ]);
+
     const compositeConditionToH1 = new CompositeTriggerCondition([
         areaConditionToH1,
         keyCondition,
+        playerPosition,
     ]);
 
     const compositeConditionToH2 = new CompositeTriggerCondition([
         areaConditionToH2,
         keyCondition,
+        playerPosition,
     ]);
 
     const compositeConditionToLab = new CompositeTriggerCondition([
         areaConditionToLab,
         keyCondition,
+        playerPosition,
     ]);
 
     const keyConditionUp = new KeyPressTriggerCondition('ArrowUp');
@@ -124,6 +133,7 @@ export async function createLittleRootTown() {
     const compositeConditionTo101 = new CompositeTriggerCondition([
         areaConditionTo101,
         keyConditionUp,
+        playerPosition,
     ]);
 
     return (

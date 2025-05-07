@@ -3,12 +3,12 @@ import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
 import { LayerPriority } from '@/types/render-types';
 import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
-import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { MapTransitionEvent } from '@/types/game-event';
 import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
 import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
 import { PlayerJumpSequence } from '@/types/effects';
 import { JumpAreaTriggerCondition } from '@/effects/trigger-conditions/jump-area';
+import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
 
 export async function createRoute101() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -21,7 +21,7 @@ export async function createRoute101() {
     };
 
     const areaConditionTo101 = new AreaTriggerCondition(
-        { x: 15, y: 25, width: 1, height: 1 },
+        { x: 15, y: 25, width: 2, height: 1 },
         32
     );
 
@@ -35,13 +35,17 @@ export async function createRoute101() {
         32
     );
 
-    const keyConditionUp = new KeyPressTriggerCondition('ArrowUp');
-
     const keyConditionDown = new KeyPressTriggerCondition('ArrowDown');
 
-    const compositeConditionTo101 = new CompositeTriggerCondition([
+    const playerDownPosition = new PlayerPositionTriggerCondition([
+        'walk-down',
+        'down-align',
+    ]);
+
+    const compositeConditionToRT = new CompositeTriggerCondition([
         areaConditionTo101,
         keyConditionDown,
+        playerDownPosition,
     ]);
 
     const compositeJumpCondition01 = new CompositeTriggerCondition([
@@ -358,7 +362,7 @@ export async function createRoute101() {
                 compositeJumpCondition02
             )
             .addMapTransitionTrigger(
-                [compositeConditionTo101],
+                [compositeConditionToRT],
                 MapTransitionEventTo101
             )
             .build()

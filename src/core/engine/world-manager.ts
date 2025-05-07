@@ -37,6 +37,9 @@ export class WorldManager {
     private transitionScreenPosition: { x: number; y: number } = { x: 0, y: 0 };
     private maxRadius: number = 0;
 
+    private mapTransitionOpening: boolean = false;
+    private mapTransitionClosing: boolean = false;
+
     private radiusMapEffect = 0;
 
     constructor() {
@@ -232,44 +235,84 @@ export class WorldManager {
     }
 
     async checkTransitionPhase(deltaTime: number): Promise<void> {
-        if (this.transitionPhase) {
-            this.transitionEffect();
-            if (this.transitionPhase === 'closing') {
-                this.transitionProgress += deltaTime / this.transitionDuration;
-                if (this.transitionProgress >= 1) {
-                    this.transitionProgress = 1;
-                    this.gameStateManager.updateState((state) => ({
-                        ...state,
-                        player: {
-                            hidden: false,
-                            canMove: true,
-                            position: this.transitionPlayerTargetPosition!,
-                            spritePosition:
-                                this.transitionPlayerSpritePosition!,
-                        },
-                        world: {
-                            currentMap: this.transitionTargetMapId!,
-                        },
-                    }));
-                    this.loadMap().then(() => {
-                        this.transitionPhase = 'opening';
-                        this.transitionProgress = 0;
-                        this.transitionScreenPosition =
-                            this.camera.targetCenter();
-                    });
-                }
-                this.radiusMapEffect =
-                    (1 - this.transitionProgress) * this.maxRadius;
-            } else if (this.transitionPhase === 'opening') {
-                this.transitionProgress += deltaTime / this.transitionDuration;
-                if (this.transitionProgress >= 1) {
-                    this.transitionPhase = null;
-                    this.radiusMapEffect = 0;
-                } else {
-                    this.radiusMapEffect =
-                        this.transitionProgress * this.maxRadius;
-                }
-            }
+        if (!this.transitionPhase) return;
+
+        this.transitionEffect();
+
+        this.transitionProgress = Math.min(
+            1,
+            this.transitionProgress + deltaTime / this.transitionDuration
+        );
+
+        if (this.transitionPhase === 'closing') {
+            await this.handleClosingTransition();
+        } else if (this.transitionPhase === 'opening') {
+            await this.handleOpeningTransition();
+        }
+    }
+
+    private async handleClosingTransition(): Promise<void> {
+        if (!this.mapTransitionClosing) {
+            this.gameStateManager.updateState((state) => ({
+                ...state,
+                player: {
+                    ...state.player,
+                    canMove: false,
+                },
+            }));
+            this.mapTransitionClosing = true;
+        }
+
+        if (this.transitionProgress >= 1) {
+            this.gameStateManager.updateState((state) => ({
+                ...state,
+                player: {
+                    ...state.player,
+                    hidden: false,
+                    position: this.transitionPlayerTargetPosition!,
+                    spritePosition: this.transitionPlayerSpritePosition!,
+                },
+                world: {
+                    currentMap: this.transitionTargetMapId!,
+                },
+            }));
+
+            await this.loadMap();
+
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+            this.transitionScreenPosition = this.camera.targetCenter();
+        }
+
+        this.radiusMapEffect = (1 - this.transitionProgress) * this.maxRadius;
+    }
+
+    private async handleOpeningTransition(): Promise<void> {
+        if (!this.mapTransitionOpening) {
+            console.log('hola');
+            this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
+                mapName: this.currentMapNode.name,
+            });
+            this.mapTransitionOpening = true;
+        }
+
+        if (this.transitionProgress >= 0.4) {
+            this.gameStateManager.updateState((state) => ({
+                ...state,
+                player: {
+                    ...state.player,
+                    canMove: true,
+                },
+            }));
+        }
+
+        if (this.transitionProgress >= 1) {
+            this.transitionPhase = null;
+            this.radiusMapEffect = 0;
+            this.mapTransitionOpening = false;
+            this.mapTransitionClosing = false;
+        } else {
+            this.radiusMapEffect = this.transitionProgress * this.maxRadius;
         }
     }
 
@@ -299,5 +342,9 @@ export class WorldManager {
 
     render(priority: LayerPriority): void {
         this.currentMap.render(priority);
+    }
+
+    getMapData(mapId: string): MapNode | null {
+        return this.maps.get(mapId) ?? null;
     }
 }

@@ -6,6 +6,7 @@ import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
 import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
 import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
 import { MapTransitionEvent } from '@/types/game-event';
+import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
 
 export async function createHouseRTLab() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -18,15 +19,21 @@ export async function createHouseRTLab() {
     };
 
     const areaCondition = new AreaTriggerCondition(
-        { x: 6, y: 12, width: 1, height: 1 },
+        { x: 6, y: 12, width: 2, height: 1 },
         32
     );
 
     const keyConditionDown = new KeyPressTriggerCondition('ArrowDown');
 
+    const playerDownPosition = new PlayerPositionTriggerCondition([
+        'walk-down',
+        'down-align',
+    ]);
+
     const compositeCondition = new CompositeTriggerCondition([
         areaCondition,
         keyConditionDown,
+        playerDownPosition,
     ]);
 
     const bookcaseTrigger = new AreaTriggerCondition(

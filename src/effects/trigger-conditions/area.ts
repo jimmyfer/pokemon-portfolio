@@ -13,13 +13,30 @@ export class AreaTriggerCondition implements TriggerCondition {
         const gameStateManager =
             GameContext.getInstance().getBean(GameStateManager);
         const playerState = gameStateManager.getState().player;
-        return (
-            playerState.position.x >= this.area.x * this.tileSize &&
-            playerState.position.x <=
-                (this.area.x + this.area.width) * this.tileSize &&
-            playerState.position.y >= this.area.y * this.tileSize &&
-            playerState.position.y <=
-                (this.area.y + this.area.height) * this.tileSize
-        );
+        const playerX = playerState.position.x;
+        const playerY = playerState.position.y;
+
+        const playerTileX = Math.floor(playerX / this.tileSize);
+        const playerTileY = Math.floor(playerY / this.tileSize);
+
+        const isInAreaX =
+            playerTileX >= this.area.x &&
+            playerTileX < this.area.x + this.area.width;
+        const isInAreaY =
+            playerTileY >= this.area.y &&
+            playerTileY < this.area.y + this.area.height;
+        if (!isInAreaX || !isInAreaY) {
+            return false;
+        }
+
+        const tileCenterX = playerTileX * this.tileSize + this.tileSize / 2;
+        const tileCenterY = playerTileY * this.tileSize + this.tileSize / 2;
+
+        const isInCenterX =
+            playerX >= tileCenterX - 1 && playerX <= tileCenterX + 1;
+        const isInCenterY =
+            playerY >= tileCenterY - 1 && playerY <= tileCenterY + 1;
+
+        return isInCenterX && isInCenterY;
     }
 }
