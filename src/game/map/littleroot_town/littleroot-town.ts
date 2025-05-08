@@ -108,6 +108,7 @@ export async function createLittleRootTown() {
     const playerPosition = new PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
     ]);
 
     const compositeConditionToH1 = new CompositeTriggerCondition([

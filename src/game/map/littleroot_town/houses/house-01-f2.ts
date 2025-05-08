@@ -9,6 +9,8 @@ import { MapTransitionEvent } from '@/types/game-event';
 import { PlayerMovementEffect } from '@/effects/sprites-effects/player-movement';
 import { PlayerMovementSequence } from '@/types/effects';
 import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
+import { WideAreaTriggerCondition } from '@/effects/trigger-conditions/wide-area';
+import { OrTriggerCondition } from '@/effects/trigger-conditions/or';
 
 export async function createHouseRT01F2() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -30,16 +32,39 @@ export async function createHouseRT01F2() {
         MapTransitionEvent
     );
 
-    const bedCondition = new AreaTriggerCondition(
+    const bedCondition = new WideAreaTriggerCondition(
         { x: 0, y: 4, width: 3, height: 1 },
         32
     );
 
+    const bedCenterCondition = new WideAreaTriggerCondition(
+        { x: 1, y: 4, width: 1, height: 1 },
+        32
+    );
+
+    const playerBedPosition = new PlayerPositionTriggerCondition([
+        'left',
+        'walk-left',
+        'left-align',
+    ]);
+
     const keyCondition = new KeyPressTriggerCondition('ArrowUp');
+
+    const compositeBedCondition = new CompositeTriggerCondition([
+        bedCondition,
+        playerBedPosition,
+    ]);
+
+    const OrBedCondition = new OrTriggerCondition([
+        compositeBedCondition,
+        bedCenterCondition,
+    ]);
 
     const playerUpPosition = new PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
 
     const compositeCondition = new CompositeTriggerCondition([
@@ -111,11 +136,11 @@ export async function createHouseRT01F2() {
             -17,
             12
         )
-        .createLayer('furniture_03', 11, 8, false, LayerPriority.FOREGROUND)
-        .buildSpriteObject([[19549, 19550]], 4, 1, false, -16, -2)
         .createLayer('effects', 11, 9, false, LayerPriority.FOREGROUND)
-        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, bedCondition)
-        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, bedCondition)
+        .buildSingleSprite(19549, 4, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19550, 4, 2, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, OrBedCondition)
         .createLayer('effects_01', 11, 9, false, LayerPriority.BACKGROUND)
         .addEnterIntoBuildingTriggerEffect(
             [playerEffect],

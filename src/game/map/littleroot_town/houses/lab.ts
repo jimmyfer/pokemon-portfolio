@@ -28,6 +28,7 @@ export async function createHouseRTLab() {
     const playerDownPosition = new PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
 
     const compositeCondition = new CompositeTriggerCondition([

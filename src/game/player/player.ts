@@ -14,6 +14,7 @@ export class Player {
 
     public sprite: AnimatedSprite;
     private isMoving: boolean = false;
+    private intendedDirection: Vector2D = { x: 0, y: 0 };
     private flipX: boolean = false;
     private tileSize: number;
     public scale: number;
@@ -198,6 +199,7 @@ export class Player {
         if (!this.canMove) return;
         const deltaSeconds = deltaTime / 1000;
         let spritePosition = { activeAnimation: this.currentAnimation };
+        this.intendedDirection = Input.movementDirection;
 
         if (this.isAligning) {
             this.alignProgress += deltaTime;
@@ -211,48 +213,74 @@ export class Player {
         }
 
         if (!this.isMoving) {
-            const direction = Input.movementDirection;
+            this.intendedDirection = Input.movementDirection;
 
-            if (direction.x !== 0 || direction.y !== 0) {
+            if (
+                this.intendedDirection.x !== 0 ||
+                this.intendedDirection.y !== 0
+            ) {
                 if (
-                    direction.x !== this.lastDirection.x ||
-                    direction.y !== this.lastDirection.y
+                    this.intendedDirection.x !== this.lastDirection.x ||
+                    this.intendedDirection.y !== this.lastDirection.y
                 ) {
-                    this.playAlignAnimation(direction, spritePosition);
-                    this.lastDirection = direction;
-                    this.currentAlignDirection = direction;
+                    this.playAlignAnimation(
+                        this.intendedDirection,
+                        spritePosition
+                    );
+                    this.lastDirection = this.intendedDirection;
+                    this.currentAlignDirection = this.intendedDirection;
                     this.isAligning = true;
                 } else {
-                    this.startMovement(direction, spritePosition);
+                    this.startMovement(this.intendedDirection, spritePosition);
                 }
-                this.lastDirection = direction;
+                this.lastDirection = this.intendedDirection;
             }
         }
 
         if (this.isMoving) {
-            this.moveTowardsTarget(deltaSeconds, spritePosition);
+            this.moveTowardsTarget(deltaSeconds);
             this.sprite.update(deltaTime);
         }
 
-        this.gameStateManager.updateState((state) => {
-            return {
-                ...state,
-                player: {
-                    ...state.player,
-                    spritePosition: spritePosition.activeAnimation,
-                    position: {
-                        x: this.position.x,
-                        y: this.position.y,
+        if (
+            !this.isMoving &&
+            !this.isAligning &&
+            this.intendedDirection.x === 0 &&
+            this.intendedDirection.y === 0
+        ) {
+            this.gameStateManager.updateState((state) => {
+                return {
+                    ...state,
+                    player: {
+                        ...state.player,
+                        spritePosition: this.getIdleAnimation(
+                            spritePosition.activeAnimation
+                        ),
+                        position: {
+                            x: this.position.x,
+                            y: this.position.y,
+                        },
                     },
-                },
-            };
-        });
+                };
+            });
+        } else {
+            this.gameStateManager.updateState((state) => {
+                return {
+                    ...state,
+                    player: {
+                        ...state.player,
+                        spritePosition: spritePosition.activeAnimation,
+                        position: {
+                            x: this.position.x,
+                            y: this.position.y,
+                        },
+                    },
+                };
+            });
+        }
     }
 
-    private moveTowardsTarget(
-        deltaSeconds: number,
-        spritePosition: { activeAnimation: string }
-    ): void {
+    private moveTowardsTarget(deltaSeconds: number): void {
         const dx = this.targetPosition.x - this.position.x;
         const dy = this.targetPosition.y - this.position.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -396,5 +424,25 @@ export class Player {
             this.sprite.play(animation);
             this.currentAnimation = animation;
         }
+    }
+
+    getIdleAnimation(currentAnimation: string): string {
+        console.log(currentAnimation);
+        switch (currentAnimation) {
+            case 'walk-left':
+            case 'left-align':
+            case 'left':
+                return 'left';
+            case 'walk-up':
+            case 'up-align':
+            case 'up':
+                return 'up';
+            case 'walk-down':
+            case 'down-align':
+            case 'down':
+                return 'down';
+        }
+
+        return 'up';
     }
 }
