@@ -31,7 +31,7 @@ export async function createRoute101() {
     );
 
     const jumpArea02 = new JumpAreaTriggerCondition(
-        { x: 3, y: 10, width: 4, height: 1 },
+        { x: 3, y: 10, width: 7, height: 1 },
         32
     );
 
@@ -40,6 +40,7 @@ export async function createRoute101() {
     const playerDownPosition = new PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
 
     const compositeConditionToRT = new CompositeTriggerCondition([

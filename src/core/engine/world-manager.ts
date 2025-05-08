@@ -252,6 +252,7 @@ export class WorldManager {
     }
 
     private async handleClosingTransition(): Promise<void> {
+        this.mapTransitionOpening = false;
         if (!this.mapTransitionClosing) {
             this.gameStateManager.updateState((state) => ({
                 ...state,
@@ -289,10 +290,11 @@ export class WorldManager {
 
     private async handleOpeningTransition(): Promise<void> {
         if (!this.mapTransitionOpening) {
-            console.log('hola');
-            this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
-                mapName: this.currentMapNode.name,
-            });
+            if (this.currentMapNode.type === 'OPEN_WORLD') {
+                this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
+                    mapName: this.currentMapNode.name,
+                });
+            }
             this.mapTransitionOpening = true;
         }
 

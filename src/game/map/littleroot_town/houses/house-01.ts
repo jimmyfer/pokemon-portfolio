@@ -48,10 +48,13 @@ export async function createHouseRT01() {
     const playerUpPosition = new PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
     const playerDownPosition = new PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
 
     const compositeConditionToRT = new CompositeTriggerCondition([

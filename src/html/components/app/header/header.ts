@@ -8,8 +8,8 @@ import { GameContext } from '@/core/engine/game-context';
 
 export default class HeaderComponent extends HTMLElement {
     private eventSystem: EventSystem;
-
     private logoElement: HTMLDivElement;
+    private transitionTimeout: ReturnType<typeof setTimeout> | null = null;
 
     constructor() {
         super();
@@ -20,12 +20,10 @@ export default class HeaderComponent extends HTMLElement {
         this.attachShadow({ mode: 'open' });
 
         const template = document.createElement('template');
-
         template.innerHTML = `
                     <style>${mainCss.toString()}${css.toString()}</style>
                     ${html}
                 `;
-
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
 
         this.shadowRoot
@@ -74,7 +72,12 @@ export default class HeaderComponent extends HTMLElement {
         this.eventSystem.on('MAP_TRANSITION_COMPLETED', (data) => {
             this.logoElement.style.transform = 'translateY(0px)';
             this.logoElement.childNodes[3].textContent = data.mapName ?? '';
-            setTimeout(() => {
+
+            if (this.transitionTimeout) {
+                clearTimeout(this.transitionTimeout);
+            }
+
+            this.transitionTimeout = setTimeout(() => {
                 const logoHeight = this.logoElement.offsetHeight;
                 this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
             }, 2000);

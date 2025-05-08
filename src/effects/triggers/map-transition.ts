@@ -7,17 +7,29 @@ import { Trigger, TriggerCondition } from '@/types/trigger';
 export class MapTransitionTrigger implements Trigger {
     private eventEmited: boolean = false;
     private eventSystem: EventSystem;
+    private gameStateManager: GameStateManager;
 
     constructor(
         public conditions: TriggerCondition[],
         private mapEvent: MapTransitionEvent
     ) {
-        this.eventSystem = GameContext.getInstance().getBean(EventSystem);
+        const gameContext = GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(EventSystem);
+        this.gameStateManager = gameContext.getBean(GameStateManager);
     }
 
     update(): void {
         if (this.conditions.every((c) => c.isMet())) {
             if (!this.eventEmited) {
+                this.gameStateManager.updateState((state) => {
+                    return {
+                        ...state,
+                        player: {
+                            ...state.player,
+                            canMove: false,
+                        },
+                    };
+                });
                 this.eventSystem.emit(this.mapEvent.type, this.mapEvent);
                 this.eventEmited = true;
             }
