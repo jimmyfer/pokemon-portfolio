@@ -636,6 +636,7 @@ let WorldManager = class WorldManager {
         }
     }
     async handleClosingTransition() {
+        this.mapTransitionOpening = false;
         if (!this.mapTransitionClosing) {
             this.gameStateManager.updateState((state) => ({
                 ...state,
@@ -668,10 +669,11 @@ let WorldManager = class WorldManager {
     }
     async handleOpeningTransition() {
         if (!this.mapTransitionOpening) {
-            console.log('hola');
-            this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
-                mapName: this.currentMapNode.name,
-            });
+            if (this.currentMapNode.type === 'OPEN_WORLD') {
+                this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
+                    mapName: this.currentMapNode.name,
+                });
+            }
             this.mapTransitionOpening = true;
         }
         if (this.transitionProgress >= 0.4) {
@@ -1855,6 +1857,29 @@ class KeyPressTriggerCondition {
 
 /***/ }),
 
+/***/ "./src/effects/trigger-conditions/or.ts":
+/*!**********************************************!*\
+  !*** ./src/effects/trigger-conditions/or.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OrTriggerCondition: () => (/* binding */ OrTriggerCondition)
+/* harmony export */ });
+class OrTriggerCondition {
+    conditions;
+    constructor(conditions) {
+        this.conditions = conditions;
+    }
+    isMet(...args) {
+        return this.conditions.some((condition) => condition.isMet(...args));
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/effects/trigger-conditions/player-position.ts":
 /*!***********************************************************!*\
   !*** ./src/effects/trigger-conditions/player-position.ts ***!
@@ -1880,6 +1905,42 @@ class PlayerPositionTriggerCondition {
     isMet() {
         const spritePosition = this.gameStateManager.getState().player.spritePosition;
         return this.playerAnimations.some((playerAnimation) => playerAnimation === spritePosition);
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/effects/trigger-conditions/wide-area.ts":
+/*!*****************************************************!*\
+  !*** ./src/effects/trigger-conditions/wide-area.ts ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   WideAreaTriggerCondition: () => (/* binding */ WideAreaTriggerCondition)
+/* harmony export */ });
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+
+
+class WideAreaTriggerCondition {
+    area;
+    tileSize;
+    constructor(area, tileSize) {
+        this.area = area;
+        this.tileSize = tileSize;
+    }
+    isMet() {
+        const gameStateManager = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance().getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__.GameStateManager);
+        const playerState = gameStateManager.getState().player;
+        return (playerState.position.x >= this.area.x * this.tileSize &&
+            playerState.position.x <=
+                (this.area.x + this.area.width) * this.tileSize &&
+            playerState.position.y >= this.area.y * this.tileSize &&
+            playerState.position.y <=
+                (this.area.y + this.area.height) * this.tileSize);
     }
 }
 
@@ -2060,6 +2121,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
 /* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+
 
 
 class MapTransitionTrigger {
@@ -2067,14 +2130,26 @@ class MapTransitionTrigger {
     mapEvent;
     eventEmited = false;
     eventSystem;
+    gameStateManager;
     constructor(conditions, mapEvent) {
         this.conditions = conditions;
         this.mapEvent = mapEvent;
-        this.eventSystem = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance().getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_1__.EventSystem);
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_1__.EventSystem);
+        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_2__.GameStateManager);
     }
     update() {
         if (this.conditions.every((c) => c.isMet())) {
             if (!this.eventEmited) {
+                this.gameStateManager.updateState((state) => {
+                    return {
+                        ...state,
+                        player: {
+                            ...state.player,
+                            canMove: false,
+                        },
+                    };
+                });
                 this.eventSystem.emit(this.mapEvent.type, this.mapEvent);
                 this.eventEmited = true;
             }
@@ -2106,6 +2181,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _effects_sprites_effects_player_movement__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/effects/sprites-effects/player-movement */ "./src/effects/sprites-effects/player-movement.ts");
 /* harmony import */ var _types_effects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/types/effects */ "./src/types/effects.ts");
 /* harmony import */ var _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/effects/trigger-conditions/player-position */ "./src/effects/trigger-conditions/player-position.ts");
+/* harmony import */ var _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/effects/trigger-conditions/wide-area */ "./src/effects/trigger-conditions/wide-area.ts");
+/* harmony import */ var _effects_trigger_conditions_or__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/effects/trigger-conditions/or */ "./src/effects/trigger-conditions/or.ts");
+
+
 
 
 
@@ -2126,11 +2205,27 @@ async function createHouseRT01F2() {
     };
     const areaCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_4__.AreaTriggerCondition({ x: 9, y: 2, width: 1, height: 1 }, 32);
     const playerEffect = new _effects_sprites_effects_player_movement__WEBPACK_IMPORTED_MODULE_7__.PlayerMovementEffect({ x: 9, y: 1 }, MapTransitionEvent);
-    const bedCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_4__.AreaTriggerCondition({ x: 0, y: 4, width: 3, height: 1 }, 32);
+    const bedCondition = new _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__.WideAreaTriggerCondition({ x: 0, y: 4, width: 3, height: 1 }, 32);
+    const bedCenterCondition = new _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__.WideAreaTriggerCondition({ x: 1, y: 4, width: 1, height: 1 }, 32);
+    const playerBedPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
+        'left',
+        'walk-left',
+        'left-align',
+    ]);
     const keyCondition = new _effects_trigger_conditions_keypress__WEBPACK_IMPORTED_MODULE_5__.KeyPressTriggerCondition('ArrowUp');
+    const compositeBedCondition = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
+        bedCondition,
+        playerBedPosition,
+    ]);
+    const OrBedCondition = new _effects_trigger_conditions_or__WEBPACK_IMPORTED_MODULE_11__.OrTriggerCondition([
+        compositeBedCondition,
+        bedCenterCondition,
+    ]);
     const playerUpPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
     const compositeCondition = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
         areaCondition,
@@ -2172,11 +2267,11 @@ async function createHouseRT01F2() {
         [19617, 19618],
         [19633, 19634],
     ], 0, 9, false, -17, 12)
-        .createLayer('furniture_03', 11, 8, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
-        .buildSpriteObject([[19549, 19550]], 4, 1, false, -16, -2)
         .createLayer('effects', 11, 9, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
-        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, bedCondition)
-        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, bedCondition)
+        .buildSingleSprite(19549, 4, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19550, 4, 2, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, OrBedCondition)
         .createLayer('effects_01', 11, 9, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND)
         .addEnterIntoBuildingTriggerEffect([playerEffect], [_types_effects__WEBPACK_IMPORTED_MODULE_8__.PlayerMovementSequence.WALK_UP], [compositeCondition], 500)
         .build();
@@ -2236,10 +2331,13 @@ async function createHouseRT01() {
     const playerUpPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
     const playerDownPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
     const compositeConditionToRT = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
         areaConditionToRT,
@@ -2333,6 +2431,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _effects_sprites_effects_player_movement__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/effects/sprites-effects/player-movement */ "./src/effects/sprites-effects/player-movement.ts");
 /* harmony import */ var _types_effects__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/types/effects */ "./src/types/effects.ts");
 /* harmony import */ var _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/effects/trigger-conditions/player-position */ "./src/effects/trigger-conditions/player-position.ts");
+/* harmony import */ var _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/effects/trigger-conditions/wide-area */ "./src/effects/trigger-conditions/wide-area.ts");
+/* harmony import */ var _effects_trigger_conditions_or__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/effects/trigger-conditions/or */ "./src/effects/trigger-conditions/or.ts");
+
+
 
 
 
@@ -2353,11 +2455,27 @@ async function createHouseRT02F2() {
     };
     const areaCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_4__.AreaTriggerCondition({ x: 9, y: 2, width: 1, height: 1 }, 32);
     const playerEffect = new _effects_sprites_effects_player_movement__WEBPACK_IMPORTED_MODULE_7__.PlayerMovementEffect({ x: 9, y: 1 }, MapTransitionEvent);
-    const bedCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_4__.AreaTriggerCondition({ x: 0, y: 4, width: 3, height: 1 }, 32);
+    const bedCondition = new _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__.WideAreaTriggerCondition({ x: 0, y: 4, width: 3, height: 1 }, 32);
+    const bedCenterCondition = new _effects_trigger_conditions_wide_area__WEBPACK_IMPORTED_MODULE_10__.WideAreaTriggerCondition({ x: 1, y: 4, width: 1, height: 1 }, 32);
+    const playerBedPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
+        'left',
+        'walk-left',
+        'left-align',
+    ]);
     const keyCondition = new _effects_trigger_conditions_keypress__WEBPACK_IMPORTED_MODULE_5__.KeyPressTriggerCondition('ArrowUp');
+    const compositeBedCondition = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
+        bedCondition,
+        playerBedPosition,
+    ]);
+    const OrBedCondition = new _effects_trigger_conditions_or__WEBPACK_IMPORTED_MODULE_11__.OrTriggerCondition([
+        compositeBedCondition,
+        bedCenterCondition,
+    ]);
     const playerUpPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
     const compositeCondition = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
         areaCondition,
@@ -2399,11 +2517,11 @@ async function createHouseRT02F2() {
         [19617, 19618],
         [19633, 19634],
     ], 0, 9, false, -17, 12)
-        .createLayer('furniture_03', 11, 8, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
-        .buildSpriteObject([[19549, 19550]], 4, 1, false, -16, -2)
         .createLayer('effects', 11, 9, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
-        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, bedCondition)
-        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, bedCondition)
+        .buildSingleSprite(19549, 4, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19550, 4, 2, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19533, 5, 1, false, false, -16, -2, OrBedCondition)
+        .buildSingleSprite(19534, 5, 2, false, false, -16, -2, OrBedCondition)
         .createLayer('effects_01', 11, 9, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND)
         .addEnterIntoBuildingTriggerEffect([playerEffect], [_types_effects__WEBPACK_IMPORTED_MODULE_8__.PlayerMovementSequence.WALK_UP], [compositeCondition], 500)
         .build();
@@ -2463,10 +2581,13 @@ async function createHouseRT02() {
     const playerUpPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
+        'down',
     ]);
     const playerDownPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
     const compositeConditionToRT = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
         areaConditionToRT,
@@ -2584,6 +2705,7 @@ async function createHouseRTLab() {
     const playerDownPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_7__.PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
     const compositeCondition = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_6__.CompositeTriggerCondition([
         areaCondition,
@@ -2773,6 +2895,7 @@ async function createLittleRootTown() {
     const playerPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_11__.PlayerPositionTriggerCondition([
         'walk-up',
         'up-align',
+        'up',
     ]);
     const compositeConditionToH1 = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_7__.CompositeTriggerCondition([
         areaConditionToH1,
@@ -3050,11 +3173,12 @@ async function createRoute101() {
     };
     const areaConditionTo101 = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_6__.AreaTriggerCondition({ x: 15, y: 25, width: 2, height: 1 }, 32);
     const jumpArea01 = new _effects_trigger_conditions_jump_area__WEBPACK_IMPORTED_MODULE_8__.JumpAreaTriggerCondition({ x: 11, y: 8, width: 4, height: 1 }, 32);
-    const jumpArea02 = new _effects_trigger_conditions_jump_area__WEBPACK_IMPORTED_MODULE_8__.JumpAreaTriggerCondition({ x: 3, y: 10, width: 4, height: 1 }, 32);
+    const jumpArea02 = new _effects_trigger_conditions_jump_area__WEBPACK_IMPORTED_MODULE_8__.JumpAreaTriggerCondition({ x: 3, y: 10, width: 7, height: 1 }, 32);
     const keyConditionDown = new _effects_trigger_conditions_keypress__WEBPACK_IMPORTED_MODULE_4__.KeyPressTriggerCondition('ArrowDown');
     const playerDownPosition = new _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_9__.PlayerPositionTriggerCondition([
         'walk-down',
         'down-align',
+        'down',
     ]);
     const compositeConditionToRT = new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_5__.CompositeTriggerCondition([
         areaConditionTo101,
@@ -3319,6 +3443,7 @@ class Player {
     targetPosition;
     sprite;
     isMoving = false;
+    intendedDirection = { x: 0, y: 0 };
     flipX = false;
     tileSize;
     scale;
@@ -3467,6 +3592,7 @@ class Player {
             return;
         const deltaSeconds = deltaTime / 1000;
         let spritePosition = { activeAnimation: this.currentAnimation };
+        this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_5__.Input.movementDirection;
         if (this.isAligning) {
             this.alignProgress += deltaTime;
             this.sprite.update(deltaTime);
@@ -3477,40 +3603,61 @@ class Player {
             return;
         }
         if (!this.isMoving) {
-            const direction = _input_input_manager__WEBPACK_IMPORTED_MODULE_5__.Input.movementDirection;
-            if (direction.x !== 0 || direction.y !== 0) {
-                if (direction.x !== this.lastDirection.x ||
-                    direction.y !== this.lastDirection.y) {
-                    this.playAlignAnimation(direction, spritePosition);
-                    this.lastDirection = direction;
-                    this.currentAlignDirection = direction;
+            this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_5__.Input.movementDirection;
+            if (this.intendedDirection.x !== 0 ||
+                this.intendedDirection.y !== 0) {
+                if (this.intendedDirection.x !== this.lastDirection.x ||
+                    this.intendedDirection.y !== this.lastDirection.y) {
+                    this.playAlignAnimation(this.intendedDirection, spritePosition);
+                    this.lastDirection = this.intendedDirection;
+                    this.currentAlignDirection = this.intendedDirection;
                     this.isAligning = true;
                 }
                 else {
-                    this.startMovement(direction, spritePosition);
+                    this.startMovement(this.intendedDirection, spritePosition);
                 }
-                this.lastDirection = direction;
+                this.lastDirection = this.intendedDirection;
             }
         }
         if (this.isMoving) {
-            this.moveTowardsTarget(deltaSeconds, spritePosition);
+            this.moveTowardsTarget(deltaSeconds);
             this.sprite.update(deltaTime);
         }
-        this.gameStateManager.updateState((state) => {
-            return {
-                ...state,
-                player: {
-                    ...state.player,
-                    spritePosition: spritePosition.activeAnimation,
-                    position: {
-                        x: this.position.x,
-                        y: this.position.y,
+        if (!this.isMoving &&
+            !this.isAligning &&
+            this.intendedDirection.x === 0 &&
+            this.intendedDirection.y === 0) {
+            this.gameStateManager.updateState((state) => {
+                return {
+                    ...state,
+                    player: {
+                        ...state.player,
+                        spritePosition: this.getIdleAnimation(spritePosition.activeAnimation),
+                        position: {
+                            x: this.position.x,
+                            y: this.position.y,
+                        },
                     },
-                },
-            };
-        });
+                };
+            });
+        }
+        else {
+            this.gameStateManager.updateState((state) => {
+                return {
+                    ...state,
+                    player: {
+                        ...state.player,
+                        spritePosition: spritePosition.activeAnimation,
+                        position: {
+                            x: this.position.x,
+                            y: this.position.y,
+                        },
+                    },
+                };
+            });
+        }
     }
-    moveTowardsTarget(deltaSeconds, spritePosition) {
+    moveTowardsTarget(deltaSeconds) {
         const dx = this.targetPosition.x - this.position.x;
         const dy = this.targetPosition.y - this.position.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -3612,6 +3759,24 @@ class Player {
             this.currentAnimation = animation;
         }
     }
+    getIdleAnimation(currentAnimation) {
+        console.log(currentAnimation);
+        switch (currentAnimation) {
+            case 'walk-left':
+            case 'left-align':
+            case 'left':
+                return 'left';
+            case 'walk-up':
+            case 'up-align':
+            case 'up':
+                return 'up';
+            case 'walk-down':
+            case 'down-align':
+            case 'down':
+                return 'down';
+        }
+        return 'up';
+    }
 }
 
 
@@ -3629,6 +3794,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _layout_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout/layout */ "./src/html/components/app/layout/layout.ts");
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/header */ "./src/html/components/app/header/header.ts");
+/* harmony import */ var _body_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./body/body */ "./src/html/components/app/body/body.ts");
+
 
 
 /**
@@ -3643,7 +3810,81 @@ const componentDefinitions = [
         name: 'app-header',
         component: _header_header__WEBPACK_IMPORTED_MODULE_1__["default"],
     },
+    {
+        name: 'app-body',
+        component: _body_body__WEBPACK_IMPORTED_MODULE_2__["default"]
+    }
 ];
+
+
+/***/ }),
+
+/***/ "./src/html/components/app/body/body.css":
+/*!***********************************************!*\
+  !*** ./src/html/components/app/body/body.css ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("");
+
+/***/ }),
+
+/***/ "./src/html/components/app/body/body.html":
+/*!************************************************!*\
+  !*** ./src/html/components/app/body/body.html ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Module
+var code = ``;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/html/components/app/body/body.ts":
+/*!**********************************************!*\
+  !*** ./src/html/components/app/body/body.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ BodyComponent)
+/* harmony export */ });
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../main.css */ "./src/html/main.css");
+/* harmony import */ var _body_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./body.css */ "./src/html/components/app/body/body.css");
+/* harmony import */ var _body_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./body.html */ "./src/html/components/app/body/body.html");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+
+
+
+
+
+class BodyComponent extends HTMLElement {
+    eventSystem;
+    constructor() {
+        super();
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__.EventSystem);
+        this.attachShadow({ mode: 'open' });
+        const template = document.createElement('template');
+        template.innerHTML = `
+                    <style>${_main_css__WEBPACK_IMPORTED_MODULE_0__["default"].toString()}${_body_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}</style>
+                    ${_body_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
+                `;
+        this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    }
+}
 
 
 /***/ }),
@@ -3755,6 +3996,7 @@ __webpack_require__.r(__webpack_exports__);
 class HeaderComponent extends HTMLElement {
     eventSystem;
     logoElement;
+    transitionTimeout = null;
     constructor() {
         super();
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_5__.GameContext.getInstance();
@@ -3799,7 +4041,10 @@ class HeaderComponent extends HTMLElement {
         this.eventSystem.on('MAP_TRANSITION_COMPLETED', (data) => {
             this.logoElement.style.transform = 'translateY(0px)';
             this.logoElement.childNodes[3].textContent = data.mapName ?? '';
-            setTimeout(() => {
+            if (this.transitionTimeout) {
+                clearTimeout(this.transitionTimeout);
+            }
+            this.transitionTimeout = setTimeout(() => {
                 const logoHeight = this.logoElement.offsetHeight;
                 this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
             }, 2000);
