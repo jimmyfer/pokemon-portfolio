@@ -7,6 +7,7 @@ import { GameScene } from '@/scenes/game-scene';
 import { Input } from '@/input/input-manager';
 import { WorldManager } from '@/core/engine/world-manager';
 import { GAME_CANVAS } from '@/core/engine/canvas-token';
+import { TransitionManager } from '@/core/systems/transition-manager';
 
 export class OverworldScene extends GameScene {
     private camera: Camera;
@@ -15,6 +16,7 @@ export class OverworldScene extends GameScene {
 
     private layerManager: LayerManager;
     private worldManager: WorldManager;
+    private transitionManager: TransitionManager;
 
     constructor() {
         super();
@@ -23,6 +25,7 @@ export class OverworldScene extends GameScene {
         this.layerManager = gameContext.getBean(LayerManager);
         this.camera = gameContext.getBean(Camera);
         this.worldManager = gameContext.getBean(WorldManager);
+        this.transitionManager = gameContext.getBean(TransitionManager);
 
         this.player = new Player();
         this.initializeLayers();
@@ -110,12 +113,14 @@ export class OverworldScene extends GameScene {
 
     update(deltaTime: number) {
         this.layerManager.update(deltaTime);
+        this.transitionManager.update(deltaTime);
     }
 
     render(ctx: CanvasRenderingContext2D) {
         ctx.save();
         ctx.imageSmoothingEnabled = false;
         this.layerManager.render();
+        this.transitionManager.render();
         ctx.restore();
     }
 

@@ -9,8 +9,6 @@ import { CollisionSystem } from '../systems/collision-system';
 import { LayerPriority } from '@/types/render-types';
 import { createRoute101 } from '@/game/map/route_101/route-101';
 import { EventSystem } from '../systems/event-system';
-import { Vector2D } from '@/types/sprite-sheet';
-import { GAME_CANVAS, TRANSICION_CANVAS } from './canvas-token';
 import { createHouseRT01 } from '@/game/map/littleroot_town/houses/house-01';
 import { createHouseRT01F2 } from '@/game/map/littleroot_town/houses/house-01-f2';
 import { createHouseRT02 } from '@/game/map/littleroot_town/houses/house-02';
@@ -28,20 +26,6 @@ export class WorldManager {
     private collisionSystem: CollisionSystem;
     private eventSystem: EventSystem;
 
-    private transitionPhase: 'closing' | 'opening' | null = null;
-    private transitionProgress: number = 0;
-    private transitionDuration: number = 1000;
-    private transitionTargetMapId: string | null = null;
-    private transitionPlayerTargetPosition: Vector2D | null = null;
-    private transitionPlayerSpritePosition: string | null = null;
-    private transitionScreenPosition: { x: number; y: number } = { x: 0, y: 0 };
-    private maxRadius: number = 0;
-
-    private mapTransitionOpening: boolean = false;
-    private mapTransitionClosing: boolean = false;
-
-    private radiusMapEffect = 0;
-
     constructor() {
         const gameContext = GameContext.getInstance();
         this.gameStateManager = gameContext.getBean(GameStateManager);
@@ -53,7 +37,7 @@ export class WorldManager {
     async initialize() {
         await this.buildWorldGraph();
         await this.loadMap();
-        this.listenMapTransitionEvent();
+        this.setupTransitionListeners();
     }
 
     private async buildWorldGraph() {
@@ -205,141 +189,42 @@ export class WorldManager {
         );
     }
 
-    listenMapTransitionEvent(): void {
-        this.eventSystem.on('MAP_TRANSITION', (data) => {
-            this.startTransition(data.to);
-        });
+    private setupTransitionListeners() {
+        const eventSystem = GameContext.getInstance().getBean(EventSystem);
+        eventSystem.on(
+            'MAP_TRANSITION_CLOSED',
+            (data: { targetMapId: string }) =>
+                this.handleMapLoad(data.targetMapId)
+        );
     }
 
-    private startTransition(targetMapId: string): void {
+    private async handleMapLoad(targetMapId: string) {
         const spawnPoint = this.currentMapNode.spawnPoints?.get(targetMapId);
-        if (spawnPoint) {
-            const gameCtx = GameContext.getInstance().getBean(GAME_CANVAS);
-            this.transitionTargetMapId = targetMapId;
-            this.transitionScreenPosition = this.camera.targetCenter();
-            this.transitionPlayerTargetPosition = spawnPoint.spawnPosition;
-            this.transitionPlayerSpritePosition = spawnPoint.playerPosition;
-            const screenWidth = gameCtx.canvas.width;
-            const screenHeight = gameCtx.canvas.height;
-            this.maxRadius = Math.hypot(screenWidth, screenHeight);
-            this.transitionPhase = 'closing';
-            this.transitionProgress = 0;
-        } else {
-            throw new Error('Wrong connection');
-        }
+        if (!spawnPoint) throw new Error('Spawn point invalid');
+
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: {
+                ...state.player,
+                position: spawnPoint.spawnPosition,
+                spritePosition: spawnPoint.playerPosition,
+                canMove: false,
+                hidden: false,
+            },
+            world: { currentMap: targetMapId },
+        }));
+
+        await this.loadMap();
+
+        const worldName =
+            this.currentMapNode.type === 'OPEN_WORLD'
+                ? this.currentMapNode.name
+                : null;
+        this.eventSystem.emit('MAP_TRANSITION_READY', { mapName: worldName });
     }
 
     update(deltaTime: number): void {
         this.currentMap.update(deltaTime);
-        this.checkTransitionPhase(deltaTime);
-    }
-
-    async checkTransitionPhase(deltaTime: number): Promise<void> {
-        if (!this.transitionPhase) return;
-
-        this.transitionEffect();
-
-        this.transitionProgress = Math.min(
-            1,
-            this.transitionProgress + deltaTime / this.transitionDuration
-        );
-
-        if (this.transitionPhase === 'closing') {
-            await this.handleClosingTransition();
-        } else if (this.transitionPhase === 'opening') {
-            await this.handleOpeningTransition();
-        }
-    }
-
-    private async handleClosingTransition(): Promise<void> {
-        this.mapTransitionOpening = false;
-        if (!this.mapTransitionClosing) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    canMove: false,
-                },
-            }));
-            this.mapTransitionClosing = true;
-        }
-
-        if (this.transitionProgress >= 1) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    hidden: false,
-                    position: this.transitionPlayerTargetPosition!,
-                    spritePosition: this.transitionPlayerSpritePosition!,
-                },
-                world: {
-                    currentMap: this.transitionTargetMapId!,
-                },
-            }));
-
-            await this.loadMap();
-
-            this.transitionPhase = 'opening';
-            this.transitionProgress = 0;
-            this.transitionScreenPosition = this.camera.targetCenter();
-        }
-
-        this.radiusMapEffect = (1 - this.transitionProgress) * this.maxRadius;
-    }
-
-    private async handleOpeningTransition(): Promise<void> {
-        if (!this.mapTransitionOpening) {
-            if (this.currentMapNode.type === 'OPEN_WORLD') {
-                this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
-                    mapName: this.currentMapNode.name,
-                });
-            }
-            this.mapTransitionOpening = true;
-        }
-
-        if (this.transitionProgress >= 0.4) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    canMove: true,
-                },
-            }));
-        }
-
-        if (this.transitionProgress >= 1) {
-            this.transitionPhase = null;
-            this.radiusMapEffect = 0;
-            this.mapTransitionOpening = false;
-            this.mapTransitionClosing = false;
-        } else {
-            this.radiusMapEffect = this.transitionProgress * this.maxRadius;
-        }
-    }
-
-    transitionEffect(): void {
-        if (this.radiusMapEffect == 0) return;
-        const ctx = GameContext.getInstance().getBean(TRANSICION_CANVAS);
-
-        ctx.save();
-        ctx.globalCompositeOperation = 'source-over';
-        ctx.fillStyle = 'black';
-        ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
-        ctx.fill();
-
-        ctx.globalCompositeOperation = 'destination-out';
-        ctx.beginPath();
-        ctx.arc(
-            this.transitionScreenPosition.x,
-            this.transitionScreenPosition.y,
-            this.radiusMapEffect,
-            0,
-            Math.PI * 2
-        );
-        ctx.fill();
-        ctx.restore();
     }
 
     render(priority: LayerPriority): void {

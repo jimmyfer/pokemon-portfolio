@@ -69,9 +69,11 @@ export default class HeaderComponent extends HTMLElement {
             this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
         });
 
-        this.eventSystem.on('MAP_TRANSITION_COMPLETED', (data) => {
+        this.eventSystem.on('MAP_TRANSITION_READY', (data) => {
+            if (!data.mapName) return;
+
             this.logoElement.style.transform = 'translateY(0px)';
-            this.logoElement.childNodes[3].textContent = data.mapName ?? '';
+            this.logoElement.childNodes[3].textContent = data.mapName;
 
             if (this.transitionTimeout) {
                 clearTimeout(this.transitionTimeout);
