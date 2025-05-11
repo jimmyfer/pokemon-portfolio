@@ -2,6 +2,7 @@ import { AssetManager } from '@/assets/assetsManager';
 import { GAME_CANVAS } from '@/core/engine/canvas-token';
 import { GameContext } from '@/core/engine/game-context';
 import { CollisionSystem } from '@/core/systems/collision-system';
+import { EventSystem } from '@/core/systems/event-system';
 import { GameStateManager } from '@/core/systems/game-state-manager';
 import { Input } from '@/input/input-manager';
 import { Camera } from '@/rendering/camera';
@@ -37,14 +38,21 @@ export class Player {
     private gameStateManager: GameStateManager;
     private assetManager: AssetManager;
     private collisionSystem: CollisionSystem;
+    private eventSystem: EventSystem;
 
     constructor() {
+        this.initialize();
+    }
+
+    initialize(): void {
         const gameContext = GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
         this.assetManager = GameContext.getInstance().getBean(AssetManager);
         this.collisionSystem = gameContext.getBean(CollisionSystem);
         this.gameStateManager = gameContext.getBean(GameStateManager);
+        this.eventSystem = gameContext.getBean(EventSystem);
+
         this.gameStateManager.subscribe(() => {
             this.updatePlayerState();
         });
@@ -64,6 +72,13 @@ export class Player {
         this.configureAnimations(this.assetManager.getSpriteSheet('player'));
         this.sprite = new AnimatedSprite(
             this.assetManager.getSpriteSheet('player')
+        );
+
+        this.eventSystem.on('TRANSITION_START', () =>
+            this.lockPlayerMovement()
+        );
+        this.eventSystem.on('TRANSITION_END', () =>
+            this.unlockPlayerMovement()
         );
 
         this.sprite.play('idle');
@@ -427,7 +442,6 @@ export class Player {
     }
 
     getIdleAnimation(currentAnimation: string): string {
-        console.log(currentAnimation);
         switch (currentAnimation) {
             case 'walk-left':
             case 'left-align':
@@ -444,5 +458,19 @@ export class Player {
         }
 
         return 'up';
+    }
+
+    private lockPlayerMovement() {
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: false },
+        }));
+    }
+
+    private unlockPlayerMovement() {
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: true },
+        }));
     }
 }
