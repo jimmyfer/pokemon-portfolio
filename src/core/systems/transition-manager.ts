@@ -3,13 +3,13 @@ import { Injectable } from '../decorators/injectable';
 import { GameContext } from '../engine/game-context';
 import { EventSystem } from './event-system';
 import { TRANSICION_CANVAS } from '../engine/canvas-token';
-import { OpacityTransitionEffect } from './opacity-transition';
-import { WorldManager } from '../engine/world-manager';
+import { OpacityTransitionEffect } from '../transitions/opacity-transition';
+import { PageComponent } from '@/types/page-component';
 
 @Injectable()
 export class TransitionManager {
     private currentEffect: TransitionEffect | null;
-    private transitionType: 'map' | 'page' | null = null;
+    private transitionType: 'map' | 'page' | 'page-closed' | null = null;
     private transitionProgress: number = 0;
     private transitionDuration: number = 500;
     private transitionPhase: 'closing' | 'opening' | 'waiting' | null = null;
@@ -33,8 +33,15 @@ export class TransitionManager {
 
         this.eventSystem.on(
             'PAGE_TRANSITION',
-            (data: { component: any; effect?: TransitionEffect }) =>
-                this.handlePageTransition(data)
+            (data: {
+                component: PageComponent;
+                itemName: string;
+                effect?: TransitionEffect;
+            }) => this.handlePageTransition(data)
+        );
+
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION', () =>
+            this.handlePageClosedTransition()
         );
 
         this.eventSystem.on('MAP_TRANSITION_READY', () =>
@@ -53,14 +60,21 @@ export class TransitionManager {
     }
 
     private handlePageTransition(data: {
-        component: any;
+        component: PageComponent;
+        itemName: string;
         effect?: TransitionEffect;
     }) {
         this.transitionType = 'page';
         this.startTransition(data.effect || new OpacityTransitionEffect());
         this.eventSystem.emit('PAGE_TRANSITION_STARTED', {
             component: data.component,
+            itemName: data.itemName,
         });
+    }
+
+    private handlePageClosedTransition() {
+        this.transitionType = 'page-closed';
+        this.startTransition(new OpacityTransitionEffect());
     }
 
     private startTransition(effect: TransitionEffect) {
@@ -102,6 +116,8 @@ export class TransitionManager {
             this.eventSystem.emit('MAP_TRANSITION_COMPLETE', {});
         } else if (this.transitionType === 'page') {
             this.eventSystem.emit('PAGE_TRANSITION_COMPLETE', {});
+        } else if (this.transitionType === 'page-closed') {
+            this.eventSystem.emit('PAGE_CLOSED_TRANSITION_COMPLETE', {});
         }
 
         this.transitionType = null;
@@ -135,6 +151,10 @@ export class TransitionManager {
             this.transitionPhase = 'waiting';
         } else if (this.transitionType === 'page') {
             this.eventSystem.emit('PAGE_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        } else if (this.transitionType === 'page-closed') {
+            this.eventSystem.emit('PAGE_CLOSED_TRANSITION_CLOSED', {});
             this.transitionPhase = 'opening';
             this.transitionProgress = 0;
         }

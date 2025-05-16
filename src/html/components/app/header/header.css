@@ -1,14 +1,25 @@
+:host {
+    position: absolute;
+}
+
+.header-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     padding: 1rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-container {
-    margin-right: 40px;
     position: relative;
+    z-index: 12;
 }
 
 .shadow-box {
@@ -35,15 +46,15 @@
     background: none;
 }
 
-.open-menu-btn svg {
-    display: block;
+.open-menu-btn img {
     position: absolute;
     bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
 }
 
-.open-menu-btn:active svg {
+.open-menu-btn:active img {
     transform: translate(0, 0.25rem) rotate(0) skew(0) skewY(0) scaleX(1)
         scaleY(1);
 }

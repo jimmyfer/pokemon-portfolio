@@ -220,7 +220,7 @@ export class WorldManager {
             this.currentMapNode.type === 'OPEN_WORLD'
                 ? this.currentMapNode.name
                 : null;
-        this.eventSystem.emit('MAP_TRANSITION_READY', { mapName: worldName });
+        this.eventSystem.emit('MAP_TRANSITION_READY', {});
     }
 
     update(deltaTime: number): void {

@@ -55,10 +55,10 @@ export class GameEngine {
     }
 
     private initializeCanvas(): void {
-        this.canvasGame.width = window.innerWidth;
-        this.canvasGame.height = window.innerHeight;
-        this.canvasTransicion.width = window.innerWidth;
-        this.canvasTransicion.height = window.innerHeight;
+        this.canvasGame.width = window.screen.width;
+        this.canvasGame.height = window.screen.height;
+        this.canvasTransicion.width = window.screen.width;
+        this.canvasTransicion.height = window.screen.height;
         this.handleResize();
     }
 
@@ -109,11 +109,12 @@ export class GameEngine {
         this.sceneManager.currentScene?.update(deltaTime);
 
         this.canvasGameCtx.save();
+
         this.canvasGameCtx.clearRect(
             0,
             0,
-            window.innerWidth,
-            window.innerHeight
+            window.screen.width,
+            window.screen.height
         );
         this.sceneManager.currentScene?.render(this.canvasGameCtx);
         this.canvasGameCtx.restore();
@@ -134,7 +135,7 @@ export class GameEngine {
         this.canvasTransicion.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
         this.canvasTransicion.style.transformOrigin = 'top left';
 
-        container.style.width = `${window.innerWidth}px`;
-        container.style.height = `${window.innerHeight}px`;
+        container.style.width = `${window.screen.width}px`;
+        container.style.height = `${window.screen.height}px`;
     }
 }
