@@ -16,8 +16,8 @@ export class Camera {
 
     constructor() {
         this.viewport = {
-            width: window.innerWidth * 0.6,
-            height: window.innerHeight * 0.8,
+            width: window.screen.width * 0.6,
+            height: window.screen.height * 0.8,
         };
     }
 

@@ -10,6 +10,7 @@ export default class HeaderComponent extends HTMLElement {
     private eventSystem: EventSystem;
     private logoElement: HTMLDivElement;
     private transitionTimeout: ReturnType<typeof setTimeout> | null = null;
+    private pageActive: Boolean = false;
 
     constructor() {
         super();
@@ -18,52 +19,96 @@ export default class HeaderComponent extends HTMLElement {
         this.eventSystem = gameContext.getBean(EventSystem);
 
         this.attachShadow({ mode: 'open' });
+        this.initializeTemplate();
 
+        this.initializeMenuButtons();
+        this.initializeMenuItems();
+
+        this.initializeLogo();
+
+        this.listenMapTransitionEvent();
+
+        this.eventSystem.on('PAGE_TRANSITION_CLOSED', () =>
+            this.updateToPageMode()
+        );
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () =>
+            this.updateToGameMode()
+        );
+    }
+
+    private initializeTemplate(): void {
         const template = document.createElement('template');
         template.innerHTML = `
-                    <style>${mainCss.toString()}${css.toString()}</style>
-                    ${html}
-                `;
+        <style>${mainCss.toString()}${css.toString()}</style>
+        ${html}
+      `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    }
 
-        this.shadowRoot
-            ?.querySelector('.open-menu-btn')
-            ?.addEventListener('click', () => {
-                this.shadowRoot
-                    ?.querySelector('.menu-body-container')
-                    ?.classList.toggle('active');
-            });
+    private initializeMenuButtons(): void {
+        const openMenuBtn = this.shadowRoot?.querySelector('.open-menu-btn');
+        const closeMenuBtn = this.shadowRoot?.querySelector('.close-menu');
 
-        this.shadowRoot
-            ?.querySelector('.close-menu')
-            ?.addEventListener('click', () => {
-                this.shadowRoot
-                    ?.querySelector('.menu-body-container')
-                    ?.classList.toggle('active');
-            });
+        openMenuBtn?.addEventListener('click', () => this.clickedMenu());
+        closeMenuBtn?.addEventListener('click', () => this.clickedMenu());
+    }
 
+    private clickedMenu(): void {
+        if (this.pageActive) {
+            this.closeActivePage();
+        } else {
+            this.toggleMenu();
+        }
+    }
+
+    private closeActivePage(): void {
+        this.eventSystem.emit('PAGE_CLOSED_TRANSITION', {});
+    }
+
+    private toggleMenu(): void {
+        const menuContainer = this.shadowRoot?.querySelector(
+            '.menu-body-container'
+        );
+        menuContainer?.classList.toggle('active');
+    }
+
+    private desactivateMenu(): void {
+        const menuContainer = this.shadowRoot?.querySelector(
+            '.menu-body-container'
+        ) as HTMLDivElement;
+        menuContainer.style = 'display: none';
+        menuContainer?.classList.remove('active');
+
+        setTimeout(() => {
+            menuContainer.style = 'display: block';
+        }, 350);
+    }
+
+    private initializeMenuItems(): void {
         MENU_CONFIG.forEach((item) => {
             const menuItemsContainer =
                 this.shadowRoot?.querySelector('.menu-items');
 
-            const menuItem = document.createElement(
-                'ui-menu-item'
-            ) as MenuItemComponent;
+            const menuItem = new MenuItemComponent();
             menuItem.itemName = item.itemName;
+
+            if (item.component) {
+                menuItem.pageComponent = new item.component();
+            }
 
             menuItemsContainer?.appendChild(menuItem);
         });
+    }
 
+    private initializeLogo(): void {
         this.logoElement = this.shadowRoot?.querySelector(
             '.logo'
         ) as HTMLDivElement;
         const logoHeight = this.logoElement.offsetHeight;
         this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
-
-        this.listenMapTransitionEvent();
     }
 
-    listenMapTransitionEvent(): void {
+    private listenMapTransitionEvent(): void {
         this.eventSystem.on('MAP_TRANSITION', () => {
             const logoHeight = this.logoElement.offsetHeight;
             this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
@@ -84,5 +129,22 @@ export default class HeaderComponent extends HTMLElement {
                 this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
             }, 2000);
         });
+    }
+
+    updateToPageMode(): void {
+        const imgComponent = this.shadowRoot?.querySelector(
+            '.menu-btn-img'
+        ) as HTMLImageElement;
+        imgComponent.style.display = 'none';
+        this.pageActive = true;
+        this.desactivateMenu();
+    }
+
+    updateToGameMode(): void {
+        const imgComponent = this.shadowRoot?.querySelector(
+            '.menu-btn-img'
+        ) as HTMLImageElement;
+        imgComponent.style.display = 'block';
+        this.pageActive = false;
     }
 }
