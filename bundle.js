@@ -85,6 +85,56 @@ AssetManager = __decorate([
 
 /***/ }),
 
+/***/ "./src/assets/html/layout/arrow_rigth.png":
+/*!************************************************!*\
+  !*** ./src/assets/html/layout/arrow_rigth.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "e385083e6ac8ee3bd54c.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/bag_selector.png":
+/*!*************************************************!*\
+  !*** ./src/assets/html/layout/bag_selector.png ***!
+  \*************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "89207b34c66f80e937e9.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/close_btn.png":
+/*!**********************************************!*\
+  !*** ./src/assets/html/layout/close_btn.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "75bf5e391988ee619c26.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/inventory.png":
+/*!**********************************************!*\
+  !*** ./src/assets/html/layout/inventory.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "a310ba5be3a410fa2101.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/menu_btn.png":
+/*!*********************************************!*\
+  !*** ./src/assets/html/layout/menu_btn.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "5b1bb886729819d2bb9b.png";
+
+/***/ }),
+
 /***/ "./src/assets/html/layout/menu_content.png":
 /*!*************************************************!*\
   !*** ./src/assets/html/layout/menu_content.png ***!
@@ -92,6 +142,36 @@ AssetManager = __decorate([
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "1e486534e0429f1eb5f6.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/rigth_arrow.png":
+/*!************************************************!*\
+  !*** ./src/assets/html/layout/rigth_arrow.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "4ad1ef1cd06d34d78ba6.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/trainer_card_back.png":
+/*!******************************************************!*\
+  !*** ./src/assets/html/layout/trainer_card_back.png ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "8e9558fff26985eaddeb.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/trainer_card_front.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/html/layout/trainer_card_front.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "123ba8a5e486e88edff9.png";
 
 /***/ }),
 
@@ -279,10 +359,10 @@ class GameEngine {
         this.gameLoop = this.gameLoop.bind(this);
     }
     initializeCanvas() {
-        this.canvasGame.width = window.innerWidth;
-        this.canvasGame.height = window.innerHeight;
-        this.canvasTransicion.width = window.innerWidth;
-        this.canvasTransicion.height = window.innerHeight;
+        this.canvasGame.width = window.screen.width;
+        this.canvasGame.height = window.screen.height;
+        this.canvasTransicion.width = window.screen.width;
+        this.canvasTransicion.height = window.screen.height;
         this.handleResize();
     }
     async initialize() {
@@ -303,7 +383,7 @@ class GameEngine {
         this.lastFrameTime = timestamp;
         this.sceneManager.currentScene?.update(deltaTime);
         this.canvasGameCtx.save();
-        this.canvasGameCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+        this.canvasGameCtx.clearRect(0, 0, window.screen.width, window.screen.height);
         this.sceneManager.currentScene?.render(this.canvasGameCtx);
         this.canvasGameCtx.restore();
         requestAnimationFrame(this.gameLoop);
@@ -317,8 +397,8 @@ class GameEngine {
         this.canvasGame.style.transformOrigin = 'top left';
         this.canvasTransicion.style.transform = `scale(${_core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance().getGameScale()})`;
         this.canvasTransicion.style.transformOrigin = 'top left';
-        container.style.width = `${window.innerWidth}px`;
-        container.style.height = `${window.innerHeight}px`;
+        container.style.width = `${window.screen.width}px`;
+        container.style.height = `${window.screen.height}px`;
     }
 }
 
@@ -399,12 +479,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _systems_collision_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../systems/collision-system */ "./src/core/systems/collision-system.ts");
 /* harmony import */ var _game_map_route_101_route_101__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/game/map/route_101/route-101 */ "./src/game/map/route_101/route-101.ts");
 /* harmony import */ var _systems_event_system__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../systems/event-system */ "./src/core/systems/event-system.ts");
-/* harmony import */ var _canvas_token__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./canvas-token */ "./src/core/engine/canvas-token.ts");
-/* harmony import */ var _game_map_littleroot_town_houses_house_01__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-01 */ "./src/game/map/littleroot_town/houses/house-01.ts");
-/* harmony import */ var _game_map_littleroot_town_houses_house_01_f2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-01-f2 */ "./src/game/map/littleroot_town/houses/house-01-f2.ts");
-/* harmony import */ var _game_map_littleroot_town_houses_house_02__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-02 */ "./src/game/map/littleroot_town/houses/house-02.ts");
-/* harmony import */ var _game_map_littleroot_town_houses_house_02_f2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-02-f2 */ "./src/game/map/littleroot_town/houses/house-02-f2.ts");
-/* harmony import */ var _game_map_littleroot_town_houses_lab__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/lab */ "./src/game/map/littleroot_town/houses/lab.ts");
+/* harmony import */ var _game_map_littleroot_town_houses_house_01__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-01 */ "./src/game/map/littleroot_town/houses/house-01.ts");
+/* harmony import */ var _game_map_littleroot_town_houses_house_01_f2__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-01-f2 */ "./src/game/map/littleroot_town/houses/house-01-f2.ts");
+/* harmony import */ var _game_map_littleroot_town_houses_house_02__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-02 */ "./src/game/map/littleroot_town/houses/house-02.ts");
+/* harmony import */ var _game_map_littleroot_town_houses_house_02_f2__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/house-02-f2 */ "./src/game/map/littleroot_town/houses/house-02-f2.ts");
+/* harmony import */ var _game_map_littleroot_town_houses_lab__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/game/map/littleroot_town/houses/lab */ "./src/game/map/littleroot_town/houses/lab.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -427,7 +506,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 let WorldManager = class WorldManager {
     currentMapNode;
     currentMap;
@@ -436,17 +514,6 @@ let WorldManager = class WorldManager {
     camera;
     collisionSystem;
     eventSystem;
-    transitionPhase = null;
-    transitionProgress = 0;
-    transitionDuration = 1000;
-    transitionTargetMapId = null;
-    transitionPlayerTargetPosition = null;
-    transitionPlayerSpritePosition = null;
-    transitionScreenPosition = { x: 0, y: 0 };
-    maxRadius = 0;
-    mapTransitionOpening = false;
-    mapTransitionClosing = false;
-    radiusMapEffect = 0;
     constructor() {
         const gameContext = _game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance();
         this.gameStateManager = gameContext.getBean(_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_4__.GameStateManager);
@@ -457,7 +524,7 @@ let WorldManager = class WorldManager {
     async initialize() {
         await this.buildWorldGraph();
         await this.loadMap();
-        this.listenMapTransitionEvent();
+        this.setupTransitionListeners();
     }
     async buildWorldGraph() {
         this.maps.set('little_root_town', {
@@ -487,7 +554,7 @@ let WorldManager = class WorldManager {
         this.maps.set('little_root_town_house01_f1', {
             id: 'little_root_town_house01_f1',
             name: 'Home F1',
-            loader: _game_map_littleroot_town_houses_house_01__WEBPACK_IMPORTED_MODULE_9__.createHouseRT01,
+            loader: _game_map_littleroot_town_houses_house_01__WEBPACK_IMPORTED_MODULE_8__.createHouseRT01,
             type: 'INTERIOR',
             spawnPoints: new Map([
                 [
@@ -509,7 +576,7 @@ let WorldManager = class WorldManager {
         this.maps.set('little_root_town_house01_f2', {
             id: 'little_root_town_house01_f2',
             name: 'Home F2',
-            loader: _game_map_littleroot_town_houses_house_01_f2__WEBPACK_IMPORTED_MODULE_10__.createHouseRT01F2,
+            loader: _game_map_littleroot_town_houses_house_01_f2__WEBPACK_IMPORTED_MODULE_9__.createHouseRT01F2,
             type: 'INTERIOR',
             spawnPoints: new Map([
                 [
@@ -524,7 +591,7 @@ let WorldManager = class WorldManager {
         this.maps.set('little_root_town_house02_f1', {
             id: 'little_root_town_house02_f1',
             name: 'RT House 02 F1',
-            loader: _game_map_littleroot_town_houses_house_02__WEBPACK_IMPORTED_MODULE_11__.createHouseRT02,
+            loader: _game_map_littleroot_town_houses_house_02__WEBPACK_IMPORTED_MODULE_10__.createHouseRT02,
             type: 'INTERIOR',
             spawnPoints: new Map([
                 [
@@ -546,7 +613,7 @@ let WorldManager = class WorldManager {
         this.maps.set('little_root_town_house02_f2', {
             id: 'little_root_town_house02_f2',
             name: 'RT House 02 F1',
-            loader: _game_map_littleroot_town_houses_house_02_f2__WEBPACK_IMPORTED_MODULE_12__.createHouseRT02F2,
+            loader: _game_map_littleroot_town_houses_house_02_f2__WEBPACK_IMPORTED_MODULE_11__.createHouseRT02F2,
             type: 'INTERIOR',
             spawnPoints: new Map([
                 [
@@ -561,7 +628,7 @@ let WorldManager = class WorldManager {
         this.maps.set('little_root_town_lab', {
             id: 'little_root_town_lab',
             name: 'RT Lab',
-            loader: _game_map_littleroot_town_houses_lab__WEBPACK_IMPORTED_MODULE_13__.createHouseRTLab,
+            loader: _game_map_littleroot_town_houses_lab__WEBPACK_IMPORTED_MODULE_12__.createHouseRTLab,
             type: 'INTERIOR',
             spawnPoints: new Map([
                 [
@@ -596,119 +663,33 @@ let WorldManager = class WorldManager {
         this.collisionSystem.setTileMap(this.currentMap);
         this.camera.setBounds(this.currentMap.getMapWidth(), this.currentMap.getMapHeight());
     }
-    listenMapTransitionEvent() {
-        this.eventSystem.on('MAP_TRANSITION', (data) => {
-            this.startTransition(data.to);
-        });
+    setupTransitionListeners() {
+        const eventSystem = _game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_systems_event_system__WEBPACK_IMPORTED_MODULE_7__.EventSystem);
+        eventSystem.on('MAP_TRANSITION_CLOSED', (data) => this.handleMapLoad(data.targetMapId));
     }
-    startTransition(targetMapId) {
+    async handleMapLoad(targetMapId) {
         const spawnPoint = this.currentMapNode.spawnPoints?.get(targetMapId);
-        if (spawnPoint) {
-            const gameCtx = _game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_canvas_token__WEBPACK_IMPORTED_MODULE_8__.GAME_CANVAS);
-            this.transitionTargetMapId = targetMapId;
-            this.transitionScreenPosition = this.camera.targetCenter();
-            this.transitionPlayerTargetPosition = spawnPoint.spawnPosition;
-            this.transitionPlayerSpritePosition = spawnPoint.playerPosition;
-            const screenWidth = gameCtx.canvas.width;
-            const screenHeight = gameCtx.canvas.height;
-            this.maxRadius = Math.hypot(screenWidth, screenHeight);
-            this.transitionPhase = 'closing';
-            this.transitionProgress = 0;
-        }
-        else {
-            throw new Error('Wrong connection');
-        }
+        if (!spawnPoint)
+            throw new Error('Spawn point invalid');
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: {
+                ...state.player,
+                position: spawnPoint.spawnPosition,
+                spritePosition: spawnPoint.playerPosition,
+                canMove: false,
+                hidden: false,
+            },
+            world: { currentMap: targetMapId },
+        }));
+        await this.loadMap();
+        const worldName = this.currentMapNode.type === 'OPEN_WORLD'
+            ? this.currentMapNode.name
+            : null;
+        this.eventSystem.emit('MAP_TRANSITION_READY', {});
     }
     update(deltaTime) {
         this.currentMap.update(deltaTime);
-        this.checkTransitionPhase(deltaTime);
-    }
-    async checkTransitionPhase(deltaTime) {
-        if (!this.transitionPhase)
-            return;
-        this.transitionEffect();
-        this.transitionProgress = Math.min(1, this.transitionProgress + deltaTime / this.transitionDuration);
-        if (this.transitionPhase === 'closing') {
-            await this.handleClosingTransition();
-        }
-        else if (this.transitionPhase === 'opening') {
-            await this.handleOpeningTransition();
-        }
-    }
-    async handleClosingTransition() {
-        this.mapTransitionOpening = false;
-        if (!this.mapTransitionClosing) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    canMove: false,
-                },
-            }));
-            this.mapTransitionClosing = true;
-        }
-        if (this.transitionProgress >= 1) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    hidden: false,
-                    position: this.transitionPlayerTargetPosition,
-                    spritePosition: this.transitionPlayerSpritePosition,
-                },
-                world: {
-                    currentMap: this.transitionTargetMapId,
-                },
-            }));
-            await this.loadMap();
-            this.transitionPhase = 'opening';
-            this.transitionProgress = 0;
-            this.transitionScreenPosition = this.camera.targetCenter();
-        }
-        this.radiusMapEffect = (1 - this.transitionProgress) * this.maxRadius;
-    }
-    async handleOpeningTransition() {
-        if (!this.mapTransitionOpening) {
-            if (this.currentMapNode.type === 'OPEN_WORLD') {
-                this.eventSystem.emit('MAP_TRANSITION_COMPLETED', {
-                    mapName: this.currentMapNode.name,
-                });
-            }
-            this.mapTransitionOpening = true;
-        }
-        if (this.transitionProgress >= 0.4) {
-            this.gameStateManager.updateState((state) => ({
-                ...state,
-                player: {
-                    ...state.player,
-                    canMove: true,
-                },
-            }));
-        }
-        if (this.transitionProgress >= 1) {
-            this.transitionPhase = null;
-            this.radiusMapEffect = 0;
-            this.mapTransitionOpening = false;
-            this.mapTransitionClosing = false;
-        }
-        else {
-            this.radiusMapEffect = this.transitionProgress * this.maxRadius;
-        }
-    }
-    transitionEffect() {
-        if (this.radiusMapEffect == 0)
-            return;
-        const ctx = _game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_canvas_token__WEBPACK_IMPORTED_MODULE_8__.TRANSICION_CANVAS);
-        ctx.save();
-        ctx.globalCompositeOperation = 'source-over';
-        ctx.fillStyle = 'black';
-        ctx.rect(0, 0, ctx.canvas.width, ctx.canvas.height);
-        ctx.fill();
-        ctx.globalCompositeOperation = 'destination-out';
-        ctx.beginPath();
-        ctx.arc(this.transitionScreenPosition.x, this.transitionScreenPosition.y, this.radiusMapEffect, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
     }
     render(priority) {
         this.currentMap.render(priority);
@@ -987,6 +968,198 @@ GameStateManager = __decorate([
     (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)(),
     __metadata("design:paramtypes", [])
 ], GameStateManager);
+
+
+
+/***/ }),
+
+/***/ "./src/core/systems/transition-manager.ts":
+/*!************************************************!*\
+  !*** ./src/core/systems/transition-manager.ts ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TransitionManager: () => (/* binding */ TransitionManager)
+/* harmony export */ });
+/* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+/* harmony import */ var _engine_game_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _event_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _engine_canvas_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/canvas-token */ "./src/core/engine/canvas-token.ts");
+/* harmony import */ var _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../transitions/opacity-transition */ "./src/core/transitions/opacity-transition.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+let TransitionManager = class TransitionManager {
+    currentEffect;
+    transitionType = null;
+    transitionProgress = 0;
+    transitionDuration = 500;
+    transitionPhase = null;
+    targetMapId = null;
+    eventSystem;
+    gameContext;
+    constructor() {
+        this.gameContext = _engine_game_context__WEBPACK_IMPORTED_MODULE_1__.GameContext.getInstance();
+        this.eventSystem = this.gameContext.getBean(_event_system__WEBPACK_IMPORTED_MODULE_2__.EventSystem);
+        this.initialize();
+    }
+    initialize() {
+        this.eventSystem.on('MAP_TRANSITION', (data) => this.handleMapTransition(data));
+        this.eventSystem.on('PAGE_TRANSITION', (data) => this.handlePageTransition(data));
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION', () => this.handlePageClosedTransition());
+        this.eventSystem.on('MAP_TRANSITION_READY', () => this.handleTransitionClosedReady());
+    }
+    handleMapTransition(data) {
+        this.transitionType = 'map';
+        this.targetMapId = data.to;
+        this.startTransition(data.effect || new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
+    }
+    handlePageTransition(data) {
+        this.transitionType = 'page';
+        this.startTransition(data.effect || new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
+        this.eventSystem.emit('PAGE_TRANSITION_STARTED', {
+            component: data.component,
+            itemName: data.itemName,
+        });
+    }
+    handlePageClosedTransition() {
+        this.transitionType = 'page-closed';
+        this.startTransition(new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
+    }
+    startTransition(effect) {
+        this.currentEffect = effect;
+        this.transitionProgress = 0;
+        this.transitionPhase = 'closing';
+        this.eventSystem.emit('TRANSITION_START', {});
+        this.currentEffect.initialize();
+    }
+    update(deltaTime) {
+        if (!this.currentEffect || !this.transitionPhase)
+            return;
+        this.transitionProgress += deltaTime / this.transitionDuration;
+        this.transitionProgress = Math.min(this.transitionProgress, 1);
+        switch (this.transitionPhase) {
+            case 'closing':
+                this.currentEffect.update(this.transitionProgress);
+                if (this.transitionProgress >= 1)
+                    this.handleTransitionClosed();
+                break;
+            case 'opening':
+                this.currentEffect.update(1 - this.transitionProgress);
+                if (this.transitionProgress >= 1)
+                    this.handleTransitionComplete();
+                break;
+        }
+    }
+    handleTransitionComplete() {
+        if (!this.currentEffect)
+            return;
+        this.eventSystem.emit('TRANSITION_END', {});
+        if (this.transitionType === 'map') {
+            this.eventSystem.emit('MAP_TRANSITION_COMPLETE', {});
+        }
+        else if (this.transitionType === 'page') {
+            this.eventSystem.emit('PAGE_TRANSITION_COMPLETE', {});
+        }
+        else if (this.transitionType === 'page-closed') {
+            this.eventSystem.emit('PAGE_CLOSED_TRANSITION_COMPLETE', {});
+        }
+        this.transitionType = null;
+        this.transitionPhase = null;
+        this.currentEffect = null;
+    }
+    render() {
+        if (!this.currentEffect)
+            return;
+        const ctx = this.gameContext.getBean(_engine_canvas_token__WEBPACK_IMPORTED_MODULE_3__.TRANSICION_CANVAS);
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        this.currentEffect.render(ctx);
+    }
+    handleTransitionClosedReady() {
+        if (this.transitionPhase === 'waiting' &&
+            this.transitionType === 'map') {
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        }
+    }
+    handleTransitionClosed() {
+        if (this.transitionType === 'map') {
+            this.eventSystem.emit('MAP_TRANSITION_CLOSED', {
+                targetMapId: this.targetMapId,
+            });
+            this.transitionPhase = 'waiting';
+        }
+        else if (this.transitionType === 'page') {
+            this.eventSystem.emit('PAGE_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        }
+        else if (this.transitionType === 'page-closed') {
+            this.eventSystem.emit('PAGE_CLOSED_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        }
+    }
+};
+TransitionManager = __decorate([
+    (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)(),
+    __metadata("design:paramtypes", [])
+], TransitionManager);
+
+
+
+/***/ }),
+
+/***/ "./src/core/transitions/opacity-transition.ts":
+/*!****************************************************!*\
+  !*** ./src/core/transitions/opacity-transition.ts ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   OpacityTransitionEffect: () => (/* binding */ OpacityTransitionEffect)
+/* harmony export */ });
+/* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let OpacityTransitionEffect = class OpacityTransitionEffect {
+    opacity = 0;
+    initialize() {
+        this.opacity = 0;
+    }
+    update(progress) {
+        this.opacity = progress;
+    }
+    render(ctx) {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = 'black';
+        ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.restore();
+    }
+};
+OpacityTransitionEffect = __decorate([
+    (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)()
+], OpacityTransitionEffect);
 
 
 
@@ -3426,10 +3599,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
 /* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
 /* harmony import */ var _core_systems_collision_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/collision-system */ "./src/core/systems/collision-system.ts");
-/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
-/* harmony import */ var _input_input_manager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/input/input-manager */ "./src/input/input-manager.ts");
-/* harmony import */ var _rendering_camera__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/rendering/camera */ "./src/rendering/camera.ts");
-/* harmony import */ var _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/rendering/sprite-sheet */ "./src/rendering/sprite-sheet.ts");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+/* harmony import */ var _input_input_manager__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/input/input-manager */ "./src/input/input-manager.ts");
+/* harmony import */ var _rendering_camera__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/rendering/camera */ "./src/rendering/camera.ts");
+/* harmony import */ var _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/rendering/sprite-sheet */ "./src/rendering/sprite-sheet.ts");
+
 
 
 
@@ -3461,13 +3636,18 @@ class Player {
     gameStateManager;
     assetManager;
     collisionSystem;
+    eventSystem;
     constructor() {
+        this.initialize();
+    }
+    initialize() {
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
         this.assetManager = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_assets_assetsManager__WEBPACK_IMPORTED_MODULE_0__.AssetManager);
         this.collisionSystem = gameContext.getBean(_core_systems_collision_system__WEBPACK_IMPORTED_MODULE_3__.CollisionSystem);
-        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_4__.GameStateManager);
+        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_5__.GameStateManager);
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_4__.EventSystem);
         this.gameStateManager.subscribe(() => {
             this.updatePlayerState();
         });
@@ -3479,7 +3659,9 @@ class Player {
         });
         this.targetPosition = { ...this.position };
         this.configureAnimations(this.assetManager.getSpriteSheet('player'));
-        this.sprite = new _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_7__.AnimatedSprite(this.assetManager.getSpriteSheet('player'));
+        this.sprite = new _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_8__.AnimatedSprite(this.assetManager.getSpriteSheet('player'));
+        this.eventSystem.on('TRANSITION_START', () => this.lockPlayerMovement());
+        this.eventSystem.on('TRANSITION_END', () => this.unlockPlayerMovement());
         this.sprite.play('idle');
     }
     updatePlayerState() {
@@ -3592,7 +3774,7 @@ class Player {
             return;
         const deltaSeconds = deltaTime / 1000;
         let spritePosition = { activeAnimation: this.currentAnimation };
-        this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_5__.Input.movementDirection;
+        this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_6__.Input.movementDirection;
         if (this.isAligning) {
             this.alignProgress += deltaTime;
             this.sprite.update(deltaTime);
@@ -3603,7 +3785,7 @@ class Player {
             return;
         }
         if (!this.isMoving) {
-            this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_5__.Input.movementDirection;
+            this.intendedDirection = _input_input_manager__WEBPACK_IMPORTED_MODULE_6__.Input.movementDirection;
             if (this.intendedDirection.x !== 0 ||
                 this.intendedDirection.y !== 0) {
                 if (this.intendedDirection.x !== this.lastDirection.x ||
@@ -3723,7 +3905,7 @@ class Player {
         const frame = this.sprite.getCurrentFrame();
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance();
         const ctx = gameContext.getBean(_core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_1__.GAME_CANVAS);
-        const camera = gameContext.getBean(_rendering_camera__WEBPACK_IMPORTED_MODULE_6__.Camera);
+        const camera = gameContext.getBean(_rendering_camera__WEBPACK_IMPORTED_MODULE_7__.Camera);
         const screenPos = {
             x: Math.ceil(this.position.x -
                 camera.position.x -
@@ -3760,7 +3942,6 @@ class Player {
         }
     }
     getIdleAnimation(currentAnimation) {
-        console.log(currentAnimation);
         switch (currentAnimation) {
             case 'walk-left':
             case 'left-align':
@@ -3776,6 +3957,18 @@ class Player {
                 return 'down';
         }
         return 'up';
+    }
+    lockPlayerMovement() {
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: false },
+        }));
+    }
+    unlockPlayerMovement() {
+        this.gameStateManager.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: true },
+        }));
     }
 }
 
@@ -3795,6 +3988,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout/layout */ "./src/html/components/app/layout/layout.ts");
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/header */ "./src/html/components/app/header/header.ts");
 /* harmony import */ var _body_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./body/body */ "./src/html/components/app/body/body.ts");
+/* harmony import */ var _pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/skills-about/skills-about */ "./src/html/components/app/pages/skills-about/skills-about.ts");
+
 
 
 
@@ -3812,8 +4007,12 @@ const componentDefinitions = [
     },
     {
         name: 'app-body',
-        component: _body_body__WEBPACK_IMPORTED_MODULE_2__["default"]
-    }
+        component: _body_body__WEBPACK_IMPORTED_MODULE_2__["default"],
+    },
+    {
+        name: 'page-skills-about',
+        component: _pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_3__["default"],
+    },
 ];
 
 
@@ -3829,7 +4028,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (":host {\r\n    position: absolute;\r\n    width: 100vw;\r\n    height: 100vh;\r\n}\r\n\r\n.body-content {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.active {\r\n    position: relative;\r\n}\r\n");
 
 /***/ }),
 
@@ -3844,7 +4043,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 // Module
-var code = ``;
+var code = `<div class="body-content">
+    <div class="component-container"></div>
+</div>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
 
@@ -3872,6 +4073,8 @@ __webpack_require__.r(__webpack_exports__);
 
 class BodyComponent extends HTMLElement {
     eventSystem;
+    currentComponent = null;
+    currentMenuItemName = null;
     constructor() {
         super();
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance();
@@ -3883,6 +4086,41 @@ class BodyComponent extends HTMLElement {
                     ${_body_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
                 `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.setupTransitionListeners();
+    }
+    setupTransitionListeners() {
+        const eventSystem = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance().getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__.EventSystem);
+        eventSystem.on('PAGE_TRANSITION_STARTED', (data) => this.preLoadComponent(data));
+        eventSystem.on('PAGE_TRANSITION_CLOSED', () => this.showLoadedComponent());
+        eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () => this.resetComponent());
+    }
+    showLoadedComponent() {
+        if (!this.currentComponent)
+            return;
+        const componentContainer = this.shadowRoot?.querySelector('.component-container');
+        const component = this.currentComponent;
+        if (this.currentMenuItemName) {
+            component.menuItemName = this.currentMenuItemName;
+        }
+        componentContainer.innerHTML = '';
+        componentContainer?.appendChild(component);
+    }
+    preLoadComponent(data) {
+        this.currentComponent = data.component;
+        this.currentMenuItemName = data.itemName;
+        this.toggleBodyContentIndex();
+    }
+    resetComponent() {
+        this.currentComponent = null;
+        this.currentMenuItemName = null;
+        this.toggleBodyContentIndex();
+    }
+    toggleBodyContentIndex() {
+        const bodyContent = this.shadowRoot.querySelector('.body-content');
+        bodyContent.classList.toggle('active');
+        const componentContainer = this.shadowRoot?.querySelector('.component-container');
+        componentContainer.innerHTML = '';
+        this.eventSystem.emit('PAGE_CLOSED_TRANSITION_READY', {});
     }
 }
 
@@ -3899,7 +4137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".header {\r\n    display: flex;\r\n    align-items: flex-start;\r\n    justify-content: space-between;\r\n    padding: 1rem;\r\n    width: 100%;\r\n}\r\n\r\n.menu-container {\r\n    margin-right: 40px;\r\n    position: relative;\r\n}\r\n\r\n.shadow-box {\r\n    bottom: -3px;\r\n    right: -3px;\r\n    position: absolute;\r\n    background: #736b84;\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 4px;\r\n}\r\n\r\n.open-menu-btn {\r\n    width: 44px;\r\n    height: 44px;\r\n    position: relative;\r\n    padding: 0;\r\n    margin: 0;\r\n    transition-property: all;\r\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\r\n    transition-duration: 0.15s;\r\n    border: none;\r\n    outline: none;\r\n    background: none;\r\n}\r\n\r\n.open-menu-btn svg {\r\n    display: block;\r\n    position: absolute;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.open-menu-btn:active svg {\r\n    transform: translate(0, 0.25rem) rotate(0) skew(0) skewY(0) scaleX(1)\r\n        scaleY(1);\r\n}\r\n\r\n.open-menu-btn:active .shadow-box {\r\n    transform: translate(0, 0.25rem) rotate(0) skew(0) skewY(0) scaleX(1)\r\n        scaleY(1);\r\n    bottom: -2px;\r\n    right: -2px;\r\n}\r\n\r\n.menu-body-container {\r\n    position: absolute;\r\n    top: 0;\r\n    right: -330px;\r\n    min-width: 300px;\r\n    width: 15vw;\r\n    max-height: 80%;\r\n    transform-origin: top;\r\n    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);\r\n}\r\n\r\n.menu-body-container.active {\r\n    transform: translateX(-320px);\r\n}\r\n\r\n.menu-body {\r\n    position: relative;\r\n}\r\n\r\n.menu-background {\r\n    img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: cover;\r\n    }\r\n}\r\n\r\n.close-menu {\r\n    position: absolute;\r\n    top: 30px;\r\n    right: 30px;\r\n}\r\n\r\n.close-menu .close-icon {\r\n    position: relative;\r\n    cursor: pointer;\r\n    width: 24px;\r\n    height: 24px;\r\n}\r\n\r\n.close-menu .close-icon::before,\r\n.close-menu .close-icon::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 24px;\r\n    height: 5px;\r\n    background-color: #58566a;\r\n    transform-origin: center;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.close-menu .close-icon::before {\r\n    transform: translate(-50%, -50%) rotate(45deg);\r\n}\r\n\r\n.close-menu .close-icon::after {\r\n    transform: translate(-50%, -50%) rotate(-45deg);\r\n}\r\n\r\n.close-menu .close-icon:active {\r\n    transform: scale(0.8);\r\n}\r\n\r\n.menu-items {\r\n    position: absolute;\r\n    width: 100%;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.menu-items:first-child {\r\n    margin-top: 2rem;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: -10px;\r\n    transform: translateY(calc(-100% - 10px));\r\n    transition: transform 0.5s ease-in-out;\r\n    h1 {\r\n        font-family: 'pokemon-font';\r\n        color: white;\r\n        text-shadow: 2px 4px #29315a;\r\n        padding: 25px 45px;\r\n        font-size: 2rem;\r\n        letter-spacing: 0.1rem;\r\n    }\r\n}\r\n\r\n.logo-background {\r\n    position: absolute;\r\n    z-index: -1;\r\n    width: 100%;\r\n    height: 100%;\r\n    img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: fit;\r\n    }\r\n}\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (":host {\r\n    position: absolute;\r\n}\r\n\r\n.header-container {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    overflow: hidden;\r\n}\r\n\r\n.header {\r\n    display: flex;\r\n    align-items: flex-start;\r\n    justify-content: space-between;\r\n    padding: 1rem;\r\n    width: 100%;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.menu-container {\r\n    position: relative;\r\n    z-index: 12;\r\n}\r\n\r\n.shadow-box {\r\n    bottom: -3px;\r\n    right: -3px;\r\n    position: absolute;\r\n    background: #736b84;\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 4px;\r\n}\r\n\r\n.open-menu-btn {\r\n    width: 44px;\r\n    height: 44px;\r\n    position: relative;\r\n    padding: 0;\r\n    margin: 0;\r\n    transition-property: all;\r\n    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);\r\n    transition-duration: 0.15s;\r\n    border: none;\r\n    outline: none;\r\n    background: none;\r\n}\r\n\r\n.open-menu-btn img {\r\n    position: absolute;\r\n    bottom: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.open-menu-btn:active img {\r\n    transform: translate(0, 0.25rem) rotate(0) skew(0) skewY(0) scaleX(1)\r\n        scaleY(1);\r\n}\r\n\r\n.open-menu-btn:active .shadow-box {\r\n    transform: translate(0, 0.25rem) rotate(0) skew(0) skewY(0) scaleX(1)\r\n        scaleY(1);\r\n    bottom: -2px;\r\n    right: -2px;\r\n}\r\n\r\n.menu-body-container {\r\n    position: absolute;\r\n    top: 0;\r\n    right: -330px;\r\n    min-width: 300px;\r\n    width: 15vw;\r\n    max-height: 80%;\r\n    transform-origin: top;\r\n    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);\r\n}\r\n\r\n.menu-body-container.active {\r\n    transform: translateX(-320px);\r\n}\r\n\r\n.menu-body {\r\n    position: relative;\r\n}\r\n\r\n.menu-background {\r\n    img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: cover;\r\n    }\r\n}\r\n\r\n.close-menu {\r\n    position: absolute;\r\n    top: 30px;\r\n    right: 30px;\r\n}\r\n\r\n.close-menu .close-icon {\r\n    position: relative;\r\n    cursor: pointer;\r\n    width: 24px;\r\n    height: 24px;\r\n}\r\n\r\n.close-menu .close-icon::before,\r\n.close-menu .close-icon::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 50%;\r\n    left: 50%;\r\n    width: 24px;\r\n    height: 5px;\r\n    background-color: #58566a;\r\n    transform-origin: center;\r\n    transition: background-color 0.3s ease;\r\n}\r\n\r\n.close-menu .close-icon::before {\r\n    transform: translate(-50%, -50%) rotate(45deg);\r\n}\r\n\r\n.close-menu .close-icon::after {\r\n    transform: translate(-50%, -50%) rotate(-45deg);\r\n}\r\n\r\n.close-menu .close-icon:active {\r\n    transform: scale(0.8);\r\n}\r\n\r\n.menu-items {\r\n    position: absolute;\r\n    width: 100%;\r\n    padding: 20px;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.menu-items:first-child {\r\n    margin-top: 2rem;\r\n}\r\n\r\n.logo {\r\n    position: relative;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    margin: -10px;\r\n    transform: translateY(calc(-100% - 10px));\r\n    transition: transform 0.5s ease-in-out;\r\n    h1 {\r\n        font-family: 'pokemon-font';\r\n        color: white;\r\n        text-shadow: 2px 4px #29315a;\r\n        padding: 25px 45px;\r\n        font-size: 2rem;\r\n        letter-spacing: 0.1rem;\r\n    }\r\n}\r\n\r\n.logo-background {\r\n    position: absolute;\r\n    z-index: -1;\r\n    width: 100%;\r\n    height: 100%;\r\n    img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: fit;\r\n    }\r\n}\r\n");
 
 /***/ }),
 
@@ -3915,52 +4153,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // Imports
 var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/wood_sign.png */ "./src/assets/html/layout/wood_sign.png"), __webpack_require__.b);
-var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/menu_content.png */ "./src/assets/html/layout/menu_content.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/close_btn.png */ "./src/assets/html/layout/close_btn.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/menu_btn.png */ "./src/assets/html/layout/menu_btn.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/menu_content.png */ "./src/assets/html/layout/menu_content.png"), __webpack_require__.b);
 // Module
-var code = `<div class="header">
-    <div class="logo-container">
-        <div class="logo">
-            <div class="logo-background">
-                <img src="${___HTML_LOADER_IMPORT_0___}">
+var code = `<div class="header-container">
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="logo-background">
+                    <img src="${___HTML_LOADER_IMPORT_0___}">
+                </div>
+                <h1></h1>
             </div>
-            <h1></h1>
         </div>
-    </div>
-    <div class="menu-container">
-        <button class="open-menu-btn">
-            <div class="shadow-box">
-            </div>
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32"
-                height="32" viewBox="0, 0, 400, 367">
-                <g>
-                    <path id="path0"
-                        d="M45.116 20.266 C 44.536 20.908,44.946 23.134,45.820 24.080 C 46.318 24.619,49.089 21.991,49.089 20.980 C 49.089 20.820,46.241 19.559,45.881 19.559 C 45.813 19.559,45.468 19.877,45.116 20.266 M352.462 20.164 C 350.710 20.924,350.735 20.869,351.525 22.206 C 352.741 24.264,354.153 24.397,354.890 22.522 C 355.853 20.070,354.874 19.118,352.462 20.164 M52.305 25.862 C 50.445 26.671,50.240 27.846,50.240 37.659 L 50.240 46.441 48.340 48.340 L 46.441 50.240 37.659 50.240 C 32.221 50.240,28.413 50.402,27.658 50.665 C 25.108 51.554,25.312 39.343,25.312 191.554 L 25.312 329.838 27.027 331.554 L 28.743 333.269 37.592 333.269 L 46.441 333.269 48.340 335.169 L 50.240 337.068 50.240 345.900 L 50.240 354.732 51.900 356.465 L 53.560 358.198 200.000 358.198 L 346.440 358.198 348.100 356.465 L 349.760 354.732 349.760 345.900 L 349.760 337.068 351.660 335.169 L 353.559 333.269 362.408 333.269 L 371.257 333.269 372.973 331.554 L 374.688 329.838 374.688 191.554 C 374.688 39.343,374.892 51.554,372.342 50.665 C 371.587 50.402,367.779 50.240,362.341 50.240 L 353.559 50.240 351.660 48.340 L 349.760 46.441 349.760 37.659 C 349.760 27.732,349.566 26.662,347.611 25.846 C 345.723 25.056,54.118 25.072,52.305 25.862 M331.594 43.478 L 333.269 45.153 333.271 53.737 C 333.272 63.307,333.357 63.671,336.053 65.727 L 337.369 66.731 346.108 66.731 L 354.847 66.731 356.522 68.406 L 358.198 70.081 358.198 195.791 L 358.198 321.500 357.219 322.783 C 355.645 324.847,354.534 325.215,349.875 325.218 C 343.223 325.222,341.707 326.735,341.707 333.363 C 341.707 338.045,341.341 339.151,339.274 340.728 L 337.991 341.707 204.036 341.707 L 70.081 341.707 68.406 340.031 L 66.731 338.356 66.729 329.772 C 66.728 320.202,66.643 319.839,63.947 317.782 L 62.631 316.779 53.892 316.779 L 45.153 316.779 43.478 315.103 L 41.802 313.428 41.802 191.755 L 41.802 70.081 43.478 68.406 L 45.153 66.731 53.892 66.731 L 62.631 66.731 63.947 65.727 C 66.643 63.671,66.728 63.307,66.729 53.737 L 66.731 45.153 68.406 43.478 L 70.081 41.802 200.000 41.802 L 329.919 41.802 331.594 43.478 M20.135 45.253 C 19.467 45.992,19.466 46.074,20.134 47.554 C 20.929 49.318,20.803 49.259,22.216 48.528 C 24.204 47.500,24.293 46.026,22.422 45.133 C 20.767 44.344,20.967 44.333,20.135 45.253 M377.469 45.156 C 375.706 46.034,375.846 47.526,377.784 48.528 C 379.197 49.259,379.071 49.318,379.866 47.554 C 380.956 45.137,379.811 43.991,377.469 45.156 M68.894 108.812 C 66.008 110.866,65.964 111.117,65.964 125.251 C 65.964 139.342,65.953 139.287,68.968 141.336 L 70.360 142.282 200.000 142.282 L 329.640 142.282 331.032 141.336 C 334.047 139.287,334.036 139.342,334.036 125.251 C 334.036 111.096,333.986 110.816,331.073 108.797 L 329.585 107.766 199.975 107.766 L 70.365 107.766 68.894 108.812 M330.276 111.481 L 331.352 112.512 331.352 125.113 L 331.352 137.715 330.411 138.656 L 329.469 139.597 200.000 139.597 L 70.531 139.597 69.589 138.656 L 68.648 137.715 68.648 125.158 L 68.648 112.602 69.679 111.526 L 70.709 110.451 199.955 110.451 L 329.201 110.451 330.276 111.481 M68.968 175.443 C 65.947 177.495,65.964 177.408,65.964 191.755 C 65.964 206.101,65.947 206.014,68.968 208.066 L 70.360 209.012 200.000 209.012 L 329.640 209.012 331.032 208.066 C 334.053 206.014,334.036 206.101,334.036 191.755 C 334.036 177.408,334.053 177.495,331.032 175.443 L 329.640 174.497 200.000 174.497 L 70.360 174.497 68.968 175.443 M330.411 178.123 L 331.352 179.064 331.352 191.755 L 331.352 204.445 330.411 205.387 L 329.469 206.328 200.000 206.328 L 70.531 206.328 69.589 205.387 L 68.648 204.445 68.648 191.755 L 68.648 179.064 69.589 178.123 L 70.531 177.181 200.000 177.181 L 329.469 177.181 330.411 178.123 M68.968 242.173 C 65.953 244.222,65.964 244.167,65.964 258.258 C 65.964 272.413,66.014 272.693,68.927 274.712 L 70.415 275.743 200.000 275.743 L 329.585 275.743 331.073 274.712 C 333.986 272.693,334.036 272.413,334.036 258.258 C 334.036 244.167,334.047 244.222,331.032 242.173 L 329.640 241.227 200.000 241.227 L 70.360 241.227 68.968 242.173 M330.411 244.853 L 331.352 245.794 331.352 258.396 L 331.352 270.997 330.276 272.028 L 329.201 273.058 199.955 273.058 L 70.709 273.058 69.679 271.983 L 68.648 270.907 68.648 258.351 L 68.648 245.794 69.589 244.853 L 70.531 243.912 200.000 243.912 L 329.469 243.912 330.411 244.853 M36.513 341.813 C 36.062 342.294,35.431 343.427,35.113 344.330 L 34.533 345.973 35.963 347.497 L 37.392 349.021 39.165 348.412 C 40.141 348.078,41.341 347.375,41.834 346.851 L 42.729 345.898 41.978 344.502 C 40.462 341.685,37.844 340.397,36.513 341.813 M360.268 342.023 C 359.446 342.619,358.435 343.735,358.022 344.502 L 357.271 345.898 358.166 346.851 C 358.659 347.375,359.859 348.078,360.835 348.412 L 362.608 349.021 364.037 347.497 L 365.467 345.973 364.887 344.330 C 363.705 340.979,362.524 340.389,360.268 342.023 "
-                        stroke="none" fill="#746c84" fill-rule="evenodd"></path>
-                    <path id="path1"
-                        d="M77.405 50.419 C 74.530 52.372,74.401 52.897,74.401 62.608 L 74.401 71.242 72.822 72.822 L 71.242 74.401 62.556 74.401 C 52.806 74.401,52.149 74.572,50.279 77.597 L 49.473 78.902 49.473 191.807 L 49.473 304.712 50.419 306.104 C 52.372 308.979,52.897 309.108,62.608 309.108 L 71.242 309.108 72.822 310.687 L 74.401 312.267 74.401 320.901 C 74.401 330.612,74.530 331.137,77.405 333.090 L 78.797 334.036 204.188 334.036 L 329.579 334.036 330.815 333.189 C 333.411 331.410,334.036 329.802,334.036 324.902 L 334.036 320.523 335.525 319.034 L 337.014 317.546 341.393 317.546 C 346.334 317.546,347.933 316.912,349.668 314.265 L 350.527 312.954 350.527 195.928 L 350.527 78.902 349.721 77.597 C 347.851 74.572,347.194 74.401,337.444 74.401 L 328.758 74.401 327.178 72.822 L 325.599 71.242 325.599 62.608 C 325.599 52.897,325.470 52.372,322.595 50.419 L 321.203 49.473 200.000 49.473 L 78.797 49.473 77.405 50.419 M333.461 106.040 C 336.502 107.561,336.529 107.730,336.529 125.024 C 336.529 142.059,336.484 142.357,333.653 143.997 C 331.530 145.227,68.470 145.227,66.347 143.997 C 63.569 142.388,63.485 141.890,63.353 126.245 C 63.201 108.264,63.470 106.907,67.426 105.687 C 70.733 104.667,331.407 105.013,333.461 106.040 M333.653 172.782 C 336.484 174.422,336.529 174.720,336.529 191.755 C 336.529 208.789,336.484 209.087,333.653 210.728 C 331.530 211.958,68.470 211.958,66.347 210.728 C 63.569 209.118,63.485 208.621,63.353 192.976 C 63.202 175.154,63.472 173.746,67.306 172.387 C 70.184 171.367,331.880 171.754,333.653 172.782 M333.653 239.512 C 336.484 241.152,336.529 241.450,336.529 258.485 C 336.529 275.779,336.502 275.949,333.461 277.469 C 331.936 278.231,331.160 278.236,200.000 278.236 C 68.840 278.236,68.064 278.231,66.539 277.469 C 63.553 275.976,63.487 275.611,63.353 259.707 C 63.202 241.885,63.472 240.477,67.306 239.118 C 70.184 238.098,331.880 238.485,333.653 239.512 "
-                        stroke="none" fill="#fcfcfc" fill-rule="evenodd"></path>
-                    <path id="path2"
-                        d="M68.406 43.478 L 66.731 45.153 66.729 53.737 C 66.728 63.307,66.643 63.671,63.947 65.727 L 62.631 66.731 53.892 66.731 L 45.153 66.731 43.478 68.406 L 41.802 70.081 41.802 191.755 L 41.802 313.428 43.478 315.103 L 45.153 316.779 53.892 316.779 L 62.631 316.779 63.947 317.782 C 66.643 319.839,66.728 320.202,66.729 329.772 L 66.731 338.356 68.406 340.031 L 70.081 341.707 204.036 341.707 L 337.991 341.707 339.274 340.728 C 341.341 339.151,341.707 338.045,341.707 333.363 C 341.707 326.735,343.223 325.222,349.875 325.218 C 354.534 325.215,355.645 324.847,357.219 322.783 L 358.198 321.500 358.198 195.791 L 358.198 70.081 356.522 68.406 L 354.847 66.731 346.108 66.731 L 337.369 66.731 336.053 65.727 C 333.357 63.671,333.272 63.307,333.271 53.737 L 333.269 45.153 331.594 43.478 L 329.919 41.802 200.000 41.802 L 70.081 41.802 68.406 43.478 M322.595 50.419 C 325.470 52.372,325.599 52.897,325.599 62.608 L 325.599 71.242 327.178 72.822 L 328.758 74.401 337.444 74.401 C 347.194 74.401,347.851 74.572,349.721 77.597 L 350.527 78.902 350.527 195.928 L 350.527 312.954 349.668 314.265 C 347.933 316.912,346.334 317.546,341.393 317.546 L 337.014 317.546 335.525 319.034 L 334.036 320.523 334.036 324.902 C 334.036 329.802,333.411 331.410,330.815 333.189 L 329.579 334.036 204.188 334.036 L 78.797 334.036 77.405 333.090 C 74.530 331.137,74.401 330.612,74.401 320.901 L 74.401 312.267 72.822 310.687 L 71.242 309.108 62.608 309.108 C 52.897 309.108,52.372 308.979,50.419 306.104 L 49.473 304.712 49.473 191.807 L 49.473 78.902 50.279 77.597 C 52.149 74.572,52.806 74.401,62.556 74.401 L 71.242 74.401 72.822 72.822 L 74.401 71.242 74.401 62.608 C 74.401 52.897,74.530 52.372,77.405 50.419 L 78.797 49.473 200.000 49.473 L 321.203 49.473 322.595 50.419 M67.426 105.687 C 63.470 106.907,63.201 108.264,63.353 126.245 C 63.485 141.890,63.569 142.388,66.347 143.997 C 68.470 145.227,331.530 145.227,333.653 143.997 C 336.484 142.357,336.529 142.059,336.529 125.024 C 336.529 107.730,336.502 107.561,333.461 106.040 C 331.407 105.013,70.733 104.667,67.426 105.687 M331.073 108.797 C 333.986 110.816,334.036 111.096,334.036 125.251 C 334.036 139.342,334.047 139.287,331.032 141.336 L 329.640 142.282 200.000 142.282 L 70.360 142.282 68.968 141.336 C 65.953 139.287,65.964 139.342,65.964 125.251 C 65.964 111.117,66.008 110.866,68.894 108.812 L 70.365 107.766 199.975 107.766 L 329.585 107.766 331.073 108.797 M67.306 172.387 C 63.472 173.746,63.202 175.154,63.353 192.976 C 63.485 208.621,63.569 209.118,66.347 210.728 C 68.470 211.958,331.530 211.958,333.653 210.728 C 336.484 209.087,336.529 208.789,336.529 191.755 C 336.529 174.720,336.484 174.422,333.653 172.782 C 331.880 171.754,70.184 171.367,67.306 172.387 M331.032 175.443 C 334.053 177.495,334.036 177.408,334.036 191.755 C 334.036 206.101,334.053 206.014,331.032 208.066 L 329.640 209.012 200.000 209.012 L 70.360 209.012 68.968 208.066 C 65.947 206.014,65.964 206.101,65.964 191.755 C 65.964 177.408,65.947 177.495,68.968 175.443 L 70.360 174.497 200.000 174.497 L 329.640 174.497 331.032 175.443 M67.306 239.118 C 63.472 240.477,63.202 241.885,63.353 259.707 C 63.487 275.611,63.553 275.976,66.539 277.469 C 68.064 278.231,68.840 278.236,200.000 278.236 C 331.160 278.236,331.936 278.231,333.461 277.469 C 336.502 275.949,336.529 275.779,336.529 258.485 C 336.529 241.450,336.484 241.152,333.653 239.512 C 331.880 238.485,70.184 238.098,67.306 239.118 M331.032 242.173 C 334.047 244.222,334.036 244.167,334.036 258.258 C 334.036 272.413,333.986 272.693,331.073 274.712 L 329.585 275.743 200.000 275.743 L 70.415 275.743 68.927 274.712 C 66.014 272.693,65.964 272.413,65.964 258.258 C 65.964 244.167,65.953 244.222,68.968 242.173 L 70.360 241.227 200.000 241.227 L 329.640 241.227 331.032 242.173 "
-                        stroke="none" fill="#dcd4dc" fill-rule="evenodd"></path>
-                    <path id="path3"
-                        d="M20.709 10.355 L 20.709 20.709 10.355 20.709 L 0.000 20.709 0.000 191.755 L 0.000 362.800 10.355 362.800 L 20.709 362.800 20.709 373.154 L 20.709 383.509 200.000 383.509 L 379.291 383.509 379.291 373.154 L 379.291 362.800 389.645 362.800 L 400.000 362.800 400.000 191.755 L 400.000 20.709 389.645 20.709 L 379.291 20.709 379.291 10.355 L 379.291 0.000 200.000 0.000 L 20.709 0.000 20.709 10.355 M50.935 16.110 C 55.958 17.314,344.042 17.314,349.065 16.110 C 358.144 13.933,361.723 18.547,358.357 28.088 C 357.701 29.947,357.623 36.879,358.244 38.088 C 360.308 42.105,365.800 43.377,372.755 41.449 C 378.636 39.819,380.540 40.007,382.791 42.439 C 384.924 44.744,385.082 45.963,383.890 50.935 C 383.134 54.090,383.126 55.611,383.126 195.633 C 383.126 319.126,383.054 337.281,382.564 338.228 C 381.228 340.813,380.040 341.323,375.360 341.323 C 370.197 341.323,370.075 341.404,368.765 345.699 C 367.525 349.765,366.333 351.018,362.654 352.122 C 357.875 353.555,357.814 353.641,357.814 358.865 L 357.814 363.315 356.081 364.975 L 354.349 366.635 200.000 366.635 L 45.651 366.635 43.919 364.975 L 42.186 363.315 42.186 358.865 C 42.186 353.641,42.125 353.555,37.346 352.122 C 33.667 351.018,32.475 349.765,31.235 345.699 C 29.925 341.404,29.803 341.323,24.640 341.323 C 19.960 341.323,18.772 340.813,17.436 338.228 C 16.946 337.281,16.874 319.126,16.874 195.633 C 16.874 55.611,16.866 54.090,16.110 50.935 C 14.918 45.963,15.076 44.744,17.209 42.439 C 19.460 40.007,21.364 39.819,27.245 41.449 C 39.532 44.854,44.553 39.417,41.227 26.308 C 38.982 17.455,42.245 14.027,50.935 16.110 M70.259 112.061 C 69.600 112.720,69.600 137.328,70.259 137.987 C 70.929 138.657,329.071 138.657,329.741 137.987 C 330.400 137.328,330.400 112.720,329.741 112.061 C 329.071 111.391,70.929 111.391,70.259 112.061 M70.259 178.792 C 69.600 179.451,69.600 204.058,70.259 204.717 C 70.929 205.388,329.071 205.388,329.741 204.717 C 330.400 204.058,330.400 179.451,329.741 178.792 C 329.071 178.121,70.929 178.121,70.259 178.792 M70.259 245.523 C 69.600 246.181,69.600 270.789,70.259 271.448 C 70.929 272.118,329.071 272.118,329.741 271.448 C 330.400 270.789,330.400 246.181,329.741 245.523 C 329.071 244.852,70.929 244.852,70.259 245.523 "
-                        stroke="none" fill="#2c3434" fill-rule="evenodd"></path>
-                    <path id="path4"
-                        d="M43.570 16.247 C 40.260 18.251,39.745 20.464,41.227 26.308 C 44.553 39.417,39.532 44.854,27.245 41.449 C 21.364 39.819,19.460 40.007,17.209 42.439 C 15.076 44.744,14.918 45.963,16.110 50.935 C 16.866 54.090,16.874 55.611,16.874 195.633 C 16.874 319.126,16.946 337.281,17.436 338.228 C 18.772 340.813,19.960 341.323,24.640 341.323 C 29.803 341.323,29.925 341.404,31.235 345.699 C 32.475 349.765,33.667 351.018,37.346 352.122 C 42.125 353.555,42.186 353.641,42.186 358.865 L 42.186 363.315 43.919 364.975 L 45.651 366.635 200.000 366.635 L 354.349 366.635 356.081 364.975 L 357.814 363.315 357.814 358.865 C 357.814 353.641,357.875 353.555,362.654 352.122 C 366.333 351.018,367.525 349.765,368.765 345.699 C 370.075 341.404,370.197 341.323,375.360 341.323 C 380.040 341.323,381.228 340.813,382.564 338.228 C 383.054 337.281,383.126 319.126,383.126 195.633 C 383.126 55.611,383.134 54.090,383.890 50.935 C 385.082 45.963,384.924 44.744,382.791 42.439 C 380.540 40.007,378.636 39.819,372.755 41.449 C 365.800 43.377,360.308 42.105,358.244 38.088 C 357.623 36.879,357.701 29.947,358.357 28.088 C 361.723 18.547,358.144 13.933,349.065 16.110 C 344.042 17.314,55.958 17.314,50.935 16.110 C 46.803 15.119,45.390 15.146,43.570 16.247 M47.547 20.176 C 49.319 20.885,49.292 20.823,48.451 22.248 C 47.902 23.176,46.127 24.412,45.820 24.080 C 44.946 23.134,44.536 20.908,45.116 20.266 C 45.886 19.416,45.668 19.424,47.547 20.176 M354.875 20.256 C 355.457 20.900,355.458 21.075,354.890 22.522 C 354.153 24.397,352.741 24.264,351.525 22.206 C 350.735 20.869,350.710 20.924,352.462 20.164 C 354.151 19.431,354.127 19.430,354.875 20.256 M347.611 25.846 C 349.566 26.662,349.760 27.732,349.760 37.659 L 349.760 46.441 351.660 48.340 L 353.559 50.240 362.341 50.240 C 367.779 50.240,371.587 50.402,372.342 50.665 C 374.892 51.554,374.688 39.343,374.688 191.554 L 374.688 329.838 372.973 331.554 L 371.257 333.269 362.408 333.269 L 353.559 333.269 351.660 335.169 L 349.760 337.068 349.760 345.900 L 349.760 354.732 348.100 356.465 L 346.440 358.198 200.000 358.198 L 53.560 358.198 51.900 356.465 L 50.240 354.732 50.240 345.900 L 50.240 337.068 48.340 335.169 L 46.441 333.269 37.592 333.269 L 28.743 333.269 27.027 331.554 L 25.312 329.838 25.312 191.554 C 25.312 39.343,25.108 51.554,27.658 50.665 C 28.413 50.402,32.221 50.240,37.659 50.240 L 46.441 50.240 48.340 48.340 L 50.240 46.441 50.240 37.659 C 50.240 27.846,50.445 26.671,52.305 25.862 C 54.118 25.072,345.723 25.056,347.611 25.846 M22.422 45.133 C 24.293 46.026,24.204 47.500,22.216 48.528 C 20.803 49.259,20.929 49.318,20.134 47.554 C 19.054 45.159,20.117 44.034,22.422 45.133 M379.865 45.253 C 380.502 45.957,379.814 49.089,379.021 49.089 C 376.655 49.089,375.491 46.141,377.469 45.156 C 379.078 44.356,379.052 44.355,379.865 45.253 M69.679 111.526 L 68.648 112.602 68.648 125.158 L 68.648 137.715 69.589 138.656 L 70.531 139.597 200.000 139.597 L 329.469 139.597 330.411 138.656 L 331.352 137.715 331.352 125.113 L 331.352 112.512 330.276 111.481 L 329.201 110.451 199.955 110.451 L 70.709 110.451 69.679 111.526 M329.741 112.061 C 330.400 112.720,330.400 137.328,329.741 137.987 C 329.071 138.657,70.929 138.657,70.259 137.987 C 69.600 137.328,69.600 112.720,70.259 112.061 C 70.929 111.391,329.071 111.391,329.741 112.061 M69.589 178.123 L 68.648 179.064 68.648 191.755 L 68.648 204.445 69.589 205.387 L 70.531 206.328 200.000 206.328 L 329.469 206.328 330.411 205.387 L 331.352 204.445 331.352 191.755 L 331.352 179.064 330.411 178.123 L 329.469 177.181 200.000 177.181 L 70.531 177.181 69.589 178.123 M329.741 178.792 C 330.400 179.451,330.400 204.058,329.741 204.717 C 329.071 205.388,70.929 205.388,70.259 204.717 C 69.600 204.058,69.600 179.451,70.259 178.792 C 70.929 178.121,329.071 178.121,329.741 178.792 M69.589 244.853 L 68.648 245.794 68.648 258.351 L 68.648 270.907 69.679 271.983 L 70.709 273.058 199.955 273.058 L 329.201 273.058 330.276 272.028 L 331.352 270.997 331.352 258.396 L 331.352 245.794 330.411 244.853 L 329.469 243.912 200.000 243.912 L 70.531 243.912 69.589 244.853 M329.741 245.523 C 330.400 246.181,330.400 270.789,329.741 271.448 C 329.071 272.118,70.929 272.118,70.259 271.448 C 69.600 270.789,69.600 246.181,70.259 245.523 C 70.929 244.852,329.071 244.852,329.741 245.523 M39.732 342.023 C 40.554 342.619,41.565 343.735,41.978 344.502 L 42.729 345.898 41.834 346.851 C 41.341 347.375,40.141 348.078,39.165 348.412 L 37.392 349.021 35.963 347.497 L 34.533 345.973 35.113 344.330 C 36.295 340.979,37.476 340.389,39.732 342.023 M363.487 341.813 C 363.938 342.294,364.569 343.427,364.887 344.330 L 365.467 345.973 364.037 347.497 L 362.608 349.021 360.835 348.412 C 359.859 348.078,358.659 347.375,358.166 346.851 L 357.271 345.898 358.022 344.502 C 359.538 341.685,362.156 340.397,363.487 341.813 "
-                        stroke="none" fill="#4c4c6c" fill-rule="evenodd"></path>
-                </g>
-            </svg>
-        </button>
+        <div class="menu-container">
+            <button class="open-menu-btn">
+                <div class="shadow-box">
+                </div>
+                <img class="close-btn-img" src="${___HTML_LOADER_IMPORT_1___}" alt="">
+                <img class="menu-btn-img" src="${___HTML_LOADER_IMPORT_2___}" alt="">
+            </button>
 
-        <div class="menu-body-container">
-            <div class="menu-body">
-                <div class="menu-items">
-                </div>
-                <div class="menu-background">
-                    <img src="${___HTML_LOADER_IMPORT_1___}">
-                </div>
-                <div class="close-menu">
-                    <div class="close-icon"></div>
+            <div class="menu-body-container">
+                <div class="menu-body">
+                    <div class="menu-items">
+                    </div>
+                    <div class="menu-background">
+                        <img src="${___HTML_LOADER_IMPORT_3___}">
+                    </div>
+                    <div class="close-menu">
+                        <div class="close-icon"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3985,8 +4209,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../main.css */ "./src/html/main.css");
 /* harmony import */ var _header_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header.css */ "./src/html/components/app/header/header.css");
 /* harmony import */ var _header_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header.html */ "./src/html/components/app/header/header.html");
-/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
-/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _ui_menu_item_menu_item__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ui/menu-item/menu-item */ "./src/html/components/ui/menu-item/menu-item.ts");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+
 
 
 
@@ -3997,50 +4223,83 @@ class HeaderComponent extends HTMLElement {
     eventSystem;
     logoElement;
     transitionTimeout = null;
+    pageActive = false;
     constructor() {
         super();
-        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_5__.GameContext.getInstance();
-        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_4__.EventSystem);
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_6__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_5__.EventSystem);
         this.attachShadow({ mode: 'open' });
+        this.initializeTemplate();
+        this.initializeMenuButtons();
+        this.initializeMenuItems();
+        this.initializeLogo();
+        this.listenMapTransitionEvent();
+        this.eventSystem.on('PAGE_TRANSITION_CLOSED', () => this.updateToPageMode());
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () => this.updateToGameMode());
+    }
+    initializeTemplate() {
         const template = document.createElement('template');
         template.innerHTML = `
-                    <style>${_main_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}${_header_css__WEBPACK_IMPORTED_MODULE_2__["default"].toString()}</style>
-                    ${_header_html__WEBPACK_IMPORTED_MODULE_3__["default"]}
-                `;
+        <style>${_main_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}${_header_css__WEBPACK_IMPORTED_MODULE_2__["default"].toString()}</style>
+        ${_header_html__WEBPACK_IMPORTED_MODULE_3__["default"]}
+      `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
-        this.shadowRoot
-            ?.querySelector('.open-menu-btn')
-            ?.addEventListener('click', () => {
-            this.shadowRoot
-                ?.querySelector('.menu-body-container')
-                ?.classList.toggle('active');
-        });
-        this.shadowRoot
-            ?.querySelector('.close-menu')
-            ?.addEventListener('click', () => {
-            this.shadowRoot
-                ?.querySelector('.menu-body-container')
-                ?.classList.toggle('active');
-        });
+    }
+    initializeMenuButtons() {
+        const openMenuBtn = this.shadowRoot?.querySelector('.open-menu-btn');
+        const closeMenuBtn = this.shadowRoot?.querySelector('.close-menu');
+        openMenuBtn?.addEventListener('click', () => this.clickedMenu());
+        closeMenuBtn?.addEventListener('click', () => this.clickedMenu());
+    }
+    clickedMenu() {
+        if (this.pageActive) {
+            this.closeActivePage();
+        }
+        else {
+            this.toggleMenu();
+        }
+    }
+    closeActivePage() {
+        this.eventSystem.emit('PAGE_CLOSED_TRANSITION', {});
+    }
+    toggleMenu() {
+        const menuContainer = this.shadowRoot?.querySelector('.menu-body-container');
+        menuContainer?.classList.toggle('active');
+    }
+    desactivateMenu() {
+        const menuContainer = this.shadowRoot?.querySelector('.menu-body-container');
+        menuContainer.style = 'display: none';
+        menuContainer?.classList.remove('active');
+        setTimeout(() => {
+            menuContainer.style = 'display: block';
+        }, 350);
+    }
+    initializeMenuItems() {
         _html_menu_menu_config__WEBPACK_IMPORTED_MODULE_0__.MENU_CONFIG.forEach((item) => {
             const menuItemsContainer = this.shadowRoot?.querySelector('.menu-items');
-            const menuItem = document.createElement('ui-menu-item');
+            const menuItem = new _ui_menu_item_menu_item__WEBPACK_IMPORTED_MODULE_4__["default"]();
             menuItem.itemName = item.itemName;
+            if (item.component) {
+                menuItem.pageComponent = new item.component();
+            }
             menuItemsContainer?.appendChild(menuItem);
         });
+    }
+    initializeLogo() {
         this.logoElement = this.shadowRoot?.querySelector('.logo');
         const logoHeight = this.logoElement.offsetHeight;
         this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
-        this.listenMapTransitionEvent();
     }
     listenMapTransitionEvent() {
         this.eventSystem.on('MAP_TRANSITION', () => {
             const logoHeight = this.logoElement.offsetHeight;
             this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
         });
-        this.eventSystem.on('MAP_TRANSITION_COMPLETED', (data) => {
+        this.eventSystem.on('MAP_TRANSITION_READY', (data) => {
+            if (!data.mapName)
+                return;
             this.logoElement.style.transform = 'translateY(0px)';
-            this.logoElement.childNodes[3].textContent = data.mapName ?? '';
+            this.logoElement.childNodes[3].textContent = data.mapName;
             if (this.transitionTimeout) {
                 clearTimeout(this.transitionTimeout);
             }
@@ -4049,6 +4308,17 @@ class HeaderComponent extends HTMLElement {
                 this.logoElement.style.transform = `translateY(-${logoHeight + 10}px)`;
             }, 2000);
         });
+    }
+    updateToPageMode() {
+        const imgComponent = this.shadowRoot?.querySelector('.menu-btn-img');
+        imgComponent.style.display = 'none';
+        this.pageActive = true;
+        this.desactivateMenu();
+    }
+    updateToGameMode() {
+        const imgComponent = this.shadowRoot?.querySelector('.menu-btn-img');
+        imgComponent.style.display = 'block';
+        this.pageActive = false;
     }
 }
 
@@ -4065,7 +4335,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".layout-container {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    overflow: hidden;\r\n}\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".layout-container {\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n}\n");
 
 /***/ }),
 
@@ -4082,6 +4352,7 @@ __webpack_require__.r(__webpack_exports__);
 // Module
 var code = `<div class="layout-container">
     <app-header></app-header>
+    <app-body></app-body>
 </div>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
@@ -4114,6 +4385,333 @@ class LayoutComponent extends HTMLElement {
                     ${_layout_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
                 `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/skills-about/skills-about.css":
+/*!*********************************************************************!*\
+  !*** ./src/html/components/app/pages/skills-about/skills-about.css ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".skills-about-container {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    background: repeating-linear-gradient(\r\n        to bottom,\r\n        #297ba5,\r\n        #297ba5 3vw,\r\n        #6bb5d6 3vw,\r\n        #6bb5d6 6vw\r\n    );\r\n    font-family: 'pokemon-font';\r\n    user-select: none;\r\n}\r\n\r\n@media (max-width: 767px) {\r\n    .trainer-card {\r\n        display: none;\r\n    }\r\n\r\n    .bag {\r\n        width: 100%;\r\n        height: 100%;\r\n        padding: 0.5rem;\r\n        padding-top: 25%;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .bag-container {\r\n        position: relative;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n\r\n    .bag-background {\r\n        position: absolute;\r\n        width: 100%;\r\n        height: 100%;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .bag-background img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: fill;\r\n    }\r\n\r\n    .inventory-header-container {\r\n        position: relative;\r\n        width: 68vw;\r\n        height: 18vw;\r\n        margin-left: 5vw;\r\n    }\r\n\r\n    .inventory-header {\r\n        position: absolute;\r\n        top: -85%;\r\n    }\r\n\r\n    .inventory-container {\r\n        position: relative;\r\n        width: 68vw;\r\n        height: 18vw;\r\n        display: flex;\r\n        justify-content: center;\r\n    }\r\n\r\n    .inventory-background {\r\n        position: absolute;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n\r\n    .inventory-background img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: fill;\r\n    }\r\n\r\n    .inventory-container .header-title {\r\n        position: absolute;\r\n        height: 73%;\r\n        margin-left: 9vw;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        width: 50vw;\r\n        overflow: hidden;\r\n    }\r\n\r\n    .transition-container {\r\n        width: 100%;\r\n        height: 100%;\r\n        transform: translateX(-100%);\r\n    }\r\n\r\n    .header-title .text-container {\r\n        width: 100%;\r\n        height: 100%;\r\n        display: flex;\r\n        align-items: center;\r\n    }\r\n\r\n    .text {\r\n        white-space: nowrap;\r\n        min-width: 100%;\r\n        font-size: 7vw;\r\n        margin: 0;\r\n        margin-bottom: -1vw;\r\n        text-align: center;\r\n    }\r\n\r\n    .arrow {\r\n        position: absolute;\r\n        width: 8vw;\r\n        height: 12vw;\r\n        cursor: pointer;\r\n\r\n        img {\r\n            width: 100%;\r\n            height: 100%;\r\n            object-fit: fill;\r\n        }\r\n    }\r\n\r\n    .movil-arrow-right {\r\n        right: 0;\r\n        animation: rigthmove 0.6s ease-in infinite;\r\n    }\r\n\r\n    .movil-arrow-left {\r\n        left: 11.5vw;\r\n        animation: leftmove 0.6s ease-in infinite;\r\n    }\r\n\r\n    @keyframes rigthmove {\r\n        0% {\r\n            transform: translateX(0);\r\n        }\r\n\r\n        50% {\r\n            transform: translateX(3vw);\r\n        }\r\n\r\n        100% {\r\n            transform: translateX(0);\r\n        }\r\n    }\r\n\r\n    @keyframes leftmove {\r\n        0% {\r\n            transform: translateX(0) rotateY(180deg);\r\n        }\r\n\r\n        50% {\r\n            transform: translateX(-3vw) rotateY(180deg);\r\n        }\r\n\r\n        100% {\r\n            transform: translateX(0) rotateY(180deg);\r\n        }\r\n    }\r\n\r\n    .inventory-body {\r\n        position: absolute;\r\n        width: 100%;\r\n        height: 100%;\r\n        padding: 10.5vw 4vw;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .inventory-content {\r\n        max-height: 0;\r\n        background-color: #ffffce;\r\n        transition: max-height 0.3s ease-out;\r\n        padding: 1rem;\r\n        box-sizing: border-box;\r\n        font-size: 0.9rem;\r\n        overflow-y: scroll;\r\n    }\r\n\r\n    .content-about {\r\n        display: none;\r\n    }\r\n\r\n    .content-skills {\r\n        display: none;\r\n    }\r\n\r\n    .inventory-content.expanded {\r\n        height: 100%;\r\n        max-height: 100%;\r\n    }\r\n\r\n    .inventory-content h1,\r\n    .inventory-content h2 {\r\n        display: inline;\r\n        margin: 0;\r\n    }\r\n\r\n    .inventory-content .data-set {\r\n        margin-top: 0.5rem;\r\n        margin-bottom: 1.5rem;\r\n    }\r\n\r\n    /* Posiciones definidas */\r\n    .center {\r\n        transform: translateX(0);\r\n    }\r\n\r\n    .off-right {\r\n        transform: translateX(100%);\r\n    }\r\n\r\n    .off-left {\r\n        transform: translateX(-100%);\r\n    }\r\n\r\n    /* Clases para la animación de salida */\r\n    .slide-out-left {\r\n        transform: translateX(-100%);\r\n    }\r\n\r\n    .slide-out-right {\r\n        transform: translateX(100%);\r\n    }\r\n\r\n    /* Clase para animar la entrada (siempre al centro) */\r\n    .slide-in {\r\n        transform: translateX(0);\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .bag {\r\n        display: none;\r\n    }\r\n\r\n    .skills-about-container {\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n        background: repeating-linear-gradient(\r\n            to bottom,\r\n            #297ba5,\r\n            #297ba5 0.8vw,\r\n            #6bb5d6 0.8vw,\r\n            #6bb5d6 1.6vw\r\n        );\r\n    }\r\n\r\n    .trainer-card {\r\n        position: relative;\r\n        width: 80%;\r\n        display: flex;\r\n        align-items: center;\r\n        justify-content: center;\r\n        perspective: 2500px;\r\n    }\r\n\r\n    .card-inner {\r\n        width: 80%;\r\n        aspect-ratio: 547 / 336;\r\n        position: relative;\r\n        transform-style: preserve-3d;\r\n        transition: transform 1s ease-in-out;\r\n    }\r\n\r\n    .arrow {\r\n        position: absolute;\r\n        top: 50%;\r\n        transform: translateY(-50%);\r\n        width: 5vw;\r\n        height: 10vw;\r\n        animation: blink 1.5s infinite linear;\r\n        cursor: pointer;\r\n\r\n        img {\r\n            width: 100%;\r\n            height: 100%;\r\n            object-fit: fill;\r\n            image-rendering: crisp-edges;\r\n            image-rendering: -webkit-optimize-contrast;\r\n            filter: invert(100%) sepia(100%) saturate(500%) hue-rotate(200deg);\r\n        }\r\n    }\r\n\r\n    .arrow-left {\r\n        transform: rotateY(180deg) translateY(-50%);\r\n        left: -5vw;\r\n    }\r\n\r\n    .arrow-right {\r\n        right: -5vw;\r\n    }\r\n\r\n    @keyframes blink {\r\n        0% {\r\n            opacity: 1;\r\n        }\r\n\r\n        50% {\r\n            opacity: 0;\r\n        }\r\n\r\n        100% {\r\n            opacity: 1;\r\n        }\r\n    }\r\n\r\n    .card-face {\r\n        position: absolute;\r\n        width: 100%;\r\n        aspect-ratio: 547 / 336;\r\n    }\r\n\r\n    .face-back {\r\n        transform: rotateY(180deg) translateZ(1px);\r\n    }\r\n\r\n    .face-front {\r\n        transform: translateZ(1px);\r\n    }\r\n\r\n    .card-border {\r\n        position: absolute;\r\n        height: 100%;\r\n        width: 15px;\r\n        transform: rotateY(90deg) translateZ(-9px);\r\n        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);\r\n    }\r\n\r\n    .trainer-card-background {\r\n        position: absolute;\r\n        width: 100%;\r\n        height: 100%;\r\n    }\r\n\r\n    .trainer-card-background img {\r\n        width: 100%;\r\n        height: 100%;\r\n        object-fit: contain;\r\n    }\r\n\r\n    .card-container {\r\n        width: 100%;\r\n        height: 100%;\r\n        position: relative;\r\n    }\r\n\r\n    .card-content {\r\n        position: absolute;\r\n        width: 100%;\r\n        height: 100%;\r\n        font-size: 1.2vw;\r\n    }\r\n\r\n    .trainer-id,\r\n    .trainer-name,\r\n    .trainer-text,\r\n    .trainer-about {\r\n        position: absolute;\r\n        height: 8.5%;\r\n    }\r\n\r\n    .trainer-id {\r\n        width: 25%;\r\n        top: 9%;\r\n        right: 10%;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n    }\r\n\r\n    .trainer-name {\r\n        width: 80%;\r\n        top: 9%;\r\n        right: 0;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n    }\r\n\r\n    .trainer-text {\r\n        width: 85%;\r\n        left: 8%;\r\n    }\r\n\r\n    .trainer-about {\r\n        width: 90%;\r\n        left: 8%;\r\n    }\r\n\r\n    .trainer-text.name {\r\n        top: 25%;\r\n    }\r\n\r\n    .trainer-text.name h2::after {\r\n        content: '';\r\n        position: absolute;\r\n        left: 0;\r\n        bottom: 0.1em;\r\n        width: 11em;\r\n        height: 0.11em;\r\n        background-color: #646464;\r\n        box-shadow: 0 0.1em #cecece;\r\n    }\r\n\r\n    .trainer-text.skills {\r\n        top: 38%;\r\n    }\r\n\r\n    .trainer-text.softs {\r\n        top: 56%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(2) {\r\n        top: 30%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(3) {\r\n        top: 42%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(4) {\r\n        top: 53%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(5) {\r\n        top: 64%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(6) {\r\n        top: 76%;\r\n    }\r\n\r\n    .trainer-about.about:nth-of-type(7) {\r\n        top: 88%;\r\n    }\r\n\r\n    .trainer-id h2,\r\n    .trainer-name h2,\r\n    .trainer-text h2,\r\n    .trainer-about h2 {\r\n        font-family: 'pokemon-font';\r\n        color: #646464;\r\n        letter-spacing: 0.1em;\r\n        margin: 0;\r\n        margin-bottom: -0.3em;\r\n    }\r\n\r\n    .trainer-id h2 {\r\n        text-shadow: 0.05em 0.12em #d6d6ce;\r\n        padding: 25px 45px;\r\n        font-size: 2.3em;\r\n    }\r\n\r\n    .trainer-name h2 {\r\n        text-shadow: 0.05em 0.12em #d6d6ce;\r\n        padding: 25px 45px;\r\n        font-size: 2.3em;\r\n    }\r\n\r\n    .trainer-text h2 {\r\n        text-shadow: 0.05em 0.12em #cecece;\r\n        font-size: 1.7em;\r\n        line-height: 140%;\r\n    }\r\n\r\n    .trainer-about h2 {\r\n        text-shadow: 0.05em 0.12em #cecece;\r\n        font-size: 1.3em;\r\n    }\r\n\r\n    .trainer-text::before,\r\n    .trainer-text::after {\r\n        content: '';\r\n        position: absolute;\r\n    }\r\n\r\n    .trainer-text::before {\r\n        top: 0.3em;\r\n        left: -1em;\r\n        width: 0.77em;\r\n        height: 1.4em;\r\n        background-color: #84de73;\r\n        z-index: 1;\r\n    }\r\n\r\n    .trainer-text::after {\r\n        top: 0.5em;\r\n        left: -0.85em;\r\n        width: 0.45em;\r\n        height: 1em;\r\n        background-color: #94ef84;\r\n        z-index: 2;\r\n    }\r\n}\r\n");
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/skills-about/skills-about.html":
+/*!**********************************************************************!*\
+  !*** ./src/html/components/app/pages/skills-about/skills-about.html ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Imports
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/trainer_card_front.png */ "./src/assets/html/layout/trainer_card_front.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/trainer_card_back.png */ "./src/assets/html/layout/trainer_card_back.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/rigth_arrow.png */ "./src/assets/html/layout/rigth_arrow.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/inventory.png */ "./src/assets/html/layout/inventory.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/bag_selector.png */ "./src/assets/html/layout/bag_selector.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/arrow_rigth.png */ "./src/assets/html/layout/arrow_rigth.png"), __webpack_require__.b);
+// Module
+var code = `<div class="skills-about-container">
+    <div class="trainer-card">
+        <div class="card-inner">
+            <!-- front face -->
+            <div class="card-face face-front">
+                <div class="card-container">
+                    <div class="trainer-card-background">
+                        <img src="${___HTML_LOADER_IMPORT_0___}" alt="Front">
+                    </div>
+                    <div class="card-content">
+                        <div class="trainer-id">
+                            <h2>IDNo.23529</h2>
+                        </div>
+                        <div class="trainer-text name">
+                            <h2>
+                                NAME: JIMMY GUERRA
+                            </h2>
+                        </div>
+                        <div class="trainer-text skills">
+                            <h2>
+                                SKILLS: HTML, CSS, Javascript, Java, TypeScript, Angular, Springboot, SQL.
+                            </h2>
+                        </div>
+
+                        <div class="trainer-text softs">
+                            <h2>
+                                SOFT SKILLS: Proactive, Communicative, Colaborative
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- back face -->
+            <div class="card-face face-back">
+                <div class="card-container">
+                    <div class="trainer-card-background">
+                        <img src="${___HTML_LOADER_IMPORT_1___}" alt="Back">
+                    </div>
+                    <div class="card-content">
+                        <div class="trainer-name">
+                            <h2>JIMMY GUERRA TRAINER CARD</h2>
+                        </div>
+                        <div class="trainer-about about">
+                            <h2>
+                                Front-End Web Developer with extensive experience working
+                            </h2>
+                        </div>
+                        <div class="trainer-about about">
+                            <h2>
+                                with cutting-edge technologies such as Angular and RxJS, and
+                            </h2>
+                        </div>
+
+                        <div class="trainer-about about">
+                            <h2>
+                                an excellent command of UX/UI in creating high-quality,
+                            </h2>
+                        </div>
+
+                        <div class="trainer-about about">
+                            <h2>
+                                responsive websites.
+                            </h2>
+                        </div>
+
+                        <div class="trainer-about about">
+                            <h2>
+                                Constantly developing and learning new technologies and
+                            </h2>
+                        </div>
+
+                        <div class="trainer-about about">
+                            <h2>
+                                computational knowledge.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow arrow-left">
+                <img src="${___HTML_LOADER_IMPORT_2___}" alt="">
+            </div>
+            <div class="arrow arrow-right">
+                <img src="${___HTML_LOADER_IMPORT_2___}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="bag">
+        <div class="bag-container">
+            <div class="bag-background">
+                <img src="${___HTML_LOADER_IMPORT_3___}">
+            </div>
+            <div class="inventory-body">
+                <div class="inventory-content expanded">
+                    <div class="content-skills">
+                        <div class="data-set">
+                            <h1>Skills:</h1>
+                            <h2>HTML, CSS, Java, Javascript, TypeScript, Angular, Springboot, SQL.</h2>
+                        </div>
+                        <div class="data-set">
+                            <h1>SOFT SKILLS:</h1>
+                            <h2>Proactive, Communicative, Colaborative.</h2>
+                        </div>
+                        <div class="data-set">
+                            <h2>Front-End Developer with 4 years of Angular expertise and sharp UI/UX skills, dedicated
+                                to building responsive, engaging interfaces.</h2>
+                        </div>
+                    </div>
+                    <div class="content-about">
+                        <div class="data-set">
+                            <h2>Front-End Web Developer with extensive experience working with cutting-edge technologies
+                                such as Angular and RxJS, and an excellent command of UX/UI in creating high-quality,
+                                responsive websites.</h2>
+                        </div>
+                        <div class="data-set">
+                            <h2>Constantly developing and learning new technologies and computational knowledge in
+                                general. I am passionate about studying sciences and understanding a bit more about this
+                                chaotic Universe.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inventory-header-container">
+                <div class="inventory-header">
+                    <div class="inventory-container">
+                        <div class="inventory-background">
+                            <img src="${___HTML_LOADER_IMPORT_4___}">
+                        </div>
+                        <div class="header-title">
+                            <div class="transition-container">
+                                <div class="text-container"
+                                    style="transform: translateX(0px); transition: transform 0.5s ease-in-out;">
+                                    <h2 class="text about">About me</h2>
+                                    <h2 class="text skills">Skills</h2>
+                                    <h2 class="text about">About me</h2>
+                                    <h2 class="text skills">Skills</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow movil-arrow-left">
+                            <img src="${___HTML_LOADER_IMPORT_5___}" alt="">
+                        </div>
+                        <div class="arrow movil-arrow-right">
+                            <img src="${___HTML_LOADER_IMPORT_5___}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/skills-about/skills-about.ts":
+/*!********************************************************************!*\
+  !*** ./src/html/components/app/pages/skills-about/skills-about.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ SkillsAboutComponent)
+/* harmony export */ });
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../main.css */ "./src/html/main.css");
+/* harmony import */ var _skills_about_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skills-about.css */ "./src/html/components/app/pages/skills-about/skills-about.css");
+/* harmony import */ var _skills_about_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./skills-about.html */ "./src/html/components/app/pages/skills-about/skills-about.html");
+
+
+
+class SkillsAboutComponent extends HTMLElement {
+    name = 'page-skills-about';
+    _menuItemName = '';
+    currentRotation = 0;
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        const template = document.createElement('template');
+        template.innerHTML = `
+      <style>${_main_css__WEBPACK_IMPORTED_MODULE_0__["default"].toString()}${_skills_about_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}</style>
+      ${_skills_about_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
+    `;
+        this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.setupEventListeners();
+    }
+    setupEventListeners() {
+        this.shadowRoot
+            ?.querySelector('.arrow-left')
+            ?.addEventListener('click', () => this.handleCardRotation('left'));
+        this.shadowRoot
+            ?.querySelector('.arrow-right')
+            ?.addEventListener('click', () => this.handleCardRotation('right'));
+        this.shadowRoot
+            ?.querySelector('.movil-arrow-right')
+            ?.addEventListener('click', () => this.moveRespHeaderBag('right'));
+        this.shadowRoot
+            ?.querySelector('.movil-arrow-left')
+            ?.addEventListener('click', () => this.moveRespHeaderBag('left'));
+    }
+    handleCardRotation(direction) {
+        const cardInner = this.shadowRoot?.querySelector('.card-inner');
+        const multiplier = direction === 'left' ? 1 : -1;
+        if (this._menuItemName === 'ABOUT ME') {
+            this.currentRotation += multiplier * 180;
+            this._menuItemName = 'SKILLS';
+        }
+        else if (this._menuItemName === 'SKILLS') {
+            this.currentRotation -= multiplier * 180;
+            this._menuItemName = 'ABOUT ME';
+        }
+        cardInner.style.transform = `rotateY(${this.currentRotation}deg)`;
+    }
+    set menuItemName(value) {
+        this._menuItemName = value;
+        this.rotateInnerCard();
+        this.setUpResponsiveHeader();
+    }
+    get menuItemName() {
+        return this._menuItemName;
+    }
+    moveRespHeaderBag(dir) {
+        const contentAbout = this.shadowRoot?.querySelector('.content-about');
+        const contentSkills = this.shadowRoot?.querySelector('.content-skills');
+        contentAbout.style.display = 'none';
+        contentSkills.style.display = 'none';
+        const inventoryContent = this.shadowRoot?.querySelector('.inventory-content');
+        inventoryContent.classList.remove('expanded');
+        const textContainer = this.shadowRoot?.querySelector('.header-title .text-container');
+        const directionFactor = dir === 'left' ? 1 : -1;
+        textContainer.style.transform = `translateX(${directionFactor * -100}%)`;
+        setTimeout(() => {
+            if (directionFactor === 1) {
+                textContainer.appendChild(textContainer.firstElementChild);
+            }
+            else {
+                textContainer.prepend(textContainer.lastElementChild);
+            }
+            textContainer.style.transition = 'none';
+            textContainer.style.transform = 'translateX(0)';
+            setTimeout(() => {
+                textContainer.style.transition = 'transform 0.5s ease-in-out';
+            }, 50);
+        }, 500);
+        setTimeout(() => {
+            if (this._menuItemName === 'ABOUT ME') {
+                this._menuItemName = 'SKILLS';
+                setTimeout(() => {
+                    const contentSkills = this.shadowRoot?.querySelector('.content-skills');
+                    contentSkills.style.display = 'block';
+                }, 250);
+            }
+            else if (this._menuItemName === 'SKILLS') {
+                this._menuItemName = 'ABOUT ME';
+                setTimeout(() => {
+                    const contentAbout = this.shadowRoot?.querySelector('.content-about');
+                    contentAbout.style.display = 'block';
+                }, 250);
+            }
+            inventoryContent.classList.add('expanded');
+        }, 200);
+    }
+    setUpResponsiveHeader() {
+        const textContainer = this.shadowRoot?.querySelector('.header-title .text-container');
+        if (this._menuItemName === 'ABOUT ME') {
+            const contentAbout = this.shadowRoot?.querySelector('.content-about');
+            contentAbout.style.display = 'block';
+            if (textContainer.firstElementChild?.classList.contains('about')) {
+                textContainer.appendChild(textContainer.firstElementChild);
+            }
+        }
+        else if (this._menuItemName === 'SKILLS') {
+            const contentSkills = this.shadowRoot?.querySelector('.content-skills');
+            contentSkills.style.display = 'block';
+            if (textContainer.firstElementChild?.classList.contains('skills')) {
+                textContainer.prepend(textContainer.firstElementChild);
+            }
+        }
+    }
+    rotateInnerCard() {
+        if (this._menuItemName === 'ABOUT ME') {
+            this.currentRotation = 180;
+            const cardInner = this.shadowRoot?.querySelector('.card-inner');
+            cardInner.style.transform = `rotateY(${this.currentRotation}deg)`;
+        }
     }
 }
 
@@ -4193,12 +4791,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../main.css */ "./src/html/main.css");
 /* harmony import */ var _menu_item_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu-item.css */ "./src/html/components/ui/menu-item/menu-item.css");
 /* harmony import */ var _menu_item_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu-item.html */ "./src/html/components/ui/menu-item/menu-item.html");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+
+
 
 
 
 class MenuItemComponent extends HTMLElement {
+    _pageComponent = null;
+    _itemName = null;
+    eventSystem;
     constructor() {
         super();
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__.EventSystem);
         this.attachShadow({ mode: 'open' });
         const template = document.createElement('template');
         template.innerHTML = `
@@ -4206,9 +4813,29 @@ class MenuItemComponent extends HTMLElement {
                     ${_menu_item_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
                 `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.shadowRoot
+            ?.querySelector('.menu-item')
+            ?.addEventListener('click', () => {
+            if (this._pageComponent) {
+                this.eventSystem.emit('PAGE_TRANSITION', {
+                    component: this._pageComponent,
+                    itemName: this._itemName,
+                });
+            }
+        });
     }
     set itemName(value) {
         this.shadowRoot.querySelector('.item-name').innerHTML = value;
+        this._itemName = value;
+    }
+    get itemName() {
+        return this._itemName;
+    }
+    set pageComponent(value) {
+        this._pageComponent = value;
+    }
+    get pageComponent() {
+        return this._pageComponent;
     }
 }
 
@@ -4294,7 +4921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("@font-face {\r\n    font-family: 'pokemon-font';\r\n    src: url('assets/html/fonts/pokemon-font.ttf') format('truetype');\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    overflow: hidden;\r\n    background: #000;\r\n    display: flex;\r\n    height: 100vh;\r\n}\r\n\r\n.pokemon-rpg {\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.pokemon-rpg,\r\n.app-layout {\r\n    position: absolute;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 5;\r\n}\r\n\r\n#game-container {\r\n    position: relative;\r\n    image-rendering: pixelated;\r\n}\r\n\r\n#game-canvas,\r\n#transicion-canvas {\r\n    position: absolute;\r\n    border: 2px solid #333;\r\n}\r\n\r\n@media (max-width: 320px) {\r\n}\r\n\r\n@media (max-width: 480px) {\r\n}\r\n\r\n@media (max-width: 768px) {\r\n}\r\n\r\n@media (max-width: 1024px) {\r\n}\r\n\r\n@media (min-width: 1025px) and (max-width: 1366px) {\r\n}\r\n\r\n@media (min-width: 1367px) {\r\n}\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("@font-face {\r\n    font-family: 'pokemon-font';\r\n    src: url('assets/html/fonts/pokemon-font.ttf') format('truetype');\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    overflow: hidden;\r\n    background: #000;\r\n    display: flex;\r\n    height: 100vh;\r\n}\r\n\r\n.pokemon-rpg {\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.pokemon-rpg,\r\n.app-layout {\r\n    position: absolute;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 55;\r\n}\r\n\r\n#game-container {\r\n    position: relative;\r\n    image-rendering: pixelated;\r\n}\r\n\r\n#game-canvas,\r\n#transicion-canvas {\r\n    position: absolute;\r\n}\r\n\r\n#game-canvas {\r\n    z-index: 51;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 52;\r\n}\r\n\r\n#transicion-canvas {\r\n    z-index: 53;\r\n    pointer-events: none;\r\n}\r\n\r\n@media (max-width: 320px) {\r\n}\r\n\r\n@media (max-width: 480px) {\r\n}\r\n\r\n@media (max-width: 768px) {\r\n}\r\n\r\n@media (max-width: 1024px) {\r\n}\r\n\r\n@media (min-width: 1025px) and (max-width: 1366px) {\r\n}\r\n\r\n@media (min-width: 1367px) {\r\n}\r\n");
 
 /***/ }),
 
@@ -4308,6 +4935,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   MENU_CONFIG: () => (/* binding */ MENU_CONFIG)
 /* harmony export */ });
+/* harmony import */ var _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/app/pages/skills-about/skills-about */ "./src/html/components/app/pages/skills-about/skills-about.ts");
+
 const MENU_CONFIG = [
     {
         itemName: 'POKéMON',
@@ -4317,12 +4946,14 @@ const MENU_CONFIG = [
     },
     {
         itemName: 'ABOUT ME',
+        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__["default"],
     },
     {
         itemName: 'PROJECTS',
     },
     {
         itemName: 'SKILLS',
+        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__["default"],
     },
     {
         itemName: 'SERVICES',
@@ -4424,8 +5055,8 @@ let Camera = class Camera {
     bounds = { minX: 0, minY: 0, maxX: Infinity, maxY: Infinity };
     constructor() {
         this.viewport = {
-            width: window.innerWidth * 0.6,
-            height: window.innerHeight * 0.8,
+            width: window.screen.width * 0.6,
+            height: window.screen.height * 0.8,
         };
     }
     targetCenter() {
@@ -5126,6 +5757,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _input_input_manager__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/input/input-manager */ "./src/input/input-manager.ts");
 /* harmony import */ var _core_engine_world_manager__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/core/engine/world-manager */ "./src/core/engine/world-manager.ts");
 /* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
+/* harmony import */ var _core_systems_transition_manager__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/core/systems/transition-manager */ "./src/core/systems/transition-manager.ts");
+
 
 
 
@@ -5141,12 +5774,14 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
     npcs = [];
     layerManager;
     worldManager;
+    transitionManager;
     constructor() {
         super();
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
         this.layerManager = gameContext.getBean(_rendering_layer_manager__WEBPACK_IMPORTED_MODULE_4__.LayerManager);
         this.camera = gameContext.getBean(_rendering_camera__WEBPACK_IMPORTED_MODULE_3__.Camera);
         this.worldManager = gameContext.getBean(_core_engine_world_manager__WEBPACK_IMPORTED_MODULE_7__.WorldManager);
+        this.transitionManager = gameContext.getBean(_core_systems_transition_manager__WEBPACK_IMPORTED_MODULE_9__.TransitionManager);
         this.player = new _game_player_player__WEBPACK_IMPORTED_MODULE_2__.Player();
         this.initializeLayers();
     }
@@ -5223,11 +5858,13 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
     }
     update(deltaTime) {
         this.layerManager.update(deltaTime);
+        this.transitionManager.update(deltaTime);
     }
     render(ctx) {
         ctx.save();
         ctx.imageSmoothingEnabled = false;
         this.layerManager.render();
+        this.transitionManager.render();
         ctx.restore();
     }
     drawDebugInfo() {
