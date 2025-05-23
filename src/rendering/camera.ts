@@ -1,5 +1,4 @@
 import { Injectable } from '@/core/decorators/injectable';
-import { GAME_CANVAS } from '@/core/engine/canvas-token';
 import { GameContext } from '@/core/engine/game-context';
 import { Player } from '@/game/player/player';
 import { Vector2D } from '@/types/sprite-sheet';
@@ -16,9 +15,16 @@ export class Camera {
 
     constructor() {
         this.viewport = {
-            width: window.screen.width * 0.6,
-            height: window.screen.height * 0.8,
+            width: window.innerWidth,
+            height: window.innerHeight,
         };
+
+        window.addEventListener('resize', () => {
+            this.viewport = {
+                width: window.innerWidth,
+                height: window.innerHeight,
+            };
+        });
     }
 
     public targetCenter(): { x: number; y: number } {
@@ -44,20 +50,19 @@ export class Camera {
     update(deltaTime: number): void {
         if (!this.target) return;
 
-        const ctx = GameContext.getInstance().getBean(GAME_CANVAS);
         const scale = GameContext.getInstance().getGameScale();
 
-        const effectiveViewportWidth = ctx.canvas.width / scale;
-        const effectiveViewportHeight = ctx.canvas.height / scale;
+        const logicalViewportWidth = this.viewport.width / scale;
+        const logicalViewportHeight = this.viewport.height / scale;
 
-        const targetX = this.target.position.x - effectiveViewportWidth / 2;
-        const targetY = this.target.position.y - effectiveViewportHeight / 2;
+        const targetX = this.target.position.x - logicalViewportWidth / 2;
+        const targetY = this.target.position.y - logicalViewportHeight / 2;
 
         this.bounds = {
             minX: 0,
             minY: 0,
-            maxX: Math.max(this.mapWidth - effectiveViewportWidth, 0),
-            maxY: Math.max(this.mapHeight - effectiveViewportHeight, 0),
+            maxX: Math.max(this.mapWidth - logicalViewportWidth, 0),
+            maxY: Math.max(this.mapHeight - logicalViewportHeight, 0),
         };
 
         const clampedX = this.clamp(

@@ -46,11 +46,18 @@ export class TileMap {
         return maxHeight * this.scaledTileSize;
     }
 
-    update(deltaTime: number) {
-        this.effectSystem.update(deltaTime);
-        this.layers.forEach((layer) =>
-            layer.npc.forEach((npc) => npc.update(deltaTime))
-        );
+    update(deltaTime: number, priority?: LayerPriority) {
+        if (priority === LayerPriority.WORLD_EFFECTS) {
+            this.effectSystem.update(deltaTime);
+        }
+        if (
+            priority === LayerPriority.ENTITIES_HIGH ||
+            priority === LayerPriority.ENTITIES_LOW
+        ) {
+            this.layers.forEach((layer) =>
+                layer.npc.forEach((npc) => npc.update(deltaTime))
+            );
+        }
     }
 
     render(priority: LayerPriority): void {
@@ -135,7 +142,9 @@ export class TileMap {
                 layer.npc.forEach((npc) => npc.render());
             });
 
-        this.effectSystem.render();
+        if (priority === LayerPriority.WORLD_EFFECTS) {
+            this.effectSystem.render();
+        }
     }
 
     public getCollisionGrid(): boolean[][] {
