@@ -223,8 +223,8 @@ export class WorldManager {
         this.eventSystem.emit('MAP_TRANSITION_READY', {});
     }
 
-    update(deltaTime: number): void {
-        this.currentMap.update(deltaTime);
+    update(deltaTime: number, priority?: LayerPriority): void {
+        this.currentMap.update(deltaTime, priority);
     }
 
     render(priority: LayerPriority): void {

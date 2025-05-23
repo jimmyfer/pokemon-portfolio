@@ -79,7 +79,7 @@ export class OverworldScene extends GameScene {
             priority: LayerPriority.ENTITIES_LOW,
             enabled: true,
             update: (delta) => {
-                this.worldManager.update(delta);
+                this.worldManager.update(delta, LayerPriority.ENTITIES_LOW);
             },
             render: () => {
                 this.worldManager.render(LayerPriority.ENTITIES_LOW);
@@ -102,7 +102,7 @@ export class OverworldScene extends GameScene {
             priority: LayerPriority.ENTITIES_HIGH,
             enabled: true,
             update: (delta) => {
-                this.worldManager.update(delta);
+                this.worldManager.update(delta, LayerPriority.ENTITIES_HIGH);
             },
             render: () => {
                 this.worldManager.render(LayerPriority.ENTITIES_HIGH);
@@ -117,6 +117,17 @@ export class OverworldScene extends GameScene {
             },
             render: () => {
                 this.worldManager.render(LayerPriority.FOREGROUND);
+            },
+        });
+
+        this.layerManager.addLayer({
+            priority: LayerPriority.WORLD_EFFECTS,
+            enabled: true,
+            update: (delta) => {
+                this.worldManager.update(delta, LayerPriority.WORLD_EFFECTS);
+            },
+            render: () => {
+                this.worldManager.render(LayerPriority.WORLD_EFFECTS);
             },
         });
 

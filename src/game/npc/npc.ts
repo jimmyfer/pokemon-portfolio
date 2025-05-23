@@ -63,7 +63,7 @@ export class NPC {
         );
 
         this.targetPosition = { ...this.position };
-        this.movementSpeed = config.movementSpeed || 20;
+        this.movementSpeed = config.movementSpeed || 40;
 
         this.initialPosition = { ...this.position };
         this.movementRange = config.movementRange || 3;
@@ -107,7 +107,7 @@ export class NPC {
                 spriteSheet.defineAnimation({
                     name: animationName,
                     frames: frames,
-                    frameRate: 2,
+                    frameRate: 4,
                     loop: true,
                 });
             }

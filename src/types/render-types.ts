@@ -10,6 +10,7 @@ export enum LayerPriority {
     FOREGROUND = 300,
     UI = 400,
     DEBUG = 500,
+    WORLD_EFFECTS = 600,
 }
 
 export interface Layer {
