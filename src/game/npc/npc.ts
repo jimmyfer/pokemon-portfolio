@@ -73,7 +73,7 @@ export class NPC {
 
         this.setupInteractionTrigger(config.interactionTrigger(this));
 
-        this.eventSystem.on('CLOSE_DIALOG', (data) => this.stopInteraction());
+        this.eventSystem.on('CLOSE_DIALOG', () => this.stopInteraction());
     }
 
     private stopInteraction(): void {
