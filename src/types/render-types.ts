@@ -14,7 +14,7 @@ export enum LayerPriority {
 }
 
 export interface Layer {
-    update(deltaTime: number): void;
+    update?(deltaTime: number): void;
     render(): void;
     priority: LayerPriority;
     enabled: boolean;

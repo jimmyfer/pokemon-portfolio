@@ -27,7 +27,11 @@ export class LayerManager {
     }
 
     update(deltaTime: number): void {
-        this.sortedLayers.forEach((layer) => layer.update(deltaTime));
+        this.sortedLayers.forEach((layer) => {
+            if (layer.update) {
+                layer.update(deltaTime);
+            }
+        });
     }
 
     render(): void {
