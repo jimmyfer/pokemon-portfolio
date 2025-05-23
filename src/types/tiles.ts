@@ -1,3 +1,4 @@
+import { NPC } from '@/game/npc/npc';
 import { LayerPriority } from './render-types';
 import { TriggerCondition } from './trigger';
 
@@ -53,7 +54,9 @@ export interface Tile {
 export interface MapLayer {
     name: string;
     data: Tile[][];
+    npc: NPC[];
     visible: boolean;
     collidable: boolean;
     priority: LayerPriority;
+    condition?: TriggerCondition;
 }

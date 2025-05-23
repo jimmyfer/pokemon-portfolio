@@ -13,6 +13,9 @@ import { AreaTriggerCondition } from '@/effects/trigger-conditions/area';
 import { BushAreaTriggerCondition } from '@/effects/trigger-conditions/bush-area';
 import { JumpTrigger } from '@/effects/triggers/jump';
 import { PlayerJumpSequence } from '@/types/effects';
+import { NPCRelativePositionTriggerCondition } from '@/effects/trigger-conditions/npc-relative-position';
+import { NPCConfig } from '@/types/npc';
+import { NPC } from '@/game/npc/npc';
 
 export class TileMapBuilder {
     private layers: MapLayer[] = [];
@@ -25,6 +28,34 @@ export class TileMapBuilder {
     constructor(tileSize: number = 16, scale: number = 2) {
         this.tileSize = tileSize;
         this.scale = scale;
+    }
+
+    addNPC(config: NPCConfig): this {
+        const npc = new NPC(config);
+
+        const abovePositionTrigger = new NPCRelativePositionTriggerCondition(
+            npc,
+            'above'
+        );
+        const belowPositionTrigger = new NPCRelativePositionTriggerCondition(
+            npc,
+            'below'
+        );
+
+        const lowEntityLayer = this.layers.find(
+            (layer) => layer.priority === LayerPriority.ENTITIES_LOW
+        );
+        lowEntityLayer!.condition = abovePositionTrigger;
+
+        const highEntityLayer = this.layers.find(
+            (layer) => layer.priority === LayerPriority.ENTITIES_HIGH
+        );
+        highEntityLayer!.condition = belowPositionTrigger;
+
+        lowEntityLayer?.npc.push(npc);
+        highEntityLayer?.npc.push(npc);
+
+        return this;
     }
 
     addMapTransitionTrigger(
@@ -122,6 +153,7 @@ export class TileMapBuilder {
                     collidable: false,
                 }))
             ),
+            npc: [],
             visible: true,
             collidable,
             priority,
@@ -129,6 +161,56 @@ export class TileMapBuilder {
 
         this.layers.push(layer);
         this.currentLayer = layer;
+
+        return this;
+    }
+
+    createNpcLayer(width: number, height: number): this {
+        const layerNames = this.layers.map((layer) => layer.name);
+        if (layerNames.includes('npc_low') || layerNames.includes('npc_high')) {
+            throw new Error(
+                'NPC layers already exist. Cannot create duplicate NPC layers.'
+            );
+        }
+
+        const lowEntityLayer: MapLayer = {
+            name: 'npc_low',
+            data: Array.from({ length: height }, () =>
+                Array.from({ length: width }, () => ({
+                    tile: -1,
+                    offsetX: 0,
+                    offsetY: 0,
+                    flipX: false,
+                    flipY: false,
+                    collidable: false,
+                }))
+            ),
+            npc: [],
+            visible: true,
+            collidable: true,
+            priority: LayerPriority.ENTITIES_LOW,
+        };
+
+        const highEntityLayer: MapLayer = {
+            name: 'npc_high',
+            data: Array.from({ length: height }, () =>
+                Array.from({ length: width }, () => ({
+                    tile: -1,
+                    offsetX: 0,
+                    offsetY: 0,
+                    flipX: false,
+                    flipY: false,
+                    collidable: false,
+                }))
+            ),
+            npc: [],
+            visible: true,
+            collidable: true,
+            priority: LayerPriority.ENTITIES_HIGH,
+        };
+
+        this.layers.push(lowEntityLayer);
+        this.layers.push(highEntityLayer);
 
         return this;
     }

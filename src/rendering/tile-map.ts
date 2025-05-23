@@ -48,6 +48,9 @@ export class TileMap {
 
     update(deltaTime: number) {
         this.effectSystem.update(deltaTime);
+        this.layers.forEach((layer) =>
+            layer.npc.forEach((npc) => npc.update(deltaTime))
+        );
     }
 
     render(priority: LayerPriority): void {
@@ -58,6 +61,8 @@ export class TileMap {
         this.layers
             .filter((layer) => layer.priority === priority)
             .forEach((layer) => {
+                if (layer.condition && !layer.condition?.isMet()) return;
+
                 for (let y = 0; y < layer.data.length; y++) {
                     for (let x = 0; x < layer.data[y].length; x++) {
                         const tile = layer.data[y][x];
@@ -127,6 +132,7 @@ export class TileMap {
                         }
                     }
                 }
+                layer.npc.forEach((npc) => npc.render());
             });
 
         this.effectSystem.render();
@@ -137,6 +143,7 @@ export class TileMap {
         if (!collidableLayer) {
             return [];
         }
+
         const grid: boolean[][] = [];
         const width = collidableLayer?.data[0]?.length || 0;
         const height = collidableLayer?.data.length || 0;
@@ -149,12 +156,33 @@ export class TileMap {
             if (layer.collidable) {
                 layer.data.forEach((row, y) => {
                     row.forEach((tile, x) => {
-                        if (tile.tile !== -1 || tile.collidable)
+                        if (tile.tile !== -1 || tile.collidable) {
                             grid[y][x] = true;
+                        }
                     });
                 });
             }
         });
+
+        this.layers.forEach((layer) =>
+            layer.npc.forEach((npc) => {
+                const npcTileX = Math.floor(
+                    npc.position.x / this.scaledTileSize
+                );
+                const npcTileY = Math.floor(
+                    npc.position.y / this.scaledTileSize
+                );
+
+                if (
+                    npcTileY >= 0 &&
+                    npcTileY < height &&
+                    npcTileX >= 0 &&
+                    npcTileX < width
+                ) {
+                    grid[npcTileY][npcTileX] = true;
+                }
+            })
+        );
 
         return grid;
     }

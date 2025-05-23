@@ -12,7 +12,6 @@ import { TransitionManager } from '@/core/systems/transition-manager';
 export class OverworldScene extends GameScene {
     private camera: Camera;
     private player: Player;
-    private npcs: any[] = [];
 
     private layerManager: LayerManager;
     private worldManager: WorldManager;
@@ -77,16 +76,36 @@ export class OverworldScene extends GameScene {
         });
 
         this.layerManager.addLayer({
-            priority: LayerPriority.ENTITIES,
+            priority: LayerPriority.ENTITIES_LOW,
+            enabled: true,
+            update: (delta) => {
+                this.worldManager.update(delta);
+            },
+            render: () => {
+                this.worldManager.render(LayerPriority.ENTITIES_LOW);
+            },
+        });
+
+        this.layerManager.addLayer({
+            priority: LayerPriority.ENTITIES_MED,
             enabled: true,
             update: (delta) => {
                 this.player.update(delta);
-                this.npcs.forEach((npc) => npc.update(delta));
                 this.camera.update(delta);
             },
             render: () => {
                 this.player.render();
-                this.npcs.forEach((npc) => npc.render());
+            },
+        });
+
+        this.layerManager.addLayer({
+            priority: LayerPriority.ENTITIES_HIGH,
+            enabled: true,
+            update: (delta) => {
+                this.worldManager.update(delta);
+            },
+            render: () => {
+                this.worldManager.render(LayerPriority.ENTITIES_HIGH);
             },
         });
 

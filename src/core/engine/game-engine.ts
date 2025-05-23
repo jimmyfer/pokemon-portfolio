@@ -101,6 +101,12 @@ export class GameEngine {
             16,
             16
         );
+        await this.assetManager.loadSpriteSheet(
+            'npcs',
+            'assets/sprites/npc.png',
+            32,
+            32
+        );
     }
 
     private gameLoop(timestamp: number) {
