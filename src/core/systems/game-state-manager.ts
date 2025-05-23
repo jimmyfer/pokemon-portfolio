@@ -68,4 +68,18 @@ export class GameStateManager {
     private notifyObservers(): void {
         this.observers.forEach((observer) => observer(this.getState()));
     }
+
+    public lockPlayerMovement() {
+        this.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: false },
+        }));
+    }
+
+    public unlockPlayerMovement() {
+        this.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: true },
+        }));
+    }
 }

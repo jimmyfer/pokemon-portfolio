@@ -27,6 +27,13 @@ module.exports = {
                     filename: 'assets/maps/[name][ext]',
                 },
             },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/sprites/[name][ext]',
+                },
+            },
         ],
     },
     resolve: {

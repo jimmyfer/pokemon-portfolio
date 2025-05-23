@@ -16,7 +16,6 @@ export class Player {
     public sprite: AnimatedSprite;
     private isMoving: boolean = false;
     private intendedDirection: Vector2D = { x: 0, y: 0 };
-    private flipX: boolean = false;
     private tileSize: number;
     public scale: number;
     private readonly movementSpeed: number = 120;
@@ -48,7 +47,7 @@ export class Player {
         const gameContext = GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
-        this.assetManager = GameContext.getInstance().getBean(AssetManager);
+        this.assetManager = gameContext.getBean(AssetManager);
         this.collisionSystem = gameContext.getBean(CollisionSystem);
         this.gameStateManager = gameContext.getBean(GameStateManager);
         this.eventSystem = gameContext.getBean(EventSystem);
@@ -157,6 +156,13 @@ export class Player {
         });
 
         spriteSheet.defineAnimation({
+            name: 'walk-right',
+            frames: [[[5]], [[2]], [[8]], [[2]]],
+            frameRate: 8,
+            loop: true,
+        });
+
+        spriteSheet.defineAnimation({
             name: 'walk-up',
             frames: [[[4]], [[1]], [[7]], [[1]]],
             frameRate: 8,
@@ -172,6 +178,13 @@ export class Player {
 
         spriteSheet.defineAnimation({
             name: 'left-align',
+            frames: [[[2]], [[5]]],
+            frameRate: 16,
+            loop: true,
+        });
+
+        spriteSheet.defineAnimation({
+            name: 'right-align',
             frames: [[[2]], [[5]]],
             frameRate: 16,
             loop: true,
@@ -310,6 +323,7 @@ export class Player {
         if (distance <= moveDistance) {
             this.position = { ...this.targetPosition };
             this.isMoving = false;
+            this.collisionSystem.clearMovement('player');
         }
     }
 
@@ -317,8 +331,9 @@ export class Player {
         direction: Vector2D,
         spritePosition: { activeAnimation: string }
     ): void {
-        if (direction.x !== 0) {
-            this.flipX = direction.x > 0;
+        if (direction.x > 0) {
+            spritePosition.activeAnimation = 'walk-right';
+        } else if (direction.x < 0) {
             spritePosition.activeAnimation = 'walk-left';
         } else if (direction.y > 0) {
             spritePosition.activeAnimation = 'walk-down';
@@ -332,11 +347,9 @@ export class Player {
         spritePosition: { activeAnimation: string }
     ): void {
         if (direction.x > 0) {
-            spritePosition.activeAnimation = 'left-align';
-            this.flipX = true;
+            spritePosition.activeAnimation = 'right-align';
         } else if (direction.x < 0) {
             spritePosition.activeAnimation = 'left-align';
-            this.flipX = false;
         } else if (direction.y > 0) {
             spritePosition.activeAnimation = 'down-align';
         } else if (direction.y < 0) {
@@ -360,19 +373,25 @@ export class Player {
             y: currentTile.y + direction.y,
         };
 
-        if (
-            this.collisionSystem.isColliding(
-                targetTile.x * this.tileSize,
-                targetTile.y * this.tileSize
-            )
-        ) {
-            return;
-        }
-
-        this.targetPosition = {
+        const targetWorldPos = {
             x: targetTile.x * this.tileSize + this.tileSize / 2,
             y: targetTile.y * this.tileSize + this.tileSize / 2,
         };
+
+        this.collisionSystem.registerMovement('player', targetWorldPos);
+
+        if (
+            this.collisionSystem.isColliding(
+                targetTile.x * this.tileSize,
+                targetTile.y * this.tileSize,
+                'player'
+            )
+        ) {
+            this.collisionSystem.clearMovement('player');
+            return;
+        }
+
+        this.targetPosition = targetWorldPos;
         this.isMoving = true;
         this.updateMovementAnimation(direction, spritePosition);
     }
@@ -396,24 +415,25 @@ export class Player {
             ),
         };
 
-        const tileWidth = this.sprite.spriteSheet.width * this.scale;
-        const tileHeight = this.sprite.spriteSheet.height * this.scale;
-
         if (this.hidden) {
             return;
         }
 
-        frame.tiles.forEach((row, rowIndex) => {
-            row.forEach((tile, colIndex) => {
-                const xOffset =
-                    (this.flipX
-                        ? (row.length - colIndex - 1) * tileWidth
-                        : colIndex * tileWidth) + this.playerOffsetX;
+        let flipX =
+            this.currentAnimation === 'walk-right' ||
+            this.currentAnimation === 'right-align' ||
+            this.currentAnimation === 'right'
+                ? true
+                : false;
 
-                let yOffset = rowIndex * tileHeight + this.playerOffsetY;
+        frame.tiles.forEach((row, rowIndex) => {
+            row.forEach((tile) => {
+                let xOffset = 0;
+                let yOffset = 0;
 
                 if (
-                    frame.currentAnimation === 'walk-left' &&
+                    (frame.currentAnimation === 'walk-left' ||
+                        frame.currentAnimation === 'walk-right') &&
                     (frame.currentFrame == 0 || frame.currentFrame == 2)
                 ) {
                     yOffset = yOffset + 2;
@@ -427,7 +447,7 @@ export class Player {
                     tile,
                     tileX,
                     tileY,
-                    this.flipX,
+                    flipX,
                     this.scale
                 );
             });
@@ -447,6 +467,10 @@ export class Player {
             case 'left-align':
             case 'left':
                 return 'left';
+            case 'walk-right':
+            case 'right-align':
+            case 'right':
+                return 'right';
             case 'walk-up':
             case 'up-align':
             case 'up':

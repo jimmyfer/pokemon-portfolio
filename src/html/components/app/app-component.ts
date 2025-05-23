@@ -3,6 +3,7 @@ import LayoutComponent from './layout/layout';
 import HeaderComponent from './header/header';
 import BodyComponent from './body/body';
 import SkillsAboutComponent from './pages/skills-about/skills-about';
+import DialogComponent from './game-dialog/game-dialog';
 
 /**
  * Components declaration
@@ -23,5 +24,9 @@ export const componentDefinitions: ComponentDefinition[] = [
     {
         name: 'page-skills-about',
         component: SkillsAboutComponent,
+    },
+    {
+        name: 'game-dialog',
+        component: DialogComponent,
     },
 ];

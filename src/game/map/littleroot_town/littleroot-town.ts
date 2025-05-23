@@ -15,6 +15,10 @@ import {
 import { MapTransitionEvent } from '@/types/game-event';
 import { LabDoorOpenEffect } from '@/effects/sprites-effects/lab-door-open';
 import { PlayerPositionTriggerCondition } from '@/effects/trigger-conditions/player-position';
+import { NPCProximityTriggerCondition } from '@/effects/trigger-conditions/npc-proximity';
+import { NPCConfig } from '@/types/npc';
+import { NPC } from '@/game/npc/npc';
+import { SkinType } from '@/game/npc/npc-skins';
 
 export async function createLittleRootTown() {
     const assetManager = GameContext.getInstance().getBean(AssetManager);
@@ -136,6 +140,29 @@ export async function createLittleRootTown() {
         keyConditionUp,
         playerPosition,
     ]);
+
+    const momNpc: NPCConfig = {
+        id: 'mom',
+        name: 'Mom',
+        position: { x: 13, y: 12 },
+        spriteSheet: 'npcs',
+        initialAnimation: 'idle',
+        interactionType: 'dialogue',
+        interactionTrigger: (npc: NPC) => {
+            return new CompositeTriggerCondition([
+                new NPCProximityTriggerCondition(npc),
+                new KeyPressTriggerCondition(' '),
+            ]);
+        },
+        dialogue: [
+            'Talk is cheap, show me the code.',
+            'Make it work, make it right, make it fast.',
+            'Best luck for you my boy!',
+        ],
+        behavior: 'wandering',
+        movementRange: 1,
+        skin: SkinType.WOMAN_01,
+    };
 
     return (
         new TileMapBuilder(16, 2)
@@ -418,6 +445,8 @@ export async function createLittleRootTown() {
                 [compositeConditionTo101],
                 MapTransitionEventTo101
             )
+            .createNpcLayer(29, 27)
+            .addNPC(momNpc)
             .build()
     );
 }
