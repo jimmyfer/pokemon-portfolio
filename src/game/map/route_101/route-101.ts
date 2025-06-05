@@ -1,7 +1,7 @@
 import { GameContext } from '@/core/engine/game-context';
 import { AssetManager } from '@/assets/assetsManager';
 import { TileMapBuilder } from '@/rendering/tile-map-builder';
-import { LayerPriority } from '@/types/render-types';
+import { LayerGroup, LayerPriority } from '@/types/render-types';
 import { KeyPressTriggerCondition } from '@/effects/trigger-conditions/keypress';
 import { MapTransitionEvent } from '@/types/game-event';
 import { CompositeTriggerCondition } from '@/effects/trigger-conditions/composite';
@@ -62,7 +62,13 @@ export async function createRoute101() {
     return (
         new TileMapBuilder(16, 2)
             .setTileset(sprites)
-            .createLayer('collision', 29, 26, true, LayerPriority.BACKGROUND)
+            .createLayer(
+                LayerGroup.COLLISION,
+                29,
+                26,
+                true,
+                LayerPriority.BACKGROUND
+            )
             .buildCollisionRec(0, 0, 4, 12)
             .buildCollisionRec(0, 17, 4, 12)
             .buildCollisionRow(25, 0, 15)
@@ -94,7 +100,13 @@ export async function createRoute101() {
             .buildSpriteRow([4968, 4968, 4968, 4968, 4970], 9, 11)
             .buildSingleSprite(4885, 10, 2, true)
             .buildSingleSprite(4885, 8, 15, false)
-            .createLayer('bush', 29, 26, false, LayerPriority.BACKGROUND_LOW)
+            .createLayer(
+                'bush_ground',
+                29,
+                26,
+                false,
+                LayerPriority.BACKGROUND_LOW
+            )
             // rigth south area
             .buildSpriteRow([2254, 2254], 13, 19, 0, 6)
             .buildSpriteRow([2254, 2254], 14, 19, 0, 6)
@@ -133,7 +145,7 @@ export async function createRoute101() {
             .buildSpriteRow([2254, 2254, 2254, 2254, 2254, 2254], 8, 19, 0, 6)
             .buildSpriteRow([2254, 2254, 2254, 2254, 2254], 9, 19, 0, 6)
             .createLayer(
-                'grass_foreground',
+                LayerGroup.BUSH,
                 29,
                 26,
                 false,

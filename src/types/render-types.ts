@@ -19,3 +19,8 @@ export interface Layer {
     priority: LayerPriority;
     enabled: boolean;
 }
+
+export enum LayerGroup {
+    COLLISION = 'collision',
+    BUSH = 'bush',
+}

@@ -73,14 +73,35 @@ export class Player {
             this.assetManager.getSpriteSheet('player')
         );
 
-        this.eventSystem.on('TRANSITION_START', () =>
+        this.lockPlayerTransitions();
+
+        this.unlockPlayerTransitions();
+
+        this.sprite.play('idle');
+    }
+
+    lockPlayerTransitions(): void {
+        this.eventSystem.on('BATTLE_TRANSITION_STARTED', () =>
             this.lockPlayerMovement()
         );
-        this.eventSystem.on('TRANSITION_END', () =>
+
+        this.eventSystem.on('MAP_TRANSITION_STARTED', () =>
+            this.lockPlayerMovement()
+        );
+
+        this.eventSystem.on('PAGE_TRANSITION_STARTED', () =>
+            this.lockPlayerMovement()
+        );
+    }
+
+    unlockPlayerTransitions(): void {
+        this.eventSystem.on('MAP_TRANSITION_COMPLETE', () =>
             this.unlockPlayerMovement()
         );
 
-        this.sprite.play('idle');
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () =>
+            this.unlockPlayerMovement()
+        );
     }
 
     updatePlayerState() {
@@ -88,9 +109,16 @@ export class Player {
             this.gameStateManager.getState().player;
         this.hidden = hidden;
         this.canMove = canMove;
-        this.canMove = canMove;
 
-        this.playAnimation(spritePosition);
+        this.playAnimation(
+            this.canMove
+                ? spritePosition
+                : this.getIdleAnimation(spritePosition)
+        );
+
+        if (!this.canMove) {
+            this.intendedDirection = { x: 0, y: 0 };
+        }
 
         if (this.position.x != position.x || this.position.y != position.y) {
             this.position = this.snapToTileCenter(position);
@@ -322,6 +350,7 @@ export class Player {
 
         if (distance <= moveDistance) {
             this.position = { ...this.targetPosition };
+            this.eventSystem.emit('PLAYER_MOVED', this.position);
             this.isMoving = false;
             this.collisionSystem.clearMovement('player');
         }

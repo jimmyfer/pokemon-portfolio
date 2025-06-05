@@ -4,6 +4,7 @@ import HeaderComponent from './header/header';
 import BodyComponent from './body/body';
 import SkillsAboutComponent from './pages/skills-about/skills-about';
 import DialogComponent from './game-dialog/game-dialog';
+import BattleComponent from './battle/battle';
 
 /**
  * Components declaration
@@ -28,5 +29,9 @@ export const componentDefinitions: ComponentDefinition[] = [
     {
         name: 'game-dialog',
         component: DialogComponent,
+    },
+    {
+        name: 'app-battle',
+        component: BattleComponent,
     },
 ];

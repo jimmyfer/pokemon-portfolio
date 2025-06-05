@@ -5,6 +5,8 @@ import { SceneManager } from '@/core/engine/scene-manager';
 import { OverworldScene } from '@/scenes/overworld-scene';
 import { GameStateManager } from '../systems/game-state-manager';
 import { GAME_CANVAS, TRANSICION_CANVAS } from './canvas-token';
+import { EncounterSystem } from '../systems/encounter-system';
+import { BattleSystem } from '../systems/battle-system';
 
 export class GameEngine {
     public canvasGame: HTMLCanvasElement;
@@ -18,6 +20,10 @@ export class GameEngine {
     sceneManager: SceneManager;
 
     gameStateManager: GameStateManager;
+
+    encounterSystem: EncounterSystem;
+
+    battleSystem: BattleSystem;
 
     private canvasGameCtx: CanvasRenderingContext2D;
 
@@ -48,6 +54,9 @@ export class GameEngine {
         this.assetManager = this.gameContext.getBean(AssetManager);
         this.sceneManager = this.gameContext.getBean(SceneManager);
         this.gameStateManager = this.gameContext.getBean(GameStateManager);
+        this.encounterSystem = this.gameContext.getBean(EncounterSystem);
+        this.battleSystem = this.gameContext.getBean(BattleSystem);
+
         this.initializeCanvas();
 
         window.addEventListener('resize', () => this.handleResize());
@@ -64,6 +73,9 @@ export class GameEngine {
 
     async initialize() {
         this.gameStateManager.loadFromPersistentStorage();
+
+        this.encounterSystem.initialize();
+        this.battleSystem.initialize();
 
         await this.loadAssets();
         this.sceneManager.addScene('overworld', new OverworldScene());
@@ -138,10 +150,10 @@ export class GameEngine {
         this.canvasGame.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
         this.canvasGame.style.transformOrigin = 'top left';
 
-        this.canvasTransicion.style.transform = `scale(${GameContext.getInstance().getGameScale()})`;
-        this.canvasTransicion.style.transformOrigin = 'top left';
+        this.canvasTransicion.style.width = `${window.innerWidth}px`;
+        this.canvasTransicion.style.height = `${window.innerHeight}px`;
 
-        container.style.width = `${window.innerHeight}px`;
+        container.style.width = `${window.innerWidth}px`;
         container.style.height = `${window.innerHeight}px`;
     }
 }

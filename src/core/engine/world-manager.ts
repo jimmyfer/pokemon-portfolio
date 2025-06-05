@@ -14,6 +14,7 @@ import { createHouseRT01F2 } from '@/game/map/littleroot_town/houses/house-01-f2
 import { createHouseRT02 } from '@/game/map/littleroot_town/houses/house-02';
 import { createHouseRT02F2 } from '@/game/map/littleroot_town/houses/house-02-f2';
 import { createHouseRTLab } from '@/game/map/littleroot_town/houses/lab';
+import { Vector2D } from '@/types/sprite-sheet';
 
 @Injectable()
 export class WorldManager {
@@ -174,6 +175,28 @@ export class WorldManager {
                     },
                 ],
             ]),
+            encounterTable: {
+                grass: [
+                    {
+                        species: 'poochyena',
+                        minLevel: 2,
+                        maxLevel: 4,
+                        rarity: 0.4,
+                    },
+                    {
+                        species: 'zigzagoon',
+                        minLevel: 2,
+                        maxLevel: 4,
+                        rarity: 0.4,
+                    },
+                    {
+                        species: 'wurmple',
+                        minLevel: 3,
+                        maxLevel: 5,
+                        rarity: 0.2,
+                    },
+                ],
+            },
         });
     }
 
@@ -233,5 +256,9 @@ export class WorldManager {
 
     getMapData(mapId: string): MapNode | null {
         return this.maps.get(mapId) ?? null;
+    }
+
+    getCurrentWorldTileType(position: Vector2D): string {
+        return this.currentMap.getTileType(position);
     }
 }
