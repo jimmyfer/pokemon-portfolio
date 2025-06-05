@@ -66,7 +66,8 @@ export class BattleSystem {
 
     private async startBattle(): Promise<void> {
         await this.addBattleMessage(
-            `A wild ${this.battleState.wildPokemon.species} appeared!`
+            `A wild ${this.battleState.wildPokemon.species} appeared!`,
+            true
         );
 
         if (
@@ -74,9 +75,10 @@ export class BattleSystem {
             this.battleState &&
             !this.battleState.battleEnded
         ) {
-            this.battleState.messages.push(
-                `What will ${this.battleState.playerPokemon.species.toUpperCase()} do?`
-            );
+            this.battleState.messages.push({
+                message: `What will ${this.battleState.playerPokemon.species.toUpperCase()} do?`,
+                manualAvance: false,
+            });
             this.battleState.phase = 'player-input';
             this.updateBattleState();
         }
@@ -99,9 +101,15 @@ export class BattleSystem {
         }
     }
 
-    private async addBattleMessage(message: string): Promise<void> {
+    private async addBattleMessage(
+        message: string,
+        manualAvance: boolean = false
+    ): Promise<void> {
         if (this.battleState) {
-            this.battleState.messages.push(message);
+            this.battleState.messages.push({
+                message,
+                manualAvance,
+            });
             await this.updateBattleState(true);
         }
     }
@@ -166,7 +174,7 @@ export class BattleSystem {
 
             case 'flee':
                 this.battleState.phase = 'flee';
-                await this.addBattleMessage('You escaped the battle!');
+                await this.addBattleMessage('You escaped the battle!', true);
                 this.endBattle();
                 break;
         }

@@ -66,9 +66,14 @@ export interface BattleState {
     phase: 'start' | 'player-input' | 'attack' | 'end' | 'flee';
     playerPokemon: Pokemon;
     wildPokemon: Pokemon;
-    messages: string[];
+    messages: BattleMessage[];
     battleEnded: boolean;
     isDialogUpdate: boolean;
+}
+
+export interface BattleMessage {
+    message: string;
+    manualAvance: boolean;
 }
 
 export type BattleAction = {
