@@ -103,7 +103,6 @@ export class NPC {
 
         Object.entries(skinConfig.animations).forEach(
             ([animationName, frames]) => {
-                console.log(animationName, frames);
                 spriteSheet.defineAnimation({
                     name: animationName,
                     frames: frames,

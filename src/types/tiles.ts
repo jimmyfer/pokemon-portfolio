@@ -48,6 +48,7 @@ export interface Tile {
     flipX: boolean;
     flipY: boolean;
     collidable: boolean;
+    tileType: string;
     condition?: TriggerCondition;
 }
 

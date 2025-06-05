@@ -1,5 +1,6 @@
 import { TileMap } from '@/rendering/tile-map';
 import { Vector2D } from './sprite-sheet';
+import { EncounterTable } from './pokemon';
 
 export type SpawnConection = {
     spawnPosition: Vector2D;
@@ -12,4 +13,5 @@ export interface MapNode {
     loader: () => Promise<TileMap>;
     type: 'OPEN_WORLD' | 'INTERIOR';
     spawnPoints?: Map<string, SpawnConection>;
+    encounterTable?: EncounterTable;
 }

@@ -5,11 +5,18 @@ import { EventSystem } from './event-system';
 import { TRANSICION_CANVAS } from '../engine/canvas-token';
 import { OpacityTransitionEffect } from '../transitions/opacity-transition';
 import { PageComponent } from '@/types/page-component';
+import { BlinkSplitTransitionEffect } from '../transitions/blink-and-split-transition';
 
 @Injectable()
 export class TransitionManager {
     private currentEffect: TransitionEffect | null;
-    private transitionType: 'map' | 'page' | 'page-closed' | null = null;
+    private transitionType:
+        | 'map'
+        | 'page'
+        | 'page-closed'
+        | 'battle'
+        | 'battle-closed'
+        | null = null;
     private transitionProgress: number = 0;
     private transitionDuration: number = 500;
     private transitionPhase: 'closing' | 'opening' | 'waiting' | null = null;
@@ -40,8 +47,16 @@ export class TransitionManager {
             }) => this.handlePageTransition(data)
         );
 
+        this.eventSystem.on('BATTLE_TRANSITION', (data: {}) =>
+            this.handleBattleTransition(data)
+        );
+
         this.eventSystem.on('PAGE_CLOSED_TRANSITION', () =>
             this.handlePageClosedTransition()
+        );
+
+        this.eventSystem.on('BATTLE_CLOSED_TRANSITION', () =>
+            this.handleBattleClosedTransition()
         );
 
         this.eventSystem.on('MAP_TRANSITION_READY', () =>
@@ -56,7 +71,11 @@ export class TransitionManager {
     }) {
         this.transitionType = 'map';
         this.targetMapId = data.to;
+        this.transitionDuration = 500;
+
         this.startTransition(data.effect || new OpacityTransitionEffect());
+
+        this.eventSystem.emit('MAP_TRANSITION_STARTED', {});
     }
 
     private handlePageTransition(data: {
@@ -65,6 +84,7 @@ export class TransitionManager {
         effect?: TransitionEffect;
     }) {
         this.transitionType = 'page';
+        this.transitionDuration = 500;
         this.startTransition(data.effect || new OpacityTransitionEffect());
         this.eventSystem.emit('PAGE_TRANSITION_STARTED', {
             component: data.component,
@@ -72,8 +92,21 @@ export class TransitionManager {
         });
     }
 
+    private handleBattleTransition(data: {}) {
+        this.transitionType = 'battle';
+        this.transitionDuration = 2000;
+        this.startTransition(new BlinkSplitTransitionEffect());
+        this.eventSystem.emit('BATTLE_TRANSITION_STARTED', {});
+    }
+
     private handlePageClosedTransition() {
         this.transitionType = 'page-closed';
+        this.startTransition(new OpacityTransitionEffect());
+    }
+
+    private handleBattleClosedTransition() {
+        this.transitionType = 'battle-closed';
+        this.transitionDuration = 400;
         this.startTransition(new OpacityTransitionEffect());
     }
 
@@ -118,6 +151,10 @@ export class TransitionManager {
             this.eventSystem.emit('PAGE_TRANSITION_COMPLETE', {});
         } else if (this.transitionType === 'page-closed') {
             this.eventSystem.emit('PAGE_CLOSED_TRANSITION_COMPLETE', {});
+        } else if (this.transitionType === 'battle') {
+            this.eventSystem.emit('BATTLE_TRANSITION_COMPLETE', {});
+        } else if (this.transitionType === 'battle-closed') {
+            this.eventSystem.emit('BATTLE_CLOSED_TRANSITION_COMPLETE', {});
         }
 
         this.transitionType = null;
@@ -155,6 +192,14 @@ export class TransitionManager {
             this.transitionProgress = 0;
         } else if (this.transitionType === 'page-closed') {
             this.eventSystem.emit('PAGE_CLOSED_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        } else if (this.transitionType === 'battle') {
+            this.eventSystem.emit('BATTLE_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        } else if (this.transitionType === 'battle-closed') {
+            this.eventSystem.emit('BATTLE_CLOSED_TRANSITION_CLOSED', {});
             this.transitionPhase = 'opening';
             this.transitionProgress = 0;
         }

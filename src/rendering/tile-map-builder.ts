@@ -150,6 +150,7 @@ export class TileMapBuilder {
                     offsetY: 0,
                     flipX: false,
                     flipY: false,
+                    tileType: '',
                     collidable: false,
                 }))
             ),
@@ -182,6 +183,7 @@ export class TileMapBuilder {
                     offsetY: 0,
                     flipX: false,
                     flipY: false,
+                    tileType: '',
                     collidable: false,
                 }))
             ),
@@ -200,6 +202,7 @@ export class TileMapBuilder {
                     offsetY: 0,
                     flipX: false,
                     flipY: false,
+                    tileType: '',
                     collidable: false,
                 }))
             ),
@@ -270,6 +273,7 @@ export class TileMapBuilder {
             this.currentLayer!.data[row][column].offsetX = offsetX;
             this.currentLayer!.data[row][column].offsetY = offsetY;
             this.currentLayer!.data[row][column].condition = bushCondition;
+            this.currentLayer!.data[row][column].tileType = 'grass';
         });
 
         return this;
@@ -328,6 +332,7 @@ export class TileMapBuilder {
         this.currentLayer.data[row][column].offsetX = offsetX;
         this.currentLayer.data[row][column].offsetY = offsetY;
         this.currentLayer.data[row][column].condition = bushCondition;
+        this.currentLayer.data[row][column].tileType = 'grass';
         return this;
     }
 

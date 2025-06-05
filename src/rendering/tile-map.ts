@@ -5,6 +5,7 @@ import { EffectSystem } from '@/core/systems/effect-system';
 import { GameContext } from '@/core/engine/game-context';
 import { LayerPriority } from '@/types/render-types';
 import { GAME_CANVAS } from '@/core/engine/canvas-token';
+import { Vector2D } from '@/types/sprite-sheet';
 
 export class TileMap {
     private layers: MapLayer[];
@@ -191,5 +192,27 @@ export class TileMap {
 
     public getTileSize(): number {
         return this.tileSize * this.scale;
+    }
+
+    getTileType(position: Vector2D): string {
+        const bushLayer = this.layers.find((layer) => layer.name === 'bush');
+        if (!bushLayer || !bushLayer.visible) return '';
+
+        const scaledTileSize = this.getTileSize();
+        const tileX = Math.floor(position.x / scaledTileSize);
+        const tileY = Math.floor(position.y / scaledTileSize);
+
+        if (
+            tileY >= 0 &&
+            tileY < bushLayer.data.length &&
+            tileX >= 0 &&
+            tileX < bushLayer.data[tileY].length
+        ) {
+            const tile = bushLayer.data[tileY][tileX];
+
+            return tile.tile !== -1 ? tile.tileType || '' : '';
+        }
+
+        return '';
     }
 }
