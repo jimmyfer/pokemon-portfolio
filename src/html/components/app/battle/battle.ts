@@ -5,8 +5,11 @@ import { EventSystem } from '@/core/systems/event-system';
 import { GameContext } from '@/core/engine/game-context';
 import { BattleState, Move, Pokemon } from '@/types/pokemon';
 import { SPECIES_MAP } from '@/mock-data/pokemons';
+import downRedArrow from '@/assets/html/game-images/red_arrow_down.png';
 
 export default class BattleComponent extends HTMLElement {
+    private _updateTextQueue: Promise<void> = Promise.resolve();
+
     private eventSystem: EventSystem;
     private dialogArea: HTMLDivElement;
     private actionsPanel: HTMLDivElement;
@@ -160,10 +163,16 @@ export default class BattleComponent extends HTMLElement {
                     this.actionsPanel.style.display = 'none';
                     this.movePanelArea.style.display = 'none';
                     if (battleState.isDialogUpdate)
-                        await this.updateDialogText(latestMessage);
+                        await this.updateDialogText(
+                            latestMessage.message,
+                            latestMessage.manualAvance
+                        );
                 } else {
                     if (battleState.isDialogUpdate)
-                        await this.updateDialogText(latestMessage);
+                        await this.updateDialogText(
+                            latestMessage.message,
+                            latestMessage.manualAvance
+                        );
                 }
             }
         );
@@ -178,6 +187,7 @@ export default class BattleComponent extends HTMLElement {
                 this.opponentArena,
                 this.playerArena,
             ]);
+            this.dialogTextArea.querySelector('h2')!.textContent = '';
         });
     }
 
@@ -214,38 +224,123 @@ export default class BattleComponent extends HTMLElement {
         }
 
         if (SPECIES_MAP[opponentPokemon.species].img.front) {
-            this.opponentPokemonSpriteImage!.src =
+            this.opponentPokemonSpriteImage.src =
                 SPECIES_MAP[opponentPokemon.species].img.front;
         }
 
         if (SPECIES_MAP[playerPokemon.species].img.back) {
-            this.playerPokemonSpriteImage!.src =
+            this.playerPokemonSpriteImage.src =
                 SPECIES_MAP[playerPokemon.species].img.back;
         }
     }
 
-    private updateDialogText(text: string): Promise<void> {
-        if (!text) return new Promise(() => {});
-        const h2 = this.dialogTextArea!.querySelector('h2') as HTMLElement;
-        h2.textContent = '';
-
-        let charIndex = 0;
-        const velocity = 50;
-
-        return new Promise((resolve) => {
-            const typeText = () => {
-                if (charIndex < text.length) {
-                    h2.textContent += text.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeText, velocity);
-                } else {
-                    setTimeout(() => {
-                        resolve();
-                    }, 1000);
+    private updateDialogText(
+        text: string,
+        manualAvance?: boolean
+    ): Promise<void> {
+        this._updateTextQueue = this._updateTextQueue.then(() => {
+            return new Promise<void>((resolve) => {
+                if (!text) {
+                    resolve();
+                    return;
                 }
-            };
-            typeText();
+
+                const h2 = this.dialogTextArea.querySelector(
+                    'h2'
+                ) as HTMLElement;
+                h2.textContent = '';
+
+                const velocity = 50;
+                const fastDelay = Math.max(10, velocity / 5);
+
+                let charIndex = 0;
+                let isFast = false;
+
+                const onKeyDown = (event: KeyboardEvent) => {
+                    if (event.code === 'Space' || event.key === ' ') {
+                        isFast = true;
+                        event.preventDefault();
+                    }
+                };
+                const onKeyUp = (event: KeyboardEvent) => {
+                    if (event.code === 'Space' || event.key === ' ') {
+                        isFast = false;
+                        event.preventDefault();
+                    }
+                };
+
+                document.addEventListener('keydown', onKeyDown);
+                document.addEventListener('keyup', onKeyUp);
+
+                const typeText = () => {
+                    if (charIndex < text.length) {
+                        h2.textContent += text.charAt(charIndex);
+                        charIndex++;
+                        if (charIndex === text.length) {
+                            if (manualAvance) {
+                                const currentText = h2.textContent || '';
+                                if (currentText.length > 0) {
+                                    h2.textContent = currentText.slice(0, -1);
+                                    const span = document.createElement('span');
+                                    span.classList.add('last-letter');
+                                    span.appendChild(
+                                        document.createTextNode(
+                                            currentText.slice(-1)
+                                        )
+                                    );
+
+                                    const icon = document.createElement('img');
+                                    icon.src = downRedArrow;
+                                    span.appendChild(icon);
+
+                                    h2.appendChild(span);
+                                }
+
+                                const waitForAdvance = (e: KeyboardEvent) => {
+                                    if (e.code === 'Space' || e.key === ' ') {
+                                        e.preventDefault();
+                                        document.removeEventListener(
+                                            'keyup',
+                                            waitForAdvance
+                                        );
+                                        document.removeEventListener(
+                                            'keydown',
+                                            onKeyDown
+                                        );
+                                        document.removeEventListener(
+                                            'keyup',
+                                            onKeyUp
+                                        );
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 300);
+                                    }
+                                };
+                                document.addEventListener(
+                                    'keyup',
+                                    waitForAdvance
+                                );
+                            } else {
+                                document.removeEventListener(
+                                    'keydown',
+                                    onKeyDown
+                                );
+                                document.removeEventListener('keyup', onKeyUp);
+                                setTimeout(() => {
+                                    resolve();
+                                }, 300);
+                            }
+                        } else {
+                            const delay = isFast ? fastDelay : velocity;
+                            setTimeout(typeText, delay);
+                        }
+                    }
+                };
+                typeText();
+            });
         });
+
+        return this._updateTextQueue;
     }
 
     private updateMovesPanel(moves: Move[]): void {
@@ -345,7 +440,7 @@ export default class BattleComponent extends HTMLElement {
                             if (this.dialogArea)
                                 this.dialogArea.style.display = 'none';
                             if (this.movePanelArea)
-                                this.movePanelArea.style.display = 'flex';
+                                this.movePanelArea.style.display = 'block';
                         } else if (actionValue === 'BAG') {
                             this.eventSystem.emit('BATTLE_ACTION', {
                                 type: 'bag',
