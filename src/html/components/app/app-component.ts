@@ -5,6 +5,7 @@ import BodyComponent from './body/body';
 import SkillsAboutComponent from './pages/skills-about/skills-about';
 import DialogComponent from './game-dialog/game-dialog';
 import BattleComponent from './battle/battle';
+import ExperienceComponent from './pages/experiences/experience';
 
 /**
  * Components declaration
@@ -25,6 +26,10 @@ export const componentDefinitions: ComponentDefinition[] = [
     {
         name: 'page-skills-about',
         component: SkillsAboutComponent,
+    },
+    {
+        name: 'page-experience',
+        component: ExperienceComponent,
     },
     {
         name: 'game-dialog',

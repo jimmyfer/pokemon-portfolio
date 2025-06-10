@@ -1,0 +1,158 @@
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #8c94ff;
+}
+
+.experience-header {
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-body {
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content {
+    position: relative;
+    width: 95vw;
+    height: 92%;
+}
+
+.body-container {
+    position: relative;
+    width: 95vw;
+    height: 98%;
+}
+
+.header-background,
+.body-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.header-background img,
+.body-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.header-title {
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.header-title h2 {
+    margin-left: 2rem;
+    font-family: 'pokemon-font';
+    font-size: 2rem;
+    color: #ffb552;
+    text-shadow: 0.05em 0.12em #c67b00;
+}
+
+.body-experience {
+    position: relative;
+    margin: 2rem 1.5rem;
+}
+
+.experience-title h2 {
+    font-family: 'pokemon-font';
+    font-size: 1.5rem;
+    color: #ffb552;
+    text-shadow: 0.05em 0.12em #c67b00;
+    margin-bottom: 0.2rem;
+}
+
+.company-title h5 {
+    margin: 0.5rem 0rem;
+    font-family: 'pokemon-font';
+    font-size: 0.8rem;
+    color: #ff8c84;
+    text-shadow: 0.05em 0.12em #ff3118;
+}
+
+.company-technologies h5 {
+    margin: 0.5rem 0rem;
+    font-family: 'pokemon-font';
+    font-size: 0.8rem;
+    color: #ffb552;
+}
+
+.job-description h6 {
+    margin: 0.8rem 0rem;
+    font-family: 'pokemon-font';
+    font-size: 1rem;
+    color: #4a4a4a;
+    text-shadow: 0.05em 0.12em #d6d6ce;
+}
+
+.body-content {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.body-content {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+.body-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.body-content::-webkit-scrollbar-track {
+    background: #4a4a4a;
+    border: 2px solid #d6d6ce;
+}
+
+.body-content::-webkit-scrollbar-thumb {
+    background: #282f2f;
+    border-radius: 4px;
+}
+
+.body-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 480px) {
+    .header-content {
+        width: 70vw;
+    }
+
+    .body-container {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-content {
+        width: 50vw;
+    }
+
+    .body-container {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1024px) {
+}
