@@ -1,3 +1,4 @@
+import ExperienceComponent from '../components/app/pages/experiences/experience';
 import SkillsAboutComponent from '../components/app/pages/skills-about/skills-about';
 
 export const MENU_CONFIG = [
@@ -12,16 +13,11 @@ export const MENU_CONFIG = [
         component: SkillsAboutComponent,
     },
     {
-        itemName: 'PROJECTS',
+        itemName: 'EXP',
+        component: ExperienceComponent,
     },
     {
         itemName: 'SKILLS',
         component: SkillsAboutComponent,
-    },
-    {
-        itemName: 'SERVICES',
-    },
-    {
-        itemName: 'CONTACT',
     },
 ];
