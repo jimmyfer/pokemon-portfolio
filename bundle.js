@@ -85,13 +85,123 @@ AssetManager = __decorate([
 
 /***/ }),
 
+/***/ "./src/assets/html/battle/background_01.png":
+/*!**************************************************!*\
+  !*** ./src/assets/html/battle/background_01.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/background_01.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/battle/high_grass.png":
+/*!***********************************************!*\
+  !*** ./src/assets/html/battle/high_grass.png ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/high_grass.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/battle/opponent_state_hud.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/html/battle/opponent_state_hud.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/opponent_state_hud.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/battle/player_state_hud.png":
+/*!*****************************************************!*\
+  !*** ./src/assets/html/battle/player_state_hud.png ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/player_state_hud.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/battle/pokemon_battle_zone.png":
+/*!********************************************************!*\
+  !*** ./src/assets/html/battle/pokemon_battle_zone.png ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/pokemon_battle_zone.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/game-images/dialog.png":
+/*!************************************************!*\
+  !*** ./src/assets/html/game-images/dialog.png ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/dialog.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/game-images/move_panel.png":
+/*!****************************************************!*\
+  !*** ./src/assets/html/game-images/move_panel.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/move_panel.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/game-images/move_stats.png":
+/*!****************************************************!*\
+  !*** ./src/assets/html/game-images/move_stats.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/move_stats.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/game-images/red_arrow_down.png":
+/*!********************************************************!*\
+  !*** ./src/assets/html/game-images/red_arrow_down.png ***!
+  \********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/red_arrow_down.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/actions_panel.png":
+/*!**************************************************!*\
+  !*** ./src/assets/html/layout/actions_panel.png ***!
+  \**************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/actions_panel.png";
+
+/***/ }),
+
 /***/ "./src/assets/html/layout/arrow_rigth.png":
 /*!************************************************!*\
   !*** ./src/assets/html/layout/arrow_rigth.png ***!
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "e385083e6ac8ee3bd54c.png";
+module.exports = __webpack_require__.p + "assets/sprites/arrow_rigth.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/background_actions.png":
+/*!*******************************************************!*\
+  !*** ./src/assets/html/layout/background_actions.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/background_actions.png";
 
 /***/ }),
 
@@ -101,7 +211,7 @@ module.exports = __webpack_require__.p + "e385083e6ac8ee3bd54c.png";
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "89207b34c66f80e937e9.png";
+module.exports = __webpack_require__.p + "assets/sprites/bag_selector.png";
 
 /***/ }),
 
@@ -111,7 +221,27 @@ module.exports = __webpack_require__.p + "89207b34c66f80e937e9.png";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "75bf5e391988ee619c26.png";
+module.exports = __webpack_require__.p + "assets/sprites/close_btn.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/experience_body.png":
+/*!****************************************************!*\
+  !*** ./src/assets/html/layout/experience_body.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/experience_body.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/layout/experience_header.png":
+/*!******************************************************!*\
+  !*** ./src/assets/html/layout/experience_header.png ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/experience_header.png";
 
 /***/ }),
 
@@ -121,7 +251,7 @@ module.exports = __webpack_require__.p + "75bf5e391988ee619c26.png";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "a310ba5be3a410fa2101.png";
+module.exports = __webpack_require__.p + "assets/sprites/inventory.png";
 
 /***/ }),
 
@@ -131,7 +261,7 @@ module.exports = __webpack_require__.p + "a310ba5be3a410fa2101.png";
   \*********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "5b1bb886729819d2bb9b.png";
+module.exports = __webpack_require__.p + "assets/sprites/menu_btn.png";
 
 /***/ }),
 
@@ -141,7 +271,7 @@ module.exports = __webpack_require__.p + "5b1bb886729819d2bb9b.png";
   \*************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "1e486534e0429f1eb5f6.png";
+module.exports = __webpack_require__.p + "assets/sprites/menu_content.png";
 
 /***/ }),
 
@@ -151,7 +281,7 @@ module.exports = __webpack_require__.p + "1e486534e0429f1eb5f6.png";
   \************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "4ad1ef1cd06d34d78ba6.png";
+module.exports = __webpack_require__.p + "assets/sprites/rigth_arrow.png";
 
 /***/ }),
 
@@ -161,7 +291,7 @@ module.exports = __webpack_require__.p + "4ad1ef1cd06d34d78ba6.png";
   \******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "8e9558fff26985eaddeb.png";
+module.exports = __webpack_require__.p + "assets/sprites/trainer_card_back.png";
 
 /***/ }),
 
@@ -171,7 +301,7 @@ module.exports = __webpack_require__.p + "8e9558fff26985eaddeb.png";
   \*******************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "123ba8a5e486e88edff9.png";
+module.exports = __webpack_require__.p + "assets/sprites/trainer_card_front.png";
 
 /***/ }),
 
@@ -181,7 +311,27 @@ module.exports = __webpack_require__.p + "123ba8a5e486e88edff9.png";
   \**********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "c3af76fb7dc845ace559.png";
+module.exports = __webpack_require__.p + "assets/sprites/wood_sign.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/pokemons/back/back_252.png":
+/*!****************************************************!*\
+  !*** ./src/assets/html/pokemons/back/back_252.png ***!
+  \****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/back_252.png";
+
+/***/ }),
+
+/***/ "./src/assets/html/pokemons/front/front_252.png":
+/*!******************************************************!*\
+  !*** ./src/assets/html/pokemons/front/front_252.png ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/sprites/front_252.png";
 
 /***/ }),
 
@@ -327,6 +477,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scenes_overworld_scene__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/scenes/overworld-scene */ "./src/scenes/overworld-scene.ts");
 /* harmony import */ var _systems_game_state_manager__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
 /* harmony import */ var _canvas_token__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./canvas-token */ "./src/core/engine/canvas-token.ts");
+/* harmony import */ var _systems_encounter_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../systems/encounter-system */ "./src/core/systems/encounter-system.ts");
+/* harmony import */ var _systems_battle_system__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../systems/battle-system */ "./src/core/systems/battle-system.ts");
+
+
 
 
 
@@ -341,6 +495,8 @@ class GameEngine {
     assetManager;
     sceneManager;
     gameStateManager;
+    encounterSystem;
+    battleSystem;
     canvasGameCtx;
     constructor(config) {
         this.canvasGame = document.getElementById(config.canvasId);
@@ -354,19 +510,23 @@ class GameEngine {
         this.assetManager = this.gameContext.getBean(_assets_assetsManager__WEBPACK_IMPORTED_MODULE_1__.AssetManager);
         this.sceneManager = this.gameContext.getBean(_core_engine_scene_manager__WEBPACK_IMPORTED_MODULE_2__.SceneManager);
         this.gameStateManager = this.gameContext.getBean(_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_4__.GameStateManager);
+        this.encounterSystem = this.gameContext.getBean(_systems_encounter_system__WEBPACK_IMPORTED_MODULE_6__.EncounterSystem);
+        this.battleSystem = this.gameContext.getBean(_systems_battle_system__WEBPACK_IMPORTED_MODULE_7__.BattleSystem);
         this.initializeCanvas();
         window.addEventListener('resize', () => this.handleResize());
         this.gameLoop = this.gameLoop.bind(this);
     }
     initializeCanvas() {
-        this.canvasGame.width = window.screen.width;
-        this.canvasGame.height = window.screen.height;
-        this.canvasTransicion.width = window.screen.width;
-        this.canvasTransicion.height = window.screen.height;
+        this.canvasGame.width = window.innerWidth;
+        this.canvasGame.height = window.innerHeight;
+        this.canvasTransicion.width = window.innerWidth;
+        this.canvasTransicion.height = window.innerHeight;
         this.handleResize();
     }
     async initialize() {
         this.gameStateManager.loadFromPersistentStorage();
+        this.encounterSystem.initialize();
+        this.battleSystem.initialize();
         await this.loadAssets();
         this.sceneManager.addScene('overworld', new _scenes_overworld_scene__WEBPACK_IMPORTED_MODULE_3__.OverworldScene());
         await this.sceneManager.switchTo('overworld');
@@ -377,13 +537,14 @@ class GameEngine {
         await this.assetManager.loadSpriteSheet('player_effect', 'assets/sprites/character_01.png', 32, 32);
         await this.assetManager.loadSpriteSheet('door', 'assets/sprites/sprites.png', 16, 16);
         await this.assetManager.loadSpriteSheet('lab_door', 'assets/sprites/sprites.png', 16, 16);
+        await this.assetManager.loadSpriteSheet('npcs', 'assets/sprites/npc.png', 32, 32);
     }
     gameLoop(timestamp) {
         const deltaTime = timestamp - this.lastFrameTime;
         this.lastFrameTime = timestamp;
         this.sceneManager.currentScene?.update(deltaTime);
         this.canvasGameCtx.save();
-        this.canvasGameCtx.clearRect(0, 0, window.screen.width, window.screen.height);
+        this.canvasGameCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
         this.sceneManager.currentScene?.render(this.canvasGameCtx);
         this.canvasGameCtx.restore();
         requestAnimationFrame(this.gameLoop);
@@ -395,10 +556,10 @@ class GameEngine {
         const container = document.getElementById('game-container');
         this.canvasGame.style.transform = `scale(${_core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance().getGameScale()})`;
         this.canvasGame.style.transformOrigin = 'top left';
-        this.canvasTransicion.style.transform = `scale(${_core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance().getGameScale()})`;
-        this.canvasTransicion.style.transformOrigin = 'top left';
-        container.style.width = `${window.screen.width}px`;
-        container.style.height = `${window.screen.height}px`;
+        this.canvasTransicion.style.width = `${window.innerWidth}px`;
+        this.canvasTransicion.style.height = `${window.innerHeight}px`;
+        container.style.width = `${window.innerWidth}px`;
+        container.style.height = `${window.innerHeight}px`;
     }
 }
 
@@ -654,6 +815,28 @@ let WorldManager = class WorldManager {
                     },
                 ],
             ]),
+            encounterTable: {
+                grass: [
+                    {
+                        species: 'poochyena',
+                        minLevel: 2,
+                        maxLevel: 4,
+                        rarity: 0.4,
+                    },
+                    {
+                        species: 'zigzagoon',
+                        minLevel: 2,
+                        maxLevel: 4,
+                        rarity: 0.4,
+                    },
+                    {
+                        species: 'wurmple',
+                        minLevel: 3,
+                        maxLevel: 5,
+                        rarity: 0.2,
+                    },
+                ],
+            },
         });
     }
     async loadMap() {
@@ -697,11 +880,307 @@ let WorldManager = class WorldManager {
     getMapData(mapId) {
         return this.maps.get(mapId) ?? null;
     }
+    getCurrentWorldTileType(position) {
+        return this.currentMap.getTileType(position);
+    }
 };
 WorldManager = __decorate([
     (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)(),
     __metadata("design:paramtypes", [])
 ], WorldManager);
+
+
+
+/***/ }),
+
+/***/ "./src/core/systems/battle-system.ts":
+/*!*******************************************!*\
+  !*** ./src/core/systems/battle-system.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BattleSystem: () => (/* binding */ BattleSystem)
+/* harmony export */ });
+/* harmony import */ var _event_system__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _game_state_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-state-manager */ "./src/core/systems/game-state-manager.ts");
+/* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+/* harmony import */ var _engine_game_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/game-context */ "./src/core/engine/game-context.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+let BattleSystem = class BattleSystem {
+    inBattle = false;
+    battleState;
+    gameStateManager;
+    eventSystem;
+    constructor() {
+        const gameContext = _engine_game_context__WEBPACK_IMPORTED_MODULE_3__.GameContext.getInstance();
+        this.gameStateManager = gameContext.getBean(_game_state_manager__WEBPACK_IMPORTED_MODULE_1__.GameStateManager);
+        this.eventSystem = gameContext.getBean(_event_system__WEBPACK_IMPORTED_MODULE_0__.EventSystem);
+    }
+    initialize() {
+        this.eventSystem.on('POKEMON_ENCOUNTER', async (pokemon) => {
+            this.setUpBattle(pokemon);
+        });
+        this.eventSystem.on('BATTLE_READY', async (pokemon) => {
+            this.startBattle();
+        });
+        this.eventSystem.onAsync('BATTLE_ACTION', async (action) => {
+            await this.handlePlayerAction(action);
+        });
+        this.eventSystem.on('BATTLE_CLOSED_TRANSITION_COMPLETE', () => {
+            this.gameStateManager.unlockPlayerMovement();
+        });
+    }
+    async setUpBattle(wildPokemon) {
+        this.inBattle = true;
+        const playerPokemon = this.getFirstAvailablePokemon();
+        this.battleState = {
+            phase: 'start',
+            playerPokemon,
+            wildPokemon,
+            messages: [],
+            battleEnded: false,
+            isDialogUpdate: true,
+        };
+        this.eventSystem.emit('BATTLE_TRANSITION', {});
+        this.gameStateManager.lockPlayerMovement();
+        this.updateBattleState(true);
+    }
+    async startBattle() {
+        await this.addBattleMessage(`A wild ${this.battleState.wildPokemon.species} appeared!`, true);
+        if (this.inBattle &&
+            this.battleState &&
+            !this.battleState.battleEnded) {
+            this.battleState.messages.push({
+                message: `What will ${this.battleState.playerPokemon.species.toUpperCase()} do?`,
+                manualAvance: false,
+            });
+            this.battleState.phase = 'player-input';
+            this.updateBattleState();
+        }
+    }
+    getFirstAvailablePokemon() {
+        const party = this.gameStateManager.getState().player.party;
+        return party.find((p) => p.currentHP > 0) || party[0];
+    }
+    async updateBattleState(isDialogUpdate = false) {
+        if (this.battleState) {
+            this.battleState.isDialogUpdate = isDialogUpdate;
+            await this.eventSystem.emit('BATTLE_STATE_UPDATE', this.battleState);
+        }
+    }
+    async addBattleMessage(message, manualAvance = false) {
+        if (this.battleState) {
+            this.battleState.messages.push({
+                message,
+                manualAvance,
+            });
+            await this.updateBattleState(true);
+        }
+    }
+    async handlePlayerAction(action) {
+        if (!this.inBattle || !this.battleState || this.battleState.battleEnded)
+            return;
+        const playerPokemon = this.battleState.playerPokemon;
+        const wildPokemon = this.battleState.wildPokemon;
+        switch (action.type) {
+            case 'attack':
+                const chosenMove = action.move;
+                const playerGoesFirst = playerPokemon.stats.speed >= wildPokemon.stats.speed;
+                if (playerGoesFirst) {
+                    await this.executeMove(playerPokemon, wildPokemon, chosenMove);
+                    if (this.checkFainted(wildPokemon)) {
+                        await this.handleWildPokemonFainted();
+                        break;
+                    }
+                    if (this.battleState.battleEnded)
+                        break;
+                    await this.executeEnemyTurn();
+                    if (this.checkFainted(playerPokemon)) {
+                        this.handlePlayerPokemonFainted();
+                        break;
+                    }
+                }
+                else {
+                    await this.executeEnemyTurn();
+                    if (this.checkFainted(playerPokemon)) {
+                        this.handlePlayerPokemonFainted();
+                        break;
+                    }
+                    if (this.battleState.battleEnded)
+                        break;
+                    await this.executeMove(playerPokemon, wildPokemon, chosenMove);
+                    if (this.checkFainted(wildPokemon)) {
+                        this.handleWildPokemonFainted();
+                        break;
+                    }
+                }
+                break;
+            case 'capture':
+                console.log('Capture action selected (stub)');
+                break;
+            case 'switch':
+                console.log('Switch action selected (stub)');
+                break;
+            case 'flee':
+                this.battleState.phase = 'flee';
+                await this.addBattleMessage('You escaped the battle!', true);
+                this.endBattle();
+                break;
+        }
+        if (this.inBattle &&
+            this.battleState &&
+            !this.battleState.battleEnded) {
+            this.battleState.phase = 'player-input';
+            this.updateBattleState();
+        }
+    }
+    async executeEnemyTurn() {
+        if (!this.inBattle || !this.battleState || this.battleState.battleEnded)
+            return;
+        const enemyMove = this.selectRandomMove(this.battleState.wildPokemon.moves);
+        if (enemyMove) {
+            await this.executeMove(this.battleState.wildPokemon, this.battleState.playerPokemon, enemyMove);
+        }
+        else {
+            this.addBattleMessage(`${this.battleState.wildPokemon.species.toUpperCase()} doesn’t know what to do!`);
+            await this.delay(1000);
+        }
+    }
+    async executeMove(attacker, defender, move) {
+        if (!this.inBattle || !this.battleState || this.battleState.battleEnded)
+            return;
+        this.battleState.phase = 'attack';
+        await this.addBattleMessage(`${attacker.species.toUpperCase()} used ${move.name.toUpperCase()}!`);
+        if (Math.random() * 100 > move.accuracy) {
+            await this.addBattleMessage('The attack missed!');
+            this.updateBattleState();
+        }
+        else {
+            const damage = this.calculateDamage(attacker, defender, move);
+            defender.currentHP = Math.max(0, defender.currentHP - damage);
+            if (damage > 0) {
+                await this.addBattleMessage(`It did ${damage} points of damage!`);
+            }
+            else if (move.power > 0) {
+                await this.addBattleMessage(`"It didn’t have much effect...`);
+            }
+            else {
+                await this.addBattleMessage(`${move.name.toUpperCase()} was used.`);
+            }
+            if (defender.currentHP === 0) {
+                await this.addBattleMessage(`${defender.species.toUpperCase()} has fainted!`);
+            }
+            this.updateBattleState();
+        }
+        await this.delay(1500);
+    }
+    calculateDamage(attacker, defender, move) {
+        const attackStat = move.type === 'physical'
+            ? attacker.stats.attack
+            : attacker.stats.specialAttack;
+        const defenseStat = move.type === 'physical'
+            ? defender.stats.defense
+            : defender.stats.specialDefense;
+        if (move.power === 0) {
+            return 0;
+        }
+        const baseDamage = Math.floor((((2 * attacker.level) / 5 + 2) *
+            move.power *
+            (attackStat / defenseStat)) /
+            50 +
+            2);
+        return Math.floor(baseDamage * (0.85 + Math.random() * 0.15));
+    }
+    checkFainted(pokemon) {
+        return pokemon.currentHP <= 0;
+    }
+    async handleWildPokemonFainted() {
+        await this.awardExperience();
+        this.endBattle();
+    }
+    handlePlayerPokemonFainted() {
+        this.addBattleMessage('Your Pokémon has fainted!');
+        if (this.hasUsablePokemon()) {
+            this.addBattleMessage('You must select another Pokémon.');
+            // this.battleState.phase = 'player-must-switch';
+            this.updateBattleState();
+        }
+        else {
+            this.addBattleMessage('You have lost the battle!');
+            this.endBattle();
+        }
+    }
+    hasUsablePokemon() {
+        return this.gameStateManager
+            .getState()
+            .player.party.some((p) => p.currentHP > 0);
+    }
+    async awardExperience() {
+        const experience = Math.floor(this.battleState.wildPokemon.level *
+            100 *
+            (this.battleState.wildPokemon.stats.hp / 7));
+        if (!experience || experience <= 0)
+            return;
+        await this.gameStateManager.asyncUpdateState(async (state) => {
+            const pokemon = state.player.party.find((p) => p.id === this.battleState.playerPokemon.id &&
+                p.currentHP > 0);
+            if (pokemon) {
+                await this.addBattleMessage(`${pokemon.species.toUpperCase()} gained ${experience} Exp. Points!`);
+                this.updateBattleState();
+                pokemon.experience = (pokemon.experience || 0) + experience;
+                await this.checkLevelUp(pokemon);
+            }
+            return state;
+        });
+    }
+    async checkLevelUp(pokemon) {
+        const requiredExp = pokemon.level * 1000;
+        if (pokemon.experience >= requiredExp) {
+            pokemon.level++;
+            pokemon.experience = pokemon.experience - requiredExp;
+            await this.addBattleMessage(`${pokemon.species.toUpperCase()} leveled up to ${pokemon.level}!`);
+            this.updateBattleState();
+        }
+    }
+    selectRandomMove(moves) {
+        if (!moves || moves.length === 0)
+            return undefined;
+        return moves[Math.floor(Math.random() * moves.length)];
+    }
+    async delay(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+    endBattle() {
+        if (!this.inBattle)
+            return;
+        this.inBattle = false;
+        if (this.battleState) {
+            this.battleState.battleEnded = true;
+            this.battleState.phase = 'end';
+        }
+        this.eventSystem.emit('BATTLE_END', {});
+        this.eventSystem.emit('BATTLE_CLOSED_TRANSITION', {});
+        this.updateBattleState();
+    }
+};
+BattleSystem = __decorate([
+    (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_2__.Injectable)(),
+    __metadata("design:paramtypes", [])
+], BattleSystem);
 
 
 
@@ -718,6 +1197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   CollisionSystem: () => (/* binding */ CollisionSystem)
 /* harmony export */ });
 /* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+/* harmony import */ var _game_state_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-state-manager */ "./src/core/systems/game-state-manager.ts");
+/* harmony import */ var _engine_game_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../engine/game-context */ "./src/core/engine/game-context.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -728,15 +1209,40 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 let CollisionSystem = class CollisionSystem {
     tileMap;
-    constructor() { }
+    gameStateManager;
+    movingEntities = new Map();
+    constructor() {
+        const gameContext = _engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance();
+        this.gameStateManager = gameContext.getBean(_game_state_manager__WEBPACK_IMPORTED_MODULE_1__.GameStateManager);
+    }
+    registerMovement(entityId, targetPosition) {
+        this.movingEntities.set(entityId, targetPosition);
+    }
+    clearMovement(entityId) {
+        this.movingEntities.delete(entityId);
+    }
+    isColliding(x, y, ignoreEntity) {
+        const tileCoords = this.worldToTile(x, y);
+        return (this.checkTileCollision(tileCoords.x, tileCoords.y) ||
+            this.isEntityInPosition(x, y, ignoreEntity));
+    }
+    isEntityInPosition(x, y, ignoreEntity) {
+        const playerInPosition = this.isPlayerInPosition(x, y);
+        const movingEntityInPosition = Array.from(this.movingEntities.entries()).some(([entityId, position]) => {
+            if (entityId === ignoreEntity)
+                return false;
+            const targetTile = this.worldToTile(position.x, position.y);
+            const currentTile = this.worldToTile(x, y);
+            return (targetTile.x === currentTile.x && targetTile.y === currentTile.y);
+        });
+        return playerInPosition || movingEntityInPosition;
+    }
     setTileMap(tileMap) {
         this.tileMap = tileMap;
-    }
-    isColliding(x, y) {
-        const tileCoords = this.worldToTile(x, y);
-        return this.checkTileCollision(tileCoords.x, tileCoords.y);
     }
     worldToTile(x, y) {
         const tileSize = this.tileMap.getTileSize();
@@ -755,6 +1261,12 @@ let CollisionSystem = class CollisionSystem {
         if (tileX >= collisionGrid[0].length || tileX < 0)
             return true;
         return collisionGrid[tileY][tileX];
+    }
+    isPlayerInPosition(x, y) {
+        const { position } = this.gameStateManager.getState().player;
+        const playerTile = this.worldToTile(position.x, position.y);
+        const targetTile = this.worldToTile(x, y);
+        return playerTile.x === targetTile.x && playerTile.y === targetTile.y;
     }
 };
 CollisionSystem = __decorate([
@@ -788,6 +1300,151 @@ class EffectSystem {
         this.triggers.forEach((trigger) => trigger.render());
     }
 }
+
+
+/***/ }),
+
+/***/ "./src/core/systems/encounter-system.ts":
+/*!**********************************************!*\
+  !*** ./src/core/systems/encounter-system.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EncounterSystem: () => (/* binding */ EncounterSystem)
+/* harmony export */ });
+/* harmony import */ var _game_state_manager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./game-state-manager */ "./src/core/systems/game-state-manager.ts");
+/* harmony import */ var _event_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+/* harmony import */ var _engine_game_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _engine_world_manager__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../engine/world-manager */ "./src/core/engine/world-manager.ts");
+/* harmony import */ var _mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/mock-data/pokemons */ "./src/mock-data/pokemons.ts");
+/* harmony import */ var _mock_data_moves__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/mock-data/moves */ "./src/mock-data/moves.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+let EncounterSystem = class EncounterSystem {
+    encounterChance = 0.3;
+    lastEncounterPosition = null;
+    gameStateManager;
+    eventSystem;
+    worldManager;
+    constructor() {
+        const gameContext = _engine_game_context__WEBPACK_IMPORTED_MODULE_3__.GameContext.getInstance();
+        this.gameStateManager = gameContext.getBean(_game_state_manager__WEBPACK_IMPORTED_MODULE_0__.GameStateManager);
+        this.eventSystem = gameContext.getBean(_event_system__WEBPACK_IMPORTED_MODULE_1__.EventSystem);
+        this.worldManager = gameContext.getBean(_engine_world_manager__WEBPACK_IMPORTED_MODULE_4__.WorldManager);
+    }
+    initialize() {
+        this.eventSystem.on('PLAYER_MOVED', (pos) => this.checkEncounter(pos));
+    }
+    getCurrentMapEncounters() {
+        const currentMapId = this.gameStateManager.getState().world.currentMap;
+        const currentMapNode = this.worldManager.getMapData(currentMapId);
+        if (!currentMapNode)
+            return undefined;
+        return currentMapNode.encounterTable;
+    }
+    checkEncounter(position) {
+        const currentTile = this.getTileType(position);
+        if (currentTile === 'grass' &&
+            !this.isSameTileAsLastEncounter(position)) {
+            if (Math.random() < this.encounterChance) {
+                const encounterTable = this.getCurrentMapEncounters()?.grass;
+                if (encounterTable) {
+                    const encounter = this.selectEncounter(encounterTable);
+                    this.triggerEncounter(encounter);
+                    this.lastEncounterPosition = position;
+                }
+            }
+        }
+    }
+    selectEncounter(encounters) {
+        const totalRarity = encounters.reduce((sum, e) => sum + e.rarity, 0);
+        const random = Math.random() * totalRarity;
+        let cumulative = 0;
+        for (const entry of encounters) {
+            cumulative += entry.rarity;
+            if (random <= cumulative) {
+                return entry;
+            }
+        }
+        return encounters[0];
+    }
+    triggerEncounter(encounter) {
+        const level = Math.floor(Math.random() * (encounter.maxLevel - encounter.minLevel + 1)) + encounter.minLevel;
+        const wildPokemon = this.generateWildPokemon(encounter.species, level);
+        this.eventSystem.emit('POKEMON_ENCOUNTER', wildPokemon);
+        this.gameStateManager.lockPlayerMovement();
+    }
+    getTileType(position) {
+        return this.worldManager.getCurrentWorldTileType(position);
+    }
+    isSameTileAsLastEncounter(pos) {
+        if (!this.lastEncounterPosition)
+            return false;
+        return (Math.floor(pos.x) === Math.floor(this.lastEncounterPosition.x) &&
+            Math.floor(pos.y) === Math.floor(this.lastEncounterPosition.y));
+    }
+    generateWildPokemon(species, level) {
+        const speciesData = this.getSpeciesData(species);
+        const stats = this.calculateStats(speciesData.baseStats, level);
+        const moves = this.getAvailableMoves(speciesData.moves, level);
+        return {
+            id: `wild-${Date.now()}`,
+            species,
+            level,
+            experience: 0,
+            currentHP: stats.hp,
+            stats: stats,
+            moves: moves.slice(0, 4),
+        };
+    }
+    getSpeciesData(species) {
+        if (!_mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[species]) {
+            throw new Error(`Species not found: ${species}`);
+        }
+        return _mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[species];
+    }
+    calculateStats(baseStats, level) {
+        return {
+            hp: Math.floor((2 * baseStats.hp * level) / 100 + level + 10),
+            attack: Math.floor((2 * baseStats.attack * level) / 100 + 5),
+            defense: Math.floor((2 * baseStats.defense * level) / 100 + 5),
+            speed: Math.floor((2 * baseStats.speed * level) / 100 + 5),
+            specialAttack: Math.floor((2 * baseStats.specialAttack * level) / 100 + 5),
+            specialDefense: Math.floor((2 * baseStats.specialDefense * level) / 100 + 5),
+        };
+    }
+    getAvailableMoves(moves, level) {
+        const availableMoves = moves
+            .filter((m) => m.level <= level)
+            .sort((a, b) => b.level - a.level);
+        return availableMoves.map((m) => this.getMoveData(m.moveId));
+    }
+    getMoveData(moveId) {
+        return _mock_data_moves__WEBPACK_IMPORTED_MODULE_6__.MOVES_MAP[moveId];
+    }
+};
+EncounterSystem = __decorate([
+    (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_2__.Injectable)(),
+    __metadata("design:paramtypes", [])
+], EncounterSystem);
+
 
 
 /***/ }),
@@ -914,10 +1571,50 @@ let GameStateManager = class GameStateManager {
     initialState() {
         return {
             player: {
+                party: [
+                    {
+                        id: 'initial-1717123456789',
+                        species: 'treecko',
+                        nickname: 'None',
+                        level: 5,
+                        experience: 0,
+                        stats: {
+                            hp: 19,
+                            attack: 10,
+                            defense: 9,
+                            speed: 14,
+                            specialAttack: 12,
+                            specialDefense: 9,
+                        },
+                        currentHP: 19,
+                        moves: [
+                            {
+                                id: 'pound',
+                                name: 'Pound',
+                                type: 'Normal',
+                                power: 40,
+                                accuracy: 100,
+                                pp: 35,
+                                maxPP: 35,
+                            },
+                            {
+                                id: 'leer',
+                                name: 'Leer',
+                                type: 'Normal',
+                                power: 0,
+                                accuracy: 100,
+                                pp: 30,
+                                maxPP: 30,
+                            },
+                        ],
+                        status: 'healthy',
+                    },
+                ],
                 position: { x: 500, y: 500 },
                 spritePosition: 'down',
                 hidden: false,
                 canMove: true,
+                pc: [],
             },
             world: {
                 currentMap: 'little_root_town',
@@ -929,6 +1626,11 @@ let GameStateManager = class GameStateManager {
     }
     updateState(updater) {
         this.state = updater(structuredClone(this.state));
+        this.saveToPersistentStorage();
+        this.notifyObservers();
+    }
+    async asyncUpdateState(updater) {
+        this.state = await updater(structuredClone(this.state));
         this.saveToPersistentStorage();
         this.notifyObservers();
     }
@@ -963,6 +1665,42 @@ let GameStateManager = class GameStateManager {
     notifyObservers() {
         this.observers.forEach((observer) => observer(this.getState()));
     }
+    lockPlayerMovement() {
+        this.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: false },
+        }));
+    }
+    unlockPlayerMovement() {
+        this.updateState((state) => ({
+            ...state,
+            player: { ...state.player, canMove: true },
+        }));
+    }
+    addToParty(pokemon) {
+        this.updateState((state) => {
+            if (state.player.party.length < 6) {
+                state.player.party.push(pokemon);
+            }
+            else {
+                state.player.pc.push(pokemon);
+            }
+            return state;
+        });
+    }
+    healParty() {
+        this.updateState((state) => ({
+            ...state,
+            pokemon: {
+                ...state.player,
+                party: state.player.party.map((p) => ({
+                    ...p,
+                    currentHP: p.stats.hp,
+                    status: 'healthy',
+                })),
+            },
+        }));
+    }
 };
 GameStateManager = __decorate([
     (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)(),
@@ -988,6 +1726,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _event_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./event-system */ "./src/core/systems/event-system.ts");
 /* harmony import */ var _engine_canvas_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../engine/canvas-token */ "./src/core/engine/canvas-token.ts");
 /* harmony import */ var _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../transitions/opacity-transition */ "./src/core/transitions/opacity-transition.ts");
+/* harmony import */ var _transitions_blink_and_split_transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../transitions/blink-and-split-transition */ "./src/core/transitions/blink-and-split-transition.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -997,6 +1736,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1019,24 +1759,40 @@ let TransitionManager = class TransitionManager {
     initialize() {
         this.eventSystem.on('MAP_TRANSITION', (data) => this.handleMapTransition(data));
         this.eventSystem.on('PAGE_TRANSITION', (data) => this.handlePageTransition(data));
+        this.eventSystem.on('BATTLE_TRANSITION', (data) => this.handleBattleTransition(data));
         this.eventSystem.on('PAGE_CLOSED_TRANSITION', () => this.handlePageClosedTransition());
+        this.eventSystem.on('BATTLE_CLOSED_TRANSITION', () => this.handleBattleClosedTransition());
         this.eventSystem.on('MAP_TRANSITION_READY', () => this.handleTransitionClosedReady());
     }
     handleMapTransition(data) {
         this.transitionType = 'map';
         this.targetMapId = data.to;
+        this.transitionDuration = 500;
         this.startTransition(data.effect || new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
+        this.eventSystem.emit('MAP_TRANSITION_STARTED', {});
     }
     handlePageTransition(data) {
         this.transitionType = 'page';
+        this.transitionDuration = 500;
         this.startTransition(data.effect || new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
         this.eventSystem.emit('PAGE_TRANSITION_STARTED', {
             component: data.component,
             itemName: data.itemName,
         });
     }
+    handleBattleTransition(data) {
+        this.transitionType = 'battle';
+        this.transitionDuration = 2000;
+        this.startTransition(new _transitions_blink_and_split_transition__WEBPACK_IMPORTED_MODULE_5__.BlinkSplitTransitionEffect());
+        this.eventSystem.emit('BATTLE_TRANSITION_STARTED', {});
+    }
     handlePageClosedTransition() {
         this.transitionType = 'page-closed';
+        this.startTransition(new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
+    }
+    handleBattleClosedTransition() {
+        this.transitionType = 'battle-closed';
+        this.transitionDuration = 400;
         this.startTransition(new _transitions_opacity_transition__WEBPACK_IMPORTED_MODULE_4__.OpacityTransitionEffect());
     }
     startTransition(effect) {
@@ -1077,6 +1833,12 @@ let TransitionManager = class TransitionManager {
         else if (this.transitionType === 'page-closed') {
             this.eventSystem.emit('PAGE_CLOSED_TRANSITION_COMPLETE', {});
         }
+        else if (this.transitionType === 'battle') {
+            this.eventSystem.emit('BATTLE_TRANSITION_COMPLETE', {});
+        }
+        else if (this.transitionType === 'battle-closed') {
+            this.eventSystem.emit('BATTLE_CLOSED_TRANSITION_COMPLETE', {});
+        }
         this.transitionType = null;
         this.transitionPhase = null;
         this.currentEffect = null;
@@ -1112,12 +1874,99 @@ let TransitionManager = class TransitionManager {
             this.transitionPhase = 'opening';
             this.transitionProgress = 0;
         }
+        else if (this.transitionType === 'battle') {
+            this.eventSystem.emit('BATTLE_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        }
+        else if (this.transitionType === 'battle-closed') {
+            this.eventSystem.emit('BATTLE_CLOSED_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        }
     }
 };
 TransitionManager = __decorate([
     (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)(),
     __metadata("design:paramtypes", [])
 ], TransitionManager);
+
+
+
+/***/ }),
+
+/***/ "./src/core/transitions/blink-and-split-transition.ts":
+/*!************************************************************!*\
+  !*** ./src/core/transitions/blink-and-split-transition.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BlinkSplitTransitionEffect: () => (/* binding */ BlinkSplitTransitionEffect)
+/* harmony export */ });
+/* harmony import */ var _decorators_injectable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../decorators/injectable */ "./src/core/decorators/injectable.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+let BlinkSplitTransitionEffect = class BlinkSplitTransitionEffect {
+    opacity = 0;
+    splitProgress = 0;
+    previousProgress = 0;
+    closingPhase = true;
+    initialize() {
+        this.opacity = 0;
+        this.splitProgress = 0;
+        this.previousProgress = 0;
+        this.closingPhase = true;
+    }
+    update(progress) {
+        this.closingPhase = progress > this.previousProgress;
+        this.previousProgress = progress;
+        if (this.closingPhase) {
+            const numberOfBlinks = 3;
+            const blinkProgress = progress * numberOfBlinks;
+            if (blinkProgress < 2) {
+                this.opacity = Math.abs(Math.sin(blinkProgress * Math.PI));
+            }
+            else {
+                this.opacity = Math.min(1, (blinkProgress - 2) * 2);
+            }
+        }
+        else {
+            this.splitProgress = 1 - progress;
+            this.opacity = 1;
+        }
+    }
+    render(ctx) {
+        ctx.save();
+        if (this.closingPhase) {
+            ctx.globalAlpha = this.opacity;
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        }
+        else {
+            ctx.fillStyle = 'black';
+            const separation = this.splitProgress * ctx.canvas.height;
+            ctx.save();
+            ctx.translate(0, -separation);
+            ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height / 2);
+            ctx.restore();
+            ctx.save();
+            ctx.translate(0, separation);
+            ctx.fillRect(0, ctx.canvas.height / 2, ctx.canvas.width, ctx.canvas.height / 2);
+            ctx.restore();
+        }
+        ctx.restore();
+    }
+};
+BlinkSplitTransitionEffect = __decorate([
+    (0,_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__.Injectable)()
+], BlinkSplitTransitionEffect);
 
 
 
@@ -2024,6 +2873,108 @@ class KeyPressTriggerCondition {
         this.eventSystem.on('KEY_PRESS_LIBERATION', () => {
             this.pressed = false;
         });
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/effects/trigger-conditions/npc-proximity.ts":
+/*!*********************************************************!*\
+  !*** ./src/effects/trigger-conditions/npc-proximity.ts ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NPCProximityTriggerCondition: () => (/* binding */ NPCProximityTriggerCondition)
+/* harmony export */ });
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+
+
+class NPCProximityTriggerCondition {
+    npc;
+    gameStateManager;
+    TILE_SIZE = 32;
+    constructor(npc) {
+        this.npc = npc;
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
+        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__.GameStateManager);
+    }
+    isMet() {
+        const player = this.gameStateManager.getState().player;
+        const playerPosition = player.position;
+        const npcPosition = this.npc.position;
+        const playerTileX = Math.round(playerPosition.x / this.TILE_SIZE);
+        const playerTileY = Math.round(playerPosition.y / this.TILE_SIZE);
+        const npcTileX = Math.round(npcPosition.x / this.TILE_SIZE);
+        const npcTileY = Math.round(npcPosition.y / this.TILE_SIZE);
+        const deltaX = playerTileX - npcTileX;
+        const deltaY = playerTileY - npcTileY;
+        const isAdjacent = (Math.abs(deltaX) === 1 && deltaY === 0) ||
+            (Math.abs(deltaY) === 1 && deltaX === 0);
+        if (!isAdjacent)
+            return false;
+        let requiredDirection;
+        if (deltaX === 1)
+            requiredDirection = 'left';
+        else if (deltaX === -1)
+            requiredDirection = 'right';
+        else if (deltaY === 1)
+            requiredDirection = 'up';
+        else
+            requiredDirection = 'down';
+        const playerDirection = this.getBaseDirection(player.spritePosition);
+        return playerDirection === requiredDirection;
+    }
+    getBaseDirection(spritePosition) {
+        if (spritePosition.includes('left'))
+            return 'left';
+        if (spritePosition.includes('right'))
+            return 'right';
+        if (spritePosition.includes('up'))
+            return 'up';
+        if (spritePosition.includes('down'))
+            return 'down';
+        return 'down';
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/effects/trigger-conditions/npc-relative-position.ts":
+/*!*****************************************************************!*\
+  !*** ./src/effects/trigger-conditions/npc-relative-position.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NPCRelativePositionTriggerCondition: () => (/* binding */ NPCRelativePositionTriggerCondition)
+/* harmony export */ });
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+
+
+class NPCRelativePositionTriggerCondition {
+    npc;
+    verticalRelation;
+    gameStateManager;
+    constructor(npc, verticalRelation) {
+        this.npc = npc;
+        this.verticalRelation = verticalRelation;
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
+        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_1__.GameStateManager);
+    }
+    isMet() {
+        const playerPosition = this.gameStateManager.getState().player.position;
+        const verticalDifference = this.npc.position.y - playerPosition.y;
+        if (this.verticalRelation === 'above') {
+            return verticalDifference <= 0;
+        }
+        return verticalDifference > 0;
     }
 }
 
@@ -3018,6 +3969,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _types_effects__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/types/effects */ "./src/types/effects.ts");
 /* harmony import */ var _effects_sprites_effects_lab_door_open__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/effects/sprites-effects/lab-door-open */ "./src/effects/sprites-effects/lab-door-open.ts");
 /* harmony import */ var _effects_trigger_conditions_player_position__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/effects/trigger-conditions/player-position */ "./src/effects/trigger-conditions/player-position.ts");
+/* harmony import */ var _effects_trigger_conditions_npc_proximity__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/effects/trigger-conditions/npc-proximity */ "./src/effects/trigger-conditions/npc-proximity.ts");
+/* harmony import */ var _game_npc_npc_skins__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/game/npc/npc-skins */ "./src/game/npc/npc-skins.ts");
+
+
 
 
 
@@ -3091,6 +4046,28 @@ async function createLittleRootTown() {
         keyConditionUp,
         playerPosition,
     ]);
+    const momNpc = {
+        id: 'mom',
+        name: 'Mom',
+        position: { x: 13, y: 12 },
+        spriteSheet: 'npcs',
+        initialAnimation: 'idle',
+        interactionType: 'dialogue',
+        interactionTrigger: (npc) => {
+            return new _effects_trigger_conditions_composite__WEBPACK_IMPORTED_MODULE_7__.CompositeTriggerCondition([
+                new _effects_trigger_conditions_npc_proximity__WEBPACK_IMPORTED_MODULE_12__.NPCProximityTriggerCondition(npc),
+                new _effects_trigger_conditions_keypress__WEBPACK_IMPORTED_MODULE_6__.KeyPressTriggerCondition(' '),
+            ]);
+        },
+        dialogue: [
+            'Talk is cheap, show me the code.',
+            'Make it work, make it right, make it fast.',
+            'Best luck for you my boy!',
+        ],
+        behavior: 'wandering',
+        movementRange: 1,
+        skin: _game_npc_npc_skins__WEBPACK_IMPORTED_MODULE_13__.SkinType.WOMAN_01,
+    };
     return (new _rendering_tile_map_builder__WEBPACK_IMPORTED_MODULE_2__.TileMapBuilder(16, 2)
         .setTileset(sprites)
         .createLayer('collision', 29, 27, true, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND)
@@ -3300,6 +4277,8 @@ async function createLittleRootTown() {
         .addEnterIntoBuildingTriggerEffect([doorEffectToH2, playerEffectToH2], [_types_effects__WEBPACK_IMPORTED_MODULE_9__.DoorSequence.OPEN_EFFECT, _types_effects__WEBPACK_IMPORTED_MODULE_9__.PlayerMovementSequence.WALK_UP], [compositeConditionToH2], 500)
         .addEnterIntoBuildingTriggerEffect([doorEffectToLab, playerEffectToLab], [_types_effects__WEBPACK_IMPORTED_MODULE_9__.LabDoorSequence.OPEN_EFFECT, _types_effects__WEBPACK_IMPORTED_MODULE_9__.PlayerMovementSequence.WALK_UP], [compositeConditionToLab], 500)
         .addMapTransitionTrigger([compositeConditionTo101], MapTransitionEventTo101)
+        .createNpcLayer(29, 27)
+        .addNPC(momNpc)
         .build());
 }
 
@@ -3368,7 +4347,7 @@ async function createRoute101() {
     ]);
     return (new _rendering_tile_map_builder__WEBPACK_IMPORTED_MODULE_2__.TileMapBuilder(16, 2)
         .setTileset(sprites)
-        .createLayer('collision', 29, 26, true, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND)
+        .createLayer(_types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerGroup.COLLISION, 29, 26, true, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND)
         .buildCollisionRec(0, 0, 4, 12)
         .buildCollisionRec(0, 17, 4, 12)
         .buildCollisionRow(25, 0, 15)
@@ -3396,7 +4375,7 @@ async function createRoute101() {
         .buildSpriteRow([4968, 4968, 4968, 4968, 4970], 9, 11)
         .buildSingleSprite(4885, 10, 2, true)
         .buildSingleSprite(4885, 8, 15, false)
-        .createLayer('bush', 29, 26, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND_LOW)
+        .createLayer('bush_ground', 29, 26, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.BACKGROUND_LOW)
         // rigth south area
         .buildSpriteRow([2254, 2254], 13, 19, 0, 6)
         .buildSpriteRow([2254, 2254], 14, 19, 0, 6)
@@ -3428,7 +4407,7 @@ async function createRoute101() {
         .buildSpriteRow([2254, 2254, 2254, 2254, 2254, 2254, 2254], 7, 18, 0, 6)
         .buildSpriteRow([2254, 2254, 2254, 2254, 2254, 2254], 8, 19, 0, 6)
         .buildSpriteRow([2254, 2254, 2254, 2254, 2254], 9, 19, 0, 6)
-        .createLayer('grass_foreground', 29, 26, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
+        .createLayer(_types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerGroup.BUSH, 29, 26, false, _types_render_types__WEBPACK_IMPORTED_MODULE_3__.LayerPriority.FOREGROUND)
         // rigth south area
         .buildBushSpriteRow([2255, 2255], 13, 19, 0, 6)
         .buildBushSpriteRow([2255, 2255], 14, 19, 0, 6)
@@ -3585,6 +4564,389 @@ async function createRoute101() {
 
 /***/ }),
 
+/***/ "./src/game/npc/npc-skins.ts":
+/*!***********************************!*\
+  !*** ./src/game/npc/npc-skins.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NPCSkins: () => (/* binding */ NPCSkins),
+/* harmony export */   SkinType: () => (/* binding */ SkinType)
+/* harmony export */ });
+const SkinType = {
+    WOMAN_01: 'woman_01',
+    WOMAN_02: 'woman_02',
+};
+const NPCSkins = {
+    [SkinType.WOMAN_01]: {
+        animations: {
+            idle: [[[0]]],
+            up: [[[1]]],
+            down: [[[0]]],
+            left: [[[2]]],
+            right: [[[2]]],
+            walkDown: [[[3]], [[0]], [[4]], [[0]]],
+            walkUp: [[[5]], [[1]], [[6]], [[1]]],
+            walkLeft: [[[7]], [[2]], [[8]], [[2]]],
+            walkRight: [[[7]], [[2]], [[8]], [[2]]],
+        },
+    },
+    [SkinType.WOMAN_02]: {
+        animations: {
+            idle: [[[20]]],
+            up: [[[21]]],
+            down: [[[20]]],
+            left: [[[22]]],
+            right: [[[22]]],
+            walkDown: [[[23]], [[20]], [[24]], [[20]]],
+            walkUp: [[[25]], [[21]], [[26]], [[21]]],
+            walkLeft: [[[27]], [[22]], [[28]], [[22]]],
+            walkRight: [[[27]], [[22]], [[28]], [[22]]],
+        },
+    },
+};
+
+
+/***/ }),
+
+/***/ "./src/game/npc/npc.ts":
+/*!*****************************!*\
+  !*** ./src/game/npc/npc.ts ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   NPC: () => (/* binding */ NPC)
+/* harmony export */ });
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _assets_assetsManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/assets/assetsManager */ "./src/assets/assetsManager.ts");
+/* harmony import */ var _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/rendering/sprite-sheet */ "./src/rendering/sprite-sheet.ts");
+/* harmony import */ var _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/effect-system */ "./src/core/systems/effect-system.ts");
+/* harmony import */ var _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/effects/triggers/basic-trigger */ "./src/effects/triggers/basic-trigger.ts");
+/* harmony import */ var _core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/core/systems/game-state-manager */ "./src/core/systems/game-state-manager.ts");
+/* harmony import */ var _core_systems_collision_system__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/core/systems/collision-system */ "./src/core/systems/collision-system.ts");
+/* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
+/* harmony import */ var _rendering_camera__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/rendering/camera */ "./src/rendering/camera.ts");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _npc_skins__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./npc-skins */ "./src/game/npc/npc-skins.ts");
+
+
+
+
+
+
+
+
+
+
+
+class NPC {
+    position;
+    targetPosition;
+    isMoving = false;
+    movementSpeed;
+    currentDirection = { x: 0, y: 0 };
+    isInteracting = false;
+    movementTimer = 0;
+    initialPosition;
+    movementRange;
+    behaviorState;
+    sprite;
+    currentAnimation;
+    flipX = false;
+    scale;
+    tileSize;
+    config;
+    effectSystem;
+    gameStateManager;
+    collisionSystem;
+    assetManager;
+    eventSystem;
+    constructor(config) {
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
+        this.assetManager = gameContext.getBean(_assets_assetsManager__WEBPACK_IMPORTED_MODULE_1__.AssetManager);
+        this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_5__.GameStateManager);
+        this.collisionSystem = gameContext.getBean(_core_systems_collision_system__WEBPACK_IMPORTED_MODULE_6__.CollisionSystem);
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_9__.EventSystem);
+        this.effectSystem = new _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_3__.EffectSystem();
+        this.tileSize = gameContext.getTileSize();
+        this.scale = gameContext.getTilesScale();
+        this.config = config;
+        this.behaviorState = config.behavior || 'static';
+        this.position = this.snapToTileCenter(config.position);
+        this.configureAnimations(this.assetManager.getSpriteSheet('npcs'));
+        this.sprite = new _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_2__.AnimatedSprite(this.assetManager.getSpriteSheet(config.spriteSheet));
+        this.targetPosition = { ...this.position };
+        this.movementSpeed = config.movementSpeed || 40;
+        this.initialPosition = { ...this.position };
+        this.movementRange = config.movementRange || 3;
+        this.currentAnimation = config.initialAnimation;
+        this.sprite.play(this.currentAnimation);
+        this.setupInteractionTrigger(config.interactionTrigger(this));
+        this.eventSystem.on('CLOSE_DIALOG', () => this.stopInteraction());
+    }
+    stopInteraction() {
+        this.gameStateManager.unlockPlayerMovement();
+        setTimeout(() => {
+            this.isInteracting = false;
+            this.eventSystem.emit('KEY_PRESS_LIBERATION', {});
+        }, 500);
+    }
+    snapToTileCenter(position) {
+        return {
+            x: Math.floor((position.x * this.tileSize) / this.tileSize) *
+                this.tileSize +
+                this.tileSize / 2,
+            y: Math.floor((position.y * this.tileSize) / this.tileSize) *
+                this.tileSize +
+                this.tileSize / 2,
+        };
+    }
+    configureAnimations(spriteSheet) {
+        const skinType = this.config.skin || _npc_skins__WEBPACK_IMPORTED_MODULE_10__.SkinType.WOMAN_01;
+        const skinConfig = _npc_skins__WEBPACK_IMPORTED_MODULE_10__.NPCSkins[skinType];
+        Object.entries(skinConfig.animations).forEach(([animationName, frames]) => {
+            spriteSheet.defineAnimation({
+                name: animationName,
+                frames: frames,
+                frameRate: 4,
+                loop: true,
+            });
+        });
+    }
+    setupInteractionTrigger(condition) {
+        this.effectSystem.addTrigger(new _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_4__.BasicTrigger({
+            execute: (deltaTime) => {
+                if (!this.isInteracting) {
+                    this.handleInteraction();
+                    this.isInteracting = true;
+                }
+            },
+            render: () => { },
+        }, false, [condition]));
+    }
+    handleInteraction() {
+        switch (this.config.interactionType) {
+            case 'dialogue':
+                this.triggerDialogue();
+                break;
+        }
+    }
+    triggerDialogue() {
+        this.facePlayer();
+        this.gameStateManager.lockPlayerMovement();
+        this.eventSystem.emit('START_DIALOG', {
+            name: this.config.name,
+            dialogue: this.config.dialogue,
+        });
+    }
+    facePlayer() {
+        const playerPosition = this.gameStateManager.getState().player.position;
+        const npcPosition = this.position;
+        const deltaX = playerPosition.x - npcPosition.x;
+        const deltaY = playerPosition.y - npcPosition.y;
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            if (deltaX > 0) {
+                this.flipX = true;
+                this.currentAnimation = 'left';
+            }
+            else {
+                this.flipX = false;
+                this.currentAnimation = 'left';
+            }
+        }
+        else {
+            if (deltaY > 0) {
+                this.currentAnimation = 'down';
+            }
+            else {
+                this.currentAnimation = 'up';
+            }
+        }
+        this.sprite.play(this.currentAnimation);
+    }
+    updateMovement(deltaTime) {
+        if (this.behaviorState !== 'wandering' || this.isInteracting)
+            return;
+        if (!this.isMoving) {
+            this.movementTimer += deltaTime;
+            if (this.movementTimer > 10000) {
+                this.movementTimer = 0;
+                this.changeDirection();
+            }
+        }
+        if (this.isMoving) {
+            this.moveTowardsTarget(deltaTime);
+        }
+    }
+    getIdleAnimation(currentAnimation) {
+        switch (currentAnimation) {
+            case 'walkLeft':
+            case 'left':
+                return 'left';
+            case 'walkRight':
+            case 'right':
+                return 'right';
+            case 'walkUp':
+            case 'up':
+                return 'up';
+            case 'walkDown':
+            case 'down':
+                return 'down';
+        }
+        return 'down';
+    }
+    changeDirection() {
+        const directions = [
+            { x: 0, y: -1 }, // Up
+            { x: 0, y: 1 }, // Down
+            { x: -1, y: 0 }, // Left
+            { x: 1, y: 0 }, // Rigth
+        ];
+        const validDirections = directions.filter((dir) => {
+            const newTile = {
+                x: Math.floor(this.position.x / this.tileSize) + dir.x,
+                y: Math.floor(this.position.y / this.tileSize) + dir.y,
+            };
+            const newDistanceX = Math.abs(newTile.x - Math.floor(this.initialPosition.x / this.tileSize));
+            const newDistanceY = Math.abs(newTile.y - Math.floor(this.initialPosition.y / this.tileSize));
+            return (newDistanceX <= this.movementRange &&
+                newDistanceY <= this.movementRange);
+        });
+        if (validDirections.length === 0)
+            return;
+        const randomDir = validDirections[Math.floor(Math.random() * validDirections.length)];
+        this.startMovement(randomDir);
+    }
+    startMovement(direction) {
+        const currentTile = {
+            x: Math.floor(this.position.x / this.tileSize),
+            y: Math.floor(this.position.y / this.tileSize),
+        };
+        const targetTile = {
+            x: currentTile.x + direction.x,
+            y: currentTile.y + direction.y,
+        };
+        if (!this.isWithinMovementRange(targetTile) ||
+            this.collisionSystem.isColliding(targetTile.x * this.tileSize, targetTile.y * this.tileSize)) {
+            return;
+        }
+        this.currentDirection = direction;
+        this.startActualMovement();
+    }
+    isWithinMovementRange(targetTile) {
+        const initialTile = {
+            x: Math.floor(this.initialPosition.x / this.tileSize),
+            y: Math.floor(this.initialPosition.y / this.tileSize),
+        };
+        const dx = Math.abs(targetTile.x - initialTile.x);
+        const dy = Math.abs(targetTile.y - initialTile.y);
+        return dx <= this.movementRange && dy <= this.movementRange;
+    }
+    startActualMovement() {
+        const currentTile = {
+            x: Math.floor(this.position.x / this.tileSize),
+            y: Math.floor(this.position.y / this.tileSize),
+        };
+        const targetTile = {
+            x: currentTile.x + this.currentDirection.x,
+            y: currentTile.y + this.currentDirection.y,
+        };
+        const targetWorldPos = {
+            x: targetTile.x * this.tileSize + this.tileSize / 2,
+            y: targetTile.y * this.tileSize + this.tileSize / 2,
+        };
+        this.collisionSystem.registerMovement(this.config.id, targetWorldPos);
+        if (this.collisionSystem.isColliding(targetTile.x * this.tileSize, targetTile.y * this.tileSize, this.config.id)) {
+            this.collisionSystem.clearMovement(this.config.id);
+            return;
+        }
+        this.targetPosition = targetWorldPos;
+        this.isMoving = true;
+        this.playMovementAnimation(this.currentDirection);
+    }
+    playMovementAnimation(direction) {
+        let animationName = '';
+        if (direction.x > 0) {
+            animationName = 'walkRight';
+            this.flipX = true;
+        }
+        else if (direction.x < 0) {
+            animationName = 'walkLeft';
+            this.flipX = false;
+        }
+        else if (direction.y > 0) {
+            animationName = 'walkDown';
+        }
+        else {
+            animationName = 'walkUp';
+        }
+        this.currentAnimation = animationName;
+        this.sprite.play(animationName);
+    }
+    moveTowardsTarget(deltaTime) {
+        const deltaSeconds = deltaTime / 1000;
+        const dx = this.targetPosition.x - this.position.x;
+        const dy = this.targetPosition.y - this.position.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const moveDistance = this.movementSpeed * deltaSeconds;
+        if (distance > 0) {
+            const ratio = Math.min(moveDistance / distance, 1);
+            this.position.x += dx * ratio;
+            this.position.y += dy * ratio;
+        }
+        if (distance <= moveDistance) {
+            this.position = { ...this.targetPosition };
+            this.isMoving = false;
+            this.currentAnimation = this.getIdleAnimation(this.currentAnimation);
+            this.sprite.play(this.currentAnimation);
+            this.collisionSystem.clearMovement(this.config.id);
+        }
+    }
+    update(deltaTime) {
+        this.sprite.update(deltaTime);
+        this.effectSystem.update(deltaTime);
+        this.updateMovement(deltaTime);
+    }
+    render() {
+        const frame = this.sprite.getCurrentFrame();
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_0__.GameContext.getInstance();
+        const ctx = gameContext.getBean(_core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_7__.GAME_CANVAS);
+        const camera = gameContext.getBean(_rendering_camera__WEBPACK_IMPORTED_MODULE_8__.Camera);
+        const screenPos = {
+            x: Math.ceil(this.position.x -
+                camera.position.x -
+                (frame.width * this.scale) / 2),
+            y: Math.ceil(this.position.y -
+                camera.position.y -
+                (frame.height * this.scale) / 2),
+        };
+        const tileWidth = this.sprite.spriteSheet.width * this.scale;
+        const tileHeight = this.sprite.spriteSheet.height * this.scale;
+        frame.tiles.forEach((row, rowIndex) => {
+            row.forEach((tile, colIndex) => {
+                const xOffset = this.flipX
+                    ? (row.length - colIndex - 1) * tileWidth
+                    : colIndex * tileWidth;
+                let yOffset = rowIndex * tileHeight;
+                if (frame.currentAnimation === 'walk-left' &&
+                    (frame.currentFrame == 0 || frame.currentFrame == 2)) {
+                    yOffset = yOffset + 2;
+                }
+                const tileX = screenPos.x + xOffset;
+                const tileY = screenPos.y + yOffset;
+                this.sprite.spriteSheet.draw(ctx, tile, tileX, tileY, this.flipX, this.scale);
+            });
+        });
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/game/player/player.ts":
 /*!***********************************!*\
   !*** ./src/game/player/player.ts ***!
@@ -3619,7 +4981,6 @@ class Player {
     sprite;
     isMoving = false;
     intendedDirection = { x: 0, y: 0 };
-    flipX = false;
     tileSize;
     scale;
     movementSpeed = 120;
@@ -3644,7 +5005,7 @@ class Player {
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance();
         this.tileSize = gameContext.getTileSize();
         this.scale = gameContext.getTilesScale();
-        this.assetManager = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_assets_assetsManager__WEBPACK_IMPORTED_MODULE_0__.AssetManager);
+        this.assetManager = gameContext.getBean(_assets_assetsManager__WEBPACK_IMPORTED_MODULE_0__.AssetManager);
         this.collisionSystem = gameContext.getBean(_core_systems_collision_system__WEBPACK_IMPORTED_MODULE_3__.CollisionSystem);
         this.gameStateManager = gameContext.getBean(_core_systems_game_state_manager__WEBPACK_IMPORTED_MODULE_5__.GameStateManager);
         this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_4__.EventSystem);
@@ -3660,16 +5021,29 @@ class Player {
         this.targetPosition = { ...this.position };
         this.configureAnimations(this.assetManager.getSpriteSheet('player'));
         this.sprite = new _rendering_sprite_sheet__WEBPACK_IMPORTED_MODULE_8__.AnimatedSprite(this.assetManager.getSpriteSheet('player'));
-        this.eventSystem.on('TRANSITION_START', () => this.lockPlayerMovement());
-        this.eventSystem.on('TRANSITION_END', () => this.unlockPlayerMovement());
+        this.lockPlayerTransitions();
+        this.unlockPlayerTransitions();
         this.sprite.play('idle');
+    }
+    lockPlayerTransitions() {
+        this.eventSystem.on('BATTLE_TRANSITION_STARTED', () => this.lockPlayerMovement());
+        this.eventSystem.on('MAP_TRANSITION_STARTED', () => this.lockPlayerMovement());
+        this.eventSystem.on('PAGE_TRANSITION_STARTED', () => this.lockPlayerMovement());
+    }
+    unlockPlayerTransitions() {
+        this.eventSystem.on('MAP_TRANSITION_COMPLETE', () => this.unlockPlayerMovement());
+        this.eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () => this.unlockPlayerMovement());
     }
     updatePlayerState() {
         const { hidden, canMove, position, spritePosition } = this.gameStateManager.getState().player;
         this.hidden = hidden;
         this.canMove = canMove;
-        this.canMove = canMove;
-        this.playAnimation(spritePosition);
+        this.playAnimation(this.canMove
+            ? spritePosition
+            : this.getIdleAnimation(spritePosition));
+        if (!this.canMove) {
+            this.intendedDirection = { x: 0, y: 0 };
+        }
         if (this.position.x != position.x || this.position.y != position.y) {
             this.position = this.snapToTileCenter(position);
             this.targetPosition = this.position;
@@ -3725,6 +5099,12 @@ class Player {
             loop: true,
         });
         spriteSheet.defineAnimation({
+            name: 'walk-right',
+            frames: [[[5]], [[2]], [[8]], [[2]]],
+            frameRate: 8,
+            loop: true,
+        });
+        spriteSheet.defineAnimation({
             name: 'walk-up',
             frames: [[[4]], [[1]], [[7]], [[1]]],
             frameRate: 8,
@@ -3738,6 +5118,12 @@ class Player {
         });
         spriteSheet.defineAnimation({
             name: 'left-align',
+            frames: [[[2]], [[5]]],
+            frameRate: 16,
+            loop: true,
+        });
+        spriteSheet.defineAnimation({
+            name: 'right-align',
             frames: [[[2]], [[5]]],
             frameRate: 16,
             loop: true,
@@ -3851,12 +5237,16 @@ class Player {
         }
         if (distance <= moveDistance) {
             this.position = { ...this.targetPosition };
+            this.eventSystem.emit('PLAYER_MOVED', this.position);
             this.isMoving = false;
+            this.collisionSystem.clearMovement('player');
         }
     }
     updateMovementAnimation(direction, spritePosition) {
-        if (direction.x !== 0) {
-            this.flipX = direction.x > 0;
+        if (direction.x > 0) {
+            spritePosition.activeAnimation = 'walk-right';
+        }
+        else if (direction.x < 0) {
             spritePosition.activeAnimation = 'walk-left';
         }
         else if (direction.y > 0) {
@@ -3868,12 +5258,10 @@ class Player {
     }
     playAlignAnimation(direction, spritePosition) {
         if (direction.x > 0) {
-            spritePosition.activeAnimation = 'left-align';
-            this.flipX = true;
+            spritePosition.activeAnimation = 'right-align';
         }
         else if (direction.x < 0) {
             spritePosition.activeAnimation = 'left-align';
-            this.flipX = false;
         }
         else if (direction.y > 0) {
             spritePosition.activeAnimation = 'down-align';
@@ -3891,13 +5279,16 @@ class Player {
             x: currentTile.x + direction.x,
             y: currentTile.y + direction.y,
         };
-        if (this.collisionSystem.isColliding(targetTile.x * this.tileSize, targetTile.y * this.tileSize)) {
-            return;
-        }
-        this.targetPosition = {
+        const targetWorldPos = {
             x: targetTile.x * this.tileSize + this.tileSize / 2,
             y: targetTile.y * this.tileSize + this.tileSize / 2,
         };
+        this.collisionSystem.registerMovement('player', targetWorldPos);
+        if (this.collisionSystem.isColliding(targetTile.x * this.tileSize, targetTile.y * this.tileSize, 'player')) {
+            this.collisionSystem.clearMovement('player');
+            return;
+        }
+        this.targetPosition = targetWorldPos;
         this.isMoving = true;
         this.updateMovementAnimation(direction, spritePosition);
     }
@@ -3914,24 +5305,26 @@ class Player {
                 camera.position.y -
                 (frame.height * this.scale) / 2),
         };
-        const tileWidth = this.sprite.spriteSheet.width * this.scale;
-        const tileHeight = this.sprite.spriteSheet.height * this.scale;
         if (this.hidden) {
             return;
         }
+        let flipX = this.currentAnimation === 'walk-right' ||
+            this.currentAnimation === 'right-align' ||
+            this.currentAnimation === 'right'
+            ? true
+            : false;
         frame.tiles.forEach((row, rowIndex) => {
-            row.forEach((tile, colIndex) => {
-                const xOffset = (this.flipX
-                    ? (row.length - colIndex - 1) * tileWidth
-                    : colIndex * tileWidth) + this.playerOffsetX;
-                let yOffset = rowIndex * tileHeight + this.playerOffsetY;
-                if (frame.currentAnimation === 'walk-left' &&
+            row.forEach((tile) => {
+                let xOffset = 0;
+                let yOffset = 0;
+                if ((frame.currentAnimation === 'walk-left' ||
+                    frame.currentAnimation === 'walk-right') &&
                     (frame.currentFrame == 0 || frame.currentFrame == 2)) {
                     yOffset = yOffset + 2;
                 }
                 const tileX = screenPos.x + xOffset;
                 const tileY = screenPos.y + yOffset;
-                this.sprite.spriteSheet.draw(ctx, tile, tileX, tileY, this.flipX, this.scale);
+                this.sprite.spriteSheet.draw(ctx, tile, tileX, tileY, flipX, this.scale);
             });
         });
     }
@@ -3947,6 +5340,10 @@ class Player {
             case 'left-align':
             case 'left':
                 return 'left';
+            case 'walk-right':
+            case 'right-align':
+            case 'right':
+                return 'right';
             case 'walk-up':
             case 'up-align':
             case 'up':
@@ -3989,6 +5386,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/header */ "./src/html/components/app/header/header.ts");
 /* harmony import */ var _body_body__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./body/body */ "./src/html/components/app/body/body.ts");
 /* harmony import */ var _pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/skills-about/skills-about */ "./src/html/components/app/pages/skills-about/skills-about.ts");
+/* harmony import */ var _game_dialog_game_dialog__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./game-dialog/game-dialog */ "./src/html/components/app/game-dialog/game-dialog.ts");
+/* harmony import */ var _battle_battle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./battle/battle */ "./src/html/components/app/battle/battle.ts");
+/* harmony import */ var _pages_experiences_experience__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/experiences/experience */ "./src/html/components/app/pages/experiences/experience.ts");
+
+
+
 
 
 
@@ -4013,7 +5416,567 @@ const componentDefinitions = [
         name: 'page-skills-about',
         component: _pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_3__["default"],
     },
+    {
+        name: 'page-experience',
+        component: _pages_experiences_experience__WEBPACK_IMPORTED_MODULE_6__["default"],
+    },
+    {
+        name: 'game-dialog',
+        component: _game_dialog_game_dialog__WEBPACK_IMPORTED_MODULE_4__["default"],
+    },
+    {
+        name: 'app-battle',
+        component: _battle_battle__WEBPACK_IMPORTED_MODULE_5__["default"],
+    },
 ];
+
+
+/***/ }),
+
+/***/ "./src/html/components/app/battle/battle.css":
+/*!***************************************************!*\
+  !*** ./src/html/components/app/battle/battle.css ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (":host {\r\n    display: none;\r\n}\r\n\r\n.battle {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    background-color: black;\r\n    display: flex;\r\n    justify-content: center;\r\n    touch-action: manipulation;\r\n}\r\n\r\n.battle-container {\r\n    width: 80%;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.arena {\r\n    position: relative;\r\n    overflow: hidden;\r\n    width: 100%;\r\n    height: 70%;\r\n}\r\n\r\n.arena-bg {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.arena-bg img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: crisp-edges;\r\n    image-rendering: -webkit-optimize-contrast;\r\n}\r\n\r\n.hud-container {\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    font-size: calc(0.9vh + 0.6vw);\r\n}\r\n\r\n.opponent-state-hud,\r\n.player-state-hud {\r\n    position: absolute;\r\n    aspect-ratio: 280 / 80;\r\n    z-index: 7;\r\n}\r\n\r\n.opponent-state-hud {\r\n    left: 1%;\r\n    top: 10%;\r\n    height: calc(8vw + 5vh);\r\n}\r\n\r\n.player-state-hud {\r\n    right: 1%;\r\n    bottom: 25%;\r\n    height: calc(7vw + 7vh);\r\n}\r\n\r\n.opponent-pokemon-name,\r\n.opponent-pokemon-level,\r\n.player-pokemon-name,\r\n.player-pokemon-level,\r\n.player-pokemon-health-text {\r\n    position: absolute;\r\n    font-size: 80%;\r\n    letter-spacing: 0.2em;\r\n}\r\n\r\n.opponent-pokemon-health {\r\n    position: absolute;\r\n    top: 59.5%;\r\n    left: 40%;\r\n    width: 44%;\r\n    height: 10%;\r\n}\r\n\r\n.player-pokemon-health {\r\n    position: absolute;\r\n    top: 45.5%;\r\n    left: 46%;\r\n    width: 45%;\r\n    height: 9%;\r\n}\r\n\r\n.current-life {\r\n    position: absolute;\r\n    width: 50%;\r\n    height: 100%;\r\n    background: linear-gradient(to bottom, #5ad684, #73ffad);\r\n    transition: width 0.5s ease-in-out;\r\n}\r\n\r\n.hp-total {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: linear-gradient(to bottom, #4a425a, #526b5a);\r\n}\r\n\r\n.opponent-pokemon-name {\r\n    top: 21%;\r\n    left: 8%;\r\n}\r\n\r\n.opponent-pokemon-level {\r\n    top: 21%;\r\n    right: 20%;\r\n}\r\n\r\n.player-pokemon-name {\r\n    top: 17%;\r\n    left: 14%;\r\n}\r\n\r\n.player-pokemon-level {\r\n    top: 17%;\r\n    right: 13%;\r\n}\r\n\r\n.player-pokemon-health-text {\r\n    bottom: 16%;\r\n    right: 13%;\r\n}\r\n\r\n.opponent-pokemon-name h2,\r\n.opponent-pokemon-level h2,\r\n.player-pokemon-name h2,\r\n.player-pokemon-level h2,\r\n.player-pokemon-health-text h2 {\r\n    margin: 0;\r\n    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);\r\n    font-size: 2em;\r\n}\r\n\r\n.opponent-hud-background,\r\n.player-hud-background {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.opponent-hud-background img,\r\n.player-hud-background img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n}\r\n\r\n.pokemon-area {\r\n    position: absolute;\r\n}\r\n\r\n.opponent-arena {\r\n    right: 2%;\r\n    top: 35%;\r\n}\r\n\r\n.player-arena {\r\n    bottom: -8%;\r\n    left: 2%;\r\n}\r\n\r\n.pokemon-area-container {\r\n    position: relative;\r\n    width: 40vh;\r\n    height: 10vh;\r\n}\r\n\r\n.arena-background {\r\n    position: absolute;\r\n    z-index: 5;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.arena-background img,\r\n.opponent-pokemon img,\r\n.player-pokemon img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n}\r\n\r\n.opponent-pokemon {\r\n    position: absolute;\r\n    z-index: 6;\r\n    top: -80%;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n    width: 20vh;\r\n    height: 20vh;\r\n}\r\n\r\n.player-pokemon {\r\n    position: absolute;\r\n    z-index: 6;\r\n    top: -135%;\r\n    left: 55%;\r\n    transform: translateX(-50%);\r\n    width: 20vh;\r\n    height: 20vh;\r\n}\r\n\r\n.actions {\r\n    width: 100%;\r\n    height: 30%;\r\n}\r\n\r\n.dialog {\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #4a4252;\r\n}\r\n\r\n.dialog-bg {\r\n    position: absolute;\r\n    width: calc(25vh + 40vw);\r\n    height: 31%;\r\n    top: 4px;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.dialog-bg img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n}\r\n\r\n.actions-panel {\r\n    position: absolute;\r\n    left: 50%;\r\n    bottom: 0;\r\n    width: calc(35vh + 5vw);\r\n    height: 65%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.actions-panel-bg {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.actions-panel-bg img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n}\r\n\r\n.dialog-text-area {\r\n    position: absolute;\r\n    width: 70%;\r\n    top: 2.5%;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n    max-height: 26%;\r\n    overflow: hidden;\r\n}\r\n\r\n.dialog-text-area h2 {\r\n    font-family: 'pokemon-font';\r\n    color: #ffffff;\r\n    text-shadow: 0.05em 0.12em #6b5a73;\r\n    font-size: 80%;\r\n    line-height: 125%;\r\n}\r\n\r\n.actions-panel-content {\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.actions-menu {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n    padding: 4.2% 3%;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.menu {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.menu-item {\r\n    display: flex;\r\n    position: relative;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.menu-item h2 {\r\n    margin: 0;\r\n    margin-top: 5%;\r\n    font-family: 'pokemon-font';\r\n    text-shadow: 0.05em 0.1em #00000050;\r\n    font-size: 120%;\r\n    color: #4a4a4a;\r\n    cursor: pointer;\r\n}\r\n\r\n/* .menu-item h2.active::before {\r\n    content: '';\r\n    display: block;\r\n    position: absolute;\r\n    width: 2rem;\r\n    height: 2rem;\r\n    top: 50%;\r\n    transform: translate(-60%, -50%);\r\n    background-image: var(--svg-arrow);\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n    filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));\r\n} */\r\n\r\n.moves-panel {\r\n    position: relative;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: #4a4252;\r\n}\r\n\r\n.moves-panel-mobile-background,\r\n.moves-panel-desktop-background {\r\n    position: absolute;\r\n    width: 95%;\r\n    height: 95%;\r\n    top: 4px;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n}\r\n\r\n.moves-panel-desktop-background {\r\n    display: none;\r\n}\r\n\r\n.moves-panel-mobile-background img,\r\n.moves-panel-desktop-background img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n}\r\n\r\n.moves-panel-mobile {\r\n    display: grid;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr;\r\n    width: 100%;\r\n    height: 100%;\r\n    padding: 3vh 5vw;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.moves-panel-desktop {\r\n    display: none;\r\n    grid-template-columns: 1fr 1fr;\r\n    grid-template-rows: 1fr 1fr;\r\n    height: 100%;\r\n    padding: 3vh 5vw;\r\n    box-sizing: border-box;\r\n    margin-left: 2vw;\r\n    width: 50.5vw;\r\n}\r\n\r\n.move-item {\r\n    position: relative;\r\n}\r\n\r\n.menu-item span {\r\n    -webkit-text-stroke: 0.01rem #4a4a4a;\r\n    letter-spacing: 0.1rem;\r\n}\r\n\r\n.menu-item h2 .pp {\r\n    position: absolute;\r\n    top: 14px;\r\n    left: 12px;\r\n    font-size: 0.4rem;\r\n}\r\n\r\n.menu-item h2 .type {\r\n    position: absolute;\r\n    bottom: 10px;\r\n    right: 12px;\r\n    font-size: 0.4rem;\r\n}\r\n\r\n.moves-panel-data {\r\n    z-index: 1;\r\n    width: 26vw;\r\n    box-sizing: border-box;\r\n    padding: 3.42vh 1.8vw;\r\n    margin-top: 1px;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.moves-panel-data h2 {\r\n    margin: 0;\r\n    margin-top: 5%;\r\n    font-size: calc(3.5vh + 1vw);\r\n    font-family: 'pokemon-font';\r\n    color: #4a4a4a;\r\n}\r\n\r\n.pp-data {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    height: 50%;\r\n}\r\n\r\n.data-data {\r\n    height: 50%;\r\n}\r\n\r\n.moves-data-content {\r\n    width: 100%;\r\n    height: 100%;\r\n    padding: 5% 5%;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.opponent-state-hud {\r\n    transform: translateX(-150%);\r\n}\r\n\r\n.player-state-hud {\r\n    transform: translateX(150%);\r\n}\r\n\r\n.player-arena {\r\n    transform: translateX(250%);\r\n}\r\n\r\n.opponent-arena {\r\n    transform: translateX(-250%);\r\n}\r\n\r\n.player-state-hud.active,\r\n.opponent-state-hud.active,\r\n.opponent-arena.active,\r\n.player-arena.active {\r\n    transform: translateX(0);\r\n}\r\n\r\n.opponent-arena,\r\n.player-arena,\r\n.opponent-state-hud,\r\n.player-state-hud {\r\n    transition: transform 2s ease-in-out;\r\n}\r\n\r\n.opponent-state-hud,\r\n.player-state-hud {\r\n    transition: transform 1s ease-in-out;\r\n}\r\n\r\n.high-grass {\r\n    position: absolute;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 17vw;\r\n    overflow: hidden;\r\n    display: flex;\r\n    transition: transform 2s ease-in;\r\n}\r\n\r\n.high-grass img {\r\n    width: 101%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n    animation: moveGrass 1s linear infinite;\r\n}\r\n\r\n.high-grass img:nth-child(2) {\r\n    position: absolute;\r\n    left: 100%;\r\n    animation: moveGrass 1s linear infinite;\r\n}\r\n\r\n@keyframes moveGrass {\r\n    0% {\r\n        transform: translateX(0);\r\n    }\r\n    100% {\r\n        transform: translateX(-100%);\r\n    }\r\n}\r\n\r\n.high-grass.active {\r\n    transform: translateY(100%);\r\n}\r\n\r\n.last-letter img {\r\n    width: 1.5vw;\r\n    height: 1.5vw;\r\n    margin-left: 0.5rem;\r\n    object-fit: contain;\r\n    position: relative;\r\n    animation: flote 0.25s infinite alternate ease-in;\r\n}\r\n\r\n@media (max-width: 480px) {\r\n    .last-letter img {\r\n        width: 4vw;\r\n        height: 4vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 481px) and (max-width: 768px) {\r\n    .last-letter img {\r\n        width: 2.5vw;\r\n        height: 2.5vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 568px) {\r\n    .dialog-bg {\r\n        width: 98%;\r\n        height: 90%;\r\n        top: 51%;\r\n        left: 50%;\r\n        transform: translate(-50%, -50%);\r\n    }\r\n\r\n    .actions-panel {\r\n        display: none;\r\n        position: absolute;\r\n        left: unset;\r\n        height: auto;\r\n        right: 0.5%;\r\n        top: 51%;\r\n        width: 45%;\r\n        height: 95%;\r\n        transform: translateY(-50%);\r\n        opacity: 0;\r\n        transition: opacity 0.1s linear;\r\n    }\r\n\r\n    .actions-panel.active {\r\n        opacity: 1;\r\n    }\r\n\r\n    .dialog-text-area {\r\n        width: 38vw;\r\n        top: 15%;\r\n        left: 30%;\r\n        max-height: 100%;\r\n        overflow: auto;\r\n    }\r\n\r\n    .dialog-text-area h2 {\r\n        font-size: calc(1.5vw + 1.5vh);\r\n        line-height: 125%;\r\n    }\r\n\r\n    .menu-item h2 {\r\n        margin: 0;\r\n        margin-top: 5%;\r\n        font-size: calc(3.5vh + 1vw);\r\n    }\r\n\r\n    .moves-panel-mobile-background {\r\n        display: none;\r\n    }\r\n\r\n    .moves-panel-desktop-background {\r\n        display: block;\r\n    }\r\n\r\n    .moves-panel-mobile {\r\n        display: none;\r\n    }\r\n\r\n    .moves-panel-desktop {\r\n        display: grid;\r\n    }\r\n\r\n    .moves-panel-container {\r\n        display: flex;\r\n        height: 100%;\r\n    }\r\n\r\n    .moves-panel-container h2 {\r\n        display: flex;\r\n        align-items: center;\r\n        font-size: calc(2.5vh + 0.8vw);\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .hud-container {\r\n        font-size: 1vw;\r\n    }\r\n\r\n    .opponent-state-hud {\r\n        left: 10%;\r\n        top: 10%;\r\n        height: calc(5vw + 5vh);\r\n        aspect-ratio: 280 / 80;\r\n    }\r\n\r\n    .player-state-hud {\r\n        right: 10%;\r\n        bottom: 10%;\r\n        height: calc(6vw + 6vh);\r\n        aspect-ratio: 280 / 80;\r\n    }\r\n\r\n    .pokemon-area-container {\r\n        width: 40vw;\r\n        height: 10vw;\r\n    }\r\n\r\n    .player-arena {\r\n        bottom: -16%;\r\n        left: 2%;\r\n    }\r\n\r\n    .opponent-pokemon,\r\n    .player-pokemon {\r\n        width: 20vw;\r\n        height: 20vw;\r\n    }\r\n\r\n    .moves-panel-container h2 {\r\n        font-size: calc(3.5vh + 1vw);\r\n    }\r\n\r\n    .last-letter img {\r\n        width: 1.8vw;\r\n        height: 1.8vw;\r\n    }\r\n}\r\n\r\n@keyframes flote {\r\n    0% {\r\n        transform: translateY(-8px);\r\n    }\r\n\r\n    100% {\r\n        transform: translateY(-2px);\r\n    }\r\n}\r\n");
+
+/***/ }),
+
+/***/ "./src/html/components/app/battle/battle.html":
+/*!****************************************************!*\
+  !*** ./src/html/components/app/battle/battle.html ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Imports
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/battle/background_01.png */ "./src/assets/html/battle/background_01.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/battle/opponent_state_hud.png */ "./src/assets/html/battle/opponent_state_hud.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/battle/player_state_hud.png */ "./src/assets/html/battle/player_state_hud.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_3___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/battle/pokemon_battle_zone.png */ "./src/assets/html/battle/pokemon_battle_zone.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_4___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/pokemons/front/front_252.png */ "./src/assets/html/pokemons/front/front_252.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_5___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/pokemons/back/back_252.png */ "./src/assets/html/pokemons/back/back_252.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_6___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/battle/high_grass.png */ "./src/assets/html/battle/high_grass.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_7___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/background_actions.png */ "./src/assets/html/layout/background_actions.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_8___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/layout/actions_panel.png */ "./src/assets/html/layout/actions_panel.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_9___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/game-images/move_stats.png */ "./src/assets/html/game-images/move_stats.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_10___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/game-images/move_panel.png */ "./src/assets/html/game-images/move_panel.png"), __webpack_require__.b);
+// Module
+var code = `<div class="battle">
+    <div class="battle-container">
+        <div class="arena">
+            <div class="arena-bg">
+                <img src="${___HTML_LOADER_IMPORT_0___}">
+            </div>
+            <div class="opponent-state-hud">
+                <div class="hud-container">
+                    <div class="opponent-hud-background">
+                        <img src="${___HTML_LOADER_IMPORT_1___}">
+                    </div>
+                    <div class="opponent-pokemon-name">
+                        <h2 class="pokemon-text"></h2>
+                    </div>
+                    <div class="opponent-pokemon-level">
+                        <h2 class="pokemon-text"></h2>
+                    </div>
+                    <div class="opponent-pokemon-health">
+                        <div class="hp-total">
+                        </div>
+                        <div class="current-life">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="player-state-hud">
+                <div class="hud-container">
+                    <div class="player-hud-background">
+                        <img src="${___HTML_LOADER_IMPORT_2___}">
+                    </div>
+                    <div class="player-pokemon-name">
+                        <h2 class="pokemon-text"></h2>
+                    </div>
+                    <div class="player-pokemon-level">
+                        <h2 class="pokemon-text"></h2>
+                    </div>
+                    <div class="player-pokemon-health-text">
+                        <h2 class="pokemon-text"></h2>
+                    </div>
+                    <div class="player-pokemon-health">
+                        <div class="hp-total">
+                        </div>
+                        <div class="current-life">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-area opponent-arena">
+                <div class="pokemon-area-container">
+                    <div class="arena-background">
+                        <img src="${___HTML_LOADER_IMPORT_3___}">
+                    </div>
+                    <div class="opponent-pokemon">
+                        <img src="${___HTML_LOADER_IMPORT_4___}">
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-area player-arena">
+                <div class="pokemon-area-container">
+                    <div class="arena-background">
+                        <img src="${___HTML_LOADER_IMPORT_3___}">
+                    </div>
+                    <div class="player-pokemon">
+                        <img src="${___HTML_LOADER_IMPORT_5___}">
+                    </div>
+                </div>
+            </div>
+            <div class="high-grass">
+                <img src="${___HTML_LOADER_IMPORT_6___}">
+                <img src="${___HTML_LOADER_IMPORT_6___}">
+            </div>
+        </div>
+        <div class="actions">
+            <div class="dialog">
+                <div class="dialog-bg">
+                    <img src="${___HTML_LOADER_IMPORT_7___}">
+                </div>
+                <div class="actions-panel">
+                    <div class="actions-panel-content">
+                        <div class="actions-panel-bg">
+                            <img src="${___HTML_LOADER_IMPORT_8___}">
+                        </div>
+                        <div class="actions-menu">
+                            <div class="menu">
+                                <div class="menu-item" action-value="FIGHT">
+                                    <h2>FIGHT</h2>
+                                </div>
+                                <div class="menu-item" action-value="BAG">
+                                    <h2>BAG</h2>
+                                </div>
+                                <div class="menu-item" action-value="POKEMON">
+                                    <h2>POKéMON</h2>
+                                </div>
+                                <div class="menu-item" action-value="RUN">
+                                    <h2>RUN</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-text-area">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="moves-panel">
+                <div class="moves-panel-mobile-background">
+                    <img src="${___HTML_LOADER_IMPORT_9___}">
+                </div>
+                <div class="moves-panel-desktop-background">
+                    <img src="${___HTML_LOADER_IMPORT_10___}">
+                </div>
+                <div class="moves-panel-mobile">
+                    <div class="menu-item move-item" action-value="FIGHT">
+                        <h2><span class="pp"></span><span class="type"></span></h2>
+                    </div>
+                    <div class="menu-item move-item" action-value="BAG">
+                        <h2>-<span class="pp"></span><span class="type"></span></h2>
+                    </div>
+                    <div class="menu-item move-item" action-value="POKEMON">
+                        <h2>-<span class="pp"></span><span class="type"></span></h2>
+                    </div>
+                    <div class="menu-item move-item" action-value="RUN">
+                        <h2>-<span class="pp"></span><span class="type"></span></h2>
+                    </div>
+                </div>
+                <div class="moves-panel-container">
+                    <div class="moves-panel-desktop">
+                        <div class="menu-item move-item" action-value="FIGHT">
+                            <h2>-</h2>
+                        </div>
+                        <div class="menu-item move-item" action-value="BAG">
+                            <h2>-</h2>
+                        </div>
+                        <div class="menu-item move-item" action-value="POKEMON">
+                            <h2>-</h2>
+                        </div>
+                        <div class="menu-item move-item" action-value="RUN">
+                            <h2>-</h2>
+                        </div>
+                    </div>
+                    <div class="moves-panel-data">
+                        <div class="moves-data-content">
+                            <div class="pp-data">
+                                <h2></h2>
+                                <h2></h2>
+                            </div>
+                            <div>
+                                <h2></h2>
+                            </div class="data-data">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/html/components/app/battle/battle.ts":
+/*!**************************************************!*\
+  !*** ./src/html/components/app/battle/battle.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ BattleComponent)
+/* harmony export */ });
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../main.css */ "./src/html/main.css");
+/* harmony import */ var _battle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./battle.css */ "./src/html/components/app/battle/battle.css");
+/* harmony import */ var _battle_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./battle.html */ "./src/html/components/app/battle/battle.html");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/mock-data/pokemons */ "./src/mock-data/pokemons.ts");
+/* harmony import */ var _assets_html_game_images_red_arrow_down_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/assets/html/game-images/red_arrow_down.png */ "./src/assets/html/game-images/red_arrow_down.png");
+
+
+
+
+
+
+
+class BattleComponent extends HTMLElement {
+    _updateTextQueue = Promise.resolve();
+    eventSystem;
+    dialogArea;
+    actionsPanel;
+    dialogTextArea;
+    movePanelArea;
+    playerPokemonNameDisplay;
+    playerPokemonLevelDisplay;
+    playerPokemonHealthTextDisplay;
+    playerPokemonHealthBar;
+    playerPokemonSpriteImage;
+    playerStateHUD;
+    playerArena;
+    opponentPokemonNameDisplay;
+    opponentPokemonLevelDisplay;
+    opponentPokemonHealthBar;
+    opponentPokemonSpriteImage;
+    opponentStateHUD;
+    opponentArena;
+    highGrass;
+    currentPlayerMoves = [];
+    constructor() {
+        super();
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__.EventSystem);
+        this.attachShadow({ mode: 'open' });
+        const template = document.createElement('template');
+        template.innerHTML = `
+            <style>${_main_css__WEBPACK_IMPORTED_MODULE_0__["default"].toString()}${_battle_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}</style>
+            ${_battle_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
+        `;
+        this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.style.display = 'none';
+        this.dialogArea = this.shadowRoot?.querySelector('.dialog');
+        this.actionsPanel = this.shadowRoot?.querySelector('.actions-panel');
+        this.dialogTextArea = this.shadowRoot?.querySelector('.dialog-text-area');
+        this.movePanelArea = this.shadowRoot?.querySelector('.moves-panel');
+        this.playerPokemonNameDisplay = this.shadowRoot.querySelector('.player-pokemon-name h2');
+        this.playerPokemonLevelDisplay = this.shadowRoot.querySelector('.player-pokemon-level h2');
+        this.playerPokemonHealthTextDisplay = this.shadowRoot.querySelector('.player-pokemon-health-text h2');
+        this.playerPokemonHealthBar = this.shadowRoot.querySelector('.player-state-hud .current-life');
+        this.playerPokemonSpriteImage = this.shadowRoot.querySelector('.player-pokemon img');
+        this.playerStateHUD = this.shadowRoot.querySelector('.player-state-hud');
+        this.playerArena = this.shadowRoot.querySelector('.player-arena');
+        this.opponentPokemonNameDisplay = this.shadowRoot.querySelector('.opponent-pokemon-name h2');
+        this.opponentPokemonLevelDisplay = this.shadowRoot.querySelector('.opponent-pokemon-level h2');
+        this.opponentPokemonHealthBar = this.shadowRoot.querySelector('.opponent-state-hud .current-life');
+        this.opponentPokemonSpriteImage = this.shadowRoot.querySelector('.opponent-pokemon img');
+        this.opponentStateHUD = this.shadowRoot.querySelector('.opponent-state-hud');
+        this.opponentArena = this.shadowRoot.querySelector('.opponent-arena');
+        this.highGrass = this.shadowRoot.querySelector('.high-grass');
+        this.setUpBattleScreen();
+    }
+    setUpBattleScreen() {
+        this.eventSystem.on('BATTLE_TRANSITION_CLOSED', () => {
+            this.style.display = 'block';
+            setTimeout(() => {
+                this.opponentArena.classList.add('active');
+                this.playerArena.classList.add('active');
+                setTimeout(() => {
+                    this.highGrass.classList.add('active');
+                }, 200);
+                setTimeout(() => {
+                    this.playerStateHUD.classList.add('active');
+                    this.opponentStateHUD.classList.add('active');
+                    this.eventSystem.emit('BATTLE_READY', {});
+                    setTimeout(() => {
+                        this.actionsPanel.classList.add('active');
+                    }, 500);
+                }, 2000);
+            }, 200);
+        });
+        this.eventSystem.onAsync('BATTLE_STATE_UPDATE', async (battleState) => {
+            this.updateHud(battleState.playerPokemon, battleState.wildPokemon);
+            this.currentPlayerMoves = battleState.playerPokemon.moves;
+            this.updateMovesPanel(this.currentPlayerMoves);
+            const latestMessage = battleState.messages[battleState.messages.length - 1];
+            if (battleState.phase === 'player-input') {
+                this.dialogArea.style.display = 'flex';
+                this.actionsPanel.style.display = 'block';
+                this.movePanelArea.style.display = 'none';
+                await this.updateDialogText(`What will ${battleState.playerPokemon.species.toUpperCase()} do?`);
+            }
+            else if (battleState.phase === 'attack' ||
+                battleState.phase === 'start' ||
+                battleState.phase === 'flee') {
+                this.dialogArea.style.display = 'flex';
+                this.actionsPanel.style.display = 'none';
+                this.movePanelArea.style.display = 'none';
+                if (battleState.isDialogUpdate)
+                    await this.updateDialogText(latestMessage.message, latestMessage.manualAvance);
+            }
+            else {
+                if (battleState.isDialogUpdate)
+                    await this.updateDialogText(latestMessage.message, latestMessage.manualAvance);
+            }
+        });
+        this.eventSystem.on('BATTLE_CLOSED_TRANSITION_CLOSED', () => {
+            this.style.display = 'none';
+            this.onBattleEnd([
+                this.playerStateHUD,
+                this.opponentStateHUD,
+                this.actionsPanel,
+                this.highGrass,
+                this.opponentArena,
+                this.playerArena,
+            ]);
+            this.dialogTextArea.querySelector('h2').textContent = '';
+        });
+    }
+    updateHud(playerPokemon, opponentPokemon) {
+        this.playerPokemonNameDisplay.textContent =
+            playerPokemon.species.toUpperCase();
+        this.playerPokemonLevelDisplay.textContent = `Lv.${playerPokemon.level}`;
+        this.playerPokemonHealthTextDisplay.textContent = `${playerPokemon.currentHP}/${playerPokemon.stats.hp}`;
+        if (this.playerPokemonHealthBar) {
+            const playerHpPercentage = (playerPokemon.currentHP / playerPokemon.stats.hp) * 100;
+            this.playerPokemonHealthBar.style.width = `${playerHpPercentage}%`;
+            if (playerHpPercentage < 20)
+                this.playerPokemonHealthBar.style.backgroundColor = 'red';
+            else if (playerHpPercentage < 50)
+                this.playerPokemonHealthBar.style.backgroundColor = 'yellow';
+            else
+                this.playerPokemonHealthBar.style.backgroundColor = 'green';
+        }
+        this.opponentPokemonNameDisplay.textContent =
+            opponentPokemon.species.toUpperCase();
+        this.opponentPokemonLevelDisplay.textContent = `Lv.${opponentPokemon.level}`;
+        if (this.opponentPokemonHealthBar) {
+            const opponentHpPercentage = (opponentPokemon.currentHP / opponentPokemon.stats.hp) * 100;
+            this.opponentPokemonHealthBar.style.width = `${opponentHpPercentage}%`;
+            if (opponentHpPercentage < 20)
+                this.opponentPokemonHealthBar.style.backgroundColor = 'red';
+            else if (opponentHpPercentage < 50)
+                this.opponentPokemonHealthBar.style.backgroundColor = 'yellow';
+            else
+                this.opponentPokemonHealthBar.style.backgroundColor = 'green';
+        }
+        if (_mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[opponentPokemon.species].img.front) {
+            this.opponentPokemonSpriteImage.src =
+                _mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[opponentPokemon.species].img.front;
+        }
+        if (_mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[playerPokemon.species].img.back) {
+            this.playerPokemonSpriteImage.src =
+                _mock_data_pokemons__WEBPACK_IMPORTED_MODULE_5__.SPECIES_MAP[playerPokemon.species].img.back;
+        }
+    }
+    updateDialogText(text, manualAvance) {
+        this._updateTextQueue = this._updateTextQueue.then(() => {
+            return new Promise((resolve) => {
+                if (!text) {
+                    resolve();
+                    return;
+                }
+                const h2 = this.dialogTextArea.querySelector('h2');
+                h2.textContent = '';
+                const velocity = 50;
+                const fastDelay = Math.max(10, velocity / 5);
+                let charIndex = 0;
+                let isFast = false;
+                const onKeyDown = (event) => {
+                    if (event.code === 'Space' || event.key === ' ') {
+                        isFast = true;
+                        event.preventDefault();
+                    }
+                };
+                const onKeyUp = (event) => {
+                    if (event.code === 'Space' || event.key === ' ') {
+                        isFast = false;
+                        event.preventDefault();
+                    }
+                };
+                document.addEventListener('keydown', onKeyDown);
+                document.addEventListener('keyup', onKeyUp);
+                const typeText = () => {
+                    if (charIndex < text.length) {
+                        h2.textContent += text.charAt(charIndex);
+                        charIndex++;
+                        if (charIndex === text.length) {
+                            if (manualAvance) {
+                                const currentText = h2.textContent || '';
+                                if (currentText.length > 0) {
+                                    h2.textContent = currentText.slice(0, -1);
+                                    const span = document.createElement('span');
+                                    span.classList.add('last-letter');
+                                    span.appendChild(document.createTextNode(currentText.slice(-1)));
+                                    const icon = document.createElement('img');
+                                    icon.src = _assets_html_game_images_red_arrow_down_png__WEBPACK_IMPORTED_MODULE_6__;
+                                    span.appendChild(icon);
+                                    h2.appendChild(span);
+                                }
+                                const waitForAdvance = (e) => {
+                                    if (e.code === 'Space' || e.key === ' ') {
+                                        e.preventDefault();
+                                        document.removeEventListener('keyup', waitForAdvance);
+                                        document.removeEventListener('keydown', onKeyDown);
+                                        document.removeEventListener('keyup', onKeyUp);
+                                        setTimeout(() => {
+                                            resolve();
+                                        }, 300);
+                                    }
+                                };
+                                document.addEventListener('keyup', waitForAdvance);
+                            }
+                            else {
+                                document.removeEventListener('keydown', onKeyDown);
+                                document.removeEventListener('keyup', onKeyUp);
+                                setTimeout(() => {
+                                    resolve();
+                                }, 300);
+                            }
+                        }
+                        else {
+                            const delay = isFast ? fastDelay : velocity;
+                            setTimeout(typeText, delay);
+                        }
+                    }
+                };
+                typeText();
+            });
+        });
+        return this._updateTextQueue;
+    }
+    updateMovesPanel(moves) {
+        const desktopMovesContainer = this.shadowRoot.querySelector('.moves-panel-desktop');
+        const mobileMovesContainer = this.shadowRoot.querySelector('.moves-panel-mobile');
+        desktopMovesContainer.innerHTML = '';
+        mobileMovesContainer.innerHTML = '';
+        moves.forEach((move, index) => {
+            const desktopMoveItem = document.createElement('div');
+            desktopMoveItem.classList.add('menu-item', 'move-item');
+            const desktopH2 = document.createElement('h2');
+            desktopH2.textContent = move.name.toUpperCase();
+            desktopMoveItem.appendChild(desktopH2);
+            desktopMovesContainer.appendChild(desktopMoveItem);
+            const mobileMoveItem = document.createElement('div');
+            mobileMoveItem.classList.add('menu-item', 'move-item');
+            const mobileH2 = document.createElement('h2');
+            const maxPP = move.pp || move.maxPP || 0;
+            const currentPP = move.pp || 0;
+            const elementalType = move.type || move.type || 'UNKNOWN';
+            mobileH2.innerHTML = `${move.name.toUpperCase()}<span class="pp">PP ${currentPP}/${maxPP}</span><span class="type">TYPE/${elementalType.toUpperCase()}</span>`;
+            mobileMoveItem.appendChild(mobileH2);
+            mobileMovesContainer.appendChild(mobileMoveItem);
+            const handleMoveClick = () => {
+                this.eventSystem.emit('BATTLE_ACTION', {
+                    type: 'attack',
+                    move: move,
+                });
+            };
+            desktopMoveItem.addEventListener('click', handleMoveClick);
+            mobileMoveItem.addEventListener('click', handleMoveClick);
+            desktopMoveItem.addEventListener('mouseenter', () => {
+                const ppDisplay = this.shadowRoot.querySelector('.moves-panel-data .pp-data h2:nth-child(2)');
+                ppDisplay.textContent = `${currentPP}/${maxPP}`;
+                const typeDisplay = this.shadowRoot.querySelector('.moves-panel-data .moves-data-content div:nth-child(2) h2');
+                typeDisplay.textContent = `TYPE/${elementalType.toUpperCase()}`;
+                desktopMovesContainer
+                    .querySelectorAll('h2.active')
+                    .forEach((h) => h.classList.remove('active'));
+                desktopH2.classList.add('active');
+            });
+        });
+        const firstDesktopMoveItem = desktopMovesContainer.firstChild;
+        if (firstDesktopMoveItem && firstDesktopMoveItem.querySelector('h2')) {
+            firstDesktopMoveItem.querySelector('h2').classList.add('active');
+            const event = new MouseEvent('mouseenter', {
+                bubbles: true,
+                cancelable: true,
+            });
+            firstDesktopMoveItem.dispatchEvent(event);
+        }
+    }
+    connectedCallback() {
+        const menuItems = this.shadowRoot?.querySelectorAll('.actions-menu .menu-item');
+        if (menuItems && menuItems.length > 0) {
+            const firstH2 = menuItems[0].querySelector('h2');
+            firstH2?.classList.add('active');
+            menuItems.forEach((item) => {
+                const h2 = item.querySelector('h2');
+                if (h2) {
+                    h2.addEventListener('mouseenter', () => {
+                        menuItems.forEach((el) => el.querySelector('h2')?.classList.remove('active'));
+                        h2.classList.add('active');
+                    });
+                    h2.addEventListener('click', () => {
+                        const actionValue = item.getAttribute('action-value');
+                        if (actionValue === 'FIGHT') {
+                            if (this.actionsPanel)
+                                this.actionsPanel.style.display = 'none';
+                            if (this.dialogArea)
+                                this.dialogArea.style.display = 'none';
+                            if (this.movePanelArea)
+                                this.movePanelArea.style.display = 'block';
+                        }
+                        else if (actionValue === 'BAG') {
+                            this.eventSystem.emit('BATTLE_ACTION', {
+                                type: 'bag',
+                            });
+                            console.log('BAG selected - System logic not yet implemented in provided BattleSystem');
+                        }
+                        else if (actionValue === 'POKEMON') {
+                            this.eventSystem.emit('BATTLE_ACTION', {
+                                type: 'switch',
+                            });
+                            console.log('POKEMON selected - System logic not yet implemented in provided BattleSystem');
+                        }
+                        else if (actionValue === 'RUN') {
+                            this.eventSystem.emit('BATTLE_ACTION', {
+                                type: 'flee',
+                            });
+                        }
+                    });
+                }
+            });
+        }
+    }
+    onBattleEnd(elements) {
+        elements.forEach((element) => element.classList.remove('active'));
+    }
+}
 
 
 /***/ }),
@@ -4045,6 +6008,9 @@ __webpack_require__.r(__webpack_exports__);
 // Module
 var code = `<div class="body-content">
     <div class="component-container"></div>
+    <div class="dialog-container">
+        <game-dialog></game-dialog>
+    </div>
 </div>`;
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
@@ -4121,6 +6087,170 @@ class BodyComponent extends HTMLElement {
         const componentContainer = this.shadowRoot?.querySelector('.component-container');
         componentContainer.innerHTML = '';
         this.eventSystem.emit('PAGE_CLOSED_TRANSITION_READY', {});
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/html/components/app/game-dialog/game-dialog.css":
+/*!*************************************************************!*\
+  !*** ./src/html/components/app/game-dialog/game-dialog.css ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".dialog-box {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    position: relative;\r\n    display: none;\r\n}\r\n\r\n.dialog-body {\r\n    left: 50%;\r\n    bottom: 2vh;\r\n    transform: translateX(-50%);\r\n    width: 80vw;\r\n    height: 25vh;\r\n    position: absolute;\r\n}\r\n\r\n.dialog-background {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.dialog-background img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n}\r\n\r\n.dialog-content {\r\n    position: absolute;\r\n    font-family: 'pokemon-font';\r\n    color: #2c3434c5;\r\n    font-size: 1.5vw;\r\n    line-height: 250%;\r\n    padding: 1rem 2rem;\r\n}\r\n\r\n.dialog-line {\r\n    padding: 2vh 4.5vh;\r\n}\r\n\r\n.dialog-line h1 {\r\n    margin: 0;\r\n}\r\n\r\n.last-letter img {\r\n    width: 1.5vw;\r\n    height: 1.5vw;\r\n    margin-left: 0.5rem;\r\n    object-fit: contain;\r\n    position: relative;\r\n    animation: flote 0.25s infinite alternate ease-in;\r\n}\r\n\r\n@media (max-width: 480px) {\r\n    .dialog-body {\r\n        width: 90vw;\r\n        bottom: 5vh;\r\n        height: 20vh;\r\n    }\r\n\r\n    .dialog-content {\r\n        font-size: 2vw;\r\n        padding: 0.5rem 1rem;\r\n        line-height: 1.4;\r\n    }\r\n\r\n    .dialog-line {\r\n        padding: 2vh 3vh;\r\n    }\r\n\r\n    .last-letter img {\r\n        width: 4vw;\r\n        height: 4vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 481px) and (max-width: 768px) {\r\n    .dialog-body {\r\n        width: 85vw;\r\n        bottom: 3vh;\r\n        height: 28vh;\r\n    }\r\n\r\n    .dialog-content {\r\n        font-size: 1.8vw;\r\n        padding: 0.75rem 1.25rem;\r\n        line-height: 1.6;\r\n    }\r\n\r\n    .dialog-line {\r\n        padding: 2vh 4vh;\r\n    }\r\n\r\n    .last-letter img {\r\n        width: 2.5vw;\r\n        height: 2.5vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 769px) and (max-width: 1024px) {\r\n    .dialog-body {\r\n        width: 80vw;\r\n        height: 25vw;\r\n    }\r\n\r\n    .dialog-content {\r\n        font-size: 1.8vw;\r\n        padding: 1rem 1.5rem;\r\n    }\r\n\r\n    .dialog-line {\r\n        padding: 2vh 4.5vh;\r\n    }\r\n\r\n    .last-letter img {\r\n        width: 1.8vw;\r\n        height: 1.8vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 1025px) {\r\n    .dialog-body {\r\n        width: 80vw;\r\n        height: 25vh;\r\n    }\r\n\r\n    .dialog-content {\r\n        font-size: 1.5vw;\r\n        padding: 1rem 2rem;\r\n    }\r\n\r\n    .last-letter img {\r\n        width: 1.5vw;\r\n        height: 1.5vw;\r\n    }\r\n}\r\n\r\n@keyframes flote {\r\n    0% {\r\n        transform: translateY(-8px);\r\n    }\r\n\r\n    100% {\r\n        transform: translateY(-2px);\r\n    }\r\n}\r\n");
+
+/***/ }),
+
+/***/ "./src/html/components/app/game-dialog/game-dialog.html":
+/*!**************************************************************!*\
+  !*** ./src/html/components/app/game-dialog/game-dialog.html ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Imports
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../assets/html/game-images/dialog.png */ "./src/assets/html/game-images/dialog.png"), __webpack_require__.b);
+// Module
+var code = `<div class="dialog-box">
+    <div class="dialog-body">
+        <div class="dialog-content">
+            <div class="dialog-line">
+            </div>
+        </div>
+        <div class="dialog-background">
+            <img src="${___HTML_LOADER_IMPORT_0___}">
+        </div>
+    </div>
+</div>`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/html/components/app/game-dialog/game-dialog.ts":
+/*!************************************************************!*\
+  !*** ./src/html/components/app/game-dialog/game-dialog.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ DialogComponent)
+/* harmony export */ });
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../main.css */ "./src/html/main.css");
+/* harmony import */ var _game_dialog_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-dialog.css */ "./src/html/components/app/game-dialog/game-dialog.css");
+/* harmony import */ var _game_dialog_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./game-dialog.html */ "./src/html/components/app/game-dialog/game-dialog.html");
+/* harmony import */ var _core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/systems/event-system */ "./src/core/systems/event-system.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _assets_html_game_images_red_arrow_down_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/assets/html/game-images/red_arrow_down.png */ "./src/assets/html/game-images/red_arrow_down.png");
+
+
+
+
+
+
+class DialogComponent extends HTMLElement {
+    eventSystem;
+    constructor() {
+        super();
+        const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_4__.GameContext.getInstance();
+        this.eventSystem = gameContext.getBean(_core_systems_event_system__WEBPACK_IMPORTED_MODULE_3__.EventSystem);
+        this.attachShadow({ mode: 'open' });
+        const template = document.createElement('template');
+        template.innerHTML = `
+      <style>${_main_css__WEBPACK_IMPORTED_MODULE_0__["default"].toString()}${_game_dialog_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}</style>
+      ${_game_dialog_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
+    `;
+        this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.eventSystem.on('START_DIALOG', (data) => this.startDialog(data));
+    }
+    startDialog(data) {
+        const dialogBox = this.shadowRoot.querySelector('.dialog-box');
+        dialogBox.style.display = 'block';
+        const dialogContent = this.shadowRoot?.querySelector('.dialog-content');
+        this.writeDialog(dialogContent, data.dialogue, 50);
+    }
+    writeDialog(container, texts, velocity, index = 0) {
+        if (index >= texts.length) {
+            const dialogBox = this.shadowRoot.querySelector('.dialog-box');
+            dialogBox.style.display = 'none';
+            this.eventSystem.emit('CLOSE_DIALOG', {});
+            return;
+        }
+        container.innerHTML = '';
+        const dialogLine = document.createElement('div');
+        dialogLine.classList.add('dialog-line');
+        container.appendChild(dialogLine);
+        const header = document.createElement('h1');
+        dialogLine.appendChild(header);
+        let charIndex = 0;
+        let isFast = false;
+        const fastDelay = Math.max(10, velocity / 5);
+        const onKeyDown = (event) => {
+            if (event.code === 'Space' || event.key === ' ') {
+                isFast = true;
+                event.preventDefault();
+            }
+        };
+        const onKeyUp = (event) => {
+            if (event.code === 'Space' || event.key === ' ') {
+                isFast = false;
+                event.preventDefault();
+            }
+        };
+        document.addEventListener('keydown', onKeyDown);
+        document.addEventListener('keyup', onKeyUp);
+        const typeText = () => {
+            if (charIndex < texts[index].length) {
+                header.textContent += texts[index].charAt(charIndex);
+                charIndex++;
+                const delay = isFast ? fastDelay : velocity;
+                if (index !== texts.length - 1 &&
+                    charIndex === texts[index].length) {
+                    const currentText = header.textContent;
+                    if (currentText) {
+                        const span = document.createElement('span');
+                        span.classList.add('last-letter');
+                        const lastCharNode = document.createTextNode(currentText.slice(-1));
+                        span.appendChild(lastCharNode);
+                        const icon = document.createElement('img');
+                        icon.src = _assets_html_game_images_red_arrow_down_png__WEBPACK_IMPORTED_MODULE_5__;
+                        span.appendChild(icon);
+                        header.textContent = currentText.slice(0, -1);
+                        header.appendChild(span);
+                    }
+                }
+                setTimeout(typeText, delay);
+            }
+            else {
+                document.removeEventListener('keydown', onKeyDown);
+                document.removeEventListener('keyup', onKeyUp);
+                const waitForRelease = (event) => {
+                    if (event.code === 'Space' || event.key === ' ') {
+                        document.removeEventListener('keyup', waitForRelease);
+                        const onAdvance = (ev) => {
+                            if (ev.code === 'Space' || ev.key === ' ') {
+                                ev.preventDefault();
+                                document.removeEventListener('keydown', onAdvance);
+                                this.writeDialog(container, texts, velocity, index + 1);
+                            }
+                        };
+                        document.addEventListener('keydown', onAdvance);
+                    }
+                };
+                document.addEventListener('keyup', waitForRelease);
+            }
+        };
+        typeText();
     }
 }
 
@@ -4335,7 +6465,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".layout-container {\n    width: 100vw;\n    height: 100vh;\n    display: flex;\n    flex-direction: column;\n    overflow: hidden;\n}\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".layout-container {\r\n    width: 100vw;\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    overflow: hidden;\r\n}\r\n");
 
 /***/ }),
 
@@ -4385,6 +6515,165 @@ class LayoutComponent extends HTMLElement {
                     ${_layout_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
                 `;
         this.shadowRoot?.appendChild(template.content.cloneNode(true));
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/experiences/experience.css":
+/*!******************************************************************!*\
+  !*** ./src/html/components/app/pages/experiences/experience.css ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".experience-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    width: 100vw;\r\n    height: 100vh;\r\n    background-color: #8c94ff;\r\n}\r\n\r\n.experience-header {\r\n    height: 15%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.experience-body {\r\n    height: 60%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.header-content {\r\n    position: relative;\r\n    width: 95vw;\r\n    height: 92%;\r\n}\r\n\r\n.body-container {\r\n    position: relative;\r\n    width: 95vw;\r\n    height: 98%;\r\n}\r\n\r\n.header-background,\r\n.body-background {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.header-background img,\r\n.body-background img {\r\n    width: 100%;\r\n    height: 100%;\r\n    object-fit: fill;\r\n    image-rendering: pixelated;\r\n    image-rendering: crisp-edges;\r\n}\r\n\r\n.header-title {\r\n    position: relative;\r\n    display: flex;\r\n    height: 100%;\r\n    align-items: center;\r\n}\r\n\r\n.header-title h2 {\r\n    margin-left: 2rem;\r\n    font-family: 'pokemon-font';\r\n    font-size: 2rem;\r\n    color: #ffb552;\r\n    text-shadow: 0.05em 0.12em #c67b00;\r\n}\r\n\r\n.body-experience {\r\n    position: relative;\r\n    margin: 2rem 1.5rem;\r\n}\r\n\r\n.experience-title h2 {\r\n    font-family: 'pokemon-font';\r\n    font-size: 1.5rem;\r\n    color: #ffb552;\r\n    text-shadow: 0.05em 0.12em #c67b00;\r\n    margin-bottom: 0.2rem;\r\n}\r\n\r\n.company-title h5 {\r\n    margin: 0.5rem 0rem;\r\n    font-family: 'pokemon-font';\r\n    font-size: 0.8rem;\r\n    color: #ff8c84;\r\n    text-shadow: 0.05em 0.12em #ff3118;\r\n}\r\n\r\n.company-technologies h5 {\r\n    margin: 0.5rem 0rem;\r\n    font-family: 'pokemon-font';\r\n    font-size: 0.8rem;\r\n    color: #ffb552;\r\n}\r\n\r\n.job-description h6 {\r\n    margin: 0.8rem 0rem;\r\n    font-family: 'pokemon-font';\r\n    font-size: 1rem;\r\n    color: #4a4a4a;\r\n    text-shadow: 0.05em 0.12em #d6d6ce;\r\n}\r\n\r\n.body-content {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow-y: scroll;\r\n}\r\n\r\n.body-content {\r\n    position: relative;\r\n    height: 100%;\r\n    overflow-y: scroll;\r\n    box-sizing: border-box;\r\n}\r\n\r\n.body-content::-webkit-scrollbar {\r\n    width: 12px;\r\n}\r\n\r\n.body-content::-webkit-scrollbar-track {\r\n    background: #4a4a4a;\r\n    border: 2px solid #d6d6ce;\r\n}\r\n\r\n.body-content::-webkit-scrollbar-thumb {\r\n    background: #282f2f;\r\n    border-radius: 4px;\r\n}\r\n\r\n.body-wrapper {\r\n    width: 100%;\r\n    height: 100%;\r\n    padding: 1.5rem 1rem;\r\n    box-sizing: border-box;\r\n}\r\n\r\n@media (min-width: 480px) {\r\n    .header-content {\r\n        width: 70vw;\r\n    }\r\n\r\n    .body-container {\r\n        width: 70vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .header-content {\r\n        width: 50vw;\r\n    }\r\n\r\n    .body-container {\r\n        width: 50vw;\r\n    }\r\n}\r\n\r\n@media (min-width: 1024px) {\r\n}\r\n");
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/experiences/experience.html":
+/*!*******************************************************************!*\
+  !*** ./src/html/components/app/pages/experiences/experience.html ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Imports
+var ___HTML_LOADER_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/experience_header.png */ "./src/assets/html/layout/experience_header.png"), __webpack_require__.b);
+var ___HTML_LOADER_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../../assets/html/layout/experience_body.png */ "./src/assets/html/layout/experience_body.png"), __webpack_require__.b);
+// Module
+var code = `<div class="experience-container">
+    <div class="experience-header">
+        <div class="header-content">
+            <div class="header-background">
+                <img src="${___HTML_LOADER_IMPORT_0___}">
+            </div>
+            <div class="header-title">
+                <h2>EXPERIENCE</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="experience-body">
+        <div class="body-container">
+            <div class="body-background">
+                <img src="${___HTML_LOADER_IMPORT_1___}">
+            </div>
+            <div class="body-wrapper">
+                <div class="body-content">
+                    <div class="body-experience">
+                        <div class="experience-title">
+                            <h2>FullStack Web Developer</h2>
+                        </div>
+                        <div class="company-title">
+                            <h5>EDSA | FEB 2023 - OCT 2024</h5>
+                        </div>
+                        <div class="job-description">
+                            <h6>During my time at EDSA, I worked as a FullStack Developer on projects involving the
+                                development
+                                of interactive and efficient interfaces using Angular, Java, and Oracle SQL. I
+                                contributed
+                                significantly to projects for My Linde and EDENOR, focusing on data processing, report
+                                generation, and optimizing manual processes, ultimately improving operational
+                                efficiency.
+                            </h6>
+                        </div>
+                        <div class="company-technologies">
+                            <h5>Angular, PrimeNG, SpringBoot, OracleDB, Liquibase, GitHub, HTML, SCSS, TypeScript, GIT</h5>
+                        </div>
+                    </div>
+                    <div class="body-experience">
+                        <div class="experience-title">
+                            <h2>Frontend Web Developer</h2>
+                        </div>
+                        <div class="company-title">
+                            <h5>MND | ABR 2022 - FEB 2023</h5>
+                        </div>
+                        <div class="job-description">
+                            <h6>At Merge & Deploy, I served as a Front-End Developer, focusing on the creation of
+                                Angular components under a Domain-Driven Design (DDD) approach, consuming REST services,
+                                RxJS, and modern JavaScript. I worked on a standout project for clinical laboratories,
+                                where I developed solutions for data management and report generation. Additionally, I
+                                standardized the CSS of applications, addressing specificity and inheritance issues, and
+                                ensuring a consistent, responsive design.
+                            </h6>
+                        </div>
+                        <div class="company-technologies">
+                            <h5>Angular, PrimeNG, Figma, Nx, GitLab, HTML, SCSS, TypeScript, GIT</h5>
+                        </div>
+                    </div>
+                    <div class="body-experience">
+                        <div class="experience-title">
+                            <h2>Frontend Web Developer</h2>
+                        </div>
+                        <div class="company-title">
+                            <h5>FIXE | MAY 2021 - ABR 2022</h5>
+                        </div>
+                        <div class="job-description">
+                            <h6>At Fixe, I collaborated on projects using Angular and Sass for CSS, as well as Firebase
+                                for backend-database integration. Here, I developed websites using HTML, CSS, Bootstrap,
+                                and JavaScript with supporting libraries like ScrollMagic and VideoJs. One of my most
+                                significant achievements was designing and developing UX interfaces that adapt perfectly
+                                to any device.
+                            </h6>
+                        </div>
+                        <div class="company-technologies">
+                            <h5>Angular, PrimeNG, FireBase, JQuery, Figma, GitHub, HTML, SCSS, TypeScript, GIT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (code);
+
+/***/ }),
+
+/***/ "./src/html/components/app/pages/experiences/experience.ts":
+/*!*****************************************************************!*\
+  !*** ./src/html/components/app/pages/experiences/experience.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ExperienceComponent)
+/* harmony export */ });
+/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../main.css */ "./src/html/main.css");
+/* harmony import */ var _experience_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./experience.css */ "./src/html/components/app/pages/experiences/experience.css");
+/* harmony import */ var _experience_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./experience.html */ "./src/html/components/app/pages/experiences/experience.html");
+
+
+
+class ExperienceComponent extends HTMLElement {
+    name = 'experience';
+    _menuItemName = '';
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        const template = document.createElement('template');
+        template.innerHTML = `
+      <style>${_main_css__WEBPACK_IMPORTED_MODULE_0__["default"].toString()}${_experience_css__WEBPACK_IMPORTED_MODULE_1__["default"].toString()}</style>
+      ${_experience_html__WEBPACK_IMPORTED_MODULE_2__["default"]}
+    `;
+        this.shadowRoot?.appendChild(template.content.cloneNode(true));
+        this.setupEventListeners();
+    }
+    setupEventListeners() { }
+    set menuItemName(value) {
+        this._menuItemName = value;
+    }
+    get menuItemName() {
+        return this._menuItemName;
     }
 }
 
@@ -4753,7 +7042,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".menu-item {\r\n    font-family: 'pokemon-font', sans-serif;\r\n\r\n    .item {\r\n        position: relative;\r\n        margin-left: 2rem;\r\n        cursor: pointer;\r\n\r\n        &:hover::before {\r\n            content: '';\r\n            display: block;\r\n            position: absolute;\r\n            width: 2rem;\r\n            height: 2rem;\r\n            left: -0.5rem;\r\n            top: 0.5rem;\r\n            background-image: url('data:image/svg+xml,<svg id=\"svg\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"400\" height=\"651.8518518518518\" viewBox=\"0, 0, 400,651.8518518518518\"><g id=\"svgg\"><path id=\"path0\" d=\"M-0.000 292.413 L -0.000 584.826 32.795 584.784 C 57.458 584.752,65.665 584.625,65.895 584.271 C 66.384 583.517,66.427 581.648,66.625 552.600 L 66.813 525.000 89.306 524.993 L 111.800 524.987 89.400 525.206 L 67.000 525.426 95.882 525.476 C 127.740 525.530,125.878 525.688,125.368 522.972 C 125.168 521.904,125.218 521.564,125.545 521.766 C 125.872 521.968,126.000 521.041,126.000 518.461 C 126.000 515.072,125.956 514.886,125.200 515.084 C 124.298 515.320,124.149 514.811,124.900 514.060 C 125.284 513.676,125.446 508.032,125.600 489.680 L 125.800 465.800 155.800 465.795 L 185.800 465.790 156.000 466.006 L 126.200 466.222 162.185 466.280 C 201.163 466.342,199.756 466.426,199.410 464.078 C 199.236 462.900,199.275 462.762,199.603 463.400 C 199.901 463.981,199.961 463.215,199.820 460.604 C 199.679 458.007,199.455 456.883,199.013 456.560 C 198.243 455.997,198.228 455.600,198.975 455.600 C 199.968 455.600,200.039 453.108,199.918 422.200 L 199.800 392.200 224.985 392.306 C 246.929 392.398,250.068 392.338,249.385 391.839 C 248.954 391.523,248.727 391.139,248.882 390.985 C 249.036 390.831,249.434 390.977,249.767 391.309 C 251.226 392.769,258.037 392.626,258.843 391.119 C 259.470 389.948,258.919 383.776,258.116 382.973 C 257.780 382.637,257.631 382.236,257.785 382.082 C 257.939 381.927,258.321 382.150,258.633 382.577 C 259.125 383.250,259.200 380.022,259.200 358.276 L 259.200 333.200 284.300 333.102 C 298.105 333.047,310.989 333.059,312.931 333.127 C 315.624 333.222,316.689 333.103,317.418 332.625 L 318.375 331.998 318.374 288.899 C 318.373 262.806,318.225 245.563,317.998 245.200 C 317.706 244.732,316.833 244.612,314.021 244.654 C 310.114 244.712,308.650 245.013,309.554 245.572 C 309.915 245.795,309.751 245.900,309.043 245.900 C 307.821 245.900,307.801 245.857,308.629 245.029 C 309.200 244.457,306.982 244.400,284.229 244.400 L 259.200 244.400 259.200 219.371 C 259.200 196.618,259.143 194.400,258.571 194.971 C 257.743 195.799,257.700 195.779,257.700 194.557 C 257.700 193.849,257.805 193.685,258.028 194.046 C 258.287 194.464,258.414 194.428,258.625 193.880 C 259.021 192.847,259.054 186.129,258.665 185.737 C 258.278 185.347,259.938 185.371,226.109 185.274 L 200.018 185.200 199.909 161.368 C 199.804 138.304,199.775 137.517,199.024 136.968 C 198.295 136.435,198.290 136.369,198.936 135.896 C 199.470 135.506,199.669 134.583,199.820 131.796 C 199.961 129.185,199.901 128.419,199.603 129.000 C 199.272 129.643,199.233 129.516,199.403 128.355 C 199.760 125.927,201.657 126.040,161.987 126.123 L 125.400 126.200 125.505 95.153 C 125.597 67.848,125.537 64.045,125.005 63.604 C 124.145 62.890,124.256 62.269,125.200 62.516 C 125.956 62.714,126.000 62.528,126.000 59.139 C 126.000 56.615,125.869 55.634,125.556 55.827 C 125.244 56.020,125.192 55.633,125.380 54.519 C 125.818 51.925,127.363 52.049,95.593 52.128 L 66.600 52.200 66.706 26.100 C 66.776 8.776,66.676 -0.000,66.409 -0.000 C 66.143 -0.000,65.970 8.916,65.900 26.100 L 65.794 52.200 65.697 26.100 L 65.600 0.000 32.800 0.000 L 0.000 0.000 -0.000 292.413 M124.808 53.010 C 125.576 53.935,125.121 54.029,124.056 53.166 C 123.412 52.644,123.301 52.400,123.707 52.400 C 124.034 52.400,124.530 52.674,124.808 53.010 M121.994 54.638 C 121.997 54.439,122.364 54.606,122.809 55.009 C 123.349 55.497,123.486 55.874,123.219 56.141 C 122.718 56.642,121.197 55.356,121.206 54.438 C 121.211 53.880,121.261 53.875,121.600 54.400 C 121.813 54.730,121.991 54.837,121.994 54.638 M124.390 60.097 C 124.073 60.374,123.939 60.441,124.093 60.247 C 124.246 60.053,124.177 59.513,123.939 59.047 C 123.525 58.237,123.538 58.230,124.236 58.897 C 124.866 59.499,124.887 59.663,124.390 60.097 M124.300 111.330 C 124.239 119.508,124.190 112.700,124.190 96.200 C 124.190 79.700,124.239 73.008,124.300 81.330 C 124.360 89.651,124.360 103.151,124.300 111.330 M170.930 126.700 C 162.751 126.760,149.251 126.760,140.930 126.700 C 132.608 126.639,139.300 126.590,155.800 126.590 C 172.300 126.590,179.108 126.639,170.930 126.700 M191.698 126.666 C 191.421 126.777,191.273 126.994,191.368 127.148 C 191.463 127.303,191.204 127.429,190.793 127.429 C 190.228 127.429,190.149 127.302,190.471 126.914 C 190.706 126.631,191.191 126.414,191.549 126.432 C 191.967 126.452,192.020 126.536,191.698 126.666 M198.426 126.814 C 198.852 127.042,199.200 127.430,199.200 127.676 C 199.200 127.945,198.920 127.880,198.500 127.514 C 198.115 127.179,197.530 126.805,197.200 126.684 C 196.786 126.532,196.763 126.453,197.126 126.432 C 197.416 126.414,198.001 126.586,198.426 126.814 M195.994 128.638 C 195.997 128.439,196.348 128.591,196.773 128.976 C 197.538 129.668,197.488 131.025,196.715 130.548 C 196.459 130.389,196.480 130.198,196.776 130.015 C 197.107 129.810,197.063 129.584,196.619 129.216 C 196.166 128.840,196.000 128.829,196.000 129.175 C 196.000 129.435,195.820 129.536,195.600 129.400 C 195.380 129.264,195.203 128.848,195.206 128.476 C 195.211 127.893,195.266 127.883,195.600 128.400 C 195.813 128.730,195.991 128.837,195.994 128.638 M198.794 133.143 C 198.791 133.284,198.594 133.670,198.356 134.000 C 197.983 134.519,197.953 134.512,198.131 133.949 C 198.245 133.591,198.127 133.085,197.869 132.825 C 197.509 132.463,197.563 132.415,198.100 132.619 C 198.485 132.766,198.797 133.001,198.794 133.143 M222.400 185.605 L 245.400 185.810 222.580 185.905 C 205.257 185.977,199.644 185.884,199.280 185.520 C 198.916 185.156,198.823 179.632,198.895 162.620 L 198.990 140.200 199.195 162.800 L 199.400 185.400 222.400 185.605 M250.855 185.880 C 250.437 186.046,250.424 186.168,250.797 186.398 C 251.093 186.581,250.872 186.700,250.235 186.700 C 249.390 186.700,249.274 186.593,249.641 186.150 C 249.893 185.847,250.391 185.614,250.749 185.632 C 251.229 185.655,251.257 185.720,250.855 185.880 M258.000 186.400 C 258.440 186.840,258.786 187.515,258.768 187.900 C 258.748 188.351,258.597 188.217,258.343 187.525 C 258.127 186.933,257.467 186.273,256.875 186.057 C 256.183 185.803,256.049 185.652,256.500 185.632 C 256.885 185.614,257.560 185.960,258.000 186.400 M257.988 189.322 C 257.981 189.585,257.776 189.440,257.532 189.000 C 257.288 188.560,256.888 187.921,256.644 187.580 C 256.400 187.240,256.605 187.385,257.100 187.903 C 257.595 188.421,257.995 189.060,257.988 189.322 M256.585 189.224 C 256.481 189.393,256.621 189.623,256.898 189.734 C 257.210 189.860,257.144 189.949,256.724 189.968 C 256.352 189.986,255.936 189.820,255.800 189.600 C 255.664 189.380,255.765 189.200,256.025 189.200 C 256.371 189.200,256.360 189.034,255.984 188.581 C 255.616 188.137,255.390 188.093,255.185 188.424 C 254.979 188.758,254.824 188.763,254.626 188.443 C 254.021 187.463,254.904 187.158,255.830 188.028 C 256.350 188.517,256.690 189.055,256.585 189.224 M317.200 245.600 C 317.640 246.040,317.986 246.715,317.968 247.100 C 317.948 247.551,317.797 247.417,317.543 246.725 C 317.327 246.133,316.667 245.473,316.075 245.257 C 315.383 245.003,315.249 244.852,315.700 244.832 C 316.085 244.814,316.760 245.160,317.200 245.600 M315.800 248.400 C 315.664 248.620,315.773 248.800,316.043 248.800 C 316.313 248.800,316.421 248.912,316.284 249.049 C 316.147 249.187,315.717 249.177,315.328 249.028 C 314.726 248.797,314.709 248.702,315.211 248.385 C 315.971 247.904,316.104 247.907,315.800 248.400 M317.642 252.745 C 317.918 252.310,317.989 252.331,317.994 252.851 C 317.997 253.209,317.753 253.707,317.450 253.959 C 317.006 254.327,316.902 254.202,316.908 253.307 C 316.912 252.698,317.002 252.445,317.106 252.745 C 317.267 253.206,317.351 253.206,317.642 252.745 M317.900 304.100 C 317.840 312.515,317.790 305.630,317.790 288.800 C 317.790 271.970,317.840 265.085,317.900 273.500 C 317.960 281.915,317.960 295.685,317.900 304.100 M317.968 324.749 C 317.948 325.167,317.864 325.220,317.734 324.898 C 317.623 324.621,317.404 324.474,317.249 324.570 C 317.093 324.666,316.939 324.383,316.906 323.942 C 316.856 323.286,316.951 323.227,317.423 323.619 C 317.740 323.882,317.986 324.391,317.968 324.749 M317.194 326.457 C 317.197 326.599,316.885 326.834,316.500 326.981 C 315.963 327.185,315.909 327.137,316.269 326.775 C 316.527 326.515,316.645 326.009,316.531 325.651 C 316.353 325.088,316.383 325.081,316.756 325.600 C 316.994 325.930,317.191 326.316,317.194 326.457 M315.847 328.960 C 315.705 329.929,314.767 330.762,314.105 330.508 C 313.686 330.347,313.567 330.422,313.755 330.727 C 313.948 331.040,313.818 331.105,313.355 330.927 C 312.889 330.749,312.762 330.815,312.958 331.132 C 313.117 331.389,313.057 331.600,312.824 331.600 C 312.078 331.600,312.369 330.912,313.400 330.237 C 314.037 329.820,314.400 329.748,314.400 330.040 C 314.400 330.352,314.604 330.328,315.044 329.964 C 315.450 329.626,315.523 329.374,315.241 329.280 C 314.996 329.199,314.897 328.967,315.021 328.766 C 315.371 328.200,315.939 328.334,315.847 328.960 M318.000 330.600 C 318.000 331.520,316.507 332.806,315.500 332.754 C 314.685 332.712,314.676 332.689,315.400 332.512 C 316.443 332.258,317.600 331.220,317.600 330.538 C 317.600 330.242,317.690 330.000,317.800 330.000 C 317.910 330.000,318.000 330.270,318.000 330.600 M311.745 331.400 C 311.473 332.108,311.210 332.139,310.400 331.556 C 309.890 331.190,309.904 331.158,310.487 331.345 C 310.865 331.466,311.281 331.393,311.411 331.183 C 311.778 330.588,312.001 330.732,311.745 331.400 M308.545 332.200 C 308.685 332.565,308.545 332.800,308.187 332.800 C 307.864 332.800,307.600 332.530,307.600 332.200 C 307.600 331.870,307.761 331.600,307.957 331.600 C 308.154 331.600,308.418 331.870,308.545 332.200 M292.900 332.300 C 286.685 332.362,276.515 332.362,270.300 332.300 C 264.085 332.238,269.170 332.187,281.600 332.187 C 294.030 332.187,299.115 332.238,292.900 332.300 M256.126 389.281 C 255.778 389.666,255.337 389.885,255.147 389.767 C 254.956 389.649,254.786 389.788,254.768 390.076 C 254.743 390.503,254.698 390.502,254.526 390.071 C 254.224 389.317,256.051 387.436,256.454 388.087 C 256.626 388.366,256.484 388.887,256.126 389.281 M258.800 389.800 C 258.800 390.623,257.355 392.001,256.500 391.994 C 255.989 391.990,256.070 391.853,256.800 391.487 C 257.350 391.211,257.978 390.584,258.195 390.093 C 258.658 389.046,258.800 388.977,258.800 389.800 M199.100 437.330 C 199.039 445.508,198.990 438.700,198.990 422.200 C 198.990 405.700,199.039 399.008,199.100 407.330 C 199.160 415.651,199.160 429.151,199.100 437.330 M198.400 460.824 C 198.400 461.057,198.189 461.117,197.932 460.958 C 197.605 460.756,197.552 460.900,197.756 461.434 C 197.978 462.018,197.936 462.090,197.579 461.735 C 197.321 461.479,197.231 461.074,197.378 460.835 C 197.723 460.278,198.400 460.271,198.400 460.824 M197.367 462.347 C 197.485 462.537,197.243 462.999,196.830 463.373 C 195.941 464.177,195.248 463.506,196.015 462.582 C 196.562 461.923,197.052 461.837,197.367 462.347 M193.745 464.600 C 193.473 465.308,193.210 465.339,192.400 464.756 C 191.890 464.390,191.904 464.358,192.487 464.545 C 192.865 464.666,193.281 464.593,193.411 464.383 C 193.778 463.788,194.001 463.932,193.745 464.600 M198.623 465.433 C 198.196 465.745,197.566 465.989,197.224 465.975 C 196.817 465.958,196.899 465.829,197.459 465.603 C 197.932 465.412,198.445 465.051,198.599 464.801 C 198.754 464.551,198.997 464.463,199.139 464.606 C 199.282 464.749,199.050 465.121,198.623 465.433 M191.368 465.252 C 191.273 465.406,191.421 465.623,191.698 465.734 C 192.020 465.864,191.967 465.948,191.549 465.968 C 191.191 465.986,190.706 465.769,190.471 465.486 C 190.149 465.098,190.228 464.971,190.793 464.971 C 191.204 464.971,191.463 465.097,191.368 465.252 M124.300 500.100 C 124.238 506.315,124.187 501.230,124.187 488.800 C 124.187 476.370,124.238 471.285,124.300 477.500 C 124.362 483.715,124.362 493.885,124.300 500.100 M123.367 521.547 C 123.485 521.737,123.243 522.199,122.830 522.573 C 121.941 523.377,121.248 522.706,122.015 521.782 C 122.562 521.123,123.052 521.037,123.367 521.547 M120.667 523.382 C 120.667 523.703,120.509 523.867,120.316 523.748 C 120.123 523.629,119.703 523.749,119.382 524.015 C 119.062 524.280,118.800 524.323,118.800 524.110 C 118.800 523.897,119.205 523.527,119.700 523.288 C 120.195 523.049,120.615 522.842,120.633 522.827 C 120.652 522.812,120.667 523.062,120.667 523.382 M123.256 523.613 C 122.736 524.046,122.106 524.399,121.856 524.398 C 121.605 524.397,121.940 524.050,122.600 523.627 C 124.159 522.629,124.445 522.623,123.256 523.613 M124.623 524.633 C 124.196 524.945,123.566 525.189,123.224 525.175 C 122.817 525.158,122.899 525.029,123.459 524.803 C 123.932 524.612,124.445 524.251,124.599 524.001 C 124.754 523.751,124.997 523.663,125.139 523.806 C 125.282 523.949,125.050 524.321,124.623 524.633 M117.801 525.132 C 117.553 525.381,116.000 524.758,116.000 524.411 C 116.000 524.226,116.437 524.281,116.971 524.533 C 117.505 524.785,117.878 525.055,117.801 525.132 M65.900 559.472 C 65.838 565.812,65.787 560.740,65.787 548.200 C 65.787 535.660,65.838 530.472,65.900 536.672 C 65.962 542.871,65.962 553.131,65.900 559.472 M65.993 573.213 C 65.741 573.684,65.427 573.960,65.294 573.828 C 65.162 573.695,65.266 573.374,65.527 573.113 C 65.787 572.853,66.021 572.271,66.046 571.820 C 66.083 571.176,66.131 571.146,66.272 571.679 C 66.370 572.053,66.245 572.743,65.993 573.213 M63.853 580.900 C 63.706 581.869,63.167 582.362,62.526 582.116 C 61.966 581.901,62.002 581.766,62.783 581.134 C 63.856 580.265,63.953 580.244,63.853 580.900 M64.056 582.813 C 63.536 583.246,62.906 583.599,62.656 583.598 C 62.405 583.597,62.740 583.250,63.400 582.827 C 64.959 581.829,65.245 581.823,64.056 582.813 M65.379 583.865 C 64.223 584.710,63.941 584.489,64.914 583.500 C 65.401 583.005,65.870 582.764,65.955 582.965 C 66.040 583.166,65.781 583.571,65.379 583.865 M58.437 583.577 C 57.998 583.849,58.040 583.959,58.642 584.113 C 59.218 584.261,59.244 584.318,58.749 584.354 C 58.391 584.379,57.905 584.168,57.669 583.884 C 57.343 583.490,57.449 583.351,58.115 583.301 C 58.751 583.253,58.839 583.329,58.437 583.577 \" stroke=\"none\" fill=\"%23646464\" fill-rule=\"evenodd\"></path><path id=\"path1\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path2\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path3\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path4\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%2c3434c5\" fill-rule=\"evenodd\"></path></g></svg>');\r\n            background-size: contain;\r\n            background-repeat: no-repeat;\r\n            filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        margin: 0;\r\n        padding: 10px;\r\n        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.18);\r\n        color: #2c3434c5;\r\n        font-size: 2.5rem;\r\n    }\r\n}\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (".menu-item {\r\n    font-family: 'pokemon-font', sans-serif;\r\n\r\n    .item {\r\n        position: relative;\r\n        margin-left: 2rem;\r\n        cursor: pointer;\r\n\r\n        &:hover::before {\r\n            content: '';\r\n            display: block;\r\n            position: absolute;\r\n            width: 2rem;\r\n            height: 2rem;\r\n            left: -0.5rem;\r\n            top: 0.5rem;\r\n            background-image: var(--svg-arrow);\r\n            background-size: contain;\r\n            background-repeat: no-repeat;\r\n            filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));\r\n        }\r\n    }\r\n\r\n    h1 {\r\n        margin: 0;\r\n        padding: 10px;\r\n        text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.18);\r\n        color: #2c3434c5;\r\n        font-size: 2.5rem;\r\n    }\r\n}\r\n");
 
 /***/ }),
 
@@ -4879,6 +7168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 // Module
 var code = `<app-layout class="app-layout"></app-layout>
+<app-battle class="app-battle"></app-battle>
 <div class="pokemon-rpg">
     <div id="game-container">
         <canvas id="game-canvas"></canvas>
@@ -4921,7 +7211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("@font-face {\r\n    font-family: 'pokemon-font';\r\n    src: url('assets/html/fonts/pokemon-font.ttf') format('truetype');\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    overflow: hidden;\r\n    background: #000;\r\n    display: flex;\r\n    height: 100vh;\r\n}\r\n\r\n.pokemon-rpg {\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.pokemon-rpg,\r\n.app-layout {\r\n    position: absolute;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 55;\r\n}\r\n\r\n#game-container {\r\n    position: relative;\r\n    image-rendering: pixelated;\r\n}\r\n\r\n#game-canvas,\r\n#transicion-canvas {\r\n    position: absolute;\r\n}\r\n\r\n#game-canvas {\r\n    z-index: 51;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 52;\r\n}\r\n\r\n#transicion-canvas {\r\n    z-index: 53;\r\n    pointer-events: none;\r\n}\r\n\r\n@media (max-width: 320px) {\r\n}\r\n\r\n@media (max-width: 480px) {\r\n}\r\n\r\n@media (max-width: 768px) {\r\n}\r\n\r\n@media (max-width: 1024px) {\r\n}\r\n\r\n@media (min-width: 1025px) and (max-width: 1366px) {\r\n}\r\n\r\n@media (min-width: 1367px) {\r\n}\r\n");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("@font-face {\r\n    font-family: 'pokemon-font';\r\n    src: url('assets/html/fonts/pokemon-font.ttf') format('truetype');\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    overflow: hidden;\r\n    background: #000;\r\n    display: flex;\r\n    height: 100vh;\r\n}\r\n\r\n.pokemon-rpg {\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: hidden;\r\n}\r\n\r\n.pokemon-rpg,\r\n.app-layout,\r\n.app-battle {\r\n    position: absolute;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 55;\r\n}\r\n\r\n.app-battle {\r\n    z-index: 56;\r\n}\r\n\r\n#game-container {\r\n    position: relative;\r\n    image-rendering: pixelated;\r\n}\r\n\r\n#game-canvas,\r\n#transicion-canvas {\r\n    position: absolute;\r\n}\r\n\r\n#game-canvas {\r\n    z-index: 51;\r\n}\r\n\r\n.app-layout {\r\n    z-index: 52;\r\n}\r\n\r\n#transicion-canvas {\r\n    z-index: 999999;\r\n    pointer-events: none;\r\n}\r\n\r\n.pokemon-text {\r\n    font-family: 'pokemon-font';\r\n    color: #424242;\r\n}\r\n\r\n@media (max-width: 320px) {\r\n}\r\n\r\n@media (max-width: 480px) {\r\n}\r\n\r\n@media (max-width: 768px) {\r\n}\r\n\r\n@media (max-width: 1024px) {\r\n}\r\n\r\n@media (min-width: 1025px) and (max-width: 1366px) {\r\n}\r\n\r\n@media (min-width: 1367px) {\r\n}\r\n\r\n:root {\r\n    --svg-arrow: url('data:image/svg+xml,<svg id=\"svg\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"400\" height=\"651.8518518518518\" viewBox=\"0, 0, 400,651.8518518518518\"><g id=\"svgg\"><path id=\"path0\" d=\"M-0.000 292.413 L -0.000 584.826 32.795 584.784 C 57.458 584.752,65.665 584.625,65.895 584.271 C 66.384 583.517,66.427 581.648,66.625 552.600 L 66.813 525.000 89.306 524.993 L 111.800 524.987 89.400 525.206 L 67.000 525.426 95.882 525.476 C 127.740 525.530,125.878 525.688,125.368 522.972 C 125.168 521.904,125.218 521.564,125.545 521.766 C 125.872 521.968,126.000 521.041,126.000 518.461 C 126.000 515.072,125.956 514.886,125.200 515.084 C 124.298 515.320,124.149 514.811,124.900 514.060 C 125.284 513.676,125.446 508.032,125.600 489.680 L 125.800 465.800 155.800 465.795 L 185.800 465.790 156.000 466.006 L 126.200 466.222 162.185 466.280 C 201.163 466.342,199.756 466.426,199.410 464.078 C 199.236 462.900,199.275 462.762,199.603 463.400 C 199.901 463.981,199.961 463.215,199.820 460.604 C 199.679 458.007,199.455 456.883,199.013 456.560 C 198.243 455.997,198.228 455.600,198.975 455.600 C 199.968 455.600,200.039 453.108,199.918 422.200 L 199.800 392.200 224.985 392.306 C 246.929 392.398,250.068 392.338,249.385 391.839 C 248.954 391.523,248.727 391.139,248.882 390.985 C 249.036 390.831,249.434 390.977,249.767 391.309 C 251.226 392.769,258.037 392.626,258.843 391.119 C 259.470 389.948,258.919 383.776,258.116 382.973 C 257.780 382.637,257.631 382.236,257.785 382.082 C 257.939 381.927,258.321 382.150,258.633 382.577 C 259.125 383.250,259.200 380.022,259.200 358.276 L 259.200 333.200 284.300 333.102 C 298.105 333.047,310.989 333.059,312.931 333.127 C 315.624 333.222,316.689 333.103,317.418 332.625 L 318.375 331.998 318.374 288.899 C 318.373 262.806,318.225 245.563,317.998 245.200 C 317.706 244.732,316.833 244.612,314.021 244.654 C 310.114 244.712,308.650 245.013,309.554 245.572 C 309.915 245.795,309.751 245.900,309.043 245.900 C 307.821 245.900,307.801 245.857,308.629 245.029 C 309.200 244.457,306.982 244.400,284.229 244.400 L 259.200 244.400 259.200 219.371 C 259.200 196.618,259.143 194.400,258.571 194.971 C 257.743 195.799,257.700 195.779,257.700 194.557 C 257.700 193.849,257.805 193.685,258.028 194.046 C 258.287 194.464,258.414 194.428,258.625 193.880 C 259.021 192.847,259.054 186.129,258.665 185.737 C 258.278 185.347,259.938 185.371,226.109 185.274 L 200.018 185.200 199.909 161.368 C 199.804 138.304,199.775 137.517,199.024 136.968 C 198.295 136.435,198.290 136.369,198.936 135.896 C 199.470 135.506,199.669 134.583,199.820 131.796 C 199.961 129.185,199.901 128.419,199.603 129.000 C 199.272 129.643,199.233 129.516,199.403 128.355 C 199.760 125.927,201.657 126.040,161.987 126.123 L 125.400 126.200 125.505 95.153 C 125.597 67.848,125.537 64.045,125.005 63.604 C 124.145 62.890,124.256 62.269,125.200 62.516 C 125.956 62.714,126.000 62.528,126.000 59.139 C 126.000 56.615,125.869 55.634,125.556 55.827 C 125.244 56.020,125.192 55.633,125.380 54.519 C 125.818 51.925,127.363 52.049,95.593 52.128 L 66.600 52.200 66.706 26.100 C 66.776 8.776,66.676 -0.000,66.409 -0.000 C 66.143 -0.000,65.970 8.916,65.900 26.100 L 65.794 52.200 65.697 26.100 L 65.600 0.000 32.800 0.000 L 0.000 0.000 -0.000 292.413 M124.808 53.010 C 125.576 53.935,125.121 54.029,124.056 53.166 C 123.412 52.644,123.301 52.400,123.707 52.400 C 124.034 52.400,124.530 52.674,124.808 53.010 M121.994 54.638 C 121.997 54.439,122.364 54.606,122.809 55.009 C 123.349 55.497,123.486 55.874,123.219 56.141 C 122.718 56.642,121.197 55.356,121.206 54.438 C 121.211 53.880,121.261 53.875,121.600 54.400 C 121.813 54.730,121.991 54.837,121.994 54.638 M124.390 60.097 C 124.073 60.374,123.939 60.441,124.093 60.247 C 124.246 60.053,124.177 59.513,123.939 59.047 C 123.525 58.237,123.538 58.230,124.236 58.897 C 124.866 59.499,124.887 59.663,124.390 60.097 M124.300 111.330 C 124.239 119.508,124.190 112.700,124.190 96.200 C 124.190 79.700,124.239 73.008,124.300 81.330 C 124.360 89.651,124.360 103.151,124.300 111.330 M170.930 126.700 C 162.751 126.760,149.251 126.760,140.930 126.700 C 132.608 126.639,139.300 126.590,155.800 126.590 C 172.300 126.590,179.108 126.639,170.930 126.700 M191.698 126.666 C 191.421 126.777,191.273 126.994,191.368 127.148 C 191.463 127.303,191.204 127.429,190.793 127.429 C 190.228 127.429,190.149 127.302,190.471 126.914 C 190.706 126.631,191.191 126.414,191.549 126.432 C 191.967 126.452,192.020 126.536,191.698 126.666 M198.426 126.814 C 198.852 127.042,199.200 127.430,199.200 127.676 C 199.200 127.945,198.920 127.880,198.500 127.514 C 198.115 127.179,197.530 126.805,197.200 126.684 C 196.786 126.532,196.763 126.453,197.126 126.432 C 197.416 126.414,198.001 126.586,198.426 126.814 M195.994 128.638 C 195.997 128.439,196.348 128.591,196.773 128.976 C 197.538 129.668,197.488 131.025,196.715 130.548 C 196.459 130.389,196.480 130.198,196.776 130.015 C 197.107 129.810,197.063 129.584,196.619 129.216 C 196.166 128.840,196.000 128.829,196.000 129.175 C 196.000 129.435,195.820 129.536,195.600 129.400 C 195.380 129.264,195.203 128.848,195.206 128.476 C 195.211 127.893,195.266 127.883,195.600 128.400 C 195.813 128.730,195.991 128.837,195.994 128.638 M198.794 133.143 C 198.791 133.284,198.594 133.670,198.356 134.000 C 197.983 134.519,197.953 134.512,198.131 133.949 C 198.245 133.591,198.127 133.085,197.869 132.825 C 197.509 132.463,197.563 132.415,198.100 132.619 C 198.485 132.766,198.797 133.001,198.794 133.143 M222.400 185.605 L 245.400 185.810 222.580 185.905 C 205.257 185.977,199.644 185.884,199.280 185.520 C 198.916 185.156,198.823 179.632,198.895 162.620 L 198.990 140.200 199.195 162.800 L 199.400 185.400 222.400 185.605 M250.855 185.880 C 250.437 186.046,250.424 186.168,250.797 186.398 C 251.093 186.581,250.872 186.700,250.235 186.700 C 249.390 186.700,249.274 186.593,249.641 186.150 C 249.893 185.847,250.391 185.614,250.749 185.632 C 251.229 185.655,251.257 185.720,250.855 185.880 M258.000 186.400 C 258.440 186.840,258.786 187.515,258.768 187.900 C 258.748 188.351,258.597 188.217,258.343 187.525 C 258.127 186.933,257.467 186.273,256.875 186.057 C 256.183 185.803,256.049 185.652,256.500 185.632 C 256.885 185.614,257.560 185.960,258.000 186.400 M257.988 189.322 C 257.981 189.585,257.776 189.440,257.532 189.000 C 257.288 188.560,256.888 187.921,256.644 187.580 C 256.400 187.240,256.605 187.385,257.100 187.903 C 257.595 188.421,257.995 189.060,257.988 189.322 M256.585 189.224 C 256.481 189.393,256.621 189.623,256.898 189.734 C 257.210 189.860,257.144 189.949,256.724 189.968 C 256.352 189.986,255.936 189.820,255.800 189.600 C 255.664 189.380,255.765 189.200,256.025 189.200 C 256.371 189.200,256.360 189.034,255.984 188.581 C 255.616 188.137,255.390 188.093,255.185 188.424 C 254.979 188.758,254.824 188.763,254.626 188.443 C 254.021 187.463,254.904 187.158,255.830 188.028 C 256.350 188.517,256.690 189.055,256.585 189.224 M317.200 245.600 C 317.640 246.040,317.986 246.715,317.968 247.100 C 317.948 247.551,317.797 247.417,317.543 246.725 C 317.327 246.133,316.667 245.473,316.075 245.257 C 315.383 245.003,315.249 244.852,315.700 244.832 C 316.085 244.814,316.760 245.160,317.200 245.600 M315.800 248.400 C 315.664 248.620,315.773 248.800,316.043 248.800 C 316.313 248.800,316.421 248.912,316.284 249.049 C 316.147 249.187,315.717 249.177,315.328 249.028 C 314.726 248.797,314.709 248.702,315.211 248.385 C 315.971 247.904,316.104 247.907,315.800 248.400 M317.642 252.745 C 317.918 252.310,317.989 252.331,317.994 252.851 C 317.997 253.209,317.753 253.707,317.450 253.959 C 317.006 254.327,316.902 254.202,316.908 253.307 C 316.912 252.698,317.002 252.445,317.106 252.745 C 317.267 253.206,317.351 253.206,317.642 252.745 M317.900 304.100 C 317.840 312.515,317.790 305.630,317.790 288.800 C 317.790 271.970,317.840 265.085,317.900 273.500 C 317.960 281.915,317.960 295.685,317.900 304.100 M317.968 324.749 C 317.948 325.167,317.864 325.220,317.734 324.898 C 317.623 324.621,317.404 324.474,317.249 324.570 C 317.093 324.666,316.939 324.383,316.906 323.942 C 316.856 323.286,316.951 323.227,317.423 323.619 C 317.740 323.882,317.986 324.391,317.968 324.749 M317.194 326.457 C 317.197 326.599,316.885 326.834,316.500 326.981 C 315.963 327.185,315.909 327.137,316.269 326.775 C 316.527 326.515,316.645 326.009,316.531 325.651 C 316.353 325.088,316.383 325.081,316.756 325.600 C 316.994 325.930,317.191 326.316,317.194 326.457 M315.847 328.960 C 315.705 329.929,314.767 330.762,314.105 330.508 C 313.686 330.347,313.567 330.422,313.755 330.727 C 313.948 331.040,313.818 331.105,313.355 330.927 C 312.889 330.749,312.762 330.815,312.958 331.132 C 313.117 331.389,313.057 331.600,312.824 331.600 C 312.078 331.600,312.369 330.912,313.400 330.237 C 314.037 329.820,314.400 329.748,314.400 330.040 C 314.400 330.352,314.604 330.328,315.044 329.964 C 315.450 329.626,315.523 329.374,315.241 329.280 C 314.996 329.199,314.897 328.967,315.021 328.766 C 315.371 328.200,315.939 328.334,315.847 328.960 M318.000 330.600 C 318.000 331.520,316.507 332.806,315.500 332.754 C 314.685 332.712,314.676 332.689,315.400 332.512 C 316.443 332.258,317.600 331.220,317.600 330.538 C 317.600 330.242,317.690 330.000,317.800 330.000 C 317.910 330.000,318.000 330.270,318.000 330.600 M311.745 331.400 C 311.473 332.108,311.210 332.139,310.400 331.556 C 309.890 331.190,309.904 331.158,310.487 331.345 C 310.865 331.466,311.281 331.393,311.411 331.183 C 311.778 330.588,312.001 330.732,311.745 331.400 M308.545 332.200 C 308.685 332.565,308.545 332.800,308.187 332.800 C 307.864 332.800,307.600 332.530,307.600 332.200 C 307.600 331.870,307.761 331.600,307.957 331.600 C 308.154 331.600,308.418 331.870,308.545 332.200 M292.900 332.300 C 286.685 332.362,276.515 332.362,270.300 332.300 C 264.085 332.238,269.170 332.187,281.600 332.187 C 294.030 332.187,299.115 332.238,292.900 332.300 M256.126 389.281 C 255.778 389.666,255.337 389.885,255.147 389.767 C 254.956 389.649,254.786 389.788,254.768 390.076 C 254.743 390.503,254.698 390.502,254.526 390.071 C 254.224 389.317,256.051 387.436,256.454 388.087 C 256.626 388.366,256.484 388.887,256.126 389.281 M258.800 389.800 C 258.800 390.623,257.355 392.001,256.500 391.994 C 255.989 391.990,256.070 391.853,256.800 391.487 C 257.350 391.211,257.978 390.584,258.195 390.093 C 258.658 389.046,258.800 388.977,258.800 389.800 M199.100 437.330 C 199.039 445.508,198.990 438.700,198.990 422.200 C 198.990 405.700,199.039 399.008,199.100 407.330 C 199.160 415.651,199.160 429.151,199.100 437.330 M198.400 460.824 C 198.400 461.057,198.189 461.117,197.932 460.958 C 197.605 460.756,197.552 460.900,197.756 461.434 C 197.978 462.018,197.936 462.090,197.579 461.735 C 197.321 461.479,197.231 461.074,197.378 460.835 C 197.723 460.278,198.400 460.271,198.400 460.824 M197.367 462.347 C 197.485 462.537,197.243 462.999,196.830 463.373 C 195.941 464.177,195.248 463.506,196.015 462.582 C 196.562 461.923,197.052 461.837,197.367 462.347 M193.745 464.600 C 193.473 465.308,193.210 465.339,192.400 464.756 C 191.890 464.390,191.904 464.358,192.487 464.545 C 192.865 464.666,193.281 464.593,193.411 464.383 C 193.778 463.788,194.001 463.932,193.745 464.600 M198.623 465.433 C 198.196 465.745,197.566 465.989,197.224 465.975 C 196.817 465.958,196.899 465.829,197.459 465.603 C 197.932 465.412,198.445 465.051,198.599 464.801 C 198.754 464.551,198.997 464.463,199.139 464.606 C 199.282 464.749,199.050 465.121,198.623 465.433 M191.368 465.252 C 191.273 465.406,191.421 465.623,191.698 465.734 C 192.020 465.864,191.967 465.948,191.549 465.968 C 191.191 465.986,190.706 465.769,190.471 465.486 C 190.149 465.098,190.228 464.971,190.793 464.971 C 191.204 464.971,191.463 465.097,191.368 465.252 M124.300 500.100 C 124.238 506.315,124.187 501.230,124.187 488.800 C 124.187 476.370,124.238 471.285,124.300 477.500 C 124.362 483.715,124.362 493.885,124.300 500.100 M123.367 521.547 C 123.485 521.737,123.243 522.199,122.830 522.573 C 121.941 523.377,121.248 522.706,122.015 521.782 C 122.562 521.123,123.052 521.037,123.367 521.547 M120.667 523.382 C 120.667 523.703,120.509 523.867,120.316 523.748 C 120.123 523.629,119.703 523.749,119.382 524.015 C 119.062 524.280,118.800 524.323,118.800 524.110 C 118.800 523.897,119.205 523.527,119.700 523.288 C 120.195 523.049,120.615 522.842,120.633 522.827 C 120.652 522.812,120.667 523.062,120.667 523.382 M123.256 523.613 C 122.736 524.046,122.106 524.399,121.856 524.398 C 121.605 524.397,121.940 524.050,122.600 523.627 C 124.159 522.629,124.445 522.623,123.256 523.613 M124.623 524.633 C 124.196 524.945,123.566 525.189,123.224 525.175 C 122.817 525.158,122.899 525.029,123.459 524.803 C 123.932 524.612,124.445 524.251,124.599 524.001 C 124.754 523.751,124.997 523.663,125.139 523.806 C 125.282 523.949,125.050 524.321,124.623 524.633 M117.801 525.132 C 117.553 525.381,116.000 524.758,116.000 524.411 C 116.000 524.226,116.437 524.281,116.971 524.533 C 117.505 524.785,117.878 525.055,117.801 525.132 M65.900 559.472 C 65.838 565.812,65.787 560.740,65.787 548.200 C 65.787 535.660,65.838 530.472,65.900 536.672 C 65.962 542.871,65.962 553.131,65.900 559.472 M65.993 573.213 C 65.741 573.684,65.427 573.960,65.294 573.828 C 65.162 573.695,65.266 573.374,65.527 573.113 C 65.787 572.853,66.021 572.271,66.046 571.820 C 66.083 571.176,66.131 571.146,66.272 571.679 C 66.370 572.053,66.245 572.743,65.993 573.213 M63.853 580.900 C 63.706 581.869,63.167 582.362,62.526 582.116 C 61.966 581.901,62.002 581.766,62.783 581.134 C 63.856 580.265,63.953 580.244,63.853 580.900 M64.056 582.813 C 63.536 583.246,62.906 583.599,62.656 583.598 C 62.405 583.597,62.740 583.250,63.400 582.827 C 64.959 581.829,65.245 581.823,64.056 582.813 M65.379 583.865 C 64.223 584.710,63.941 584.489,64.914 583.500 C 65.401 583.005,65.870 582.764,65.955 582.965 C 66.040 583.166,65.781 583.571,65.379 583.865 M58.437 583.577 C 57.998 583.849,58.040 583.959,58.642 584.113 C 59.218 584.261,59.244 584.318,58.749 584.354 C 58.391 584.379,57.905 584.168,57.669 583.884 C 57.343 583.490,57.449 583.351,58.115 583.301 C 58.751 583.253,58.839 583.329,58.437 583.577 \" stroke=\"none\" fill=\"%23646464\" fill-rule=\"evenodd\"></path><path id=\"path1\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path2\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path3\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%23686464\" fill-rule=\"evenodd\"></path><path id=\"path4\" d=\"M65.789 26.000 C 65.789 40.410,65.839 46.305,65.900 39.100 C 65.961 31.895,65.961 20.105,65.900 12.900 C 65.839 5.695,65.789 11.590,65.789 26.000 M120.100 52.276 C 120.485 52.376,121.115 52.376,121.500 52.276 C 121.885 52.175,121.570 52.093,120.800 52.093 C 120.030 52.093,119.715 52.175,120.100 52.276 M124.056 53.166 C 124.575 53.587,125.071 53.861,125.157 53.775 C 125.450 53.485,124.306 52.400,123.707 52.400 C 123.301 52.400,123.412 52.644,124.056 53.166 M121.206 54.438 C 121.197 55.356,122.718 56.642,123.219 56.141 C 123.486 55.874,123.349 55.497,122.809 55.009 C 122.364 54.606,121.997 54.439,121.994 54.638 C 121.991 54.837,121.813 54.730,121.600 54.400 C 121.261 53.875,121.211 53.880,121.206 54.438 M123.939 59.047 C 124.177 59.513,124.246 60.053,124.093 60.247 C 123.939 60.441,124.073 60.374,124.390 60.097 C 124.887 59.663,124.866 59.499,124.236 58.897 C 123.538 58.230,123.525 58.237,123.939 59.047 M124.400 62.722 C 124.400 62.931,124.672 63.328,125.005 63.604 C 125.537 64.045,125.597 67.857,125.505 95.233 C 125.447 112.353,125.536 126.224,125.702 126.058 C 126.438 125.322,125.844 62.619,125.100 62.476 C 124.715 62.402,124.400 62.512,124.400 62.722 M124.190 96.200 C 124.190 112.700,124.239 119.508,124.300 111.330 C 124.360 103.151,124.360 89.651,124.300 81.330 C 124.239 73.008,124.190 79.700,124.190 96.200 M194.500 126.276 C 194.885 126.376,195.515 126.376,195.900 126.276 C 196.285 126.175,195.970 126.093,195.200 126.093 C 194.430 126.093,194.115 126.175,194.500 126.276 M140.930 126.700 C 149.251 126.760,162.751 126.760,170.930 126.700 C 179.108 126.639,172.300 126.590,155.800 126.590 C 139.300 126.590,132.608 126.639,140.930 126.700 M190.471 126.914 C 190.149 127.302,190.228 127.429,190.793 127.429 C 191.204 127.429,191.463 127.303,191.368 127.148 C 191.273 126.994,191.421 126.777,191.698 126.666 C 192.020 126.536,191.967 126.452,191.549 126.432 C 191.191 126.414,190.706 126.631,190.471 126.914 M197.414 126.781 C 198.405 127.182,199.049 127.936,199.311 129.000 C 199.489 129.725,199.512 129.715,199.554 128.900 C 199.609 127.835,198.292 126.389,197.300 126.425 C 196.715 126.447,196.733 126.505,197.414 126.781 M195.206 128.476 C 195.203 128.848,195.380 129.264,195.600 129.400 C 195.820 129.536,196.000 129.435,196.000 129.175 C 196.000 128.829,196.166 128.840,196.619 129.216 C 197.063 129.584,197.107 129.810,196.776 130.015 C 196.480 130.198,196.459 130.389,196.715 130.548 C 197.488 131.025,197.538 129.668,196.773 128.976 C 196.348 128.591,195.997 128.439,195.994 128.638 C 195.991 128.837,195.813 128.730,195.600 128.400 C 195.266 127.883,195.211 127.893,195.206 128.476 M197.869 132.825 C 198.127 133.085,198.245 133.591,198.131 133.949 C 197.953 134.512,197.983 134.519,198.356 134.000 C 198.954 133.170,198.908 132.927,198.100 132.619 C 197.563 132.415,197.509 132.463,197.869 132.825 M199.600 134.380 C 199.600 135.086,199.319 135.720,198.900 135.957 C 198.255 136.323,198.251 136.395,198.854 136.877 C 199.214 137.165,199.604 137.670,199.722 138.000 C 199.840 138.330,199.951 137.385,199.968 135.900 C 199.986 134.415,199.910 133.200,199.800 133.200 C 199.690 133.200,199.600 133.731,199.600 134.380 M198.895 162.620 C 198.823 179.632,198.916 185.156,199.280 185.520 C 199.644 185.884,205.257 185.977,222.580 185.905 L 245.400 185.810 222.400 185.605 L 199.400 185.400 199.195 162.800 L 198.990 140.200 198.895 162.620 M252.705 185.483 C 253.202 185.579,253.922 185.575,254.305 185.475 C 254.687 185.375,254.280 185.296,253.400 185.301 C 252.520 185.305,252.207 185.387,252.705 185.483 M249.641 186.150 C 249.274 186.593,249.390 186.700,250.235 186.700 C 250.872 186.700,251.093 186.581,250.797 186.398 C 250.424 186.168,250.437 186.046,250.855 185.880 C 251.257 185.720,251.229 185.655,250.749 185.632 C 250.391 185.614,249.893 185.847,249.641 186.150 M256.875 186.057 C 257.467 186.273,258.127 186.933,258.343 187.525 C 258.597 188.217,258.748 188.351,258.768 187.900 C 258.786 187.515,258.440 186.840,258.000 186.400 C 257.560 185.960,256.885 185.614,256.500 185.632 C 256.049 185.652,256.183 185.803,256.875 186.057 M256.644 187.580 C 256.888 187.921,257.288 188.560,257.532 189.000 C 257.776 189.440,257.981 189.585,257.988 189.322 C 257.995 189.060,257.595 188.421,257.100 187.903 C 256.605 187.385,256.400 187.240,256.644 187.580 M254.619 187.570 C 254.472 187.806,254.476 188.199,254.626 188.443 C 254.824 188.763,254.979 188.758,255.185 188.424 C 255.390 188.093,255.616 188.137,255.984 188.581 C 256.360 189.034,256.371 189.200,256.025 189.200 C 255.765 189.200,255.664 189.380,255.800 189.600 C 255.936 189.820,256.352 189.986,256.724 189.968 C 257.144 189.949,257.210 189.860,256.898 189.734 C 256.621 189.623,256.481 189.393,256.585 189.224 C 256.690 189.055,256.350 188.517,255.830 188.028 C 255.224 187.459,254.789 187.294,254.619 187.570 M258.864 192.276 C 258.801 193.931,258.235 194.879,257.892 193.902 C 257.795 193.626,257.712 193.881,257.708 194.468 C 257.702 195.215,257.866 195.473,258.253 195.324 C 258.962 195.052,259.304 193.681,259.093 191.955 C 258.940 190.695,258.924 190.717,258.864 192.276 M308.629 245.029 C 307.801 245.857,307.821 245.900,309.043 245.900 C 309.751 245.900,309.915 245.795,309.554 245.572 C 308.901 245.168,309.500 244.907,311.600 244.679 C 312.779 244.552,312.705 244.518,311.129 244.464 C 309.890 244.422,309.044 244.613,308.629 245.029 M316.075 245.257 C 316.667 245.473,317.327 246.133,317.543 246.725 C 317.797 247.417,317.948 247.551,317.968 247.100 C 317.986 246.715,317.640 246.040,317.200 245.600 C 316.760 245.160,316.085 244.814,315.700 244.832 C 315.249 244.852,315.383 245.003,316.075 245.257 M315.211 248.385 C 314.709 248.702,314.726 248.797,315.328 249.028 C 315.717 249.177,316.147 249.187,316.284 249.049 C 316.421 248.912,316.313 248.800,316.043 248.800 C 315.773 248.800,315.664 248.620,315.800 248.400 C 316.104 247.907,315.971 247.904,315.211 248.385 M318.093 249.200 C 318.093 249.970,318.175 250.285,318.276 249.900 C 318.376 249.515,318.376 248.885,318.276 248.500 C 318.175 248.115,318.093 248.430,318.093 249.200 M316.908 253.307 C 316.902 254.202,317.006 254.327,317.450 253.959 C 317.753 253.707,317.997 253.209,317.994 252.851 C 317.989 252.331,317.918 252.310,317.642 252.745 C 317.351 253.206,317.267 253.206,317.106 252.745 C 317.002 252.445,316.912 252.698,316.908 253.307 M317.790 288.800 C 317.790 305.630,317.840 312.515,317.900 304.100 C 317.960 295.685,317.960 281.915,317.900 273.500 C 317.840 265.085,317.790 271.970,317.790 288.800 M316.906 323.942 C 316.939 324.383,317.093 324.666,317.249 324.570 C 317.404 324.474,317.623 324.621,317.734 324.898 C 317.864 325.220,317.948 325.167,317.968 324.749 C 317.986 324.391,317.740 323.882,317.423 323.619 C 316.951 323.227,316.856 323.286,316.906 323.942 M316.531 325.651 C 316.645 326.009,316.527 326.515,316.269 326.775 C 315.909 327.137,315.963 327.185,316.500 326.981 C 317.308 326.673,317.354 326.430,316.756 325.600 C 316.383 325.081,316.353 325.088,316.531 325.651 M318.093 328.400 C 318.093 329.170,318.175 329.485,318.276 329.100 C 318.376 328.715,318.376 328.085,318.276 327.700 C 318.175 327.315,318.093 327.630,318.093 328.400 M315.021 328.766 C 314.897 328.967,314.996 329.199,315.241 329.280 C 315.523 329.374,315.450 329.626,315.044 329.964 C 314.604 330.328,314.400 330.352,314.400 330.040 C 314.400 329.748,314.037 329.820,313.400 330.237 C 312.369 330.912,312.078 331.600,312.824 331.600 C 313.057 331.600,313.117 331.389,312.958 331.132 C 312.762 330.815,312.889 330.749,313.355 330.927 C 313.818 331.105,313.948 331.040,313.755 330.727 C 313.567 330.422,313.686 330.347,314.105 330.508 C 314.767 330.762,315.705 329.929,315.847 328.960 C 315.939 328.334,315.371 328.200,315.021 328.766 M317.600 330.538 C 317.600 331.220,316.443 332.258,315.400 332.512 C 314.676 332.689,314.685 332.712,315.500 332.754 C 316.507 332.806,318.000 331.520,318.000 330.600 C 318.000 330.270,317.910 330.000,317.800 330.000 C 317.690 330.000,317.600 330.242,317.600 330.538 M311.411 331.183 C 311.281 331.393,310.865 331.466,310.487 331.345 C 309.904 331.158,309.890 331.190,310.400 331.556 C 311.210 332.139,311.473 332.108,311.745 331.400 C 312.001 330.732,311.778 330.588,311.411 331.183 M307.600 332.200 C 307.600 332.530,307.864 332.800,308.187 332.800 C 308.545 332.800,308.685 332.565,308.545 332.200 C 308.418 331.870,308.154 331.600,307.957 331.600 C 307.761 331.600,307.600 331.870,307.600 332.200 M270.300 332.300 C 276.515 332.362,286.685 332.362,292.900 332.300 C 299.115 332.238,294.030 332.187,281.600 332.187 C 269.170 332.187,264.085 332.238,270.300 332.300 M310.105 333.087 C 310.714 333.179,311.614 333.177,312.105 333.082 C 312.597 332.987,312.100 332.911,311.000 332.914 C 309.900 332.917,309.497 332.995,310.105 333.087 M257.600 382.367 C 257.600 382.568,257.813 382.804,258.073 382.891 C 258.333 382.978,258.669 383.938,258.820 385.024 L 259.093 387.000 259.147 385.274 C 259.201 383.501,258.669 382.000,257.986 382.000 C 257.774 382.000,257.600 382.165,257.600 382.367 M255.231 388.567 C 254.727 389.104,254.409 389.781,254.526 390.071 C 254.698 390.502,254.743 390.503,254.768 390.076 C 254.786 389.788,254.956 389.649,255.147 389.767 C 255.679 390.096,256.803 388.651,256.454 388.087 C 256.230 387.725,255.900 387.855,255.231 388.567 M258.195 390.093 C 257.978 390.584,257.350 391.211,256.800 391.487 C 256.070 391.853,255.989 391.990,256.500 391.994 C 257.355 392.001,258.800 390.623,258.800 389.800 C 258.800 388.977,258.658 389.046,258.195 390.093 M248.800 391.186 C 248.800 391.869,250.301 392.401,252.074 392.347 L 253.800 392.293 251.824 392.020 C 250.738 391.869,249.778 391.533,249.691 391.273 C 249.502 390.706,248.800 390.638,248.800 391.186 M198.990 422.200 C 198.990 438.700,199.039 445.508,199.100 437.330 C 199.160 429.151,199.160 415.651,199.100 407.330 C 199.039 399.008,198.990 405.700,198.990 422.200 M199.600 454.800 C 199.600 455.244,199.333 455.600,199.000 455.600 C 198.237 455.600,198.218 456.245,198.973 456.534 C 199.288 456.655,199.619 457.349,199.709 458.077 C 199.799 458.805,199.901 458.185,199.936 456.700 C 199.971 455.215,199.910 454.000,199.800 454.000 C 199.690 454.000,199.600 454.360,199.600 454.800 M197.378 460.835 C 197.231 461.074,197.321 461.479,197.579 461.735 C 197.936 462.090,197.978 462.018,197.756 461.434 C 197.552 460.900,197.605 460.756,197.932 460.958 C 198.189 461.117,198.400 461.057,198.400 460.824 C 198.400 460.271,197.723 460.278,197.378 460.835 M196.015 462.582 C 195.248 463.506,195.941 464.177,196.830 463.373 C 197.243 462.999,197.485 462.537,197.367 462.347 C 197.052 461.837,196.562 461.923,196.015 462.582 M199.200 463.538 C 199.200 464.299,198.255 465.328,197.200 465.716 C 196.725 465.891,196.746 465.943,197.300 465.968 C 198.231 466.010,199.600 464.601,199.600 463.600 C 199.600 463.160,199.510 462.800,199.400 462.800 C 199.290 462.800,199.200 463.132,199.200 463.538 M193.411 464.383 C 193.281 464.593,192.865 464.666,192.487 464.545 C 191.904 464.358,191.890 464.390,192.400 464.756 C 193.210 465.339,193.473 465.308,193.745 464.600 C 194.001 463.932,193.778 463.788,193.411 464.383 M190.471 465.486 C 190.706 465.769,191.191 465.986,191.549 465.968 C 191.967 465.948,192.020 465.864,191.698 465.734 C 191.421 465.623,191.273 465.406,191.368 465.252 C 191.463 465.097,191.204 464.971,190.793 464.971 C 190.228 464.971,190.149 465.098,190.471 465.486 M125.867 465.867 C 125.720 466.013,125.600 476.683,125.600 489.578 C 125.600 510.433,125.529 513.123,124.959 513.937 C 124.252 514.947,124.432 515.427,125.383 515.062 C 125.930 514.852,126.000 512.047,126.000 490.415 L 126.000 466.005 155.900 465.900 L 185.800 465.795 155.967 465.697 C 139.558 465.644,126.013 465.720,125.867 465.867 M193.505 466.283 C 194.002 466.379,194.722 466.375,195.105 466.275 C 195.487 466.175,195.080 466.096,194.200 466.101 C 193.320 466.105,193.007 466.187,193.505 466.283 M124.187 488.800 C 124.187 501.230,124.238 506.315,124.300 500.100 C 124.362 493.885,124.362 483.715,124.300 477.500 C 124.238 471.285,124.187 476.370,124.187 488.800 M122.015 521.782 C 121.248 522.706,121.941 523.377,122.830 522.573 C 123.243 522.199,123.485 521.737,123.367 521.547 C 123.052 521.037,122.562 521.123,122.015 521.782 M119.700 523.288 C 119.205 523.527,118.800 523.897,118.800 524.110 C 118.800 524.323,119.062 524.280,119.382 524.015 C 119.703 523.749,120.123 523.629,120.316 523.748 C 120.509 523.867,120.667 523.703,120.667 523.382 C 120.667 523.062,120.652 522.812,120.633 522.827 C 120.615 522.842,120.195 523.049,119.700 523.288 M122.600 523.627 C 121.940 524.050,121.605 524.397,121.856 524.398 C 122.106 524.399,122.736 524.046,123.256 523.613 C 124.445 522.623,124.159 522.629,122.600 523.627 M124.599 524.001 C 124.445 524.251,123.932 524.612,123.459 524.803 C 122.899 525.029,122.817 525.158,123.224 525.175 C 124.011 525.207,125.486 524.153,125.139 523.806 C 124.997 523.663,124.754 523.751,124.599 524.001 M116.000 524.411 C 116.000 524.758,117.553 525.381,117.801 525.132 C 117.878 525.055,117.505 524.785,116.971 524.533 C 116.437 524.281,116.000 524.226,116.000 524.411 M66.662 525.100 C 66.493 525.372,83.192 525.368,103.800 525.090 C 108.200 525.031,101.686 524.941,89.324 524.891 C 76.962 524.841,66.764 524.935,66.662 525.100 M120.305 525.483 C 120.802 525.579,121.522 525.575,121.905 525.475 C 122.287 525.375,121.880 525.296,121.000 525.301 C 120.120 525.305,119.807 525.387,120.305 525.483 M65.787 548.200 C 65.787 560.740,65.838 565.812,65.900 559.472 C 65.962 553.131,65.962 542.871,65.900 536.672 C 65.838 530.472,65.787 535.660,65.787 548.200 M66.046 571.820 C 66.021 572.271,65.787 572.853,65.527 573.113 C 65.266 573.374,65.162 573.695,65.294 573.828 C 65.670 574.203,66.472 572.439,66.272 571.679 C 66.131 571.146,66.083 571.176,66.046 571.820 M62.783 581.134 C 62.002 581.766,61.966 581.901,62.526 582.116 C 63.167 582.362,63.706 581.869,63.853 580.900 C 63.953 580.244,63.856 580.265,62.783 581.134 M66.000 581.352 C 66.000 581.970,65.578 582.858,65.018 583.418 C 63.961 584.476,64.013 584.635,65.209 583.995 C 65.955 583.596,66.731 580.997,66.248 580.515 C 66.112 580.378,66.000 580.755,66.000 581.352 M63.400 582.827 C 62.740 583.250,62.405 583.597,62.656 583.598 C 62.906 583.599,63.536 583.246,64.056 582.813 C 65.245 581.823,64.959 581.829,63.400 582.827 M57.669 583.884 C 57.905 584.168,58.391 584.379,58.749 584.354 C 59.244 584.318,59.218 584.261,58.642 584.113 C 58.040 583.959,57.998 583.849,58.437 583.577 C 58.839 583.329,58.751 583.253,58.115 583.301 C 57.449 583.351,57.343 583.490,57.669 583.884 M60.900 584.676 C 61.285 584.776,61.915 584.776,62.300 584.676 C 62.685 584.575,62.370 584.493,61.600 584.493 C 60.830 584.493,60.515 584.575,60.900 584.676 \" stroke=\"none\" fill=\"%2c3434c5\" fill-rule=\"evenodd\"></path></g></svg>');\r\n}\r\n");
 
 /***/ }),
 
@@ -4935,7 +7225,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   MENU_CONFIG: () => (/* binding */ MENU_CONFIG)
 /* harmony export */ });
-/* harmony import */ var _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/app/pages/skills-about/skills-about */ "./src/html/components/app/pages/skills-about/skills-about.ts");
+/* harmony import */ var _components_app_pages_experiences_experience__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/app/pages/experiences/experience */ "./src/html/components/app/pages/experiences/experience.ts");
+/* harmony import */ var _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/app/pages/skills-about/skills-about */ "./src/html/components/app/pages/skills-about/skills-about.ts");
+
 
 const MENU_CONFIG = [
     {
@@ -4946,20 +7238,15 @@ const MENU_CONFIG = [
     },
     {
         itemName: 'ABOUT ME',
-        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__["default"],
+        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_1__["default"],
     },
     {
-        itemName: 'PROJECTS',
+        itemName: 'EXP',
+        component: _components_app_pages_experiences_experience__WEBPACK_IMPORTED_MODULE_0__["default"],
     },
     {
         itemName: 'SKILLS',
-        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_0__["default"],
-    },
-    {
-        itemName: 'SERVICES',
-    },
-    {
-        itemName: 'CONTACT',
+        component: _components_app_pages_skills_about_skills_about__WEBPACK_IMPORTED_MODULE_1__["default"],
     },
 ];
 
@@ -5021,6 +7308,269 @@ class Input {
 
 /***/ }),
 
+/***/ "./src/mock-data/moves.ts":
+/*!********************************!*\
+  !*** ./src/mock-data/moves.ts ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MOVES_MAP: () => (/* binding */ MOVES_MAP)
+/* harmony export */ });
+const MOVES_MAP = {
+    pound: {
+        id: 'pound',
+        name: 'Pound',
+        type: 'normal',
+        power: 40,
+        pp: 35,
+        maxPP: 35,
+        accuracy: 100,
+    },
+    leer: {
+        id: 'leer',
+        name: 'Leer',
+        type: 'normal',
+        power: 0,
+        pp: 30,
+        maxPP: 30,
+        accuracy: 100,
+    },
+    quickattack: {
+        id: 'quickattack',
+        name: 'Quick Attack',
+        type: 'normal',
+        power: 40,
+        pp: 30,
+        maxPP: 30,
+        accuracy: 100,
+    },
+    scratch: {
+        id: 'scratch',
+        name: 'Scratch',
+        type: 'normal',
+        power: 40,
+        pp: 35,
+        maxPP: 35,
+        accuracy: 100,
+    },
+    growl: {
+        id: 'growl',
+        name: 'Growl',
+        type: 'normal',
+        power: 0,
+        pp: 40,
+        maxPP: 40,
+        accuracy: 100,
+    },
+    ember: {
+        id: 'ember',
+        name: 'Ember',
+        type: 'fire',
+        power: 40,
+        pp: 25,
+        maxPP: 25,
+        accuracy: 100,
+    },
+    mudslap: {
+        id: 'mudslap',
+        name: 'Mud-Slap',
+        type: 'ground',
+        power: 20,
+        pp: 10,
+        maxPP: 10,
+        accuracy: 100,
+    },
+    bite: {
+        id: 'bite',
+        name: 'Bite',
+        type: 'dark',
+        power: 60,
+        pp: 25,
+        maxPP: 25,
+        accuracy: 100,
+    },
+    howl: {
+        id: 'howl',
+        name: 'Howl',
+        type: 'normal',
+        power: 0,
+        pp: 20,
+        maxPP: 20,
+        accuracy: 100,
+    },
+    tailwhip: {
+        id: 'tailwhip',
+        name: 'Tail Whip',
+        type: 'normal',
+        power: 0,
+        pp: 30,
+        maxPP: 30,
+        accuracy: 100,
+    },
+    stringshot: {
+        id: 'stringshot',
+        name: 'String Shot',
+        type: 'bug',
+        power: 0,
+        pp: 40,
+        maxPP: 40,
+        accuracy: 100,
+    },
+    poisonpowder: {
+        id: 'poisonpowder',
+        name: 'Poison Powder',
+        type: 'poison',
+        power: 0,
+        pp: 35,
+        maxPP: 35,
+        accuracy: 75,
+    },
+    tackle: {
+        id: 'tackle',
+        name: 'Tackle',
+        type: 'normal',
+        power: 40,
+        pp: 35,
+        maxPP: 35,
+        accuracy: 100,
+    },
+};
+
+
+/***/ }),
+
+/***/ "./src/mock-data/pokemons.ts":
+/*!***********************************!*\
+  !*** ./src/mock-data/pokemons.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SPECIES_MAP: () => (/* binding */ SPECIES_MAP)
+/* harmony export */ });
+const SPECIES_MAP = {
+    treecko: {
+        baseStats: {
+            hp: 40,
+            attack: 45,
+            defense: 35,
+            speed: 70,
+            specialAttack: 65,
+            specialDefense: 55,
+        },
+        moves: [
+            { moveId: 'pound', level: 1 },
+            { moveId: 'leer', level: 1 },
+            { moveId: 'quickattack', level: 7 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_252.png',
+            back: 'assets/html/pokemons/back/back_252.png',
+        },
+    },
+    torchic: {
+        baseStats: {
+            hp: 45,
+            attack: 60,
+            defense: 40,
+            speed: 45,
+            specialAttack: 70,
+            specialDefense: 50,
+        },
+        moves: [
+            { moveId: 'scratch', level: 1 },
+            { moveId: 'growl', level: 1 },
+            { moveId: 'ember', level: 7 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_255.png',
+            back: 'assets/html/pokemons/back/back_255.png',
+        },
+    },
+    mudkip: {
+        baseStats: {
+            hp: 50,
+            attack: 70,
+            defense: 50,
+            speed: 40,
+            specialAttack: 50,
+            specialDefense: 50,
+        },
+        moves: [
+            { moveId: 'tackle', level: 1 },
+            { moveId: 'growl', level: 1 },
+            { moveId: 'mudslap', level: 7 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_258.png',
+            back: 'assets/html/pokemons/back/back_258.png',
+        },
+    },
+    poochyena: {
+        baseStats: {
+            hp: 35,
+            attack: 55,
+            defense: 35,
+            speed: 35,
+            specialAttack: 30,
+            specialDefense: 30,
+        },
+        moves: [
+            { moveId: 'tackle', level: 1 },
+            { moveId: 'bite', level: 5 },
+            { moveId: 'howl', level: 9 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_261.png',
+            back: 'assets/html/pokemons/back/back_261.png',
+        },
+    },
+    zigzagoon: {
+        baseStats: {
+            hp: 38,
+            attack: 30,
+            defense: 41,
+            speed: 60,
+            specialAttack: 30,
+            specialDefense: 41,
+        },
+        moves: [
+            { moveId: 'tackle', level: 1 },
+            { moveId: 'tailwhip', level: 4 },
+            { moveId: 'quickattack', level: 7 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_263.png',
+            back: 'assets/html/pokemons/back/back_263.png',
+        },
+    },
+    wurmple: {
+        baseStats: {
+            hp: 45,
+            attack: 45,
+            defense: 35,
+            speed: 20,
+            specialAttack: 20,
+            specialDefense: 30,
+        },
+        moves: [
+            { moveId: 'tackle', level: 1 },
+            { moveId: 'stringshot', level: 5 },
+            { moveId: 'poisonpowder', level: 10 },
+        ],
+        img: {
+            front: 'assets/html/pokemons/front/front_265.png',
+            back: 'assets/html/pokemons/back/back_265.png',
+        },
+    },
+};
+
+
+/***/ }),
+
 /***/ "./src/rendering/camera.ts":
 /*!*********************************!*\
   !*** ./src/rendering/camera.ts ***!
@@ -5032,8 +7582,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Camera: () => (/* binding */ Camera)
 /* harmony export */ });
 /* harmony import */ var _core_decorators_injectable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/core/decorators/injectable */ "./src/core/decorators/injectable.ts");
-/* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
-/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
+/* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5045,7 +7594,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
-
 let Camera = class Camera {
     position = { x: 0, y: 0 };
     viewport;
@@ -5055,9 +7603,15 @@ let Camera = class Camera {
     bounds = { minX: 0, minY: 0, maxX: Infinity, maxY: Infinity };
     constructor() {
         this.viewport = {
-            width: window.screen.width * 0.6,
-            height: window.screen.height * 0.8,
+            width: window.innerWidth,
+            height: window.innerHeight,
         };
+        window.addEventListener('resize', () => {
+            this.viewport = {
+                width: window.innerWidth,
+                height: window.innerHeight,
+            };
+        });
     }
     targetCenter() {
         if (this.target) {
@@ -5079,17 +7633,16 @@ let Camera = class Camera {
     update(deltaTime) {
         if (!this.target)
             return;
-        const ctx = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getBean(_core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_1__.GAME_CANVAS);
-        const scale = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_2__.GameContext.getInstance().getGameScale();
-        const effectiveViewportWidth = ctx.canvas.width / scale;
-        const effectiveViewportHeight = ctx.canvas.height / scale;
-        const targetX = this.target.position.x - effectiveViewportWidth / 2;
-        const targetY = this.target.position.y - effectiveViewportHeight / 2;
+        const scale = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_1__.GameContext.getInstance().getGameScale();
+        const logicalViewportWidth = this.viewport.width / scale;
+        const logicalViewportHeight = this.viewport.height / scale;
+        const targetX = this.target.position.x - logicalViewportWidth / 2;
+        const targetY = this.target.position.y - logicalViewportHeight / 2;
         this.bounds = {
             minX: 0,
             minY: 0,
-            maxX: Math.max(this.mapWidth - effectiveViewportWidth, 0),
-            maxY: Math.max(this.mapHeight - effectiveViewportHeight, 0),
+            maxX: Math.max(this.mapWidth - logicalViewportWidth, 0),
+            maxY: Math.max(this.mapHeight - logicalViewportHeight, 0),
         };
         const clampedX = this.clamp(targetX, this.bounds.minX, this.bounds.maxX);
         const clampedY = this.clamp(targetY, this.bounds.minY, this.bounds.maxY);
@@ -5148,7 +7701,11 @@ let LayerManager = class LayerManager {
             .sort((a, b) => a.priority - b.priority);
     }
     update(deltaTime) {
-        this.sortedLayers.forEach((layer) => layer.update(deltaTime));
+        this.sortedLayers.forEach((layer) => {
+            if (layer.update) {
+                layer.update(deltaTime);
+            }
+        });
     }
     render() {
         this.sortedLayers.forEach((layer) => layer.render());
@@ -5332,13 +7889,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   TileMapBuilder: () => (/* binding */ TileMapBuilder)
 /* harmony export */ });
 /* harmony import */ var _tile_map__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tile-map */ "./src/rendering/tile-map.ts");
-/* harmony import */ var _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/systems/effect-system */ "./src/core/systems/effect-system.ts");
-/* harmony import */ var _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/effects/triggers/basic-trigger */ "./src/effects/triggers/basic-trigger.ts");
-/* harmony import */ var _effects_triggers_enter_into_building__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/effects/triggers/enter-into-building */ "./src/effects/triggers/enter-into-building.ts");
-/* harmony import */ var _effects_triggers_map_transition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/effects/triggers/map-transition */ "./src/effects/triggers/map-transition.ts");
-/* harmony import */ var _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/effects/trigger-conditions/area */ "./src/effects/trigger-conditions/area.ts");
-/* harmony import */ var _effects_trigger_conditions_bush_area__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/effects/trigger-conditions/bush-area */ "./src/effects/trigger-conditions/bush-area.ts");
-/* harmony import */ var _effects_triggers_jump__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/effects/triggers/jump */ "./src/effects/triggers/jump.ts");
+/* harmony import */ var _types_render_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/types/render-types */ "./src/types/render-types.ts");
+/* harmony import */ var _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/systems/effect-system */ "./src/core/systems/effect-system.ts");
+/* harmony import */ var _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/effects/triggers/basic-trigger */ "./src/effects/triggers/basic-trigger.ts");
+/* harmony import */ var _effects_triggers_enter_into_building__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/effects/triggers/enter-into-building */ "./src/effects/triggers/enter-into-building.ts");
+/* harmony import */ var _effects_triggers_map_transition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/effects/triggers/map-transition */ "./src/effects/triggers/map-transition.ts");
+/* harmony import */ var _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/effects/trigger-conditions/area */ "./src/effects/trigger-conditions/area.ts");
+/* harmony import */ var _effects_trigger_conditions_bush_area__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/effects/trigger-conditions/bush-area */ "./src/effects/trigger-conditions/bush-area.ts");
+/* harmony import */ var _effects_triggers_jump__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/effects/triggers/jump */ "./src/effects/triggers/jump.ts");
+/* harmony import */ var _effects_trigger_conditions_npc_relative_position__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/effects/trigger-conditions/npc-relative-position */ "./src/effects/trigger-conditions/npc-relative-position.ts");
+/* harmony import */ var _game_npc_npc__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/game/npc/npc */ "./src/game/npc/npc.ts");
+
+
+
 
 
 
@@ -5353,17 +7916,29 @@ class TileMapBuilder {
     tileset;
     tileSize;
     scale;
-    effectSystem = new _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_1__.EffectSystem();
+    effectSystem = new _core_systems_effect_system__WEBPACK_IMPORTED_MODULE_2__.EffectSystem();
     constructor(tileSize = 16, scale = 2) {
         this.tileSize = tileSize;
         this.scale = scale;
     }
+    addNPC(config) {
+        const npc = new _game_npc_npc__WEBPACK_IMPORTED_MODULE_10__.NPC(config);
+        const abovePositionTrigger = new _effects_trigger_conditions_npc_relative_position__WEBPACK_IMPORTED_MODULE_9__.NPCRelativePositionTriggerCondition(npc, 'above');
+        const belowPositionTrigger = new _effects_trigger_conditions_npc_relative_position__WEBPACK_IMPORTED_MODULE_9__.NPCRelativePositionTriggerCondition(npc, 'below');
+        const lowEntityLayer = this.layers.find((layer) => layer.priority === _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_LOW);
+        lowEntityLayer.condition = abovePositionTrigger;
+        const highEntityLayer = this.layers.find((layer) => layer.priority === _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_HIGH);
+        highEntityLayer.condition = belowPositionTrigger;
+        lowEntityLayer?.npc.push(npc);
+        highEntityLayer?.npc.push(npc);
+        return this;
+    }
     addMapTransitionTrigger(conditions, mapEvent) {
-        this.effectSystem.addTrigger(new _effects_triggers_map_transition__WEBPACK_IMPORTED_MODULE_4__.MapTransitionTrigger(conditions, mapEvent));
+        this.effectSystem.addTrigger(new _effects_triggers_map_transition__WEBPACK_IMPORTED_MODULE_5__.MapTransitionTrigger(conditions, mapEvent));
         return this;
     }
     addEffectTrigger(effect, sequence, conditions) {
-        this.effectSystem.addTrigger(new _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_2__.BasicTrigger({
+        this.effectSystem.addTrigger(new _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_3__.BasicTrigger({
             execute: (deltaTime) => effect.playSequence(deltaTime, sequence),
             render: () => {
                 effect.render();
@@ -5372,7 +7947,7 @@ class TileMapBuilder {
         return this;
     }
     addEnterIntoBuildingTriggerEffect(effects, sequence, conditions, cooldown) {
-        this.effectSystem.addTrigger(new _effects_triggers_enter_into_building__WEBPACK_IMPORTED_MODULE_3__.EnterIntoBuildingTrigger(conditions, effects.map((effect, index) => new _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_2__.BasicTrigger({
+        this.effectSystem.addTrigger(new _effects_triggers_enter_into_building__WEBPACK_IMPORTED_MODULE_4__.EnterIntoBuildingTrigger(conditions, effects.map((effect, index) => new _effects_triggers_basic_trigger__WEBPACK_IMPORTED_MODULE_3__.BasicTrigger({
             execute: (deltaTime) => effect.playSequence(deltaTime, sequence[index]),
             render: () => {
                 effect.render();
@@ -5381,7 +7956,7 @@ class TileMapBuilder {
         return this;
     }
     addJumpEffectTrigger(sequence, condition) {
-        this.effectSystem.addTrigger(new _effects_triggers_jump__WEBPACK_IMPORTED_MODULE_7__.JumpTrigger(sequence, condition));
+        this.effectSystem.addTrigger(new _effects_triggers_jump__WEBPACK_IMPORTED_MODULE_8__.JumpTrigger(sequence, condition));
         return this;
     }
     setTileset(tileSet) {
@@ -5397,14 +7972,57 @@ class TileMapBuilder {
                 offsetY: 0,
                 flipX: false,
                 flipY: false,
+                tileType: '',
                 collidable: false,
             }))),
+            npc: [],
             visible: true,
             collidable,
             priority,
         };
         this.layers.push(layer);
         this.currentLayer = layer;
+        return this;
+    }
+    createNpcLayer(width, height) {
+        const layerNames = this.layers.map((layer) => layer.name);
+        if (layerNames.includes('npc_low') || layerNames.includes('npc_high')) {
+            throw new Error('NPC layers already exist. Cannot create duplicate NPC layers.');
+        }
+        const lowEntityLayer = {
+            name: 'npc_low',
+            data: Array.from({ length: height }, () => Array.from({ length: width }, () => ({
+                tile: -1,
+                offsetX: 0,
+                offsetY: 0,
+                flipX: false,
+                flipY: false,
+                tileType: '',
+                collidable: false,
+            }))),
+            npc: [],
+            visible: true,
+            collidable: true,
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_LOW,
+        };
+        const highEntityLayer = {
+            name: 'npc_high',
+            data: Array.from({ length: height }, () => Array.from({ length: width }, () => ({
+                tile: -1,
+                offsetX: 0,
+                offsetY: 0,
+                flipX: false,
+                flipY: false,
+                tileType: '',
+                collidable: false,
+            }))),
+            npc: [],
+            visible: true,
+            collidable: true,
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_HIGH,
+        };
+        this.layers.push(lowEntityLayer);
+        this.layers.push(highEntityLayer);
         return this;
     }
     buildSpriteColumn(frames, column, startRow) {
@@ -5432,11 +8050,12 @@ class TileMapBuilder {
             throw new Error('No layer selected');
         frames.forEach((frame, index) => {
             const column = startColumn + index;
-            const bushCondition = new _effects_trigger_conditions_bush_area__WEBPACK_IMPORTED_MODULE_6__.BushAreaTriggerCondition({ x: column, y: row, width: 1, height: 1 }, 32);
+            const bushCondition = new _effects_trigger_conditions_bush_area__WEBPACK_IMPORTED_MODULE_7__.BushAreaTriggerCondition({ x: column, y: row, width: 1, height: 1 }, 32);
             this.currentLayer.data[row][column].tile = frame;
             this.currentLayer.data[row][column].offsetX = offsetX;
             this.currentLayer.data[row][column].offsetY = offsetY;
             this.currentLayer.data[row][column].condition = bushCondition;
+            this.currentLayer.data[row][column].tileType = 'grass';
         });
         return this;
     }
@@ -5460,13 +8079,14 @@ class TileMapBuilder {
     buildSingleBushSprite(frame, row, column, flipX = false, flipY = false, offsetX = 0, offsetY = 0) {
         if (!this.currentLayer)
             throw new Error('No layer selected');
-        const bushCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_5__.AreaTriggerCondition({ x: column, y: row, width: 1, height: 1 }, 32);
+        const bushCondition = new _effects_trigger_conditions_area__WEBPACK_IMPORTED_MODULE_6__.AreaTriggerCondition({ x: column, y: row, width: 1, height: 1 }, 32);
         this.currentLayer.data[row][column].tile = frame;
         this.currentLayer.data[row][column].flipX = flipX;
         this.currentLayer.data[row][column].flipY = flipY;
         this.currentLayer.data[row][column].offsetX = offsetX;
         this.currentLayer.data[row][column].offsetY = offsetY;
         this.currentLayer.data[row][column].condition = bushCondition;
+        this.currentLayer.data[row][column].tileType = 'grass';
         return this;
     }
     buildSpriteObject(frames, row, column, flipX = false, offsetX = 0, offsetY = 0) {
@@ -5607,7 +8227,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _camera__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./camera */ "./src/rendering/camera.ts");
 /* harmony import */ var _core_engine_game_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/core/engine/game-context */ "./src/core/engine/game-context.ts");
-/* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
+/* harmony import */ var _types_render_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/types/render-types */ "./src/types/render-types.ts");
+/* harmony import */ var _core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/core/engine/canvas-token */ "./src/core/engine/canvas-token.ts");
+
 
 
 
@@ -5627,7 +8249,7 @@ class TileMap {
         this.effectSystem = effectSystem;
         const gameContext = _core_engine_game_context__WEBPACK_IMPORTED_MODULE_1__.GameContext.getInstance();
         this.camera = gameContext.getBean(_camera__WEBPACK_IMPORTED_MODULE_0__.Camera);
-        this.ctx = gameContext.getBean(_core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_2__.GAME_CANVAS);
+        this.ctx = gameContext.getBean(_core_engine_canvas_token__WEBPACK_IMPORTED_MODULE_3__.GAME_CANVAS);
     }
     get scaledTileSize() {
         return this.tileSize * this.scale;
@@ -5642,12 +8264,15 @@ class TileMap {
     }
     update(deltaTime) {
         this.effectSystem.update(deltaTime);
+        this.layers.forEach((layer) => layer.npc.forEach((npc) => npc.update(deltaTime)));
     }
     render(priority) {
         const tilesPerRow = Math.floor(this.tileset.getImage().width / this.tileset.width);
         this.layers
             .filter((layer) => layer.priority === priority)
             .forEach((layer) => {
+            if (layer.condition && !layer.condition?.isMet())
+                return;
             for (let y = 0; y < layer.data.length; y++) {
                 for (let x = 0; x < layer.data[y].length; x++) {
                     const tile = layer.data[y][x];
@@ -5682,8 +8307,11 @@ class TileMap {
                     }
                 }
             }
+            layer.npc.forEach((npc) => npc.render());
         });
-        this.effectSystem.render();
+        if (priority === _types_render_types__WEBPACK_IMPORTED_MODULE_2__.LayerPriority.WORLD_EFFECTS) {
+            this.effectSystem.render();
+        }
     }
     getCollisionGrid() {
         const collidableLayer = this.layers.find((layer) => layer.collidable);
@@ -5700,16 +8328,43 @@ class TileMap {
             if (layer.collidable) {
                 layer.data.forEach((row, y) => {
                     row.forEach((tile, x) => {
-                        if (tile.tile !== -1 || tile.collidable)
+                        if (tile.tile !== -1 || tile.collidable) {
                             grid[y][x] = true;
+                        }
                     });
                 });
             }
         });
+        this.layers.forEach((layer) => layer.npc.forEach((npc) => {
+            const npcTileX = Math.floor(npc.position.x / this.scaledTileSize);
+            const npcTileY = Math.floor(npc.position.y / this.scaledTileSize);
+            if (npcTileY >= 0 &&
+                npcTileY < height &&
+                npcTileX >= 0 &&
+                npcTileX < width) {
+                grid[npcTileY][npcTileX] = true;
+            }
+        }));
         return grid;
     }
     getTileSize() {
         return this.tileSize * this.scale;
+    }
+    getTileType(position) {
+        const bushLayer = this.layers.find((layer) => layer.name === 'bush');
+        if (!bushLayer || !bushLayer.visible)
+            return '';
+        const scaledTileSize = this.getTileSize();
+        const tileX = Math.floor(position.x / scaledTileSize);
+        const tileY = Math.floor(position.y / scaledTileSize);
+        if (tileY >= 0 &&
+            tileY < bushLayer.data.length &&
+            tileX >= 0 &&
+            tileX < bushLayer.data[tileY].length) {
+            const tile = bushLayer.data[tileY][tileX];
+            return tile.tile !== -1 ? tile.tileType || '' : '';
+        }
+        return '';
     }
 }
 
@@ -5771,7 +8426,6 @@ __webpack_require__.r(__webpack_exports__);
 class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.GameScene {
     camera;
     player;
-    npcs = [];
     layerManager;
     worldManager;
     transitionManager;
@@ -5795,7 +8449,11 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
         this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND,
             enabled: true,
-            update: (delta) => { },
+            update: (delta) => {
+                this.player.update(delta);
+                this.camera.update(delta);
+                this.worldManager.update(delta);
+            },
             render: () => {
                 this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND);
             },
@@ -5803,7 +8461,6 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
         this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_LOW,
             enabled: true,
-            update: (delta) => { },
             render: () => {
                 this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_LOW);
             },
@@ -5811,7 +8468,6 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
         this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_MED,
             enabled: true,
-            update: (delta) => { },
             render: () => {
                 this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_MED);
             },
@@ -5819,38 +8475,48 @@ class OverworldScene extends _scenes_game_scene__WEBPACK_IMPORTED_MODULE_5__.Gam
         this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_HIGH,
             enabled: true,
-            update: (delta) => { },
             render: () => {
                 this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.BACKGROUND_HIGH);
             },
         });
         this.layerManager.addLayer({
-            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES,
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_LOW,
             enabled: true,
-            update: (delta) => {
-                this.player.update(delta);
-                this.npcs.forEach((npc) => npc.update(delta));
-                this.camera.update(delta);
+            render: () => {
+                this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_LOW);
             },
+        });
+        this.layerManager.addLayer({
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_MED,
+            enabled: true,
             render: () => {
                 this.player.render();
-                this.npcs.forEach((npc) => npc.render());
+            },
+        });
+        this.layerManager.addLayer({
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_HIGH,
+            enabled: true,
+            render: () => {
+                this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.ENTITIES_HIGH);
             },
         });
         this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.FOREGROUND,
             enabled: true,
-            update: (delta) => {
-                this.worldManager.update(delta);
-            },
             render: () => {
                 this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.FOREGROUND);
             },
         });
         this.layerManager.addLayer({
+            priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.WORLD_EFFECTS,
+            enabled: true,
+            render: () => {
+                this.worldManager.render(_types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.WORLD_EFFECTS);
+            },
+        });
+        this.layerManager.addLayer({
             priority: _types_render_types__WEBPACK_IMPORTED_MODULE_1__.LayerPriority.UI,
             enabled: true,
-            update: (delta) => { },
             render: () => {
                 //this.drawDebugInfo();
             },
@@ -5946,6 +8612,7 @@ var LabDoorSequence;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LayerGroup: () => (/* binding */ LayerGroup),
 /* harmony export */   LayerPriority: () => (/* binding */ LayerPriority)
 /* harmony export */ });
 var LayerPriority;
@@ -5955,11 +8622,19 @@ var LayerPriority;
     LayerPriority[LayerPriority["BACKGROUND_MED"] = 20] = "BACKGROUND_MED";
     LayerPriority[LayerPriority["BACKGROUND_HIGH"] = 30] = "BACKGROUND_HIGH";
     LayerPriority[LayerPriority["TERRAIN"] = 100] = "TERRAIN";
-    LayerPriority[LayerPriority["ENTITIES"] = 200] = "ENTITIES";
+    LayerPriority[LayerPriority["ENTITIES_LOW"] = 200] = "ENTITIES_LOW";
+    LayerPriority[LayerPriority["ENTITIES_MED"] = 210] = "ENTITIES_MED";
+    LayerPriority[LayerPriority["ENTITIES_HIGH"] = 230] = "ENTITIES_HIGH";
     LayerPriority[LayerPriority["FOREGROUND"] = 300] = "FOREGROUND";
     LayerPriority[LayerPriority["UI"] = 400] = "UI";
     LayerPriority[LayerPriority["DEBUG"] = 500] = "DEBUG";
+    LayerPriority[LayerPriority["WORLD_EFFECTS"] = 600] = "WORLD_EFFECTS";
 })(LayerPriority || (LayerPriority = {}));
+var LayerGroup;
+(function (LayerGroup) {
+    LayerGroup["COLLISION"] = "collision";
+    LayerGroup["BUSH"] = "bush";
+})(LayerGroup || (LayerGroup = {}));
 
 
 /***/ })
