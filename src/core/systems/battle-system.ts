@@ -1,10 +1,4 @@
-import {
-    Pokemon,
-    Move,
-    Stats,
-    BattleAction,
-    BattleState,
-} from '@/types/pokemon';
+import { Pokemon, Move, BattleAction, BattleState } from '@/types/pokemon';
 import { EventSystem } from './event-system';
 import { GameStateManager } from './game-state-manager';
 import { Injectable } from '../decorators/injectable';
@@ -94,6 +88,17 @@ export class BattleSystem {
     ): Promise<void> {
         if (this.battleState) {
             this.battleState.isDialogUpdate = isDialogUpdate;
+            this.gameStateManager.updateState((state) => ({
+                ...state,
+                player: {
+                    ...state.player,
+                    party: state.player.party.map((pokemon) =>
+                        pokemon.id === this.battleState.playerPokemon.id
+                            ? this.battleState.playerPokemon
+                            : pokemon
+                    ),
+                },
+            }));
             await this.eventSystem.emit(
                 'BATTLE_STATE_UPDATE',
                 this.battleState
@@ -169,7 +174,9 @@ export class BattleSystem {
                 break;
 
             case 'switch':
-                console.log('Switch action selected (stub)');
+                if (action.pokemon) {
+                    await this.switchPokemon(action.pokemon);
+                }
                 break;
 
             case 'flee':
@@ -182,11 +189,44 @@ export class BattleSystem {
         if (
             this.inBattle &&
             this.battleState &&
-            !this.battleState.battleEnded
+            !this.battleState.battleEnded &&
+            !this.checkFainted(playerPokemon)
         ) {
             this.battleState.phase = 'player-input';
             this.updateBattleState();
         }
+    }
+
+    private async switchPokemon(newPokemon: Pokemon): Promise<void> {
+        if (!this.inBattle || !this.battleState || this.battleState.battleEnded)
+            return;
+
+        const oldPokemon = this.battleState.playerPokemon;
+        this.battleState.playerPokemon = newPokemon;
+
+        await this.addBattleMessage(
+            `Go! ${newPokemon.species.toUpperCase()}!`,
+            true
+        );
+
+        await this.executeEnemyTurn();
+
+        if (this.checkFainted(this.battleState.playerPokemon)) {
+            this.handlePlayerPokemonFainted();
+        } else {
+            this.battleState.phase = 'player-input';
+            this.updateBattleState();
+        }
+    }
+
+    public getAvailablePokemon(): Pokemon[] {
+        return this.gameStateManager
+            .getState()
+            .player.party.filter(
+                (p) =>
+                    p.currentHP > 0 &&
+                    p.id !== this.battleState?.playerPokemon.id
+            );
     }
 
     private async executeEnemyTurn(): Promise<void> {
@@ -293,11 +333,14 @@ export class BattleSystem {
         this.endBattle();
     }
 
-    private handlePlayerPokemonFainted(): void {
-        this.addBattleMessage('Your Pokémon has fainted!');
+    private async handlePlayerPokemonFainted(): Promise<void> {
+        await this.addBattleMessage('Your Pokémon has fainted!');
         if (this.hasUsablePokemon()) {
-            this.addBattleMessage('You must select another Pokémon.');
-            // this.battleState.phase = 'player-must-switch';
+            await this.addBattleMessage(
+                'You must select another Pokémon.',
+                true
+            );
+            this.battleState.phase = 'player-must-switch';
             this.updateBattleState();
         } else {
             this.addBattleMessage('You have lost the battle!');

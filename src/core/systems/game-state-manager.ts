@@ -1,67 +1,14 @@
 import { GameState } from '@/types/pokemon-state';
 import { Injectable } from '../decorators/injectable';
 import { Pokemon } from '@/types/pokemon';
+import { initialState } from '@/data/initial-state';
 
 @Injectable()
 export class GameStateManager {
     private state: GameState;
 
     private constructor() {
-        this.state = this.initialState();
-    }
-
-    private initialState(): GameState {
-        return {
-            player: {
-                party: [
-                    {
-                        id: 'initial-1717123456789',
-                        species: 'treecko',
-                        nickname: 'None',
-                        level: 5,
-                        experience: 0,
-                        stats: {
-                            hp: 19,
-                            attack: 10,
-                            defense: 9,
-                            speed: 14,
-                            specialAttack: 12,
-                            specialDefense: 9,
-                        },
-                        currentHP: 19,
-                        moves: [
-                            {
-                                id: 'pound',
-                                name: 'Pound',
-                                type: 'Normal',
-                                power: 40,
-                                accuracy: 100,
-                                pp: 35,
-                                maxPP: 35,
-                            },
-                            {
-                                id: 'leer',
-                                name: 'Leer',
-                                type: 'Normal',
-                                power: 0,
-                                accuracy: 100,
-                                pp: 30,
-                                maxPP: 30,
-                            },
-                        ],
-                        status: 'healthy',
-                    },
-                ],
-                position: { x: 500, y: 500 },
-                spritePosition: 'down',
-                hidden: false,
-                canMove: true,
-                pc: [],
-            },
-            world: {
-                currentMap: 'little_root_town',
-            },
-        };
+        this.state = initialState;
     }
 
     public getState(): Readonly<GameState> {
@@ -86,6 +33,7 @@ export class GameStateManager {
         const { player, world } = this.state;
         const filteredState = {
             player: {
+                party: player.party,
                 position: player.position,
             },
             world,

@@ -1,0 +1,165 @@
+import { GameState } from '@/types/pokemon-state';
+import { Pokemon } from '@/types/pokemon';
+
+export const initialParty: Pokemon[] = [
+    {
+        id: 'initial-001',
+        species: 'treecko',
+        level: 5,
+        experience: 0,
+        stats: {
+            hp: 19,
+            attack: 10,
+            defense: 9,
+            speed: 14,
+            specialAttack: 12,
+            specialDefense: 9,
+        },
+        currentHP: 2,
+        moves: [
+            {
+                id: 'pound',
+                name: 'Pound',
+                type: 'Normal',
+                power: 40,
+                accuracy: 100,
+                pp: 35,
+                maxPP: 35,
+            },
+            {
+                id: 'leer',
+                name: 'Leer',
+                type: 'Normal',
+                power: 0,
+                accuracy: 100,
+                pp: 30,
+                maxPP: 30,
+            },
+        ],
+        status: 'healthy',
+    },
+    {
+        id: 'initial-002',
+        species: 'torchic',
+        level: 5,
+        experience: 0,
+        stats: {
+            hp: 19,
+            attack: 10,
+            defense: 9,
+            speed: 14,
+            specialAttack: 12,
+            specialDefense: 9,
+        },
+        currentHP: 19,
+        moves: [
+            {
+                id: 'scratch',
+                name: 'Scratch',
+                type: 'Normal',
+                power: 40,
+                accuracy: 100,
+                pp: 35,
+                maxPP: 35,
+            },
+            {
+                id: 'growl',
+                name: 'Growl',
+                type: 'Normal',
+                power: 0,
+                accuracy: 100,
+                pp: 40,
+                maxPP: 40,
+            },
+        ],
+        status: 'healthy',
+    },
+    {
+        id: 'initial-003',
+        species: 'mudkip',
+        level: 5,
+        experience: 0,
+        stats: {
+            hp: 19,
+            attack: 10,
+            defense: 9,
+            speed: 14,
+            specialAttack: 12,
+            specialDefense: 9,
+        },
+        currentHP: 19,
+        moves: [
+            {
+                id: 'tackle',
+                name: 'Tackle',
+                type: 'Normal',
+                power: 40,
+                accuracy: 100,
+                pp: 35,
+                maxPP: 35,
+            },
+            {
+                id: 'growl',
+                name: 'Growl',
+                type: 'Normal',
+                power: 0,
+                accuracy: 100,
+                pp: 40,
+                maxPP: 40,
+            },
+        ],
+        status: 'healthy',
+    },
+    {
+        id: 'initial-004',
+        species: 'zigzagoon',
+        level: 5,
+        experience: 0,
+        stats: {
+            hp: 19,
+            attack: 10,
+            defense: 9,
+            speed: 14,
+            specialAttack: 12,
+            specialDefense: 9,
+        },
+        currentHP: 19,
+        moves: [
+            {
+                id: 'tackle',
+                name: 'Tackle',
+                type: 'Normal',
+                power: 40,
+                accuracy: 100,
+                pp: 35,
+                maxPP: 35,
+            },
+            {
+                id: 'tailwhip',
+                name: 'Tail Whip',
+                type: 'Normal',
+                power: 0,
+                accuracy: 100,
+                pp: 30,
+                maxPP: 30,
+            },
+        ],
+        status: 'healthy',
+    },
+];
+
+export const initialPlayer = {
+    party: initialParty,
+    position: { x: 500, y: 500 },
+    spritePosition: 'down',
+    hidden: false,
+    canMove: true,
+    pc: [] as Pokemon[],
+};
+
+export const initialState: GameState = {
+    player: initialPlayer,
+    world: {
+        currentMap: 'little_root_town',
+    },
+};

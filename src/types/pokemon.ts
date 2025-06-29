@@ -1,7 +1,6 @@
 export interface Pokemon {
     id: string;
     species: string;
-    nickname?: string;
     level: number;
     experience: number;
     stats: Stats;
@@ -31,6 +30,7 @@ export interface EncounterTable {
 
 export interface SpeciesData {
     baseStats: Stats;
+    dexNumber: number;
     moves: LearnableMove[];
     img: {
         front: string;
@@ -63,7 +63,13 @@ export interface Move {
 }
 
 export interface BattleState {
-    phase: 'start' | 'player-input' | 'attack' | 'end' | 'flee';
+    phase:
+        | 'start'
+        | 'player-input'
+        | 'attack'
+        | 'end'
+        | 'flee'
+        | 'player-must-switch';
     playerPokemon: Pokemon;
     wildPokemon: Pokemon;
     messages: BattleMessage[];

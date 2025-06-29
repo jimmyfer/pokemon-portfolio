@@ -6,6 +6,7 @@ import { GameContext } from '@/core/engine/game-context';
 import { BattleState, Move, Pokemon } from '@/types/pokemon';
 import { SPECIES_MAP } from '@/mock-data/pokemons';
 import downRedArrow from '@/assets/html/game-images/red_arrow_down.png';
+import PokemonSwitchComponent from '../pokemon-switch/pokemon-switch';
 
 export default class BattleComponent extends HTMLElement {
     private _updateTextQueue: Promise<void> = Promise.resolve();
@@ -167,6 +168,8 @@ export default class BattleComponent extends HTMLElement {
                             latestMessage.message,
                             latestMessage.manualAvance
                         );
+                } else if (battleState.phase === 'player-must-switch') {
+                    this.showPokemonSwitchScreen();
                 } else {
                     if (battleState.isDialogUpdate)
                         await this.updateDialogText(
@@ -188,6 +191,30 @@ export default class BattleComponent extends HTMLElement {
                 this.playerArena,
             ]);
             this.dialogTextArea.querySelector('h2')!.textContent = '';
+        });
+
+        this.eventSystem.on('BATTLE_POKEMON_SWITCHED', (pokemon: Pokemon) => {
+            this.eventSystem.emit('BATTLE_ACTION', {
+                type: 'switch',
+                pokemon: pokemon,
+            });
+        });
+
+        this.eventSystem.on('SWITCH_POKEMON_TRANSITION_CLOSED', () => {
+            this.style.zIndex = '51';
+        });
+
+        this.eventSystem.on('POKEMON_SWITCH_CLOSED_TRANSITION_CLOSED', () => {
+            this.style.zIndex = '';
+        });
+    }
+
+    private showPokemonSwitchScreen(): void {
+        const switchComponent = new PokemonSwitchComponent();
+        switchComponent.setAttribute('battle-context', 'true');
+        this.eventSystem.emit('SWITCH_POKEMON_TRANSITION', {
+            component: switchComponent,
+            itemName: 'switch-pokemon',
         });
     }
 

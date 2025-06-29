@@ -59,6 +59,10 @@ body {
     color: #424242;
 }
 
+.switching-pokemon {
+    z-index: 50;
+}
+
 @media (max-width: 320px) {
 }
 

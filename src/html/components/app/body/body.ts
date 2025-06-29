@@ -39,11 +39,25 @@ export default class BodyComponent extends HTMLElement {
                 this.preLoadComponent(data)
         );
 
+        eventSystem.on(
+            'SWITCH_POKEMON_TRANSITION_STARTED',
+            (data: { component: PageComponent; itemName: string }) =>
+                this.preLoadComponent(data)
+        );
+
         eventSystem.on('PAGE_TRANSITION_CLOSED', () =>
             this.showLoadedComponent()
         );
 
+        eventSystem.on('SWITCH_POKEMON_TRANSITION_CLOSED', () =>
+            this.showLoadedComponent()
+        );
+
         eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () =>
+            this.resetComponent()
+        );
+
+        eventSystem.on('POKEMON_SWITCH_CLOSED_TRANSITION_CLOSED', () =>
             this.resetComponent()
         );
     }
@@ -86,6 +100,5 @@ export default class BodyComponent extends HTMLElement {
             '.component-container'
         );
         componentContainer!.innerHTML = '';
-        this.eventSystem.emit('PAGE_CLOSED_TRANSITION_READY', {});
     }
 }

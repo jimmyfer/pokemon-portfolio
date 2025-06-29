@@ -1,0 +1,450 @@
+.pokemon-switch {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.pokemon-switch-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.switch-container-background {
+    width: 80%;
+    height: 100%;
+}
+
+.switch-container-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.pokemons-cards {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+}
+
+.pokemon-card {
+    width: 80%;
+    height: 90%;
+    margin-top: 5%;
+    margin-right: -8%;
+    cursor: pointer;
+}
+
+.pokemon-card .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.poke-ball-container {
+    position: absolute;
+    width: 12vh;
+    height: 12vh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.poke-ball {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.poke-ball-up,
+.poke-ball-down {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.pokemon-sprite {
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    transform: translate(-5%, -18%);
+}
+
+.poke-ball-up img,
+.pokemon-sprite img,
+.poke-ball-down img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.second-card {
+    position: absolute;
+    left: 20%;
+    top: -5%;
+}
+
+.pokemon-name h2 {
+    font-family: 'pokemon-font';
+    color: #ffffff;
+    text-shadow: 0.05em 0.12em #6b5a73;
+    font-size: 1.3rem;
+    line-height: 125%;
+}
+
+.second-card-level {
+    position: absolute;
+    right: 12%;
+    top: 8%;
+}
+
+.pokemon-level h2 {
+    font-family: 'pokemon-font';
+    color: #ffffff;
+    text-shadow: 0.05em 0.12em #424242;
+    font-size: 0.6rem;
+    line-height: 125%;
+}
+
+.pokemon-hp-hud-container {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    width: 80%;
+    height: 20%;
+}
+
+.pokemon-hp-hud {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pokemon-hp {
+    margin-right: 5%;
+}
+
+.pokemon-hp h2 {
+    font-family: 'pokemon-font';
+    color: #ffffff;
+    text-shadow: 0.05em 0.12em #424242;
+    font-size: 0.6rem;
+    line-height: 125%;
+    margin-top: 50%;
+}
+
+.pokemon-hp-bar {
+    margin-right: 5%;
+    width: 70%;
+    height: 100%;
+}
+
+.pokemon-hp-bar img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.pokemon-card.active .poke-ball .poke-ball-up {
+    transform: translateY(-8%);
+}
+
+.pokemon-card.active .poke-ball .poke-ball-down {
+    transform: translateY(8%);
+}
+
+.pokemon-card.selected {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8));
+    z-index: 10;
+}
+
+.pokemon-card.selected .card-background img {
+    filter: brightness(1.2) sepia(0.8) hue-rotate(-10deg) saturate(5.5);
+}
+
+.pokemon-card.swap-hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+    cursor: pointer;
+}
+
+.pokemon-card.swap-hover .poke-ball .poke-ball-up {
+    transform: translateY(-10%) !important;
+}
+
+.pokemon-card.swap-hover .poke-ball .poke-ball-down {
+    transform: translateY(10%) !important;
+}
+
+.cancel-button {
+    position: absolute;
+    width: 60%;
+    height: 8%;
+    bottom: 3%;
+    left: 52%;
+    transform: translateX(-50%);
+}
+
+.cancel-button-container {
+    display: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cancel-button-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cancel-button-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.pokemon-main-card {
+    display: none;
+    z-index: 8;
+}
+
+@media (min-width: 480px) {
+    .cancel-button {
+        width: 20%;
+        height: 12%;
+        bottom: 6%;
+        right: 11%;
+    }
+
+    .pokemon-card {
+        width: 50%;
+        height: 90%;
+        margin-top: 0;
+        margin-right: -8%;
+    }
+}
+
+@media (min-width: 768px) {
+    .pokemon-card {
+        width: 40%;
+        margin-right: 5%;
+    }
+
+    .pokemon-card-container {
+        justify-content: flex-end;
+    }
+
+    .pokemon-card-container:first-of-type,
+    .pokemons-cards:first-child {
+        display: none;
+    }
+
+    .pokemon-main-card {
+        display: block;
+        position: absolute;
+        width: 30%;
+        height: 30%;
+        top: 30%;
+        left: 12%;
+    }
+
+    .main-pokemon-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .main-card-background {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-card-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+
+    .main-poke-ball-container {
+        position: absolute;
+        width: 30%;
+        height: 40%;
+        top: 0;
+        transform: translate(-40%, -40%);
+    }
+
+    .main-poke-ball {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-poke-ball-up,
+    .main-poke-ball-down {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-poke-ball-up img,
+    .main-pokemon-sprite img,
+    .main-poke-ball-down img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+
+    .main-card {
+        position: absolute;
+        left: 20%;
+        top: 15%;
+    }
+
+    .main-card-level {
+        position: absolute;
+        right: 12%;
+        top: 8%;
+    }
+
+    .main-card-level.pokemon-level h2 {
+        font-size: 1rem;
+    }
+
+    .main-pokemon-hp-hud-container {
+        position: absolute;
+        bottom: 15%;
+        right: 0;
+        width: 100%;
+        height: 20%;
+    }
+
+    .main-pokemon-hp-hud {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .main-pokemon-hp-hud .pokemon-hp {
+        margin-right: 5%;
+    }
+
+    .main-pokemon-hp-hud .pokemon-hp h2 {
+        font-size: 1rem;
+        margin-top: 40%;
+    }
+
+    .main-pokemon-hp-hud .pokemon-hp-bar {
+        width: 60%;
+        height: 70%;
+    }
+
+    .main-pokemon-hp-hud .pokemon-hp-bar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-pokemon-sprite {
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        transform: translate(-5%, -18%);
+    }
+
+    .main-pokemon-card.selected {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 0, 0.8));
+        z-index: 10;
+    }
+
+    .main-pokemon-card.selected .main-card-background img {
+        filter: brightness(1.2) sepia(0.8) hue-rotate(-10deg) saturate(5.5);
+    }
+
+    .main-pokemon-card.swap-hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+        cursor: pointer;
+    }
+
+    .main-pokemon-card.swap-hover .main-poke-ball .main-poke-ball-up {
+        transform: translateY(-10%) !important;
+    }
+
+    .main-pokemon-card.swap-hover .main-poke-ball .main-poke-ball-down {
+        transform: translateY(10%) !important;
+    }
+}
+
+@media (min-width: 940px) {
+    .pokemon-main-card {
+        width: 28%;
+        left: 12%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pokemon-main-card {
+        width: 22%;
+        left: 16%;
+    }
+}
+
+.fainted-dialog-box {
+    position: absolute;
+    z-index: 7;
+}

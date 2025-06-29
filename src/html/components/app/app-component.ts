@@ -6,6 +6,7 @@ import SkillsAboutComponent from './pages/skills-about/skills-about';
 import DialogComponent from './game-dialog/game-dialog';
 import BattleComponent from './battle/battle';
 import ExperienceComponent from './pages/experiences/experience';
+import PokemonSwitchComponent from './pokemon-switch/pokemon-switch';
 
 /**
  * Components declaration
@@ -38,5 +39,9 @@ export const componentDefinitions: ComponentDefinition[] = [
     {
         name: 'app-battle',
         component: BattleComponent,
+    },
+    {
+        name: 'app-pokemon-switch',
+        component: PokemonSwitchComponent,
     },
 ];

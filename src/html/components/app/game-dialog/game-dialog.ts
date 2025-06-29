@@ -27,7 +27,7 @@ export default class DialogComponent extends HTMLElement {
         this.eventSystem.on('START_DIALOG', (data) => this.startDialog(data));
     }
 
-    startDialog(data: { name: string; dialogue: string[] }): void {
+    startDialog(data: { dialogue: string[]; name?: string }): void {
         const dialogBox = this.shadowRoot!.querySelector(
             '.dialog-box'
         ) as HTMLDivElement;

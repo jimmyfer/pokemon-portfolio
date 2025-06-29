@@ -16,6 +16,8 @@ export class TransitionManager {
         | 'page-closed'
         | 'battle'
         | 'battle-closed'
+        | 'switch-pokemon'
+        | 'pokemon-switch-closed'
         | null = null;
     private transitionProgress: number = 0;
     private transitionDuration: number = 500;
@@ -47,12 +49,25 @@ export class TransitionManager {
             }) => this.handlePageTransition(data)
         );
 
+        this.eventSystem.on(
+            'SWITCH_POKEMON_TRANSITION',
+            (data: {
+                component: PageComponent;
+                itemName: string;
+                effect?: TransitionEffect;
+            }) => this.handleSwitchPokemonTransition(data)
+        );
+
         this.eventSystem.on('BATTLE_TRANSITION', (data: {}) =>
             this.handleBattleTransition(data)
         );
 
         this.eventSystem.on('PAGE_CLOSED_TRANSITION', () =>
             this.handlePageClosedTransition()
+        );
+
+        this.eventSystem.on('POKEMON_SWITCH_CLOSED_TRANSITION', () =>
+            this.handlePokemonSwitchClosedTransition()
         );
 
         this.eventSystem.on('BATTLE_CLOSED_TRANSITION', () =>
@@ -92,6 +107,20 @@ export class TransitionManager {
         });
     }
 
+    private handleSwitchPokemonTransition(data: {
+        component: PageComponent;
+        itemName: string;
+        effect?: TransitionEffect;
+    }) {
+        this.transitionType = 'switch-pokemon';
+        this.transitionDuration = 500;
+        this.startTransition(data.effect || new OpacityTransitionEffect());
+        this.eventSystem.emit('SWITCH_POKEMON_TRANSITION_STARTED', {
+            component: data.component,
+            itemName: data.itemName,
+        });
+    }
+
     private handleBattleTransition(data: {}) {
         this.transitionType = 'battle';
         this.transitionDuration = 2000;
@@ -101,6 +130,11 @@ export class TransitionManager {
 
     private handlePageClosedTransition() {
         this.transitionType = 'page-closed';
+        this.startTransition(new OpacityTransitionEffect());
+    }
+
+    private handlePokemonSwitchClosedTransition() {
+        this.transitionType = 'pokemon-switch-closed';
         this.startTransition(new OpacityTransitionEffect());
     }
 
@@ -147,10 +181,17 @@ export class TransitionManager {
 
         if (this.transitionType === 'map') {
             this.eventSystem.emit('MAP_TRANSITION_COMPLETE', {});
+        } else if (this.transitionType === 'switch-pokemon') {
+            this.eventSystem.emit('SWITCH_POKEMON_TRANSITION_COMPLETE', {});
         } else if (this.transitionType === 'page') {
             this.eventSystem.emit('PAGE_TRANSITION_COMPLETE', {});
         } else if (this.transitionType === 'page-closed') {
             this.eventSystem.emit('PAGE_CLOSED_TRANSITION_COMPLETE', {});
+        } else if (this.transitionType === 'pokemon-switch-closed') {
+            this.eventSystem.emit(
+                'POKEMON_SWITCH_CLOSED_TRANSITION_COMPLETE',
+                {}
+            );
         } else if (this.transitionType === 'battle') {
             this.eventSystem.emit('BATTLE_TRANSITION_COMPLETE', {});
         } else if (this.transitionType === 'battle-closed') {
@@ -190,8 +231,19 @@ export class TransitionManager {
             this.eventSystem.emit('PAGE_TRANSITION_CLOSED', {});
             this.transitionPhase = 'opening';
             this.transitionProgress = 0;
+        } else if (this.transitionType === 'switch-pokemon') {
+            this.eventSystem.emit('SWITCH_POKEMON_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
         } else if (this.transitionType === 'page-closed') {
             this.eventSystem.emit('PAGE_CLOSED_TRANSITION_CLOSED', {});
+            this.transitionPhase = 'opening';
+            this.transitionProgress = 0;
+        } else if (this.transitionType === 'pokemon-switch-closed') {
+            this.eventSystem.emit(
+                'POKEMON_SWITCH_CLOSED_TRANSITION_CLOSED',
+                {}
+            );
             this.transitionPhase = 'opening';
             this.transitionProgress = 0;
         } else if (this.transitionType === 'battle') {

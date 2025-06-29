@@ -5,18 +5,23 @@ import html from './header.html';
 import MenuItemComponent from '../../ui/menu-item/menu-item';
 import { EventSystem } from '@/core/systems/event-system';
 import { GameContext } from '@/core/engine/game-context';
+import { MenuService } from '@/core/services/menu-service';
+import { AfterCloseHandler } from '@/types/menu';
 
 export default class HeaderComponent extends HTMLElement {
     private eventSystem: EventSystem;
+    private menuService: MenuService;
     private logoElement: HTMLDivElement;
     private transitionTimeout: ReturnType<typeof setTimeout> | null = null;
-    private pageActive: Boolean = false;
+    private pageActive = false;
+    private activePokemonSwitchComponent = false;
 
     constructor() {
         super();
 
         const gameContext = GameContext.getInstance();
         this.eventSystem = gameContext.getBean(EventSystem);
+        this.menuService = gameContext.getBean(MenuService);
 
         this.attachShadow({ mode: 'open' });
         this.initializeTemplate();
@@ -31,9 +36,26 @@ export default class HeaderComponent extends HTMLElement {
         this.eventSystem.on('PAGE_TRANSITION_CLOSED', () =>
             this.updateToPageMode()
         );
+
+        this.eventSystem.on('SWITCH_POKEMON_TRANSITION_CLOSED', () => {
+            this.updateToPageMode();
+            this.activePokemonSwitchComponent = true;
+        });
+
         this.eventSystem.on('PAGE_CLOSED_TRANSITION_CLOSED', () =>
             this.updateToGameMode()
         );
+        this.eventSystem.on('POKEMON_SWITCH_CLOSED_TRANSITION_CLOSED', () =>
+            this.updateToGameMode()
+        );
+
+        this.menuService.onAfterClose(() => {
+            if (this.activePokemonSwitchComponent) {
+                this.eventSystem.emit('POKEMON_SWITCH_CLOSED_TRANSITION', {});
+            } else {
+                this.eventSystem.emit('PAGE_CLOSED_TRANSITION', {});
+            }
+        });
     }
 
     private initializeTemplate(): void {
@@ -62,7 +84,7 @@ export default class HeaderComponent extends HTMLElement {
     }
 
     private closeActivePage(): void {
-        this.eventSystem.emit('PAGE_CLOSED_TRANSITION', {});
+        this.menuService.requestClose();
     }
 
     private toggleMenu(): void {
@@ -146,5 +168,6 @@ export default class HeaderComponent extends HTMLElement {
         ) as HTMLImageElement;
         imgComponent.style.display = 'block';
         this.pageActive = false;
+        this.activePokemonSwitchComponent = false;
     }
 }

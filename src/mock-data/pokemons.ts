@@ -10,6 +10,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 65,
             specialDefense: 55,
         },
+        dexNumber: 252,
         moves: [
             { moveId: 'pound', level: 1 },
             { moveId: 'leer', level: 1 },
@@ -29,6 +30,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 70,
             specialDefense: 50,
         },
+        dexNumber: 255,
         moves: [
             { moveId: 'scratch', level: 1 },
             { moveId: 'growl', level: 1 },
@@ -48,6 +50,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 50,
             specialDefense: 50,
         },
+        dexNumber: 258,
         moves: [
             { moveId: 'tackle', level: 1 },
             { moveId: 'growl', level: 1 },
@@ -67,6 +70,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 30,
             specialDefense: 30,
         },
+        dexNumber: 261,
         moves: [
             { moveId: 'tackle', level: 1 },
             { moveId: 'bite', level: 5 },
@@ -86,6 +90,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 30,
             specialDefense: 41,
         },
+        dexNumber: 263,
         moves: [
             { moveId: 'tackle', level: 1 },
             { moveId: 'tailwhip', level: 4 },
@@ -105,6 +110,7 @@ export const SPECIES_MAP: { [key: string]: SpeciesData } = {
             specialAttack: 20,
             specialDefense: 30,
         },
+        dexNumber: 265,
         moves: [
             { moveId: 'tackle', level: 1 },
             { moveId: 'stringshot', level: 5 },
