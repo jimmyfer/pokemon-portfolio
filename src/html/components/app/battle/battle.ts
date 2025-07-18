@@ -193,13 +193,6 @@ export default class BattleComponent extends HTMLElement {
             this.dialogTextArea.querySelector('h2')!.textContent = '';
         });
 
-        this.eventSystem.on('BATTLE_POKEMON_SWITCHED', (pokemon: Pokemon) => {
-            this.eventSystem.emit('BATTLE_ACTION', {
-                type: 'switch',
-                pokemon: pokemon,
-            });
-        });
-
         this.eventSystem.on('SWITCH_POKEMON_TRANSITION_CLOSED', () => {
             this.style.zIndex = '51';
         });
@@ -219,6 +212,7 @@ export default class BattleComponent extends HTMLElement {
     }
 
     private updateHud(playerPokemon: Pokemon, opponentPokemon: Pokemon): void {
+        console.log(playerPokemon, opponentPokemon);
         this.playerPokemonNameDisplay.textContent =
             playerPokemon.species.toUpperCase();
         this.playerPokemonLevelDisplay.textContent = `Lv.${playerPokemon.level}`;
@@ -476,9 +470,6 @@ export default class BattleComponent extends HTMLElement {
                                 'BAG selected - System logic not yet implemented in provided BattleSystem'
                             );
                         } else if (actionValue === 'POKEMON') {
-                            this.eventSystem.emit('BATTLE_ACTION', {
-                                type: 'switch',
-                            });
                             console.log(
                                 'POKEMON selected - System logic not yet implemented in provided BattleSystem'
                             );

@@ -12,6 +12,8 @@ export class BattleSystem {
     private gameStateManager: GameStateManager;
     private eventSystem: EventSystem;
 
+    private newPokemon: Pokemon;
+
     constructor() {
         const gameContext = GameContext.getInstance();
         this.gameStateManager = gameContext.getBean(GameStateManager);
@@ -35,6 +37,22 @@ export class BattleSystem {
         );
         this.eventSystem.on('BATTLE_CLOSED_TRANSITION_COMPLETE', () => {
             this.gameStateManager.unlockPlayerMovement();
+        });
+
+        this.eventSystem.on(
+            'BATTLE_POKEMON_SWITCHED',
+            (data: { newPokemon: Pokemon }) => {
+                this.newPokemon = data.newPokemon;
+                console.log(this.newPokemon, 'llego!');
+            }
+        );
+
+        this.eventSystem.on('POKEMON_SWITCH_CLOSED_TRANSITION_COMPLETE', () => {
+            this.eventSystem.emit('BATTLE_ACTION', {
+                type: 'switch',
+                pokemon: this.newPokemon,
+            });
+            console.log(this.newPokemon, 'emito!!');
         });
     }
 
@@ -201,8 +219,9 @@ export class BattleSystem {
         if (!this.inBattle || !this.battleState || this.battleState.battleEnded)
             return;
 
-        const oldPokemon = this.battleState.playerPokemon;
         this.battleState.playerPokemon = newPokemon;
+
+        console.log(this.battleState.playerPokemon);
 
         await this.addBattleMessage(
             `Go! ${newPokemon.species.toUpperCase()}!`,
@@ -211,11 +230,15 @@ export class BattleSystem {
 
         await this.executeEnemyTurn();
 
+        console.log('hello');
+
         if (this.checkFainted(this.battleState.playerPokemon)) {
             this.handlePlayerPokemonFainted();
+            console.log('hello 1');
         } else {
             this.battleState.phase = 'player-input';
             this.updateBattleState();
+            console.log('hello 2');
         }
     }
 

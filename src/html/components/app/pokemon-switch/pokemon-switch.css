@@ -220,7 +220,7 @@
     transform: translateY(10%) !important;
 }
 
-.cancel-button {
+/* .cancel-button {
     position: absolute;
     width: 60%;
     height: 8%;
@@ -247,7 +247,7 @@
     object-fit: fill;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
-}
+} */
 
 .pokemon-main-card {
     display: none;
@@ -255,12 +255,12 @@
 }
 
 @media (min-width: 480px) {
-    .cancel-button {
+    /* .cancel-button {
         width: 20%;
         height: 12%;
         bottom: 6%;
         right: 11%;
-    }
+    } */
 
     .pokemon-card {
         width: 50%;

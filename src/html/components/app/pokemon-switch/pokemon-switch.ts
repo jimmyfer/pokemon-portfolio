@@ -72,7 +72,6 @@ export default class PokemonSwitchComponent
 
         this.initMainCard();
         this.initCardSelection();
-        this.initCancelButton();
 
         this.renderParty();
 
@@ -85,8 +84,6 @@ export default class PokemonSwitchComponent
             this.cleanComponent()
         );
 
-        this.isBattleContext = !!this.getAttribute('battle-context');
-
         this.menuService.onAfterClose(() => {
             const dialogBox = this.shadowRoot?.querySelector(
                 '.fainted-dialog-box'
@@ -97,6 +94,8 @@ export default class PokemonSwitchComponent
 
     public connectedCallback(): void {
         this.menuService.clearBeforeClose();
+
+        this.isBattleContext = !!this.getAttribute('battle-context');
 
         this.menuService.onBeforeClose(async (ctx: BeforeCloseContext) => {
             const faintedPokemon = this.party[0].currentHP === 0;
@@ -234,15 +233,6 @@ export default class PokemonSwitchComponent
         );
     }
 
-    initCancelButton() {
-        const cancelButton = this.shadowRoot?.querySelector(
-            '.cancel-button-background'
-        );
-        if (cancelButton) {
-            cancelButton.addEventListener('click', () => this.handleCancel());
-        }
-    }
-
     handleMainCardClick() {
         if (this.selectedCard) {
             this.swapWithMainCard(this.selectedCard);
@@ -308,11 +298,14 @@ export default class PokemonSwitchComponent
         if (index === -1) return;
 
         this.animateMainCardSwap(secondaryCard, () => {
-            // Actualizar estado
             this.gameStateManager.updateState((state) => {
                 const party = [...state.player.party];
-                // Intercambiar primer Pokémon con el seleccionado
                 [party[0], party[index]] = [party[index], party[0]];
+                if (this.isBattleContext) {
+                    this.eventSystem.emit('BATTLE_POKEMON_SWITCHED', {
+                        newPokemon: party[0],
+                    });
+                }
                 return {
                     ...state,
                     player: {
@@ -463,13 +456,6 @@ export default class PokemonSwitchComponent
         }
     }
 
-    handleCancel() {
-        this.deselectCard();
-        // Aquí puedes agregar lógica para cerrar el componente o volver atrás
-        console.log('Switch canceled');
-        // Por ejemplo: this.eventSystem.dispatchEvent('close-pokemon-switch');
-    }
-
     private swapCards(card1: HTMLElement, card2: HTMLElement) {
         card1.style.transition = 'transform 0.3s ease-in-out';
         card2.style.transition = 'transform 0.3s ease-in-out';
@@ -535,6 +521,13 @@ export default class PokemonSwitchComponent
                         party[index2],
                         party[index1],
                     ];
+                }
+
+                if (this.isBattleContext && index1 == 0) {
+                    console.log('emito!! salida', party[index1]);
+                    this.eventSystem.emit('BATTLE_POKEMON_SWITCHED', {
+                        newPokemon: party[index1],
+                    });
                 }
 
                 return {
